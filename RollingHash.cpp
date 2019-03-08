@@ -1,11 +1,11 @@
 /**
- * @file RollingHash.cpp
- * @brief ローリングハッシュ
- * @author btk15049
- * @date 2019/03/08
- * @datails
- *  \todo verifyが足りない
- */
+* @file RollingHash.cpp
+* @brief ローリングハッシュ
+* @author btk15049
+* @date 2019/03/08
+* @datails
+*  \todo verifyが足りない
+*/
 
 #ifdef BTK
 #ifndef TEMPLATE
