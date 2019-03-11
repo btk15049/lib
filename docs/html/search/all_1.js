@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['build',['build',['../db/d1d/namespacefactorial.html#a18522a4facdc5307a6980e06593b57c5',1,'factorial']]]
+  ['build',['build',['../de/dbc/_mod_int_8cpp.html#ad329d1630564ebac238e964469f09de5',1,'ModInt::factorial']]]
 ];

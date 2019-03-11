@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['size',['size',['../db/d1d/namespacefactorial.html#a6bbd137b4b995b45e2c08792ae42492c',1,'factorial']]]
+  ['size',['size',['../de/dbc/_mod_int_8cpp.html#a3ac95ed8ccb5653f87a3f3ad0379ea62',1,'ModInt::factorial']]]
 ];

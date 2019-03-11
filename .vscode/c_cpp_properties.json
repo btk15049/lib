@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": ["BTK"],
+            "macFrameworkPath": [],
+            "compilerPath": "/usr/local/bin/g++"
+        }
+    ],
+    "version": 4
+}

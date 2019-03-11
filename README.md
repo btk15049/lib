@@ -5,8 +5,6 @@
 ## 文字列系
 * KMP.hpp  
 最小周期の取得 : ARC77 F  
-* RollHash.cpp  
-ロリハ : CSA12
 * ZAlgorithm.cpp  
 Z algorithm : みんプロ2018本選 D
 
@@ -23,10 +21,9 @@ HL分解 : yukicoder No529
 * TwoVertex.cpp  
 関節点列挙，二重頂点連結成分分解，block cut tree : ECR42 F , AOJ 関節点
 * LowestCommonAncestor.cpp  
-ダブリング使ったLCA，頂点rを根とする頂点uvのLCAも算出できる
+ダブリング使ったLCA，頂点rを根とする頂点uvのLCAも算出できる : CF457 d2E
 
 ## セグメント木
-* SegTree.cpp
 * AbstractSegmentTree.cpp  
 抽象化セグ木 : RUPC2018 day2 J(遅延),K
 

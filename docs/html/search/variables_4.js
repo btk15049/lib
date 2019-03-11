@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['potential',['potential',['../d5/d61/class_rolling_hash.html#a7a252aa926de56198ca897edaef6a79d',1,'RollingHash']]]
+  ['potential',['potential',['../d1/dfa/class_rolling_hash_1_1_rolling_hash.html#adcfbc8e982970359066f82c52d0bc0e8',1,'RollingHash::RollingHash']]]
 ];

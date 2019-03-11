@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['modint',['ModInt',['../d2/de3/class_mod_int.html',1,'']]]
+  ['edge',['Edge',['../df/d1f/struct_graph_1_1_edge.html',1,'Graph']]]
 ];

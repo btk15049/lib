@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['factorial',['factorial',['../db/d1d/namespacefactorial.html#a8b0be36dd20bdae932866f2446a97bfa',1,'factorial']]]
+  ['factorial',['factorial',['../de/dbc/_mod_int_8cpp.html#a24d897f0c3d8977fb2508115a4909301',1,'ModInt::factorial']]]
 ];
