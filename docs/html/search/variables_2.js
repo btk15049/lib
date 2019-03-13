@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['inverse_5ffactorial',['inverse_factorial',['../de/dbc/_mod_int_8cpp.html#a505ce118ab959e54f6449d14150a73ee',1,'ModInt::factorial']]],
-  ['is_5fbuild',['is_build',['../de/dbc/_mod_int_8cpp.html#a3adf71e0d100de8856b5f06ab26c2f8c',1,'ModInt::factorial']]]
+  ['inverse_5ffactorial',['inverse_factorial',['../de/dbc/_mod_int_8cpp.html#abb50de2c53758bc5a3d438e1d60b1a85',1,'_ModInt_::factorial']]],
+  ['is_5fbuild',['is_build',['../de/dbc/_mod_int_8cpp.html#a1f6e05980e2cc5452b527115a705060c',1,'_ModInt_::factorial']]]
 ];

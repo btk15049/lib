@@ -1,4 +1,4 @@
-namespace Graph{
+namespace _Graph_{
     /**
     * @file Graph.cpp
     * @brief グラフクラス
@@ -13,6 +13,7 @@ namespace Graph{
     #include "Template.cpp"
     #endif
     #endif
+    #define GRAPH
 
     /**
     * @brief 辺を扱う構造体の例
@@ -36,7 +37,7 @@ namespace Graph{
          * @param v 頂点番号
          * @return int vじゃない方の頂点番号
          */
-        inline int versus(int v){
+        inline int versus(const int v)const{
             return a^b^v;
         }
     };
@@ -64,12 +65,28 @@ namespace Graph{
         }
 
         /**
+         * @brief グラフの頂点数を返す
+         * @return int 頂点数
+         */
+        inline int size(){
+            return g.size();
+        }
+
+        /**
          * @brief vの次数を返す
          * @param v 頂点番号
          * @return int 次数
          */
         inline int degree(const int v){
             return g[v].size();
+        }
+
+        /**
+         * @brief グラフ全体の辺の数を返す
+         * @return int グラフ全体の辺の数
+         */
+        inline int degree(){
+            return edges.size();
         }
 
         /**
@@ -82,7 +99,7 @@ namespace Graph{
         template<typename... Ts>
         inline void add_edge(int a,int b, Ts&&... params){
             const int id = edges.size();
-            if(g.size()<=max(a,b)){
+            if((int)g.size()<=max(a,b)){
                 g.resize(max(a,b)+1);
             }
             g[a].emplace_back(id);
@@ -100,7 +117,7 @@ namespace Graph{
         template<typename... Ts>
         inline void add_arc(int a,int b, Ts&&... params){
             const int id = edges.size();
-            if(g.size()<=max(a,b)){
+            if((int)g.size()<=max(a,b)){
                 g.resize(max(a,b)+1);
             }
             g[a].emplace_back(id);
@@ -121,17 +138,22 @@ namespace Graph{
         }
 
         /**
-        * @brief vの隣接辺を返す
+        * @brief vに隣接する辺番号の集合を返す
         * @param v int
         * @return vector<Edge>
         */
-        inline vector<Edge> operator[](const int v){
-            vector<Edge> es(g[v].size());
-            for(int i=0;i<degree(v);i++){
-                es[i] = edges[g[v][i]];
-            }
-            return es;
+        inline const vector<int>& operator[](const int v){
+            return g[v];
+        }
+
+        /**
+        * @brief 辺番号から辺の参照を取得する
+        * @param edge_id
+        * @return E&
+        */
+        inline E& i2e(const int edge_id){
+            return edges[edge_id];
         }
     };
 }
-using namespace Graph;
+using namespace _Graph_;

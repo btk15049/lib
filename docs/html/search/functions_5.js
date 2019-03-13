@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['get',['get',['../d2/deb/class_mod_int_1_1_mod_int.html#a65bf6bd5bb03f91a2db11077e6e988a6',1,'ModInt::ModInt']]],
-  ['graph',['Graph',['../d6/d4f/class_graph_1_1_graph.html#aa6454d93f54722e2651412db0dcae7f2',1,'Graph::Graph']]]
+  ['flowedge',['FlowEdge',['../d7/daf/struct___dinic___1_1_flow_edge.html#a089669e1dd843b5b1ad30d6611b05d7a',1,'_Dinic_::FlowEdge']]],
+  ['flowgraph',['FlowGraph',['../d6/d11/class___dinic___1_1_flow_graph.html#a9e5001ebfbbddd18a4436d63c98b5872',1,'_Dinic_::FlowGraph']]]
 ];

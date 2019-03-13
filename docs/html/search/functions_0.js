@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['add',['add',['../de/dbc/_mod_int_8cpp.html#a82b70a1822fa0e6e273a02e151e7574b',1,'ModInt']]],
-  ['add_5farc',['add_arc',['../d6/d4f/class_graph_1_1_graph.html#a1f4df43f77758e6210ce81b9a6243656',1,'Graph::Graph']]],
-  ['add_5fedge',['add_edge',['../d6/d4f/class_graph_1_1_graph.html#ae542b5d393bff359ab109fe9e1b8bde7',1,'Graph::Graph']]]
+  ['add',['add',['../de/dbc/_mod_int_8cpp.html#a019213ff5d0277a89c399ae57c16a754',1,'_ModInt_']]],
+  ['add_5farc',['add_arc',['../d3/da5/class___graph___1_1_graph.html#a3c57faa08a4af59b891003a57ec7638f',1,'_Graph_::Graph']]],
+  ['add_5fedge',['add_edge',['../d3/da5/class___graph___1_1_graph.html#a65e461ef434209818b69e2385eb8b55b',1,'_Graph_::Graph::add_edge()'],['../d6/d11/class___dinic___1_1_flow_graph.html#ad9f87f163cce18777350df1f2cf12cf9',1,'_Dinic_::FlowGraph::add_edge()']]]
 ];

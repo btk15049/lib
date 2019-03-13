@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['edge',['Edge',['../df/d1f/struct_graph_1_1_edge.html',1,'Graph']]]
+  ['dinic',['Dinic',['../d4/d02/class___dinic___1_1_dinic.html',1,'_Dinic_']]]
 ];

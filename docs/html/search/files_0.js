@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graph_2ecpp',['Graph.cpp',['../d8/d31/_graph_8cpp.html',1,'']]]
+  ['dinic_2ecpp',['Dinic.cpp',['../d4/dce/_dinic_8cpp.html',1,'']]]
 ];

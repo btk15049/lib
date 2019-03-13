@@ -1,4 +1,4 @@
-namespace RollingHash{
+namespace _RollingHash_{
     /**
     * @file RollingHash.cpp
     * @brief ローリングハッシュ
@@ -85,4 +85,4 @@ namespace RollingHash{
         };
     };
 }
-using namespace RollingHash;
+using namespace _RollingHash_;

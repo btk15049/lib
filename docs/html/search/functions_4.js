@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['edge',['Edge',['../df/d1f/struct_graph_1_1_edge.html#af67c5b347663a0d936a13f04ba003b99',1,'Graph::Edge']]]
+  ['edge',['Edge',['../d8/dda/struct___graph___1_1_edge.html#a700d8734335239110c1e9754c23ad73d',1,'_Graph_::Edge']]]
 ];

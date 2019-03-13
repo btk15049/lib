@@ -1,4 +1,4 @@
-namespace ModInt{
+namespace _ModInt_{
     /**
      * @file ModInt.cpp
      * @brief mod構造体
@@ -322,4 +322,4 @@ namespace ModInt{
         }
     }
 }
-using namespace ModInt;
+using namespace _ModInt_;
