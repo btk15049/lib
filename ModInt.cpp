@@ -1,3 +1,6 @@
+//! [WARNING!] mod が入力で与えられる場合はconstexprを外す
+constexpr int mod = 1e9+7;
+
 namespace _ModInt_{
     /**
      * @file ModInt.cpp
@@ -14,9 +17,6 @@ namespace _ModInt_{
     #include "Template.cpp"
     #endif
     #endif
-
-    //! [WARNING!] mod が入力で与えられる場合はconstexprを外す
-    constexpr int mod = 1e9+7;
 
     /**
     * @brief mod構造体
