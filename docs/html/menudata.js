@@ -63,4 +63,7 @@ var menudata={children:[
 {text:"v",url:"functions_func.html#index_v"}]},
 {text:"変数",url:"functions_vars.html"}]}]},
 {text:"ファイル",url:"files.html",children:[
-{text:"ファイル一覧",url:"files.html"}]}]}
+{text:"ファイル一覧",url:"files.html"},
+{text:"ファイルメンバ",url:"globals.html",children:[
+{text:"全て",url:"globals.html"},
+{text:"変数",url:"globals_vars.html"}]}]}]}

@@ -77,6 +77,8 @@ $(function() {
 
 <p>ローリングハッシュ  
  <a href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../df/d01/_rolling_hash_8hpp_source.html">RollingHash.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 クラス</h2></td></tr>
@@ -115,7 +117,7 @@ class _RollingHash_::RollingHash&lt; base, mod &gt;</h3>
 <p>ローリングハッシュ </p>
 <p>ハッシュされている文字列のハッシュ値とポテンシャル（長さ）を管理． </p>
 
-<p class="definition"> <a class="el" href="../../d9/de8/_rolling_hash_8cpp_source.html">RollingHash.cpp</a> の <a class="el" href="../../d9/de8/_rolling_hash_8cpp_source.html#l00022">22</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../df/d01/_rolling_hash_8hpp_source.html">RollingHash.hpp</a> の <a class="el" href="../../df/d01/_rolling_hash_8hpp_source.html#l00021">21</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a74cdefd9abbe3f8f91abd0ac7b63ad75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a74cdefd9abbe3f8f91abd0ac7b63ad75">&#9670;&nbsp;</a></span>RollingHash()</h2>
@@ -129,7 +131,7 @@ template&lt;int base = 90001, int mod = 999999937&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html">_RollingHash_::RollingHash</a>&lt; base, mod &gt;::<a class="el" href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html">RollingHash</a> </td>
+          <td class="memname"><a class="el" href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html">_RollingHash_::RollingHash</a>&lt; base, <a class="el" href="../../dd/d33/_mod_int_8hpp.html#aa3e4f6f7382b886f19eb9b2a891dba74">mod</a> &gt;::<a class="el" href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html">RollingHash</a> </td>
           <td>(</td>
           <td class="paramtype">long long&#160;</td>
           <td class="paramname"><em>hash</em> = <code>0</code>, </td>
@@ -156,7 +158,7 @@ template&lt;int base = 90001, int mod = 999999937&gt; </div>
 <p>コンストラクタ </p>
 <p>引数無しで呼び出しは，空文字列のハッシュ化に相当する。 </p>
 
-<p class="definition"> <a class="el" href="../../d9/de8/_rolling_hash_8cpp_source.html">RollingHash.cpp</a> の <a class="el" href="../../d9/de8/_rolling_hash_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../df/d01/_rolling_hash_8hpp_source.html">RollingHash.hpp</a> の <a class="el" href="../../df/d01/_rolling_hash_8hpp_source.html#l00032">32</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -173,9 +175,9 @@ template&lt;int base = 90001, int mod = 999999937&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html">RollingHash</a> <a class="el" href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html">_RollingHash_::RollingHash</a>&lt; base, mod &gt;::operator+ </td>
+          <td class="memname"><a class="el" href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html">RollingHash</a> <a class="el" href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html">_RollingHash_::RollingHash</a>&lt; base, <a class="el" href="../../dd/d33/_mod_int_8hpp.html#aa3e4f6f7382b886f19eb9b2a891dba74">mod</a> &gt;::operator+ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html">RollingHash</a>&lt; base, mod &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d3a/class___rolling_hash___1_1_rolling_hash.html">RollingHash</a>&lt; base, <a class="el" href="../../dd/d33/_mod_int_8hpp.html#aa3e4f6f7382b886f19eb9b2a891dba74">mod</a> &gt;&#160;</td>
           <td class="paramname"><em>o</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -190,12 +192,12 @@ template&lt;int base = 90001, int mod = 999999937&gt; </div>
 <p>concatenation </p>
 <p>ハッシュ値の合成を行う．ハッシュ化前の文字列を接続する操作にあたる． hash(s)+hash(t) == hash(s+t) </p>
 
-<p class="definition"> <a class="el" href="../../d9/de8/_rolling_hash_8cpp_source.html">RollingHash.cpp</a> の <a class="el" href="../../d9/de8/_rolling_hash_8cpp_source.html#l00041">41</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../df/d01/_rolling_hash_8hpp_source.html">RollingHash.hpp</a> の <a class="el" href="../../df/d01/_rolling_hash_8hpp_source.html#l00041">41</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li><a class="el" href="../../d9/de8/_rolling_hash_8cpp_source.html">RollingHash.cpp</a></li>
+<li><a class="el" href="../../df/d01/_rolling_hash_8hpp_source.html">RollingHash.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
