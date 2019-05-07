@@ -20,9 +20,9 @@ namespace _Tree_ {
      * @details 0-indexedで使うことしか考えてないので注意．
      * @see Graph
      */
-    template <typename E=Edge>
+    template <typename E = Edge>
     class Forest : public Graph<E> {
-        private:
+      private:
         using Graph<E>::add_edge;
 
         //! 根の集合
@@ -35,36 +35,36 @@ namespace _Tree_ {
          * @param v 現在の頂点
          * @param used 既訪問リスト
          */
-        void build(Graph<E>& g, int v,vector<bool>& used) {
+        void build(Graph<E>& g, int v, vector<bool>& used) {
             used[v] = true;
-            for(int edge_id:g[v]){
-                auto e = g.i2e(edge_id);
+            for (int edge_id : g[v]) {
+                auto e      = g.i2e(edge_id);
                 const int u = e.versus(v);
-                if(used[u])continue;
-                //add_arc(e);
-                this->add_arc(v,u);
-                build(g,u,v);
+                if (used[u]) continue;
+                // add_arc(e);
+                this->add_arc(v, u);
+                build(g, u, used);
             }
         }
 
-        public:
+      public:
         /**
          * @brief
          * 無向グラフから根付き森を新しく作る用のコンストラクタ
          * @see Graph::Graph()
          */
-        Forest(Graph<E>& g , const int loop_begin = 0)
-        : Graph<E>(g.size(), g.size()-1){
+        Forest(Graph<E>& g, const int loop_begin = 0)
+            : Graph<E>(g.size(), g.size() - 1) {
             vector<bool> used(g.size());
-            for(int v:range(loop_begin, g.size())){
-                if(used[v]==false){
-                    build(g,v,v);
+            for (int v : range(loop_begin, g.size())) {
+                if (used[v] == false) {
+                    build(g, v, used);
                     roots.push_back(v);
                 }
             }
-            for(int v:range(loop_begin)){
-                if(used[v]==false){
-                    build(g,v,v);
+            for (int v : range(loop_begin)) {
+                if (used[v] == false) {
+                    build(g, v, used);
                     roots.push_back(v);
                 }
             }
@@ -74,23 +74,22 @@ namespace _Tree_ {
          * @brief Get the roots object
          * @return vector<int>
          */
-        vector<int> get_roots(){
-            return roots;
-        }
+        vector<int> get_roots() { return roots; }
     };
 
-    template <typename E=Edge>
+    template <typename E = Edge>
     class Tree : public Forest<E> {
-        private:
+      private:
         using Forest<E>::get_roots;
         int root;
-        public:
-        Tree(int reserved_vertex_size = 1, int reserved_edge_size = -1, const int root = 0)
-         : Graph<E>(reserved_vertex_size, reserved_edge_size) , root(root) {}
-        Tree(Graph<E>& g, const int root = 0) : Forest<E>(g, root), root(root) {}
-        inline int get_root(){
-            return root;
-        }
+
+      public:
+        Tree(int reserved_vertex_size = 1, int reserved_edge_size = -1,
+             const int root = 0)
+            : Graph<E>(reserved_vertex_size, reserved_edge_size), root(root) {}
+        Tree(Graph<E>& g, const int root = 0)
+            : Forest<E>(g, root), root(root) {}
+        inline int get_root() { return root; }
     };
-}
+} // namespace _Tree_
 using namespace _Tree_;
