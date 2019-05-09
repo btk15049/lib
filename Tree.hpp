@@ -84,9 +84,6 @@ namespace _Tree_ {
         int root;
 
       public:
-        Tree(int reserved_vertex_size = 1, int reserved_edge_size = -1,
-             const int root = 0)
-            : Graph<E>(reserved_vertex_size, reserved_edge_size), root(root) {}
         Tree(Graph<E>& g, const int root = 0)
             : Forest<E>(g, root), root(root) {}
         inline int get_root() { return root; }
