@@ -31,11 +31,8 @@ namespace _Tree_ {
         /**
          * @brief
          * DFSで木を作る
-         * @param g 元のグラフ
-         * @param v 現在の頂点
-         * @param used 既訪問リスト
          */
-        void build(Graph<E>& g, int v, vector<bool>& used) {
+        void build_tree(Graph<E>& g, int v, vector<bool>& used) {
             used[v] = true;
             for (int edge_id : g[v]) {
                 auto e      = g.i2e(edge_id);
@@ -43,28 +40,23 @@ namespace _Tree_ {
                 if (used[u]) continue;
                 // add_arc(e);
                 this->add_arc(v, u);
-                build(g, u, used);
+                build_tree(g, u, used);
             }
         }
 
       public:
         /**
          * @brief
-         * 無向グラフから根付き森を新しく作る用のコンストラクタ
+         * 無向グラフから根付き森を作る
          * @see Graph::Graph()
          */
-        Forest(Graph<E>& g, const int loop_begin = 0)
+        Forest(Graph<E>& g, const int loop_begin_vtx = 0)
             : Graph<E>(g.size(), g.size() - 1) {
             vector<bool> used(g.size());
-            for (int v : range(loop_begin, g.size())) {
+            for (int v : range(loop_begin_vtx, g.size() + loop_begin_vtx)) {
+                v = v % g.size();
                 if (used[v] == false) {
-                    build(g, v, used);
-                    roots.push_back(v);
-                }
-            }
-            for (int v : range(loop_begin)) {
-                if (used[v] == false) {
-                    build(g, v, used);
+                    build_tree(g, v, used);
                     roots.push_back(v);
                 }
             }
