@@ -49,17 +49,17 @@ Graph<> treeSample() {
 }
 
 /**
- * @brief 連結成分を取得
+ * @brief DFSをして連結成分を取得
  * 処理をサボってN^2
  * @param v
  * @param forest
  * @return vector<int>
  */
-vector<int> get_component(int v, Forest<>& forest) {
+vector<int> collect_component(int v, Forest<>& forest) {
     vector<int> vs;
     vs.push_back(v);
     for (int u : forest.Ns(v)) {
-        for (auto c : get_component(u, forest)) {
+        for (auto c : collect_component(u, forest)) {
             vs.push_back(c);
         }
     }
@@ -145,7 +145,7 @@ BOOST_AUTO_TEST_CASE(Forest_checkEachDegree) {
 BOOST_AUTO_TEST_CASE(Forest_checkComponents1) {
     Graph<> arg = forestSample();
     Forest<> forest(arg);
-    vector<int> component = get_component(forest.get_roots()[0], forest);
+    vector<int> component = collect_component(forest.get_roots()[0], forest);
     sort(ALL(component));
     vector<int> expected = {0, 1, 2, 3, 4, 5};
     BOOST_CHECK_EQUAL_COLLECTIONS(component.begin(), component.end(),
@@ -158,7 +158,7 @@ BOOST_AUTO_TEST_CASE(Forest_checkComponents1) {
 BOOST_AUTO_TEST_CASE(Forest_checkComponents2) {
     Graph<> arg = forestSample();
     Forest<> forest(arg);
-    vector<int> component = get_component(forest.get_roots()[1], forest);
+    vector<int> component = collect_component(forest.get_roots()[1], forest);
     sort(ALL(component));
     vector<int> expected = {6, 7, 8, 9, 10};
     BOOST_CHECK_EQUAL_COLLECTIONS(component.begin(), component.end(),
@@ -237,7 +237,7 @@ BOOST_AUTO_TEST_CASE(Tree_checkEachDegree) {
 BOOST_AUTO_TEST_CASE(Tree_checkComponents) {
     Graph<> arg = treeSample();
     _Tree_::Tree<> tree(arg);
-    vector<int> component = get_component(tree.get_root(), tree);
+    vector<int> component = collect_component(tree.get_root(), tree);
     sort(ALL(component));
     vector<int> expected = {0, 1, 2, 3, 4, 5, 6, 7};
     BOOST_CHECK_EQUAL_COLLECTIONS(component.begin(), component.end(),
