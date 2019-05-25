@@ -80,6 +80,13 @@ namespace _Graph_ {
         inline int degree() { return edges.size(); }
 
         /**
+         * @brief
+         * グラフの頂点数を変更する
+         * @return int
+         */
+        inline void resize(const int n) { g.resize(n); }
+
+        /**
          * @brief "無向"辺(a,b)を追加する．
          * @param a 頂点番号
          * @param b 頂点番号
