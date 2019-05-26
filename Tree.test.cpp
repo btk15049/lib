@@ -244,6 +244,20 @@ BOOST_AUTO_TEST_CASE(Tree_checkComponents) {
                                   expected.begin(), expected.end());
 }
 
+BOOST_AUTO_TEST_CASE(resize) {
+    Graph<> arg = treeSample();
+    _Tree_::Tree<> tree(arg);
+    tree.resize(10);
+    BOOST_CHECK_EQUAL(tree.size(), 10);
+    vector<int> degrees;
+    for (int v : range(tree.size())) {
+        degrees.push_back(tree.degree(v));
+    }
+    vector<int> expected = {3, 2, 0, 1, 0, 0, 1, 0, 0, 0};
+
+    BOOST_CHECK_EQUAL_COLLECTIONS(degrees.begin(), degrees.end(),
+                                  expected.begin(), expected.end());
+}
 BOOST_AUTO_TEST_SUITE_END()
 /* #endregion */
 

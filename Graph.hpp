@@ -105,6 +105,26 @@ namespace _Graph_ {
         }
 
         /**
+         * @brief "無向"辺Eを追加する．
+         * @details paramsはemplace_backと同じノリで続けて足してけばOK
+         */
+
+
+        /**
+         * @brief 辺を追加 idは自動付与
+         * @param e
+         */
+        inline void add_edge(Edge e) {
+            e.id = edges.size();
+            if ((int)g.size() <= max(e.a, e.b)) {
+                g.resize(max(e.a, e.b) + 1);
+            }
+            g[e.a].emplace_back(e.id);
+            g[e.b].emplace_back(e.id);
+            edges.emplace_back(e);
+        }
+
+        /**
          * @brief "有向"辺(a,b)を追加する．
          * @param a 頂点番号
          * @param b 頂点番号
@@ -119,6 +139,19 @@ namespace _Graph_ {
             }
             g[a].emplace_back(id);
             edges.emplace_back(id, a, b, forward<Ts>(params)...);
+        }
+
+        /**
+         * @brief 辺を追加 idは自動付与
+         * @param e
+         */
+        inline void add_arc(Edge e) {
+            e.id = edges.size();
+            if ((int)g.size() <= max(e.a, e.b)) {
+                g.resize(max(e.a, e.b) + 1);
+            }
+            g[e.a].emplace_back(e.id);
+            edges.emplace_back(e);
         }
 
         /**
