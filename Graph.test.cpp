@@ -9,6 +9,7 @@
  */
 #define BOOST_TEST_MAIN
 #include "Graph.hpp"
+#include "GraphUtil.hpp"
 #include <boost/test/included/unit_test.hpp>
 
 BOOST_AUTO_TEST_SUITE(GraphTest)
@@ -37,5 +38,25 @@ BOOST_AUTO_TEST_CASE(resize) {
         BOOST_CHECK_EQUAL(target.degree(vi), 0);
     }
 }
+BOOST_AUTO_TEST_SUITE_END()
+BOOST_AUTO_TEST_SUITE(GraphUtilClass)
+
+Graph<WeightedEdge<int>> sample_weighted_graph() {
+    Graph<WeightedEdge<int>> g;
+    g.add_edge(2, 0, 4);
+    g.add_edge(1, 2, 1);
+    g.add_edge(1, 3, 2);
+    g.add_edge(3, 0, 0);
+    return g;
+}
+
+BOOST_AUTO_TEST_CASE(Dijkstra) {
+    auto target          = sample_weighted_graph();
+    vector<int> actual   = dijkstra(target, (int)1e9, 2);
+    vector<int> expected = {3, 1, 0, 3};
+    BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
+                                  end(expected));
+}
+
 
 BOOST_AUTO_TEST_SUITE_END() BOOST_AUTO_TEST_SUITE_END()

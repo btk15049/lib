@@ -53,6 +53,7 @@ namespace _Tree_ {
          */
         Forest(Graph<E>& g, const int loop_begin_vtx = 0)
             : Graph<E>(g.size(), g.size() - 1) {
+            this->resize(g.size());
             vector<bool> used(g.size());
             for (int v : range(loop_begin_vtx, g.size() + loop_begin_vtx)) {
                 v = v % g.size();

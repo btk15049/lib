@@ -36,6 +36,29 @@ namespace _Graph_ {
          */
         inline int versus(const int v) const { return a ^ b ^ v; }
     };
+
+    /**
+    * @brief 重み付き辺を扱う構造体の例
+    * @details
+        辺に重みなどを加えたい場合は変数とかを増やして作る．
+        Graphに使うために必要な要件:
+        - id,a,bは必須，他のパラメータ増やすときはコンストラクタを忘れずに
+        - versusは必須，基本的にコピペでOK
+    */
+    template<typename COST_TYPE>
+    struct WeightedEdge {
+        int id, a, b;
+        COST_TYPE cost;
+
+        WeightedEdge(int id = 0, int a = 0, int b = 0, int cost = 0)
+            : id(id), a(a), b(b), cost(cost) {}
+        /**
+         * @brief 辺における，vの対になってる頂点番号を取得する
+         * @param v 頂点番号
+         * @return int vじゃない方の頂点番号
+         */
+        inline int versus(const int v) const { return a ^ b ^ v; }
+    };
     /**
      * @brief グラフクラス
      * @tparam E=Edge 新たなグラフクラス作るときは書き換える
@@ -114,7 +137,7 @@ namespace _Graph_ {
          * @brief 辺を追加 idは自動付与
          * @param e
          */
-        inline void add_edge(Edge e) {
+        inline void add_edge(E e) {
             e.id = edges.size();
             if ((int)g.size() <= max(e.a, e.b)) {
                 g.resize(max(e.a, e.b) + 1);
@@ -145,7 +168,7 @@ namespace _Graph_ {
          * @brief 辺を追加 idは自動付与
          * @param e
          */
-        inline void add_arc(Edge e) {
+        inline void add_arc(E e) {
             e.id = edges.size();
             if ((int)g.size() <= max(e.a, e.b)) {
                 g.resize(max(e.a, e.b) + 1);
