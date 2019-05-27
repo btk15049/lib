@@ -1,17 +1,18 @@
+/**
+ * @file RollingHash.hpp
+ * @brief ローリングハッシュ
+ * @author btk15049
+ * @date 2019/03/08
+ * @datails
+ *  verify: CSA12E，RUPC day3 E
+ */
+
 /*<head>*/
 #pragma once
 #include "Template.hpp"
 /*</head>*/
 
 namespace _RollingHash_ {
-    /**
-     * @file RollingHash.hpp
-     * @brief ローリングハッシュ
-     * @author btk15049
-     * @date 2019/03/08
-     * @datails
-     *  verify: CSA12E，RUPC day3 E
-     */
     /**
      * @brief ローリングハッシュ
      * @details
