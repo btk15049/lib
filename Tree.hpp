@@ -32,14 +32,15 @@ namespace _Tree_ {
          * @brief
          * DFSで木を作る
          */
-        void build_tree(Graph<E>& g, int v, vector<bool>& used) {
+        void build_tree(Graph<E>& g, const int v, vector<bool>& used) {
             used[v] = true;
             for (int edge_id : g[v]) {
                 auto e      = g.i2e(edge_id);
                 const int u = e.versus(v);
                 if (used[u]) continue;
-                // add_arc(e);
-                this->add_arc(v, u);
+                e.a = v;
+                e.b = u;
+                this->add_arc(e);
                 build_tree(g, u, used);
             }
         }
@@ -52,6 +53,7 @@ namespace _Tree_ {
          */
         Forest(Graph<E>& g, const int loop_begin_vtx = 0)
             : Graph<E>(g.size(), g.size() - 1) {
+            this->resize(g.size());
             vector<bool> used(g.size());
             for (int v : range(loop_begin_vtx, g.size() + loop_begin_vtx)) {
                 v = v % g.size();
