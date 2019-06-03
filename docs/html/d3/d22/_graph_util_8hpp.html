@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>btk&#39;s library: GraphUtil.hpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">btk&#39;s library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">GraphUtil.hpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Graphクラスを使ったライブラリ(dijkstraなど)を管理  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../da/d72/_graph_8hpp_source.html">Graph.hpp</a>&quot;</code><br />
+</div>
+<p><a href="../../d3/d22/_graph_util_8hpp_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:afb58409dd5c93ea81508e9aa253bd9ac"><td class="memTemplParams" colspan="2">template&lt;typename E , typename COST_TYPE &gt; </td></tr>
+<tr class="memitem:afb58409dd5c93ea81508e9aa253bd9ac"><td class="memTemplItemLeft" align="right" valign="top">vector&lt; COST_TYPE &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d22/_graph_util_8hpp.html#afb58409dd5c93ea81508e9aa253bd9ac">_GraphUtil_::dijkstra</a> (<a class="el" href="../../d3/da5/class___graph___1_1_graph.html">Graph</a>&lt; E &gt; &amp;g, COST_TYPE inf, const int s=0)</td></tr>
+<tr class="memdesc:afb58409dd5c93ea81508e9aa253bd9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">通常のダイクストラ  <a href="../../d3/d22/_graph_util_8hpp.html#afb58409dd5c93ea81508e9aa253bd9ac">[詳解]</a><br /></td></tr>
+<tr class="separator:afb58409dd5c93ea81508e9aa253bd9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Graphクラスを使ったライブラリ(dijkstraなど)を管理 </p>
+<dl class="section author"><dt>著者</dt><dd>btk </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2019-05-26 </dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>Copyright (c) 2019 </dd></dl>
+
+<p class="definition"> <a class="el" href="../../d3/d22/_graph_util_8hpp_source.html">GraphUtil.hpp</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="file_afb58409dd5c93ea81508e9aa253bd9ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_afb58409dd5c93ea81508e9aa253bd9ac">&#9670;&nbsp;</a></span>dijkstra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename E , typename COST_TYPE &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;COST_TYPE&gt; _GraphUtil_::dijkstra </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/da5/class___graph___1_1_graph.html">Graph</a>&lt; E &gt; &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COST_TYPE&#160;</td>
+          <td class="paramname"><em>inf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>s</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通常のダイクストラ </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">E</td><td>重み付き辺構造体　.costをメンバにもつ必要あり </td></tr>
+    <tr><td class="paramname">COST_TYPE</td><td>コストの型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>グラフ </td></tr>
+    <tr><td class="paramname">s</td><td>始点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>vector&lt;int&gt; </dd></dl>
+<p>TODO interval heapを使う </p>
+
+<p class="definition"> <a class="el" href="../../d3/d22/_graph_util_8hpp_source.html">GraphUtil.hpp</a> の <a class="el" href="../../d3/d22/_graph_util_8hpp_source.html#l00026">26</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
