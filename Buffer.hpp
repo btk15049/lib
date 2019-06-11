@@ -11,6 +11,11 @@
  * @datails
  */
 namespace _Buffer_ {
+    /**
+     * @brief
+     * バッファは基本的にこれを継承する
+     * @tparam T
+     */
     template <typename T>
     class BufferManager {
       protected:
@@ -18,9 +23,24 @@ namespace _Buffer_ {
 
       public:
         BufferManager(T* buf) : buf(buf) {}
+        /**
+         * @brief
+         * size分バッファを取得
+         * @param size
+         * @return T*
+         */
         virtual T* pop(int size) = 0;
-        virtual void push(T* p)  = 0;
-        virtual void clear()     = 0;
+        /**
+         * @brief
+         * 領域をマネージャに返却（解放）する
+         * @param p
+         */
+        virtual void push(T* p) = 0;
+        /**
+         * @brief
+         * マネージャのリセット
+         */
+        virtual void clear() = 0;
     };
 
     template <typename T>
@@ -41,6 +61,12 @@ namespace _Buffer_ {
         void clear() { ptr = 0; }
     };
 
+    /**
+     * @brief
+     * blocks*block_size分の領域をblocks個に区切って、やりくりする。
+     * 使わなくなったらpopで返すのを忘れずに
+     * @tparam T
+     */
     template <typename T>
     class BlockBufferManager : public BufferManager<T> {
       private:
@@ -68,6 +94,11 @@ namespace _Buffer_ {
 } // namespace _Buffer_
 using namespace _Buffer_;
 
+/**
+ * @brief
+ * [var_name]という名前のBlockBufferManagerを生成する
+ * type型で、大きさ　block_size の領域をblocks分生成
+ */
 #define BlockBuffer(type, blocks, block_size, var_name) \
     type var_name##_mem[(blocks) * (block_size)];       \
     BlockBufferManager<type> var_name(var_name##_mem, (blocks), (block_size));
