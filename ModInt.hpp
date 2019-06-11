@@ -54,6 +54,12 @@ namespace _ModInt_ {
         ModInt(const long long y) { x = (int)((mod + y % mod) % mod); }
 
         /**
+         * @brief ModIntからの代入演算子
+         * @param[in] o 設定したい値
+         * @details 高速
+         */
+        ModInt(const ModInt& o) { this->x = *o; }
+        /**
          * @brief 整数から高速にModIntを作りたいときに使う
          * @param[in] x 設定したい値
          * @details xが[0,mod)であることが保証されてないと正しく動かない．
@@ -88,6 +94,16 @@ namespace _ModInt_ {
          */
         ModInt& operator=(const long long o) {
             this->x = (int)((mod + o % mod) % mod);
+            return *this;
+        }
+
+        /**
+         * @brief ModIntからの代入演算子
+         * @param[in] o 設定したい値
+         * @details 高速
+         */
+        ModInt& operator=(const ModInt o) {
+            this->x = *o;
             return *this;
         }
     };
@@ -255,6 +271,48 @@ namespace _ModInt_ {
     */
     inline ModInt operator^(const ModInt l, const long long r) {
         return pow(l, r);
+    }
+
+    /**
+     * @brief
+     * +=の実装、各operator+を呼ぶだけ
+     * @tparam T
+     * @param l ModInt
+     * @param r 足すやつ
+     * @return ModInt&
+     */
+    template <typename T>
+    ModInt& operator+=(ModInt& l, T r) {
+        l = l + r;
+        return l;
+    }
+
+    /**
+     * @brief
+     * -=の実装、各operator-を呼ぶだけ
+     * @tparam T
+     * @param l ModInt
+     * @param r 引くやつ
+     * @return ModInt&
+     */
+    template <typename T>
+    ModInt& operator-=(ModInt& l, T r) {
+        l = l - r;
+        return l;
+    }
+
+    /**
+     * @brief
+     * *=の実装、各operator*を呼ぶだけ
+     * @tparam T
+     * @param l ModInt
+     * @param r かけるやつ
+     * @return ModInt&
+     */
+    template <typename T>
+    ModInt& operator*=(ModInt& l, T r) {
+        l = l * r;
+        return l;
     }
 
     /**
