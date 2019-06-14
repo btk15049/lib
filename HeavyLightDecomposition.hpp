@@ -87,15 +87,23 @@ namespace _HeavyLightDecomposition_ {
             }
             for (int i : range(f.degree(v))) {
                 if (top == i) continue;
-                const int u = f.i2e(f[v][i]).versus(v);
-                par[u]      = v;
-                col_root[++col_id]=seg_id;
+                const int u        = f.i2e(f[v][i]).versus(v);
+                par[u]             = v;
+                col_root[++col_id] = seg_id;
                 coloring(u, sub, f, seg_id, col_id);
             }
         }
 
-
       public:
+        inline int color(int v) const { return col[v]; }
+
+        inline int id(const int v) const { return v2i[v]; }
+
+        inline int vertex(const int id) const { return i2v[id]; }
+
+        inline int parent(const int v) const { return par[v]; }
+
+
         /**
          * @brief
          * 色col_idが表すパスの長さ(頂点数）を取得
@@ -122,7 +130,6 @@ namespace _HeavyLightDecomposition_ {
                 if (col[v] > col[u]) swap(v, u);
                 u = par[i2v[col_root[col[u]]]];
             }
-            cerr << v << " " << u << endl;
             if (v == super_root || u == super_root) return super_root;
             return i2v[min(v2i[v], v2i[u])];
         }
@@ -136,19 +143,20 @@ namespace _HeavyLightDecomposition_ {
         HeavyLightDecomposition(Forest<E>& f, BufferManager<int>& lender)
             : lender(lender) {
             const int n = f.size();
-            col         = lender.pop(n + 10);
-            v2i         = lender.pop(n + 10);
-            i2v         = lender.pop(n + 10);
-            col_root    = lender.pop(n + 10);
-            par         = lender.pop(n + 10);
+
+            col      = lender.pop(n + 10);
+            v2i      = lender.pop(n + 10);
+            i2v      = lender.pop(n + 10);
+            col_root = lender.pop(n + 10);
+            par      = lender.pop(n + 10);
 
             int col_id = 0;
             int seg_id = 0;
             vector<int> sub(n, 0);
             for (int r : f.get_roots()) {
                 compute_subtrees(r, sub, f);
-                par[r] = super_root;
-                col_root[col_id]=seg_id;
+                par[r]           = super_root;
+                col_root[col_id] = seg_id;
                 coloring(r, sub, f, seg_id, col_id);
                 col_id++;
             }
@@ -166,12 +174,6 @@ namespace _HeavyLightDecomposition_ {
             lender.push(col_root);
             lender.push(par);
         }
-
-        inline int get_color(int v) const { return col[v]; }
-
-        inline int get_id(const int v) const { return v2i[v]; }
-
-        inline int get_vertex(const int id) const { return i2v[id]; }
     };
 } // namespace _HeavyLightDecomposition_
 using namespace _HeavyLightDecomposition_;

@@ -56,7 +56,7 @@ BOOST_AUTO_TEST_CASE(coloringTest) {
     vector<int> expected = {0, 0, 0, 0, 2, 0, 3, 3, 4, 5, 4, 4, 1};
     vector<int> actual;
     for (int v : range(forest.size())) {
-        actual.push_back(hld.get_color(v));
+        actual.push_back(hld.color(v));
     }
     BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
                                   end(expected));
