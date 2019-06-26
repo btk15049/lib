@@ -14,11 +14,10 @@
 #include "Template.hpp"
 /*</head>*/
 
-/**
- * @brief
- * KMPテーブルを管理するやつ
- */
 namespace _KMP_ {
+    /**
+     * @brief KMPをするクラス
+     */
     class KMP {
       private:
         string keyword;

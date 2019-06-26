@@ -81,6 +81,7 @@ $(function() {
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファは基本的にこれを継承する  <a href="../../d7/d2e/class___buffer___1_1_buffer_manager.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d73/class___buffer___1_1_disposable_buffer_manager.html">_Buffer_::DisposableBufferManager&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">使った分だけメモリを使い捨てするmaneger 使い回ししたい場合には不向き  <a href="../../d4/d73/class___buffer___1_1_disposable_buffer_manager.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d68/class___buffer___1_1_block_buffer_manager.html">_Buffer_::BlockBufferManager&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">blocks*block_size分の領域をblocks個に区切って、やりくりする。 使わなくなったらpopで返すのを忘れずに  <a href="../../d4/d68/class___buffer___1_1_block_buffer_manager.html#details">[詳解]</a><br /></td></tr>
@@ -139,7 +140,7 @@ $(function() {
 <b>値:</b><div class="fragment"><div class="line">type var_name##_mem[(blocks) * (block_size)];       \</div><div class="line">    BlockBufferManager&lt;type&gt; var_name(var_name##_mem, (blocks), (block_size));</div></div><!-- fragment -->
 <p>[var_name]という名前のBlockBufferManagerを生成する type型で、大きさ　block_size の領域をblocks分生成 </p>
 
-<p class="definition"> <a class="el" href="../../dd/df1/_buffer_8hpp_source.html">Buffer.hpp</a> の <a class="el" href="../../dd/df1/_buffer_8hpp_source.html#l00102">102</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/df1/_buffer_8hpp_source.html">Buffer.hpp</a> の <a class="el" href="../../dd/df1/_buffer_8hpp_source.html#l00163">163</a> 行目に定義があります。</p>
 
 </div>
 </div>

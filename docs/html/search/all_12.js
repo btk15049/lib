@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['table',['Table',['../df/d3d/class___rolling_hash___1_1_rolling_hash_1_1_table.html',1,'_RollingHash_::RollingHash&lt; base, mod &gt;::Table'],['../df/d3d/class___rolling_hash___1_1_rolling_hash_1_1_table.html#a4ccbac294733ca4c3401823017507657',1,'_RollingHash_::RollingHash::Table::Table()'],['../df/d3d/class___rolling_hash___1_1_rolling_hash_1_1_table.html#ab3d9cbe626412b33f7d3ea74362b47d6',1,'_RollingHash_::RollingHash::Table::Table(const string s)']]],
-  ['template_2ehpp',['Template.hpp',['../df/dc0/_template_8hpp.html',1,'']]],
-  ['todo一覧',['todo一覧',['../dd/da0/todo.html',1,'']]],
-  ['tree',['Tree',['../d4/d30/class___tree___1_1_tree.html',1,'_Tree_']]],
-  ['tree_2ehpp',['Tree.hpp',['../d2/d21/_tree_8hpp.html',1,'']]],
-  ['tree_2etest_2ecpp',['Tree.test.cpp',['../d6/d94/_tree_8test_8cpp.html',1,'']]],
-  ['treesample',['treeSample',['../d6/d94/_tree_8test_8cpp.html#a8650c7bec5069b9877678230db3345a7',1,'Tree.test.cpp']]]
+  ['unionfind',['UnionFind',['../d1/d06/class___union_find___1_1_union_find.html',1,'_UnionFind_::UnionFind'],['../d1/d06/class___union_find___1_1_union_find.html#aa3741e177a47a16b90677fcd8e55bfd4',1,'_UnionFind_::UnionFind::UnionFind()']]],
+  ['unionfind_2ehpp',['UnionFind.hpp',['../df/dbf/_union_find_8hpp.html',1,'']]],
+  ['unite',['unite',['../d1/d06/class___union_find___1_1_union_find.html#a0285b0fa3ee2a72e9fe7043c10f8e144',1,'_UnionFind_::UnionFind']]],
+  ['unused_5fvar',['unused_var',['../df/dc0/_template_8hpp.html#ad44abd0cbb12399cafbf3bd79037e6fc',1,'_Template_']]]
 ];

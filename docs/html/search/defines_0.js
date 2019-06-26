@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['blockbuffer',['BlockBuffer',['../dd/df1/_buffer_8hpp.html#a56d0b3ab0297feafabb67f3ec8f60f72',1,'Buffer.hpp']]]
+  ['all',['ALL',['../df/dc0/_template_8hpp.html#ac8d63d917b27253e2b885ced116c8e50',1,'Template.hpp']]]
 ];

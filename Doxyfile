@@ -817,7 +817,7 @@ INPUT                  =    Template.hpp \
                             ModInt.hpp \
                             RollingHash.hpp \
                             Graph.hpp \
-                            Graph.test.hpp \
+                            Graph.test.cpp \
                             Dinic.hpp \
                             Tree.hpp \
                             Tree.test.cpp \

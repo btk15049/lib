@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['unionfind',['UnionFind',['../d1/d06/class___union_find___1_1_union_find.html',1,'_UnionFind_::UnionFind'],['../d1/d06/class___union_find___1_1_union_find.html#aa3741e177a47a16b90677fcd8e55bfd4',1,'_UnionFind_::UnionFind::UnionFind()']]],
-  ['unionfind_2ehpp',['UnionFind.hpp',['../df/dbf/_union_find_8hpp.html',1,'']]],
-  ['unite',['unite',['../d1/d06/class___union_find___1_1_union_find.html#a0285b0fa3ee2a72e9fe7043c10f8e144',1,'_UnionFind_::UnionFind']]],
-  ['unused_5fvar',['unused_var',['../df/dc0/_template_8hpp.html#ad44abd0cbb12399cafbf3bd79037e6fc',1,'_Template_']]]
+  ['versus',['versus',['../d8/dda/struct___graph___1_1_edge.html#ab44a5c7a7848c5db53883f2b69decb18',1,'_Graph_::Edge::versus()'],['../dd/d9b/struct___graph___1_1_weighted_edge.html#a0d587aceb90cd6f3bc9f04eae55adc55',1,'_Graph_::WeightedEdge::versus()'],['../d7/daf/struct___dinic___1_1_flow_edge.html#ab62a280b97bc65524c575021971ec259',1,'_Dinic_::FlowEdge::versus()']]],
+  ['vertex',['vertex',['../d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#a1ef1e791c45431a472890c6f69f916e5',1,'_HeavyLightDecomposition_::HeavyLightDecomposition']]]
 ];

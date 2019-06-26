@@ -95,12 +95,36 @@ namespace _HeavyLightDecomposition_ {
         }
 
       public:
+        /**
+         * @brief
+         * get color of v
+         * @param v
+         * @return int
+         */
         inline int color(int v) const { return col[v]; }
 
+        /**
+         * @brief
+         * get id of v
+         * @param v
+         * @return int
+         */
         inline int id(const int v) const { return v2i[v]; }
 
+        /**
+         * @brief
+         * get v of id
+         * @param id
+         * @return int
+         */
         inline int vertex(const int id) const { return i2v[id]; }
 
+        /**
+         * @brief
+         * get parent of v
+         * @param v
+         * @return int
+         */
         inline int parent(const int v) const { return par[v]; }
 
 

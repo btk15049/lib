@@ -21,8 +21,12 @@ namespace _Graph_ {
         - versusは必須，基本的にコピペでOK
     */
     struct Edge {
-        //! 辺edges[id] = {a,b}
-        int id, a, b;
+        //! 辺id
+        int id;
+        //! 端点
+        int a;
+        //! 端点
+        int b;
         /**
          * @brief Construct a new Edge object
          * @param id 辺番号
@@ -48,9 +52,23 @@ namespace _Graph_ {
     */
     template <typename COST_TYPE>
     struct WeightedEdge {
-        int id, a, b;
+        //! 辺id
+        int id;
+        //! 端点
+        int a;
+        //! 端点
+        int b;
+        //! 辺重み
         COST_TYPE cost;
 
+        /**
+         * @brief Construct a new Weighted Edge object
+         *
+         * @param id
+         * @param a
+         * @param b
+         * @param cost
+         */
         WeightedEdge(int id = 0, int a = 0, int b = 0, int cost = 0)
             : id(id), a(a), b(b), cost(cost) {}
         /**

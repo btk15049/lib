@@ -27,6 +27,10 @@ Graph<> sample_undirected_path() {
     return g;
 }
 
+/**
+ * @brief Construct a new boost auto test case object
+ *
+ */
 BOOST_AUTO_TEST_CASE(resize) {
     auto target = sample_undirected_path();
     target.resize(10);
@@ -41,6 +45,11 @@ BOOST_AUTO_TEST_CASE(resize) {
 BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE(GraphUtilClass)
 
+/**
+ * @brief
+ *
+ * @return Graph<WeightedEdge<int>>
+ */
 Graph<WeightedEdge<int>> sample_weighted_graph() {
     Graph<WeightedEdge<int>> g;
     g.add_edge(2, 0, 4);
@@ -50,6 +59,10 @@ Graph<WeightedEdge<int>> sample_weighted_graph() {
     return g;
 }
 
+/**
+ * @brief Construct a new boost auto test case object
+ * ダイクストラのテスト
+ */
 BOOST_AUTO_TEST_CASE(Dijkstra) {
     auto target          = sample_weighted_graph();
     vector<int> actual   = dijkstra(target, (int)1e9, 2);

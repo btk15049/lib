@@ -244,6 +244,10 @@ BOOST_AUTO_TEST_CASE(Tree_checkComponents) {
                                   expected.begin(), expected.end());
 }
 
+/**
+ * @brief resizeのテスト
+ *
+ */
 BOOST_AUTO_TEST_CASE(resize) {
     Graph<> arg = treeSample();
     _Tree_::Tree<> tree(arg);

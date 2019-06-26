@@ -20,14 +20,23 @@ namespace _Dinic_ {
      */
     template <typename F>
     struct FlowEdge {
-        int id, a, b;
+        //! 辺id
+        int id;
+        //! 端点
+        int a;
+        //! 端点
+        int b;
+        //! その辺に流せる流量
         F cap;
+        //! 逆向き辺のid
         int rev;
         /**
          * @brief Construct a new Edge object
          * @param id 辺番号
          * @param a 辺に接続する頂点番号
          * @param b 辺に接続する頂点番号
+         * @param cap 辺に許容できる流量
+         * @param rev 対応する逆向き辺のid
          */
         FlowEdge(int id = 0, int a = 0, int b = 0, F cap = 0, int rev = 0)
             : id(id), a(a), b(b), cap(cap), rev(rev) {}

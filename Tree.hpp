@@ -71,15 +71,33 @@ namespace _Tree_ {
         vector<int> get_roots() { return roots; }
     };
 
+    /**
+     * @brief
+     * "木"に限定したクラス
+     * @tparam Edge 辺構造体
+     */
     template <typename E = Edge>
     class Tree : public Forest<E> {
       private:
         using Forest<E>::get_roots;
+        //! 根
         int root;
 
       public:
+        /**
+         * @brief Construct a new Tree object
+         *
+         * @param g 元のグラフ
+         * @param root 根を明示的に指定したい時
+         */
         Tree(Graph<E>& g, const int root = 0)
             : Forest<E>(g, root), root(root) {}
+
+        /**
+         * @brief Get the root object
+         *
+         * @return int
+         */
         inline int get_root() { return root; }
     };
 } // namespace _Tree_

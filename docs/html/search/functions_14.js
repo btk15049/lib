@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7eheavylightdecomposition',['~HeavyLightDecomposition',['../d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#a96ddabece99db949168f0c052cecb815',1,'_HeavyLightDecomposition_::HeavyLightDecomposition']]]
+  ['weightededge',['WeightedEdge',['../dd/d9b/struct___graph___1_1_weighted_edge.html#af4c2af2c7c109230136938e0276f5d39',1,'_Graph_::WeightedEdge']]]
 ];

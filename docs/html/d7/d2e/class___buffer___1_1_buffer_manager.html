@@ -85,14 +85,14 @@ _Buffer_::BufferManager&lt; T &gt; の継承関係図</div>
   <img src="../../d7/d2e/class___buffer___1_1_buffer_manager.png" usemap="#_5FBuffer_5F::BufferManager_3C_20T_20_3E_map" alt=""/>
   <map id="_5FBuffer_5F::BufferManager_3C_20T_20_3E_map" name="_5FBuffer_5F::BufferManager_3C_20T_20_3E_map">
 <area href="../../d4/d68/class___buffer___1_1_block_buffer_manager.html" title="blocks*block_size分の領域をblocks個に区切って、やりくりする。 使わなくなったらpopで返すのを忘れずに" alt="_Buffer_::BlockBufferManager&lt; T &gt;" shape="rect" coords="0,56,246,80"/>
-<area href="../../d4/d73/class___buffer___1_1_disposable_buffer_manager.html" alt="_Buffer_::DisposableBufferManager&lt; T &gt;" shape="rect" coords="256,56,502,80"/>
+<area href="../../d4/d73/class___buffer___1_1_disposable_buffer_manager.html" title="使った分だけメモリを使い捨てするmaneger 使い回ししたい場合には不向き" alt="_Buffer_::DisposableBufferManager&lt; T &gt;" shape="rect" coords="256,56,502,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:acae08fb2ed51477be120049b2151521a"><td class="memItemLeft" align="right" valign="top"><a id="acae08fb2ed51477be120049b2151521a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BufferManager</b> (T *buf)</td></tr>
+<tr class="memitem:acae08fb2ed51477be120049b2151521a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html#acae08fb2ed51477be120049b2151521a">BufferManager</a> (T *<a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html#add8184d3b94b0f226400b01f44c6775a">buf</a>)</td></tr>
+<tr class="memdesc:acae08fb2ed51477be120049b2151521a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Buffer Manager object  <a href="#acae08fb2ed51477be120049b2151521a">[詳解]</a><br /></td></tr>
 <tr class="separator:acae08fb2ed51477be120049b2151521a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af246130caab43d5ce6cc43c06526b625"><td class="memItemLeft" align="right" valign="top">virtual T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html#af246130caab43d5ce6cc43c06526b625">pop</a> (int size)=0</td></tr>
 <tr class="memdesc:af246130caab43d5ce6cc43c06526b625"><td class="mdescLeft">&#160;</td><td class="mdescRight">size分バッファを取得  <a href="#af246130caab43d5ce6cc43c06526b625">[詳解]</a><br /></td></tr>
@@ -107,8 +107,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
-<tr class="memitem:add8184d3b94b0f226400b01f44c6775a"><td class="memItemLeft" align="right" valign="top"><a id="add8184d3b94b0f226400b01f44c6775a"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><b>buf</b></td></tr>
+<tr class="memitem:add8184d3b94b0f226400b01f44c6775a"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html#add8184d3b94b0f226400b01f44c6775a">buf</a></td></tr>
+<tr class="memdesc:add8184d3b94b0f226400b01f44c6775a"><td class="mdescLeft">&#160;</td><td class="mdescRight">本体、ポインタで管理  <a href="#add8184d3b94b0f226400b01f44c6775a">[詳解]</a><br /></td></tr>
 <tr class="separator:add8184d3b94b0f226400b01f44c6775a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -124,7 +124,46 @@ class _Buffer_::BufferManager&lt; T &gt;</h3>
 </dl>
 
 <p class="definition"> <a class="el" href="../../dd/df1/_buffer_8hpp_source.html">Buffer.hpp</a> の <a class="el" href="../../dd/df1/_buffer_8hpp_source.html#l00020">20</a> 行目に定義があります。</p>
-</div><h2 class="groupheader">関数詳解</h2>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="acae08fb2ed51477be120049b2151521a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae08fb2ed51477be120049b2151521a">&#9670;&nbsp;</a></span>BufferManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html">_Buffer_::BufferManager</a>&lt; T &gt;::<a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html">BufferManager</a> </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new Buffer Manager object </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="../../dd/df1/_buffer_8hpp_source.html">Buffer.hpp</a> の <a class="el" href="../../dd/df1/_buffer_8hpp_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
 <a id="af246130caab43d5ce6cc43c06526b625"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af246130caab43d5ce6cc43c06526b625">&#9670;&nbsp;</a></span>pop()</h2>
 
@@ -199,6 +238,36 @@ template&lt;typename T&gt; </div>
 </dl>
 
 <p><a class="el" href="../../d4/d68/class___buffer___1_1_block_buffer_manager.html#a8dcac70ec0b8fc99ef2706935e1ce966">_Buffer_::BlockBufferManager&lt; T &gt;</a>, <a class="el" href="../../d4/d73/class___buffer___1_1_disposable_buffer_manager.html#a0d94a4dae3b5d4c344af28167f46190f">_Buffer_::DisposableBufferManager&lt; T &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="add8184d3b94b0f226400b01f44c6775a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add8184d3b94b0f226400b01f44c6775a">&#9670;&nbsp;</a></span>buf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html">_Buffer_::BufferManager</a>&lt; T &gt;::buf</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>本体、ポインタで管理 </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000004">todo:</a></b></dt><dd>unique_ptrに変更 </dd></dl>
+
+<p class="definition"> <a class="el" href="../../dd/df1/_buffer_8hpp_source.html">Buffer.hpp</a> の <a class="el" href="../../dd/df1/_buffer_8hpp_source.html#l00027">27</a> 行目に定義があります。</p>
 
 </div>
 </div>

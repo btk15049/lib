@@ -19,9 +19,19 @@ namespace _Buffer_ {
     template <typename T>
     class BufferManager {
       protected:
+        /**
+         * @brief
+         * 本体、ポインタで管理
+         * \todo unique_ptrに変更
+         */
         T* buf;
 
       public:
+        /**
+         * @brief Construct a new Buffer Manager object
+         *
+         * @param buf
+         */
         BufferManager(T* buf) : buf(buf) {}
         /**
          * @brief
@@ -43,21 +53,48 @@ namespace _Buffer_ {
         virtual void clear() = 0;
     };
 
+    /**
+     * @brief 使った分だけメモリを使い捨てするmaneger
+     * 使い回ししたい場合には不向き
+     *
+     * @tparam T
+     */
     template <typename T>
     class DisposableBufferManager : public BufferManager<T> {
       private:
+        //! どこまで使ったかを管理
         int ptr;
 
       public:
+        /**
+         * @brief Construct a new Disposable Buffer Manager object
+         *
+         * @param buf
+         */
         DisposableBufferManager(T* buf) : BufferManager<T>(buf), ptr(0){};
 
+        /**
+         * @brief ポインタを返して、使った分だけptrを進める
+         *
+         * @param size 欲しい領域のサイズ
+         * @return T*
+         */
         T* pop(int size) {
             ptr += size;
             return this->buf + ptr - size;
         }
 
+        /**
+         * @brief 何もしない
+         *
+         * @param p
+         */
         void push(T* p) {}
 
+        /**
+         * @brief ptrをリセット
+         *
+         */
         void clear() { ptr = 0; }
     };
 
@@ -70,9 +107,17 @@ namespace _Buffer_ {
     template <typename T>
     class BlockBufferManager : public BufferManager<T> {
       private:
+        //! 使われてないblockをキューで管理
         std::queue<T*> que;
 
       public:
+        /**
+         * @brief Construct a new Block Buffer Manager object
+         *
+         * @param buf
+         * @param blocks
+         * @param block_size
+         */
         BlockBufferManager(T* buf, int blocks, int block_size)
             : BufferManager<T>(buf) {
             for (int i : range(blocks)) {
@@ -80,14 +125,29 @@ namespace _Buffer_ {
             }
         };
 
+        /**
+         * @brief　blockを取得
+         *
+         * @param size 意味ないよ
+         * @return T*
+         */
         T* pop(int size = 0) {
             T* ptr = que.front();
             que.pop();
             return ptr;
         }
 
+        /**
+         * @brief デストラクタとかでpush呼ぶのを忘れずに
+         *
+         * @param p
+         */
         void push(T* p) { que.push(p); }
 
+        /**
+         * @brief 今の所何もしない
+         * \todo 要検討
+         */
         void clear() {}
     };
 
@@ -95,6 +155,7 @@ namespace _Buffer_ {
 using namespace _Buffer_;
 
 /**
+ * @def BlockBuffer(type, blocks, block_size, var_name)
  * @brief
  * [var_name]という名前のBlockBufferManagerを生成する
  * type型で、大きさ　block_size の領域をblocks分生成

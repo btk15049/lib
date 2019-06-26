@@ -35,6 +35,9 @@ Tree<> forestSample() {
     return Tree<>(g);
 }
 
+/**
+ * @brief 領域確保
+ */
 BlockBuffer(int, 5, 212345, blocks);
 
 BOOST_AUTO_TEST_SUITE(HeavyLightDecompositionClass)

@@ -19,6 +19,7 @@ namespace _GraphUtil_ {
      * @tparam E 重み付き辺構造体　.costをメンバにもつ必要あり
      * @tparam COST_TYPE コストの型
      * @param g グラフ
+     * @param inf 流量のinf
      * @param s 始点
      * @return vector<int>
      */
