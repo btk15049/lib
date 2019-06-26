@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['edge',['Edge',['../d8/dda/struct___graph___1_1_edge.html',1,'_Graph_']]]
+  ['dinic',['Dinic',['../d4/d02/class___dinic___1_1_dinic.html',1,'_Dinic_']]],
+  ['disposablebuffermanager',['DisposableBufferManager',['../d4/d73/class___buffer___1_1_disposable_buffer_manager.html',1,'_Buffer_']]]
 ];

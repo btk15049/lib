@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dinic_2ehpp',['Dinic.hpp',['../db/dd6/_dinic_8hpp.html',1,'']]]
+  ['buffer_2ehpp',['Buffer.hpp',['../dd/df1/_buffer_8hpp.html',1,'']]]
 ];

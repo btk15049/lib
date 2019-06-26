@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['table',['Table',['../df/d3d/class___rolling_hash___1_1_rolling_hash_1_1_table.html',1,'_RollingHash_::RollingHash']]],
-  ['tree',['Tree',['../d4/d30/class___tree___1_1_tree.html',1,'_Tree_']]]
+  ['matrix',['Matrix',['../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html',1,'_MATRIX_']]],
+  ['matrix_3c_20t_2c_20r_2c_20r_20_3e',['Matrix&lt; T, r, r &gt;',['../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html',1,'_MATRIX_']]],
+  ['modint',['ModInt',['../dc/d6d/class___mod_int___1_1_mod_int.html',1,'_ModInt_']]]
 ];

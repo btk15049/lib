@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>btk&#39;s library: _MATRIX_::Matrix&lt; T, row_size, col_size &gt; クラステンプレート</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">btk&#39;s library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>_MATRIX_</b></li><li class="navelem"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html">Matrix</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="../../d1/dcb/class___m_a_t_r_i_x___1_1_matrix-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">_MATRIX_::Matrix&lt; T, row_size, col_size &gt; クラステンプレート</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>行列クラス  
+ <a href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d8/d49/_matrix_8hpp_source.html">Matrix.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:af8ec2d14af9a8de0987e6451a646f4cf"><td class="memItemLeft" align="right" valign="top"><a id="af8ec2d14af9a8de0987e6451a646f4cf"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#af8ec2d14af9a8de0987e6451a646f4cf">col_array</a> = array&lt; T, fixed_col_size &gt;</td></tr>
+<tr class="memdesc:af8ec2d14af9a8de0987e6451a646f4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">行ベクトル 横 <br /></td></tr>
+<tr class="separator:af8ec2d14af9a8de0987e6451a646f4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87101ad3688af2225db32dfd7a89c66f"><td class="memItemLeft" align="right" valign="top"><a id="a87101ad3688af2225db32dfd7a89c66f"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#a87101ad3688af2225db32dfd7a89c66f">row_array</a> = array&lt; T, fixed_row_size &gt;</td></tr>
+<tr class="memdesc:a87101ad3688af2225db32dfd7a89c66f"><td class="mdescLeft">&#160;</td><td class="mdescRight">列ベクトル 縦 <br /></td></tr>
+<tr class="separator:a87101ad3688af2225db32dfd7a89c66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54a3978ada8b4ba76b8c641f986b9ed"><td class="memItemLeft" align="right" valign="top"><a id="ac54a3978ada8b4ba76b8c641f986b9ed"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#ac54a3978ada8b4ba76b8c641f986b9ed">matrix</a> = array&lt; <a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#af8ec2d14af9a8de0987e6451a646f4cf">col_array</a>, row_size &gt;</td></tr>
+<tr class="memdesc:ac54a3978ada8b4ba76b8c641f986b9ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列 <br /></td></tr>
+<tr class="separator:ac54a3978ada8b4ba76b8c641f986b9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a12a4fe60635753be055e58f09a3a4f9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#af8ec2d14af9a8de0987e6451a646f4cf">col_array</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#a12a4fe60635753be055e58f09a3a4f9a">operator[]</a> (const int idx)</td></tr>
+<tr class="memdesc:a12a4fe60635753be055e58f09a3a4f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">idx行目の行ベクトルの参照を取得  <a href="#a12a4fe60635753be055e58f09a3a4f9a">[詳解]</a><br /></td></tr>
+<tr class="separator:a12a4fe60635753be055e58f09a3a4f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a69abda10c766034c0d194c2c09c9a572"><td class="memItemLeft" align="right" valign="top"><a id="a69abda10c766034c0d194c2c09c9a572"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>fixed_col_size</b> = ((col_size + 3) / 4) * 4</td></tr>
+<tr class="separator:a69abda10c766034c0d194c2c09c9a572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba513ccde4b377a5b10f362ee99d86df"><td class="memItemLeft" align="right" valign="top"><a id="aba513ccde4b377a5b10f362ee99d86df"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>fixed_row_size</b> = ((row_size + 3) / 4) * 4</td></tr>
+<tr class="separator:aba513ccde4b377a5b10f362ee99d86df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><h3>template&lt;typename T, size_t row_size, size_t col_size&gt;<br />
+class _MATRIX_::Matrix&lt; T, row_size, col_size &gt;</h3>
+
+<p>行列クラス </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+    <tr><td class="paramname">row_size</td><td>縦 </td></tr>
+    <tr><td class="paramname">col_size</td><td>横</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>速度が気になるようであればバッファ管理はarrayからNDRangeに変えるかも </p>
+
+<p class="definition"> <a class="el" href="../../d8/d49/_matrix_8hpp_source.html">Matrix.hpp</a> の <a class="el" href="../../d8/d49/_matrix_8hpp_source.html#l00028">28</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a12a4fe60635753be055e58f09a3a4f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12a4fe60635753be055e58f09a3a4f9a">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, size_t row_size, size_t col_size&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#af8ec2d14af9a8de0987e6451a646f4cf">col_array</a>&amp; <a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html">_MATRIX_::Matrix</a>&lt; T, row_size, col_size &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>idx行目の行ベクトルの参照を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>col_array&amp; </dd></dl>
+
+<p class="definition"> <a class="el" href="../../d8/d49/_matrix_8hpp_source.html">Matrix.hpp</a> の <a class="el" href="../../d8/d49/_matrix_8hpp_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="../../d8/d49/_matrix_8hpp_source.html">Matrix.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

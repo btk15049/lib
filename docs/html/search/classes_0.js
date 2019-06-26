@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['cww',['cww',['../d7/d77/struct___template___1_1cww.html',1,'_Template_']]]
+  ['blockbuffermanager',['BlockBufferManager',['../d4/d68/class___buffer___1_1_block_buffer_manager.html',1,'_Buffer_']]],
+  ['buffermanager',['BufferManager',['../d7/d2e/class___buffer___1_1_buffer_manager.html',1,'_Buffer_']]],
+  ['buffermanager_3c_20int_20_3e',['BufferManager&lt; int &gt;',['../d7/d2e/class___buffer___1_1_buffer_manager.html',1,'_Buffer_']]]
 ];

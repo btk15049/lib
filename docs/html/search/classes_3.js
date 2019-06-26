@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['flowedge',['FlowEdge',['../d7/daf/struct___dinic___1_1_flow_edge.html',1,'_Dinic_']]],
-  ['flowgraph',['FlowGraph',['../d6/d11/class___dinic___1_1_flow_graph.html',1,'_Dinic_']]],
-  ['flowgraph_3c_20_5fdinic_5f_3a_3aflowedge_20_3e',['FlowGraph&lt; _Dinic_::FlowEdge &gt;',['../d6/d11/class___dinic___1_1_flow_graph.html',1,'_Dinic_']]],
-  ['forest',['Forest',['../dc/d20/class___tree___1_1_forest.html',1,'_Tree_']]]
+  ['edge',['Edge',['../d8/dda/struct___graph___1_1_edge.html',1,'_Graph_']]]
 ];
