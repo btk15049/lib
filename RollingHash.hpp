@@ -3,7 +3,7 @@
  * @brief ローリングハッシュ
  * @author btk15049
  * @date 2019/03/08
- * @datails
+ * @details
  *  verify: CSA12E，RUPC day3 E
  */
 

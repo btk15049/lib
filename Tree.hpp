@@ -8,7 +8,7 @@
  * @brief 根付き森と根付き木
  * @author btk15049
  * @date 2019/05/07
- * @datails
+ * @details
  *  verify:
  */
 

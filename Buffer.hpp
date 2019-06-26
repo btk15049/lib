@@ -8,7 +8,7 @@
  * @brief メモリ管理クラス
  * @author btk15049
  * @date 2019/03/11
- * @datails
+ * @details
  */
 namespace _Buffer_ {
     /**

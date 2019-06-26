@@ -21,7 +21,7 @@ namespace _MATRIX_ {
      * @tparam T
      * @tparam row_size 縦
      * @tparam col_size 横
-     * @datail
+     * @details
      * 速度が気になるようであればバッファ管理はarrayからNDRangeに変えるかも
      */
     template <typename T, size_t row_size, size_t col_size>
@@ -144,7 +144,7 @@ namespace _MATRIX_ {
          * @param v
          * @param n
          * @return vec
-         * @datail
+         * @details
          * O(r^2 log n)
          */
         vec compute(vec v, unsigned long long n) {

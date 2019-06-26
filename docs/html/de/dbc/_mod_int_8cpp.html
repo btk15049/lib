@@ -1,1039 +1,2474 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.15"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>btk&#39;s library: ModInt.cpp ファイル</title>
-<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../search/searchdata.js"></script>
-<script type="text/javascript" src="../../search/search.js"></script>
-<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">btk&#39;s library
-   </div>
-  </td>
- </tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 構築: Doxygen 1.8.15 -->
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
-/* @license-end */
-</script>
-<script type="text/javascript" src="../../menudata.js"></script>
-<script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.8.15" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>btk&#39;s library: ModInt.cpp ファイル</title>
+    <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../jquery.js"></script>
+    <script type="text/javascript" src="../../dynsections.js"></script>
+    <link href="../../search/search.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../search/searchdata.js"></script>
+    <script type="text/javascript" src="../../search/search.js"></script>
+    <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="top">
+      <!-- do not remove this div, it is closed by doxygen! -->
+      <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr style="height: 56px;">
+              <td id="projectalign" style="padding-left: 0.5em;">
+                <div id="projectname">btk&#39;s library</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- end header part -->
+      <!-- 構築: Doxygen 1.8.15 -->
+      <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+        var searchBox = new SearchBox(
+          "searchBox",
+          "../../search",
+          false,
+          "検索"
+        );
+        /* @license-end */
+      </script>
+      <script type="text/javascript" src="../../menudata.js"></script>
+      <script type="text/javascript" src="../../menu.js"></script>
+      <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+        $(function() {
+          initMenu("../../", true, false, "search.php", "検索");
+          $(document).ready(function() {
+            init_search();
+          });
+        });
+        /* @license-end */
+      </script>
+      <div id="main-nav"></div>
+      <!-- window showing the filter options -->
+      <div
+        id="MSearchSelectWindow"
+        onmouseover="return searchBox.OnSearchSelectShow()"
+        onmouseout="return searchBox.OnSearchSelectHide()"
+        onkeydown="return searchBox.OnSearchSelectKey(event)"
+      ></div>
 
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
+      <!-- iframe showing the search results (closed by default) -->
+      <div id="MSearchResultsWindow">
+        <iframe
+          src="javascript:void(0)"
+          frameborder="0"
+          name="MSearchResults"
+          id="MSearchResults"
+        >
+        </iframe>
+      </div>
+    </div>
+    <!-- top -->
+    <div class="header">
+      <div class="summary">
+        <a href="#nested-classes">クラス</a> &#124;
+        <a href="#namespaces">名前空間</a> &#124;
+        <a href="#func-members">関数</a> &#124; <a href="#var-members">変数</a>
+      </div>
+      <div class="headertitle">
+        <div class="title">ModInt.cpp ファイル</div>
+      </div>
+    </div>
+    <!--header-->
+    <div class="contents">
+      <p>mod構造体 <a href="#datail">[詳解]</a></p>
 
-</div><!-- top -->
-<div class="header">
-  <div class="summary">
-<a href="#nested-classes">クラス</a> &#124;
-<a href="#namespaces">名前空間</a> &#124;
-<a href="#func-members">関数</a> &#124;
-<a href="#var-members">変数</a>  </div>
-  <div class="headertitle">
-<div class="title">ModInt.cpp ファイル</div>  </div>
-</div><!--header-->
-<div class="contents">
-
-<p>mod構造体  
-<a href="#datail">[詳解]</a></p>
-
-<p><a href="../../de/dbc/_mod_int_8cpp_source.html">[ソースコード]</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-クラス</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">_ModInt_::ModInt</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">mod構造体  <a href="../../dc/d6d/class___mod_int___1_1_mod_int.html#datail">[詳解]</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-名前空間</h2></td></tr>
-<tr class="memitem:db/d1d/namespacefactorial"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1d/namespacefactorial.html">factorial</a></td></tr>
-<tr class="memdesc:db/d1d/namespacefactorial"><td class="mdescLeft">&#160;</td><td class="mdescRight">順列数関連の関数のまとめ <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-関数</h2></td></tr>
-<tr class="memitem:a019213ff5d0277a89c399ae57c16a754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a019213ff5d0277a89c399ae57c16a754">_ModInt_::add</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> r)</td></tr>
-<tr class="separator:a019213ff5d0277a89c399ae57c16a754"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aede365bf8dae1d95a0e726837d2fe31a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#aede365bf8dae1d95a0e726837d2fe31a">_ModInt_::mul</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> r)</td></tr>
-<tr class="separator:aede365bf8dae1d95a0e726837d2fe31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5808d324c10bae7dfbac6bb554c104"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a4c5808d324c10bae7dfbac6bb554c104">_ModInt_::pow</a> (<a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> a, long long x)</td></tr>
-<tr class="memdesc:a4c5808d324c10bae7dfbac6bb554c104"><td class="mdescLeft">&#160;</td><td class="mdescRight">a^x modを求める  <a href="../../de/dbc/_mod_int_8cpp.html#a4c5808d324c10bae7dfbac6bb554c104">[詳解]</a><br /></td></tr>
-<tr class="separator:a4c5808d324c10bae7dfbac6bb554c104"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace7b91e5edc3937c4d13a39c58b80707"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#ace7b91e5edc3937c4d13a39c58b80707">_ModInt_::inv</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> x)</td></tr>
-<tr class="memdesc:ace7b91e5edc3937c4d13a39c58b80707"><td class="mdescLeft">&#160;</td><td class="mdescRight">x^-1 modを求める  <a href="../../de/dbc/_mod_int_8cpp.html#ace7b91e5edc3937c4d13a39c58b80707">[詳解]</a><br /></td></tr>
-<tr class="separator:ace7b91e5edc3937c4d13a39c58b80707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47afe0b07b9337c48c06a130c16c9ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a47afe0b07b9337c48c06a130c16c9ceb">_ModInt_::operator-</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> x)</td></tr>
-<tr class="memdesc:a47afe0b07b9337c48c06a130c16c9ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">負数を求める単項演算子  <a href="../../de/dbc/_mod_int_8cpp.html#a47afe0b07b9337c48c06a130c16c9ceb">[詳解]</a><br /></td></tr>
-<tr class="separator:a47afe0b07b9337c48c06a130c16c9ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1c8decd379379412a718e53c49e4cb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#ae1c8decd379379412a718e53c49e4cb7">_ModInt_::operator+</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> r)</td></tr>
-<tr class="separator:ae1c8decd379379412a718e53c49e4cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a846ff2e4e375fc0308c8bd96866372db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a846ff2e4e375fc0308c8bd96866372db">_ModInt_::operator *</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> r)</td></tr>
-<tr class="separator:a846ff2e4e375fc0308c8bd96866372db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad94327917e4c98056ead3d7c668d3b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#aad94327917e4c98056ead3d7c668d3b8">_ModInt_::operator-</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> r)</td></tr>
-<tr class="separator:aad94327917e4c98056ead3d7c668d3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25fcb6be246f0d684930da77bfcd4974"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a25fcb6be246f0d684930da77bfcd4974">_ModInt_::operator+</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const int r)</td></tr>
-<tr class="separator:a25fcb6be246f0d684930da77bfcd4974"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1085cf37b5dcd4abfa0ca045643418fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a1085cf37b5dcd4abfa0ca045643418fe">_ModInt_::operator+</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const long long r)</td></tr>
-<tr class="separator:a1085cf37b5dcd4abfa0ca045643418fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a925001387010b304d19571dd3fe9fd65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a925001387010b304d19571dd3fe9fd65">_ModInt_::operator *</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const int r)</td></tr>
-<tr class="separator:a925001387010b304d19571dd3fe9fd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeca74d382e6f1fa34bc7d5957c457686"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#aeca74d382e6f1fa34bc7d5957c457686">_ModInt_::operator *</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const long long r)</td></tr>
-<tr class="separator:aeca74d382e6f1fa34bc7d5957c457686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4ae28ccf92088cecb53226a8f59c842"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#ae4ae28ccf92088cecb53226a8f59c842">_ModInt_::operator-</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const int r)</td></tr>
-<tr class="separator:ae4ae28ccf92088cecb53226a8f59c842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59837c0a81dedea60383a2a677c44113"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a59837c0a81dedea60383a2a677c44113">_ModInt_::operator-</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const long long r)</td></tr>
-<tr class="separator:a59837c0a81dedea60383a2a677c44113"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05a875d1aafdd048f704a1b6fd47994e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a05a875d1aafdd048f704a1b6fd47994e">_ModInt_::operator/</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const int r)</td></tr>
-<tr class="separator:a05a875d1aafdd048f704a1b6fd47994e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab20c1e23d8ccf0dd845eadbbe8a12fad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#ab20c1e23d8ccf0dd845eadbbe8a12fad">_ModInt_::operator/</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const long long r)</td></tr>
-<tr class="separator:ab20c1e23d8ccf0dd845eadbbe8a12fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b59ce535ebda37b5c4c0e6c26833bb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a9b59ce535ebda37b5c4c0e6c26833bb1">_ModInt_::operator^</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const long long r)</td></tr>
-<tr class="separator:a9b59ce535ebda37b5c4c0e6c26833bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d8a734697af0a324eb774d44e191a1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a5d8a734697af0a324eb774d44e191a1e">_ModInt_::factorial::build</a> ()</td></tr>
-<tr class="memdesc:a5d8a734697af0a324eb774d44e191a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">順列数の前計算  <a href="../../de/dbc/_mod_int_8cpp.html#a5d8a734697af0a324eb774d44e191a1e">[詳解]</a><br /></td></tr>
-<tr class="separator:a5d8a734697af0a324eb774d44e191a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1823beb563e4a7db99cf7eedc6ca1b14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a1823beb563e4a7db99cf7eedc6ca1b14">_ModInt_::factorial::permutation</a> (int n, int k)</td></tr>
-<tr class="memdesc:a1823beb563e4a7db99cf7eedc6ca1b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">nPkを求める  <a href="../../de/dbc/_mod_int_8cpp.html#a1823beb563e4a7db99cf7eedc6ca1b14">[詳解]</a><br /></td></tr>
-<tr class="separator:a1823beb563e4a7db99cf7eedc6ca1b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76fb6d76d665d1a744a49cab4532895a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a76fb6d76d665d1a744a49cab4532895a">_ModInt_::factorial::combination</a> (int n, int k)</td></tr>
-<tr class="memdesc:a76fb6d76d665d1a744a49cab4532895a"><td class="mdescLeft">&#160;</td><td class="mdescRight">nCkを求める  <a href="../../de/dbc/_mod_int_8cpp.html#a76fb6d76d665d1a744a49cab4532895a">[詳解]</a><br /></td></tr>
-<tr class="separator:a76fb6d76d665d1a744a49cab4532895a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-変数</h2></td></tr>
-<tr class="memitem:a03a3061ace610c687f00ae3039cd869b"><td class="memItemLeft" align="right" valign="top"><a id="a03a3061ace610c687f00ae3039cd869b"></a>
-constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a03a3061ace610c687f00ae3039cd869b">_ModInt_::mod</a> = 1e9+7</td></tr>
-<tr class="memdesc:a03a3061ace610c687f00ae3039cd869b"><td class="mdescLeft">&#160;</td><td class="mdescRight">[WARNING!] mod が入力で与えられる場合はconstexprを外す <br /></td></tr>
-<tr class="separator:a03a3061ace610c687f00ae3039cd869b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accd7ae2024a358c79492c80537e31859"><td class="memItemLeft" align="right" valign="top"><a id="accd7ae2024a358c79492c80537e31859"></a>
-constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#accd7ae2024a358c79492c80537e31859">_ModInt_::factorial::size</a> = 1123456</td></tr>
-<tr class="memdesc:accd7ae2024a358c79492c80537e31859"><td class="mdescLeft">&#160;</td><td class="mdescRight">順列数を格納する配列のサイズ <br /></td></tr>
-<tr class="separator:accd7ae2024a358c79492c80537e31859"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f6e05980e2cc5452b527115a705060c"><td class="memItemLeft" align="right" valign="top"><a id="a1f6e05980e2cc5452b527115a705060c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#a1f6e05980e2cc5452b527115a705060c">_ModInt_::factorial::is_build</a> = false</td></tr>
-<tr class="memdesc:a1f6e05980e2cc5452b527115a705060c"><td class="mdescLeft">&#160;</td><td class="mdescRight">前計算ができているかどうかのフラグ <br /></td></tr>
-<tr class="separator:a1f6e05980e2cc5452b527115a705060c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe72e59d3655d3c4d0ca9bd6fbcfe797"><td class="memItemLeft" align="right" valign="top"><a id="abe72e59d3655d3c4d0ca9bd6fbcfe797"></a>
-<a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#abe72e59d3655d3c4d0ca9bd6fbcfe797">_ModInt_::factorial::factorial</a> [size]</td></tr>
-<tr class="memdesc:abe72e59d3655d3c4d0ca9bd6fbcfe797"><td class="mdescLeft">&#160;</td><td class="mdescRight">順列数を格納する配列 <br /></td></tr>
-<tr class="separator:abe72e59d3655d3c4d0ca9bd6fbcfe797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb50de2c53758bc5a3d438e1d60b1a85"><td class="memItemLeft" align="right" valign="top"><a id="abb50de2c53758bc5a3d438e1d60b1a85"></a>
-<a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/_mod_int_8cpp.html#abb50de2c53758bc5a3d438e1d60b1a85">_ModInt_::factorial::inverse_factorial</a> [size]</td></tr>
-<tr class="memdesc:abb50de2c53758bc5a3d438e1d60b1a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">(順列数)^-1を格納する配列 <br /></td></tr>
-<tr class="separator:abb50de2c53758bc5a3d438e1d60b1a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="datail" id="datail"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>mod構造体 </p>
-<dl class="section author"><dt>著者</dt><dd>btk15049 </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2019/03/08 @datails </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">todo:</a></b></dt><dd>verifyが足りない verify: CSA12E，RUPC day3 F </dd></dl>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> に定義があります。</p>
-</div><h2 class="groupheader">関数詳解</h2>
-<a id="file_a019213ff5d0277a89c399ae57c16a754"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a019213ff5d0277a89c399ae57c16a754">&#9670;&nbsp;</a></span>add()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::add </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+      <p><a href="../../de/dbc/_mod_int_8cpp_source.html">[ソースコード]</a></p>
+      <table class="memberdecls">
+        <tr class="heading">
+          <td colspan="2">
+            <h2 class="groupheader"><a name="nested-classes"></a> クラス</h2>
+          </td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="memitem:">
+          <td class="memItemLeft" align="right" valign="top">class &#160;</td>
+          <td class="memItemRight" valign="bottom">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >_ModInt_::ModInt</a
+            >
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memdesc:">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">
+            mod構造体
+            <a href="../../dc/d6d/class___mod_int___1_1_mod_int.html#datail"
+              >[詳解]</a
+            ><br />
+          </td>
+        </tr>
+        <tr class="separator:">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>ModInt</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>if文使って少し高速化． </p>
 
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00107">107</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a5d8a734697af0a324eb774d44e191a1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a5d8a734697af0a324eb774d44e191a1e">&#9670;&nbsp;</a></span>build()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void _ModInt_::factorial::build </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+      <table class="memberdecls">
+        <tr class="heading">
+          <td colspan="2">
+            <h2 class="groupheader"><a name="namespaces"></a> 名前空間</h2>
+          </td>
+        </tr>
+        <tr class="memitem:db/d1d/namespacefactorial">
+          <td class="memItemLeft" align="right" valign="top">&#160;</td>
+          <td class="memItemRight" valign="bottom">
+            <a class="el" href="../../db/d1d/namespacefactorial.html"
+              >factorial</a
+            >
+          </td>
+        </tr>
+        <tr class="memdesc:db/d1d/namespacefactorial">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">順列数関連の関数のまとめ <br /></td>
+        </tr>
+        <tr class="separator:">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
       </table>
-</div><div class="memdoc">
 
-<p>順列数の前計算 </p>
-<p>順列数と，その逆元を[0,size)まで求める. 計算量は，O(size + log(mod)) </p>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00290">290</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a76fb6d76d665d1a744a49cab4532895a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a76fb6d76d665d1a744a49cab4532895a">&#9670;&nbsp;</a></span>combination()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::factorial::combination </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
+      <table class="memberdecls">
+        <tr class="heading">
+          <td colspan="2">
+            <h2 class="groupheader"><a name="func-members"></a> 関数</h2>
+          </td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>k</em>&#160;</td>
+        <tr class="memitem:a019213ff5d0277a89c399ae57c16a754">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a019213ff5d0277a89c399ae57c16a754"
+              >_ModInt_::add</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            r)
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="separator:a019213ff5d0277a89c399ae57c16a754">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>nCkを求める </p>
-<p>前計算がしてあれば O(1)．前計算してない場合は is_build を読み取って前計算をする． </p>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00318">318</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_ace7b91e5edc3937c4d13a39c58b80707"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ace7b91e5edc3937c4d13a39c58b80707">&#9670;&nbsp;</a></span>inv()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::inv </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
+        <tr class="memitem:aede365bf8dae1d95a0e726837d2fe31a">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#aede365bf8dae1d95a0e726837d2fe31a"
+              >_ModInt_::mul</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            r)
+          </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>x^-1 modを求める </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>ModInt．</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>内部ではユークリッドの拡張互助法を使っている． O(log(mod)) </p>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00144">144</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_aede365bf8dae1d95a0e726837d2fe31a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aede365bf8dae1d95a0e726837d2fe31a">&#9670;&nbsp;</a></span>mul()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::mul </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="separator:aede365bf8dae1d95a0e726837d2fe31a">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="memitem:a4c5808d324c10bae7dfbac6bb554c104">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a4c5808d324c10bae7dfbac6bb554c104"
+              >_ModInt_::pow</a
+            >
+            (<a
+              class="el"
+              href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            a, long long x)
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memdesc:a4c5808d324c10bae7dfbac6bb554c104">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">
+            a^x modを求める
+            <a
+              href="../../de/dbc/_mod_int_8cpp.html#a4c5808d324c10bae7dfbac6bb554c104"
+              >[詳解]</a
+            ><br />
+          </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>ModInt． </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00116">116</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a846ff2e4e375fc0308c8bd96866372db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a846ff2e4e375fc0308c8bd96866372db">&#9670;&nbsp;</a></span>operator *() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator * </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="separator:a4c5808d324c10bae7dfbac6bb554c104">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="memitem:ace7b91e5edc3937c4d13a39c58b80707">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#ace7b91e5edc3937c4d13a39c58b80707"
+              >_ModInt_::inv</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            x)
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memdesc:ace7b91e5edc3937c4d13a39c58b80707">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">
+            x^-1 modを求める
+            <a
+              href="../../de/dbc/_mod_int_8cpp.html#ace7b91e5edc3937c4d13a39c58b80707"
+              >[詳解]</a
+            ><br />
+          </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>ModInt </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00174">174</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a925001387010b304d19571dd3fe9fd65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a925001387010b304d19571dd3fe9fd65">&#9670;&nbsp;</a></span>operator *() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator * </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="separator:ace7b91e5edc3937c4d13a39c58b80707">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="memitem:a47afe0b07b9337c48c06a130c16c9ceb">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a47afe0b07b9337c48c06a130c16c9ceb"
+              >_ModInt_::operator-</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            x)
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memdesc:a47afe0b07b9337c48c06a130c16c9ceb">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">
+            負数を求める単項演算子
+            <a
+              href="../../de/dbc/_mod_int_8cpp.html#a47afe0b07b9337c48c06a130c16c9ceb"
+              >[詳解]</a
+            ><br />
+          </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意． </p>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00208">208</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_aeca74d382e6f1fa34bc7d5957c457686"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aeca74d382e6f1fa34bc7d5957c457686">&#9670;&nbsp;</a></span>operator *() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator * </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="separator:a47afe0b07b9337c48c06a130c16c9ceb">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const long long&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="memitem:ae1c8decd379379412a718e53c49e4cb7">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#ae1c8decd379379412a718e53c49e4cb7"
+              >_ModInt_::operator+</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            r)
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="separator:ae1c8decd379379412a718e53c49e4cb7">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00216">216</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_ae1c8decd379379412a718e53c49e4cb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ae1c8decd379379412a718e53c49e4cb7">&#9670;&nbsp;</a></span>operator+() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator+ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="memitem:a846ff2e4e375fc0308c8bd96866372db">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a846ff2e4e375fc0308c8bd96866372db"
+              >_ModInt_::operator *</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            r)
+          </td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="separator:a846ff2e4e375fc0308c8bd96866372db">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memitem:aad94327917e4c98056ead3d7c668d3b8">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#aad94327917e4c98056ead3d7c668d3b8"
+              >_ModInt_::operator-</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            r)
+          </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>ModInt </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00166">166</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a25fcb6be246f0d684930da77bfcd4974"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a25fcb6be246f0d684930da77bfcd4974">&#9670;&nbsp;</a></span>operator+() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator+ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="separator:aad94327917e4c98056ead3d7c668d3b8">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="memitem:a25fcb6be246f0d684930da77bfcd4974">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a25fcb6be246f0d684930da77bfcd4974"
+              >_ModInt_::operator+</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const int r)
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="separator:a25fcb6be246f0d684930da77bfcd4974">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意． </p>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00191">191</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a1085cf37b5dcd4abfa0ca045643418fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a1085cf37b5dcd4abfa0ca045643418fe">&#9670;&nbsp;</a></span>operator+() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator+ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="memitem:a1085cf37b5dcd4abfa0ca045643418fe">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a1085cf37b5dcd4abfa0ca045643418fe"
+              >_ModInt_::operator+</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const long long r)
+          </td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const long long&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="separator:a1085cf37b5dcd4abfa0ca045643418fe">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memitem:a925001387010b304d19571dd3fe9fd65">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a925001387010b304d19571dd3fe9fd65"
+              >_ModInt_::operator *</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const int r)
+          </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00199">199</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a47afe0b07b9337c48c06a130c16c9ceb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a47afe0b07b9337c48c06a130c16c9ceb">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
+        <tr class="separator:a925001387010b304d19571dd3fe9fd65">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>負数を求める単項演算子 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>ModInt </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00158">158</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_aad94327917e4c98056ead3d7c668d3b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aad94327917e4c98056ead3d7c668d3b8">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="memitem:aeca74d382e6f1fa34bc7d5957c457686">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#aeca74d382e6f1fa34bc7d5957c457686"
+              >_ModInt_::operator *</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const long long r)
+          </td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="separator:aeca74d382e6f1fa34bc7d5957c457686">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memitem:ae4ae28ccf92088cecb53226a8f59c842">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#ae4ae28ccf92088cecb53226a8f59c842"
+              >_ModInt_::operator-</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const int r)
+          </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>ModInt </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00182">182</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_ae4ae28ccf92088cecb53226a8f59c842"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ae4ae28ccf92088cecb53226a8f59c842">&#9670;&nbsp;</a></span>operator-() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="separator:ae4ae28ccf92088cecb53226a8f59c842">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="memitem:a59837c0a81dedea60383a2a677c44113">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a59837c0a81dedea60383a2a677c44113"
+              >_ModInt_::operator-</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const long long r)
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="separator:a59837c0a81dedea60383a2a677c44113">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意． </p>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00225">225</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a59837c0a81dedea60383a2a677c44113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a59837c0a81dedea60383a2a677c44113">&#9670;&nbsp;</a></span>operator-() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="memitem:a05a875d1aafdd048f704a1b6fd47994e">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a05a875d1aafdd048f704a1b6fd47994e"
+              >_ModInt_::operator/</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const int r)
+          </td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const long long&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="separator:a05a875d1aafdd048f704a1b6fd47994e">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memitem:ab20c1e23d8ccf0dd845eadbbe8a12fad">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#ab20c1e23d8ccf0dd845eadbbe8a12fad"
+              >_ModInt_::operator/</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const long long r)
+          </td>
+        </tr>
+        <tr class="separator:ab20c1e23d8ccf0dd845eadbbe8a12fad">
+          <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a9b59ce535ebda37b5c4c0e6c26833bb1">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a9b59ce535ebda37b5c4c0e6c26833bb1"
+              >_ModInt_::operator^</a
+            >
+            (const
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >
+            l, const long long r)
+          </td>
+        </tr>
+        <tr class="separator:a9b59ce535ebda37b5c4c0e6c26833bb1">
+          <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a5d8a734697af0a324eb774d44e191a1e">
+          <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a5d8a734697af0a324eb774d44e191a1e"
+              >_ModInt_::factorial::build</a
+            >
+            ()
+          </td>
+        </tr>
+        <tr class="memdesc:a5d8a734697af0a324eb774d44e191a1e">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">
+            順列数の前計算
+            <a
+              href="../../de/dbc/_mod_int_8cpp.html#a5d8a734697af0a324eb774d44e191a1e"
+              >[詳解]</a
+            ><br />
+          </td>
+        </tr>
+        <tr class="separator:a5d8a734697af0a324eb774d44e191a1e">
+          <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a1823beb563e4a7db99cf7eedc6ca1b14">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a1823beb563e4a7db99cf7eedc6ca1b14"
+              >_ModInt_::factorial::permutation</a
+            >
+            (int n, int k)
+          </td>
+        </tr>
+        <tr class="memdesc:a1823beb563e4a7db99cf7eedc6ca1b14">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">
+            nPkを求める
+            <a
+              href="../../de/dbc/_mod_int_8cpp.html#a1823beb563e4a7db99cf7eedc6ca1b14"
+              >[詳解]</a
+            ><br />
+          </td>
+        </tr>
+        <tr class="separator:a1823beb563e4a7db99cf7eedc6ca1b14">
+          <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a76fb6d76d665d1a744a49cab4532895a">
+          <td class="memItemLeft" align="right" valign="top">
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a76fb6d76d665d1a744a49cab4532895a"
+              >_ModInt_::factorial::combination</a
+            >
+            (int n, int k)
+          </td>
+        </tr>
+        <tr class="memdesc:a76fb6d76d665d1a744a49cab4532895a">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">
+            nCkを求める
+            <a
+              href="../../de/dbc/_mod_int_8cpp.html#a76fb6d76d665d1a744a49cab4532895a"
+              >[詳解]</a
+            ><br />
+          </td>
+        </tr>
+        <tr class="separator:a76fb6d76d665d1a744a49cab4532895a">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00233">233</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a05a875d1aafdd048f704a1b6fd47994e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a05a875d1aafdd048f704a1b6fd47994e">&#9670;&nbsp;</a></span>operator/() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator/ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+      <table class="memberdecls">
+        <tr class="heading">
+          <td colspan="2">
+            <h2 class="groupheader"><a name="var-members"></a> 変数</h2>
+          </td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="memitem:a03a3061ace610c687f00ae3039cd869b">
+          <td class="memItemLeft" align="right" valign="top">
+            <a id="a03a3061ace610c687f00ae3039cd869b"></a> constexpr int&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a03a3061ace610c687f00ae3039cd869b"
+              >_ModInt_::mod</a
+            >
+            = 1e9+7
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memdesc:a03a3061ace610c687f00ae3039cd869b">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">
+            [WARNING!] mod が入力で与えられる場合はconstexprを外す <br />
+          </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意． </p>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00242">242</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_ab20c1e23d8ccf0dd845eadbbe8a12fad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ab20c1e23d8ccf0dd845eadbbe8a12fad">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator/ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="separator:a03a3061ace610c687f00ae3039cd869b">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const long long&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="memitem:accd7ae2024a358c79492c80537e31859">
+          <td class="memItemLeft" align="right" valign="top">
+            <a id="accd7ae2024a358c79492c80537e31859"></a> constexpr int&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#accd7ae2024a358c79492c80537e31859"
+              >_ModInt_::factorial::size</a
+            >
+            = 1123456
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memdesc:accd7ae2024a358c79492c80537e31859">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">順列数を格納する配列のサイズ <br /></td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00250">250</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a9b59ce535ebda37b5c4c0e6c26833bb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a9b59ce535ebda37b5c4c0e6c26833bb1">&#9670;&nbsp;</a></span>operator^()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator^ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+        <tr class="separator:accd7ae2024a358c79492c80537e31859">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const long long&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+        <tr class="memitem:a1f6e05980e2cc5452b527115a705060c">
+          <td class="memItemLeft" align="right" valign="top">
+            <a id="a1f6e05980e2cc5452b527115a705060c"></a> bool&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#a1f6e05980e2cc5452b527115a705060c"
+              >_ModInt_::factorial::is_build</a
+            >
+            = false
+          </td>
         </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        <tr class="memdesc:a1f6e05980e2cc5452b527115a705060c">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">前計算ができているかどうかのフラグ <br /></td>
+        </tr>
+        <tr class="separator:a1f6e05980e2cc5452b527115a705060c">
+          <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:abe72e59d3655d3c4d0ca9bd6fbcfe797">
+          <td class="memItemLeft" align="right" valign="top">
+            <a id="abe72e59d3655d3c4d0ca9bd6fbcfe797"></a>
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#abe72e59d3655d3c4d0ca9bd6fbcfe797"
+              >_ModInt_::factorial::factorial</a
+            >
+            [size]
+          </td>
+        </tr>
+        <tr class="memdesc:abe72e59d3655d3c4d0ca9bd6fbcfe797">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">順列数を格納する配列 <br /></td>
+        </tr>
+        <tr class="separator:abe72e59d3655d3c4d0ca9bd6fbcfe797">
+          <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:abb50de2c53758bc5a3d438e1d60b1a85">
+          <td class="memItemLeft" align="right" valign="top">
+            <a id="abb50de2c53758bc5a3d438e1d60b1a85"></a>
+            <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+              >ModInt</a
+            >&#160;
+          </td>
+          <td class="memItemRight" valign="bottom">
+            <a
+              class="el"
+              href="../../de/dbc/_mod_int_8cpp.html#abb50de2c53758bc5a3d438e1d60b1a85"
+              >_ModInt_::factorial::inverse_factorial</a
+            >
+            [size]
+          </td>
+        </tr>
+        <tr class="memdesc:abb50de2c53758bc5a3d438e1d60b1a85">
+          <td class="mdescLeft">&#160;</td>
+          <td class="mdescRight">(順列数)^-1を格納する配列 <br /></td>
+        </tr>
+        <tr class="separator:abb50de2c53758bc5a3d438e1d60b1a85">
+          <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>long long</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>pow(l,r)を呼び出すだけなのでpowを参照のこと． 計算量はO(log mod) </p>
 
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00261">261</a> 行目に定義があります。</p>
+      <a name="datail" id="datail"></a>
+      <h2 class="groupheader">詳解</h2>
+      <div class="textblock">
+        <p>mod構造体</p>
+        <dl class="section author">
+          <dt>著者</dt>
+          <dd>btk15049</dd>
+        </dl>
+        <dl class="section date">
+          <dt>日付</dt>
+          <dd>2019/03/08 @details</dd>
+        </dl>
+        <dl class="todo">
+          <dt>
+            <b
+              ><a class="el" href="../../dd/da0/todo.html#_todo000001"
+                >todo:</a
+              ></b
+            >
+          </dt>
+          <dd>verifyが足りない verify: CSA12E，RUPC day3 F</dd>
+        </dl>
 
-</div>
-</div>
-<a id="file_a1823beb563e4a7db99cf7eedc6ca1b14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a1823beb563e4a7db99cf7eedc6ca1b14">&#9670;&nbsp;</a></span>permutation()</h2>
+        <p class="definition">
+          <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+            >ModInt.cpp</a
+          >
+          に定義があります。
+        </p>
+      </div>
+      <h2 class="groupheader">関数詳解</h2>
+      <a id="file_a019213ff5d0277a89c399ae57c16a754"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a019213ff5d0277a89c399ae57c16a754"
+            >&#9670;&nbsp;</a
+          ></span
+        >add()
+      </h2>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::factorial::permutation </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>k</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::add
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>ModInt</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+          <p>if文使って少し高速化．</p>
 
-<p>nPkを求める </p>
-<p>前計算がしてあれば O(1)．前計算してない場合は is_build を読み取って前計算をする． </p>
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00107"
+              >107</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a5d8a734697af0a324eb774d44e191a1e"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a5d8a734697af0a324eb774d44e191a1e"
+            >&#9670;&nbsp;</a
+          ></span
+        >build()
+      </h2>
 
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00307">307</a> 行目に定義があります。</p>
+      <div class="memitem">
+        <div class="memproto">
+          <table class="memname">
+            <tr>
+              <td class="memname">void _ModInt_::factorial::build</td>
+              <td>(</td>
+              <td class="paramname"></td>
+              <td>)</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <p>順列数の前計算</p>
+          <p>
+            順列数と，その逆元を[0,size)まで求める. 計算量は，O(size + log(mod))
+          </p>
 
-</div>
-</div>
-<a id="file_a4c5808d324c10bae7dfbac6bb554c104"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a4c5808d324c10bae7dfbac6bb554c104">&#9670;&nbsp;</a></span>pow()</h2>
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00290"
+              >290</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a76fb6d76d665d1a744a49cab4532895a"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a76fb6d76d665d1a744a49cab4532895a"
+            >&#9670;&nbsp;</a
+          ></span
+        >combination()
+      </h2>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::pow </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long&#160;</td>
-          <td class="paramname"><em>x</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::factorial::combination
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>k</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <p>nCkを求める</p>
+          <p>
+            前計算がしてあれば O(1)．前計算してない場合は is_build
+            を読み取って前計算をする．
+          </p>
 
-<p>a^x modを求める </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>long long． </td></tr>
-  </table>
-  </dd>
-</dl>
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00318"
+              >318</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_ace7b91e5edc3937c4d13a39c58b80707"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_ace7b91e5edc3937c4d13a39c58b80707"
+            >&#9670;&nbsp;</a
+          ></span
+        >inv()
+      </h2>
 
-<p class="definition"> <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html">ModInt.cpp</a> の <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00125">125</a> 行目に定義があります。</p>
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::inv
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>x</em></td>
+                    <td>)</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <p>x^-1 modを求める</p>
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">x</td>
+                  <td>ModInt．</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+          <p>内部ではユークリッドの拡張互助法を使っている． O(log(mod))</p>
 
-</div>
-</div>
-</div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
-</body>
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00144"
+              >144</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_aede365bf8dae1d95a0e726837d2fe31a"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_aede365bf8dae1d95a0e726837d2fe31a"
+            >&#9670;&nbsp;</a
+          ></span
+        >mul()
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::mul
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>ModInt．</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00116"
+              >116</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a846ff2e4e375fc0308c8bd96866372db"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a846ff2e4e375fc0308c8bd96866372db"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator *() <span class="overload">[1/3]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator *
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>ModInt</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00174"
+              >174</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a925001387010b304d19571dd3fe9fd65"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a925001387010b304d19571dd3fe9fd65"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator *() <span class="overload">[2/3]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator *
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">const int&#160;</td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>int</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+          <p>
+            右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意．
+          </p>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00208"
+              >208</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_aeca74d382e6f1fa34bc7d5957c457686"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_aeca74d382e6f1fa34bc7d5957c457686"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator *() <span class="overload">[3/3]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator *
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">const long long&#160;</td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>int</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00216"
+              >216</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_ae1c8decd379379412a718e53c49e4cb7"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_ae1c8decd379379412a718e53c49e4cb7"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator+() <span class="overload">[1/3]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator+
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>ModInt</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00166"
+              >166</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a25fcb6be246f0d684930da77bfcd4974"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a25fcb6be246f0d684930da77bfcd4974"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator+() <span class="overload">[2/3]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator+
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">const int&#160;</td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>int</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+          <p>
+            右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意．
+          </p>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00191"
+              >191</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a1085cf37b5dcd4abfa0ca045643418fe"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a1085cf37b5dcd4abfa0ca045643418fe"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator+() <span class="overload">[3/3]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator+
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">const long long&#160;</td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>int</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00199"
+              >199</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a47afe0b07b9337c48c06a130c16c9ceb"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a47afe0b07b9337c48c06a130c16c9ceb"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator-() <span class="overload">[1/4]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator-
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>x</em></td>
+                    <td>)</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <p>負数を求める単項演算子</p>
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">x</td>
+                  <td>ModInt</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00158"
+              >158</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_aad94327917e4c98056ead3d7c668d3b8"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_aad94327917e4c98056ead3d7c668d3b8"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator-() <span class="overload">[2/4]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator-
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>ModInt</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00182"
+              >182</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_ae4ae28ccf92088cecb53226a8f59c842"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_ae4ae28ccf92088cecb53226a8f59c842"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator-() <span class="overload">[3/4]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator-
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">const int&#160;</td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>int</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+          <p>
+            右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意．
+          </p>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00225"
+              >225</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a59837c0a81dedea60383a2a677c44113"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a59837c0a81dedea60383a2a677c44113"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator-() <span class="overload">[4/4]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator-
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">const long long&#160;</td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>int</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00233"
+              >233</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a05a875d1aafdd048f704a1b6fd47994e"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a05a875d1aafdd048f704a1b6fd47994e"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator/() <span class="overload">[1/2]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator/
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">const int&#160;</td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>int</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+          <p>
+            右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意．
+          </p>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00242"
+              >242</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_ab20c1e23d8ccf0dd845eadbbe8a12fad"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_ab20c1e23d8ccf0dd845eadbbe8a12fad"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator/() <span class="overload">[2/2]</span>
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator/
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">const long long&#160;</td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>int</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00250"
+              >250</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a9b59ce535ebda37b5c4c0e6c26833bb1"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a9b59ce535ebda37b5c4c0e6c26833bb1"
+            >&#9670;&nbsp;</a
+          ></span
+        >operator^()
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::operator^
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      const
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>l</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">const long long&#160;</td>
+                    <td class="paramname"><em>r</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">l</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">r</td>
+                  <td>long long</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+          <p>
+            pow(l,r)を呼び出すだけなのでpowを参照のこと． 計算量はO(log mod)
+          </p>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00261"
+              >261</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a1823beb563e4a7db99cf7eedc6ca1b14"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a1823beb563e4a7db99cf7eedc6ca1b14"
+            >&#9670;&nbsp;</a
+          ></span
+        >permutation()
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::factorial::permutation
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>k</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <p>nPkを求める</p>
+          <p>
+            前計算がしてあれば O(1)．前計算してない場合は is_build
+            を読み取って前計算をする．
+          </p>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00307"
+              >307</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+      <a id="file_a4c5808d324c10bae7dfbac6bb554c104"></a>
+      <h2 class="memtitle">
+        <span class="permalink"
+          ><a href="#file_a4c5808d324c10bae7dfbac6bb554c104"
+            >&#9670;&nbsp;</a
+          ></span
+        >pow()
+      </h2>
+
+      <div class="memitem">
+        <div class="memproto">
+          <table class="mlabels">
+            <tr>
+              <td class="mlabels-left">
+                <table class="memname">
+                  <tr>
+                    <td class="memname">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >
+                      _ModInt_::pow
+                    </td>
+                    <td>(</td>
+                    <td class="paramtype">
+                      <a
+                        class="el"
+                        href="../../dc/d6d/class___mod_int___1_1_mod_int.html"
+                        >ModInt</a
+                      >&#160;
+                    </td>
+                    <td class="paramname"><em>a</em>,</td>
+                  </tr>
+                  <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">long long&#160;</td>
+                    <td class="paramname"><em>x</em>&#160;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </td>
+              <td class="mlabels-right">
+                <span class="mlabels"><span class="mlabel">inline</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="memdoc">
+          <p>a^x modを求める</p>
+          <dl class="params">
+            <dt>引数</dt>
+            <dd>
+              <table class="params">
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">a</td>
+                  <td>ModInt</td>
+                </tr>
+                <tr>
+                  <td class="paramdir">[in]</td>
+                  <td class="paramname">x</td>
+                  <td>long long．</td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+
+          <p class="definition">
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html"
+              >ModInt.cpp</a
+            >
+            の
+            <a class="el" href="../../de/dbc/_mod_int_8cpp_source.html#l00125"
+              >125</a
+            >
+            行目に定義があります。
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- contents -->
+    <!-- start footer part -->
+    <hr class="footer" />
+    <address class="footer">
+      <small>
+        構築: &#160;<a href="http://www.doxygen.org/index.html">
+          <img class="footer" src="../../doxygen.png" alt="doxygen" />
+        </a>
+        1.8.15
+      </small>
+    </address>
+  </body>
 </html>
