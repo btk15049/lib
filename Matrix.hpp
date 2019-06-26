@@ -21,13 +21,15 @@ namespace _MATRIX_ {
      * @tparam T
      * @tparam row_size 縦
      * @tparam col_size 横
-     * @details
+     * @datail
      * 速度が気になるようであればバッファ管理はarrayからNDRangeに変えるかも
      */
     template <typename T, size_t row_size, size_t col_size>
     class Matrix {
       public:
+        //! 行サイズを4の倍数に
         static constexpr int fixed_col_size = ((col_size + 3) / 4) * 4;
+        //! 列サイズを4の倍数に
         static constexpr int fixed_row_size = ((row_size + 3) / 4) * 4;
         //! 行ベクトル 横
         using col_array = array<T, fixed_col_size>;
@@ -142,7 +144,7 @@ namespace _MATRIX_ {
          * @param v
          * @param n
          * @return vec
-         * @details
+         * @datail
          * O(r^2 log n)
          */
         vec compute(vec v, unsigned long long n) {

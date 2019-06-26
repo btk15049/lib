@@ -83,11 +83,11 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 公開型</h2></td></tr>
 <tr class="memitem:af8ec2d14af9a8de0987e6451a646f4cf"><td class="memItemLeft" align="right" valign="top"><a id="af8ec2d14af9a8de0987e6451a646f4cf"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#af8ec2d14af9a8de0987e6451a646f4cf">col_array</a> = array&lt; T, fixed_col_size &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#af8ec2d14af9a8de0987e6451a646f4cf">col_array</a> = array&lt; T, <a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#a69abda10c766034c0d194c2c09c9a572">fixed_col_size</a> &gt;</td></tr>
 <tr class="memdesc:af8ec2d14af9a8de0987e6451a646f4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">行ベクトル 横 <br /></td></tr>
 <tr class="separator:af8ec2d14af9a8de0987e6451a646f4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87101ad3688af2225db32dfd7a89c66f"><td class="memItemLeft" align="right" valign="top"><a id="a87101ad3688af2225db32dfd7a89c66f"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#a87101ad3688af2225db32dfd7a89c66f">row_array</a> = array&lt; T, fixed_row_size &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#a87101ad3688af2225db32dfd7a89c66f">row_array</a> = array&lt; T, <a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#aba513ccde4b377a5b10f362ee99d86df">fixed_row_size</a> &gt;</td></tr>
 <tr class="memdesc:a87101ad3688af2225db32dfd7a89c66f"><td class="mdescLeft">&#160;</td><td class="mdescRight">列ベクトル 縦 <br /></td></tr>
 <tr class="separator:a87101ad3688af2225db32dfd7a89c66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac54a3978ada8b4ba76b8c641f986b9ed"><td class="memItemLeft" align="right" valign="top"><a id="ac54a3978ada8b4ba76b8c641f986b9ed"></a>
@@ -104,10 +104,12 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
 <tr class="memitem:a69abda10c766034c0d194c2c09c9a572"><td class="memItemLeft" align="right" valign="top"><a id="a69abda10c766034c0d194c2c09c9a572"></a>
-static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>fixed_col_size</b> = ((col_size + 3) / 4) * 4</td></tr>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#a69abda10c766034c0d194c2c09c9a572">fixed_col_size</a> = ((col_size + 3) / 4) * 4</td></tr>
+<tr class="memdesc:a69abda10c766034c0d194c2c09c9a572"><td class="mdescLeft">&#160;</td><td class="mdescRight">行サイズを4の倍数に <br /></td></tr>
 <tr class="separator:a69abda10c766034c0d194c2c09c9a572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba513ccde4b377a5b10f362ee99d86df"><td class="memItemLeft" align="right" valign="top"><a id="aba513ccde4b377a5b10f362ee99d86df"></a>
-static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>fixed_row_size</b> = ((row_size + 3) / 4) * 4</td></tr>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#aba513ccde4b377a5b10f362ee99d86df">fixed_row_size</a> = ((row_size + 3) / 4) * 4</td></tr>
+<tr class="memdesc:aba513ccde4b377a5b10f362ee99d86df"><td class="mdescLeft">&#160;</td><td class="mdescRight">列サイズを4の倍数に <br /></td></tr>
 <tr class="separator:aba513ccde4b377a5b10f362ee99d86df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -119,11 +121,10 @@ class _MATRIX_::Matrix&lt; T, row_size, col_size &gt;</h3>
   <table class="tparams">
     <tr><td class="paramname">T</td><td></td></tr>
     <tr><td class="paramname">row_size</td><td>縦 </td></tr>
-    <tr><td class="paramname">col_size</td><td>横</td></tr>
+    <tr><td class="paramname">col_size</td><td>横 @datail 速度が気になるようであればバッファ管理はarrayからNDRangeに変えるかも </td></tr>
   </table>
   </dd>
 </dl>
-<p>速度が気になるようであればバッファ管理はarrayからNDRangeに変えるかも </p>
 
 <p class="definition"> <a class="el" href="../../d8/d49/_matrix_8hpp_source.html">Matrix.hpp</a> の <a class="el" href="../../d8/d49/_matrix_8hpp_source.html#l00028">28</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
@@ -162,7 +163,7 @@ template&lt;typename T, size_t row_size, size_t col_size&gt; </div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>col_array&amp; </dd></dl>
 
-<p class="definition"> <a class="el" href="../../d8/d49/_matrix_8hpp_source.html">Matrix.hpp</a> の <a class="el" href="../../d8/d49/_matrix_8hpp_source.html#l00050">50</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d8/d49/_matrix_8hpp_source.html">Matrix.hpp</a> の <a class="el" href="../../d8/d49/_matrix_8hpp_source.html#l00052">52</a> 行目に定義があります。</p>
 
 </div>
 </div>

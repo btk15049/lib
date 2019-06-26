@@ -8,7 +8,7 @@
  * @brief グラフクラス
  * @author btk15049
  * @date 2019/03/11
- * @datails
+ * @details
  *  verify: WUPC C
  */
 namespace _Graph_ {
@@ -21,6 +21,7 @@ namespace _Graph_ {
         - versusは必須，基本的にコピペでOK
     */
     struct Edge {
+        //! 辺edges[id] = {a,b}
         int id, a, b;
         /**
          * @brief Construct a new Edge object
@@ -45,7 +46,7 @@ namespace _Graph_ {
         - id,a,bは必須，他のパラメータ増やすときはコンストラクタを忘れずに
         - versusは必須，基本的にコピペでOK
     */
-    template<typename COST_TYPE>
+    template <typename COST_TYPE>
     struct WeightedEdge {
         int id, a, b;
         COST_TYPE cost;

@@ -8,7 +8,7 @@
  * @brief Dinic法の実装
  * @author btk15049
  * @date 2019/03/13
- * @datails
+ * @details
  *  \todo verify
  *  verify: WUPC F
  */
