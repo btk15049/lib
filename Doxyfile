@@ -813,23 +813,24 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  =    Template.hpp \
-                            ModInt.hpp \
-                            RollingHash.hpp \
-                            Graph.hpp \
-                            Graph.test.cpp \
-                            Dinic.hpp \
-                            Tree.hpp \
-                            Tree.test.cpp \
-                            KMP.hpp \
-                            KMP.test.cpp \
-                            GraphUtil.hpp \
-                            HeavyLightDecomposition.hpp \
-                            HeavyLightDecomposition.test.cpp \
-                            Matrix.hpp \
-                            UnionFind.hpp \
-                            Buffer.hpp \
-                            Buffer.test.cpp
+INPUT                  =    src/Template.hpp \
+                            src/num/ModInt.hpp \
+                            src/string/RollingHash.hpp \
+                            src/graph/Graph.hpp \
+                            test/graph/Graph.test.cpp \
+                            src/graph/Dinic.hpp \
+                            src/graph/Tree.hpp \
+                            test/graph/Tree.test.cpp \
+                            src/string/KMP.hpp \
+                            test/string/KMP.test.cpp \
+                            src/graph/GraphUtil.hpp \
+                            src/graph/HeavyLightDecomposition.hpp \
+                            test/graph/HeavyLightDecomposition.test.cpp \
+                            src/num/Matrix.hpp \
+                            test/num/Matrix.test.cpp \
+                            src/structure/UnionFind.hpp \
+                            src/structure/Buffer.hpp \
+                            test/structure/Buffer.test.cpp
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

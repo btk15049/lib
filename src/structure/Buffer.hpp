@@ -106,7 +106,7 @@ namespace _Buffer_ {
     };
 
     /**
-     * @def DisposalBuffer(type, size, var_name)
+     * @def DisposableBuffer(type, size, var_name)
      * @brief
      * [var_name]という名前のDisposalBufferManagerを生成する
      */
