@@ -89,7 +89,7 @@ namespace _Buffer_ {
          *
          * @param p
          */
-        void push(T* p) {}
+        void push(T* p) { unused_var(p); }
 
         /**
          * @brief ptrをリセット
@@ -148,6 +148,7 @@ namespace _Buffer_ {
          * @return T*
          */
         T* pop(int size = 0) {
+            unused_var(size);
             T* ptr = que.front();
             que.pop();
             return ptr;

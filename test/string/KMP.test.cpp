@@ -56,7 +56,6 @@ BOOST_AUTO_TEST_CASE(find3) {
 BOOST_AUTO_TEST_CASE(find_all1) {
     KMP finder("abc");
     string sentence      = "abcabc";
-    int reading_len      = 0;
     vector<int> actual   = finder.find_all(sentence);
     vector<int> expected = {0, 3};
     BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
@@ -70,7 +69,6 @@ BOOST_AUTO_TEST_CASE(find_all1) {
 BOOST_AUTO_TEST_CASE(find_all2) {
     KMP finder("abc");
     string sentence      = "abc_abc";
-    int reading_len      = 0;
     vector<int> actual   = finder.find_all(sentence);
     vector<int> expected = {0, 4};
     BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
@@ -84,7 +82,6 @@ BOOST_AUTO_TEST_CASE(find_all2) {
 BOOST_AUTO_TEST_CASE(find_all3) {
     KMP finder("a");
     string sentence      = "aaaaa";
-    int reading_len      = 0;
     vector<int> actual   = finder.find_all(sentence);
     vector<int> expected = {0, 1, 2, 3, 4};
     BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
@@ -98,7 +95,6 @@ BOOST_AUTO_TEST_CASE(find_all3) {
 BOOST_AUTO_TEST_CASE(find_all4) {
     KMP finder("aa");
     string sentence      = "aaaaa";
-    int reading_len      = 0;
     vector<int> actual   = finder.find_all(sentence);
     vector<int> expected = {0, 1, 2, 3};
     BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
@@ -112,7 +108,6 @@ BOOST_AUTO_TEST_CASE(find_all4) {
 BOOST_AUTO_TEST_CASE(find_all5) {
     KMP finder("abcabc");
     string sentence      = "abcabcabcabc";
-    int reading_len      = 0;
     vector<int> actual   = finder.find_all(sentence);
     vector<int> expected = {0, 3, 6};
     BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
