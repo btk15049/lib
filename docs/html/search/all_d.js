@@ -11,6 +11,6 @@ var searchData=
   ['operator_3d',['operator=',['../dc/d6d/class___mod_int___1_1_mod_int.html#a101df96e36b0b164f851fb3785140110',1,'_ModInt_::ModInt::operator=(const int o)'],['../dc/d6d/class___mod_int___1_1_mod_int.html#a29613802ca4f0f5b6920cf2330ab8a75',1,'_ModInt_::ModInt::operator=(const long long o)'],['../dc/d6d/class___mod_int___1_1_mod_int.html#a71a04312eec2f8c7af3de19f78835cac',1,'_ModInt_::ModInt::operator=(const ModInt o)']]],
   ['operator_3d_3d',['operator==',['../d1/d3a/class___rolling_hash___1_1_rolling_hash.html#af88a23dbc87ef6a0cd51afbd12b50c54',1,'_RollingHash_::RollingHash']]],
   ['operator_3e_3e',['operator&gt;&gt;',['../df/dc0/_template_8hpp.html#aebab323750af7564862582b16ff0fb55',1,'_Template_']]],
-  ['operator_5b_5d',['operator[]',['../d3/da5/class___graph___1_1_graph.html#a10a4e026134bdf9e851946b1b7c87c73',1,'_Graph_::Graph::operator[]()'],['../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#a12a4fe60635753be055e58f09a3a4f9a',1,'_MATRIX_::Matrix::operator[]()']]],
+  ['operator_5b_5d',['operator[]',['../d3/da5/class___graph___1_1_graph.html#a10a4e026134bdf9e851946b1b7c87c73',1,'_Graph_::Graph::operator[]()'],['../d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#a12a4fe60635753be055e58f09a3a4f9a',1,'_MATRIX_::Matrix::operator[]()'],['../d4/df3/class_buffer_test.html#a0493d55a98b45263356678bdb363a331',1,'BufferTest::operator[]()']]],
   ['operator_5e',['operator^',['../dd/d33/_mod_int_8hpp.html#a9b59ce535ebda37b5c4c0e6c26833bb1',1,'_ModInt_']]]
 ];

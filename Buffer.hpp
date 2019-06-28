@@ -69,7 +69,7 @@ namespace _Buffer_ {
         /**
          * @brief Construct a new Disposable Buffer Manager object
          *
-         * @param buf
+         * @param buf 配列を保持するポインタ
          */
         DisposableBufferManager(T* buf) : BufferManager<T>(buf), ptr(0){};
 
@@ -96,7 +96,23 @@ namespace _Buffer_ {
          *
          */
         void clear() { ptr = 0; }
+
+        /**
+         * @brief Get the ptr object
+         * 現在どこまで使っているかがわかる。主にデバッグ用
+         * @return int
+         */
+        int get_ptr() { return ptr; }
     };
+
+    /**
+     * @def DisposalBuffer(type, size, var_name)
+     * @brief
+     * [var_name]という名前のDisposalBufferManagerを生成する
+     */
+#define DisposableBuffer(type, size, var_name) \
+    type var_name##_mem[size];                 \
+    DisposableBufferManager<type> var_name(var_name##_mem);
 
     /**
      * @brief
@@ -149,6 +165,13 @@ namespace _Buffer_ {
          * \todo 要検討
          */
         void clear() {}
+
+        /**
+         * @brief キューの残りサイズを取得 デバッグ用
+         *
+         * @return int
+         */
+        int get_queue_size() { return que.size(); }
     };
 
 } // namespace _Buffer_

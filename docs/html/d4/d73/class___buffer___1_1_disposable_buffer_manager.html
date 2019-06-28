@@ -101,6 +101,9 @@ _Buffer_::DisposableBufferManager&lt; T &gt; の継承関係図</div>
 <tr class="memitem:a59e2d1014b2b3449bf94f68c29f01ab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d73/class___buffer___1_1_disposable_buffer_manager.html#a59e2d1014b2b3449bf94f68c29f01ab8">clear</a> ()</td></tr>
 <tr class="memdesc:a59e2d1014b2b3449bf94f68c29f01ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ptrをリセット  <a href="#a59e2d1014b2b3449bf94f68c29f01ab8">[詳解]</a><br /></td></tr>
 <tr class="separator:a59e2d1014b2b3449bf94f68c29f01ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739f8e06ea5219f3ca9c44ed27844578"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d73/class___buffer___1_1_disposable_buffer_manager.html#a739f8e06ea5219f3ca9c44ed27844578">get_ptr</a> ()</td></tr>
+<tr class="memdesc:a739f8e06ea5219f3ca9c44ed27844578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ptr object 現在どこまで使っているかがわかる。主にデバッグ用  <a href="#a739f8e06ea5219f3ca9c44ed27844578">[詳解]</a><br /></td></tr>
+<tr class="separator:a739f8e06ea5219f3ca9c44ed27844578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class___buffer___1_1_buffer_manager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class___buffer___1_1_buffer_manager')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html">_Buffer_::BufferManager&lt; T &gt;</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:acae08fb2ed51477be120049b2151521a inherit pub_methods_class___buffer___1_1_buffer_manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html#acae08fb2ed51477be120049b2151521a">BufferManager</a> (T *<a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html#add8184d3b94b0f226400b01f44c6775a">buf</a>)</td></tr>
 <tr class="memdesc:acae08fb2ed51477be120049b2151521a inherit pub_methods_class___buffer___1_1_buffer_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Buffer Manager object  <a href="../../d7/d2e/class___buffer___1_1_buffer_manager.html#acae08fb2ed51477be120049b2151521a">[詳解]</a><br /></td></tr>
@@ -156,7 +159,7 @@ template&lt;typename T &gt; </div>
 <p>Construct a new Disposable Buffer Manager object </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buf</td><td></td></tr>
+    <tr><td class="paramname">buf</td><td>配列を保持するポインタ </td></tr>
   </table>
   </dd>
 </dl>
@@ -196,6 +199,38 @@ template&lt;typename T &gt; </div>
 <p><a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html#aa04e5e4aed36ae9083ac1b9e220772e7">_Buffer_::BufferManager&lt; T &gt;</a>を実装しています。</p>
 
 <p class="definition"> <a class="el" href="../../dd/df1/_buffer_8hpp_source.html">Buffer.hpp</a> の <a class="el" href="../../dd/df1/_buffer_8hpp_source.html#l00098">98</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a739f8e06ea5219f3ca9c44ed27844578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a739f8e06ea5219f3ca9c44ed27844578">&#9670;&nbsp;</a></span>get_ptr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="../../d4/d73/class___buffer___1_1_disposable_buffer_manager.html">_Buffer_::DisposableBufferManager</a>&lt; T &gt;::get_ptr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the ptr object 現在どこまで使っているかがわかる。主にデバッグ用 </p>
+<dl class="section return"><dt>戻り値</dt><dd>int </dd></dl>
+
+<p class="definition"> <a class="el" href="../../dd/df1/_buffer_8hpp_source.html">Buffer.hpp</a> の <a class="el" href="../../dd/df1/_buffer_8hpp_source.html#l00105">105</a> 行目に定義があります。</p>
 
 </div>
 </div>
