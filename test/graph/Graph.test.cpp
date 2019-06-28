@@ -8,8 +8,8 @@
  *
  */
 #define BOOST_TEST_MAIN
-#include "Graph.hpp"
-#include "GraphUtil.hpp"
+#include "graph/Graph.hpp"
+#include "graph/GraphUtil.hpp"
 #include <boost/test/included/unit_test.hpp>
 
 BOOST_AUTO_TEST_SUITE(GraphTest)

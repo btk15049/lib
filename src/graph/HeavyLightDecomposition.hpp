@@ -8,9 +8,9 @@
  */
 /*<head>*/
 #pragma once
-#include "Buffer.hpp"
 #include "Template.hpp"
-#include "Tree.hpp"
+#include "graph/Tree.hpp"
+#include "structure/Buffer.hpp"
 /*</head>*/
 
 

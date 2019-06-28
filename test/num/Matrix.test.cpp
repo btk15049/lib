@@ -8,7 +8,7 @@
  *
  */
 #define BOOST_TEST_MAIN
-#include "Matrix.hpp"
+#include "num/Matrix.hpp"
 #include <boost/test/included/unit_test.hpp>
 
 BOOST_AUTO_TEST_SUITE(MatrixClass)

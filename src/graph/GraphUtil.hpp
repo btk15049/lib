@@ -8,7 +8,7 @@
 
 /*<head>*/
 #pragma once
-#include "Graph.hpp"
+#include "graph/Graph.hpp"
 /*</head>*/
 
 namespace _GraphUtil_ {

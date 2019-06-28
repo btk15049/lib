@@ -8,7 +8,7 @@
  *
  */
 #define BOOST_TEST_MAIN
-#include "Tree.hpp"
+#include "graph/Tree.hpp"
 #include <boost/test/included/unit_test.hpp>
 
 

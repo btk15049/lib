@@ -10,8 +10,8 @@
  */
 
 #define BOOST_TEST_MAIN
-#include "Buffer.hpp"
-#include "HeavyLightDecomposition.hpp"
+#include "graph/HeavyLightDecomposition.hpp"
+#include "structure/Buffer.hpp"
 #include <boost/test/included/unit_test.hpp>
 
 /**
