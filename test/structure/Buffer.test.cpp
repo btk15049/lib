@@ -55,7 +55,7 @@ DisposableBuffer(int, 50, disposable_buffer);
  * @brief DisposableBufferManagerをとりあえず使うテスト
  *
  */
-BOOST_AUTO_TEST_CASE(single_use) {
+BOOST_AUTO_TEST_CASE(disposable_single_use) {
     BOOST_CHECK_EQUAL(disposable_buffer.get_ptr(), 0);
     auto p = disposable_buffer.pop(10);
     BOOST_CHECK_EQUAL(disposable_buffer.get_ptr(), 10);
@@ -72,7 +72,7 @@ BOOST_AUTO_TEST_CASE(single_use) {
 /**
  * @brief 複数同時に使う場合のテスト
  */
-BOOST_AUTO_TEST_CASE(multi_use) {
+BOOST_AUTO_TEST_CASE(disposable_multi_use) {
     BOOST_CHECK_EQUAL(disposable_buffer.get_ptr(), 0);
     auto p = disposable_buffer.pop(6);
     BOOST_CHECK_EQUAL(disposable_buffer.get_ptr(), 6);
@@ -95,7 +95,7 @@ BOOST_AUTO_TEST_CASE(multi_use) {
  * @brief クラスで領域管理する場合のテスト
  *
  */
-BOOST_AUTO_TEST_CASE(class_use) {
+BOOST_AUTO_TEST_CASE(disposable_class_use) {
     BOOST_CHECK_EQUAL(disposable_buffer.get_ptr(), 0);
     {
         BufferTest p(disposable_buffer, 6);
@@ -128,7 +128,7 @@ BlockBuffer(int, 5, 6, block_buffer);
 /**
  * @brief とりあえず使えるかテスト
  */
-BOOST_AUTO_TEST_CASE(single_use) {
+BOOST_AUTO_TEST_CASE(block_single_use) {
     BOOST_CHECK_EQUAL(block_buffer.get_queue_size(), 5);
     auto p = block_buffer.pop();
     BOOST_CHECK_EQUAL(block_buffer.get_queue_size(), 4);
@@ -142,7 +142,7 @@ BOOST_AUTO_TEST_CASE(single_use) {
 /**
  * @brief 複数使う場合（領域が重複してないかとかをテスト）
  */
-BOOST_AUTO_TEST_CASE(multi_use) {
+BOOST_AUTO_TEST_CASE(block_multi_use) {
     BOOST_CHECK_EQUAL(block_buffer.get_queue_size(), 5);
     auto p = block_buffer.pop();
     BOOST_CHECK_EQUAL(block_buffer.get_queue_size(), 4);
@@ -167,7 +167,7 @@ BOOST_AUTO_TEST_CASE(multi_use) {
  * @details デストラクタでうまくqueueにポインタを戻せるかのテストがしたい
  * @see BufferTest
  */
-BOOST_AUTO_TEST_CASE(class_use) {
+BOOST_AUTO_TEST_CASE(block_class_use) {
     BOOST_CHECK_EQUAL(block_buffer.get_queue_size(), 5);
     {
         auto p = BufferTest(block_buffer, 6);
