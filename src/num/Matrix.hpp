@@ -1,7 +1,7 @@
 /**
  * @file Matrix.hpp
  * @author btk
- * @brief
+ * @brief 行列累乗
  * @version 0.1
  * @date 2019-06-10
  *
