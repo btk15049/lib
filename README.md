@@ -13,10 +13,14 @@
 
 ビルド時のコマンドを環境変数で設定しているので`settings.json`の`settings`の項にパスを書く
 
-```json
-    "cmake.environment": {
-      "BUILD_CMD": "$(which g++)",
-      "LIB_PATH": "${REPOSITORY_ROOT}/lib/src",
-      "BOOST_PATH": "boostのパス(例：/usr/local/Cellar/boost/1.68.0/include)"
-    }
-```
+````json
+    "cmake": {
+      "configureOnOpen": true,
+      "ctestArgs": ["-V"],
+      "environment": {
+        "BUILD_CMD": "/usr/local/bin/g++",
+        "LIB_PATH": "/Users/btk/btk15049/lib/src",
+        "BOOST_PATH": "/usr/local/Cellar/boost/1.68.0/include"
+      }
+    }```
+````
