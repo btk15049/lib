@@ -1,5 +1,7 @@
 /*<head>*/
 #pragma once
+#include "template/Header.hpp"
+#include "template/MinMaxOperation.hpp"
 /*</head>*/
 /**
  * @file Template.hpp
@@ -7,8 +9,7 @@
  * @author btk15049
  * @date 2019/05/02
  */
-#include <bits/stdc++.h>
-using namespace std;
+
 
 /* #region macro */
 /**
@@ -60,29 +61,7 @@ namespace _Template_ {
      * @var star
      * @brief cin高速化を実体化
      */
-    /**
-     * @brief change min
-     * @tparam T 型
-     * @param l 参照
-     * @param r 非参照
-     * @return 更新があればtrue
-     */
-    template <typename T>
-    inline bool chmin(T& l, T r) {
-        bool a = l > r;
-        if (a) l = r;
-        return a;
-    }
-    /**
-     * @brief chminのmax版
-     * @see chmin
-     */
-    template <typename T>
-    inline bool chmax(T& l, T r) {
-        bool a = l < r;
-        if (a) l = r;
-        return a;
-    }
+
     /**
      * @brief
      * vectorに直接cin流すためのやつ
