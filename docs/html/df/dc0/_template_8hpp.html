@@ -78,7 +78,8 @@ $(function() {
 
 <p>競技プログラミング用テンプレート  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &lt;bits/stdc++.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;template/Header.hpp&quot;</code><br />
+<code>#include &quot;template/MinMaxOperation.hpp&quot;</code><br />
 </div>
 <p><a href="../../df/dc0/_template_8hpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -122,14 +123,6 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:ac008d5593276f4e3e6a8e4f2536c2973"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac008d5593276f4e3e6a8e4f2536c2973"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/dc0/_template_8hpp.html#ac008d5593276f4e3e6a8e4f2536c2973">_Template_::chmin</a> (T &amp;l, T r)</td></tr>
-<tr class="memdesc:ac008d5593276f4e3e6a8e4f2536c2973"><td class="mdescLeft">&#160;</td><td class="mdescRight">change min  <a href="../../df/dc0/_template_8hpp.html#ac008d5593276f4e3e6a8e4f2536c2973">[詳解]</a><br /></td></tr>
-<tr class="separator:ac008d5593276f4e3e6a8e4f2536c2973"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a422324178a6a41a597841a8bdfa815"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0a422324178a6a41a597841a8bdfa815"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/dc0/_template_8hpp.html#a0a422324178a6a41a597841a8bdfa815">_Template_::chmax</a> (T &amp;l, T r)</td></tr>
-<tr class="memdesc:a0a422324178a6a41a597841a8bdfa815"><td class="mdescLeft">&#160;</td><td class="mdescRight">chminのmax版  <a href="../../df/dc0/_template_8hpp.html#a0a422324178a6a41a597841a8bdfa815">[詳解]</a><br /></td></tr>
-<tr class="separator:a0a422324178a6a41a597841a8bdfa815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebab323750af7564862582b16ff0fb55"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aebab323750af7564862582b16ff0fb55"><td class="memTemplItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/dc0/_template_8hpp.html#aebab323750af7564862582b16ff0fb55">_Template_::operator&gt;&gt;</a> (istream &amp;is, vector&lt; T &gt; &amp;v)</td></tr>
 <tr class="memdesc:aebab323750af7564862582b16ff0fb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">vectorに直接cin流すためのやつ  <a href="../../df/dc0/_template_8hpp.html#aebab323750af7564862582b16ff0fb55">[詳解]</a><br /></td></tr>
@@ -154,105 +147,6 @@ struct <a class="el" href="../../d7/d77/struct___template___1_1cww.html">_Templa
 
 <p class="definition"> <a class="el" href="../../df/dc0/_template_8hpp_source.html">Template.hpp</a> に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="file_a0a422324178a6a41a597841a8bdfa815"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a0a422324178a6a41a597841a8bdfa815">&#9670;&nbsp;</a></span>chmax()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool _Template_::chmax </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>chminのmax版 </p>
-<dl class="section see"><dt>参照</dt><dd>chmin </dd></dl>
-
-<p class="definition"> <a class="el" href="../../df/dc0/_template_8hpp_source.html">Template.hpp</a> の <a class="el" href="../../df/dc0/_template_8hpp_source.html#l00081">81</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_ac008d5593276f4e3e6a8e4f2536c2973"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ac008d5593276f4e3e6a8e4f2536c2973">&#9670;&nbsp;</a></span>chmin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool _Template_::chmin </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>change min </p>
-<dl class="tparams"><dt>テンプレート引数</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>型 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l</td><td>参照 </td></tr>
-    <tr><td class="paramname">r</td><td>非参照 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>戻り値</dt><dd>更新があればtrue </dd></dl>
-
-<p class="definition"> <a class="el" href="../../df/dc0/_template_8hpp_source.html">Template.hpp</a> の <a class="el" href="../../df/dc0/_template_8hpp_source.html#l00071">71</a> 行目に定義があります。</p>
-
-</div>
-</div>
 <a id="file_aebab323750af7564862582b16ff0fb55"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#file_aebab323750af7564862582b16ff0fb55">&#9670;&nbsp;</a></span>operator&gt;&gt;()</h2>
 
@@ -297,7 +191,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>istream&amp; </dd></dl>
 
-<p class="definition"> <a class="el" href="../../df/dc0/_template_8hpp_source.html">Template.hpp</a> の <a class="el" href="../../df/dc0/_template_8hpp_source.html#l00095">95</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../df/dc0/_template_8hpp_source.html">Template.hpp</a> の <a class="el" href="../../df/dc0/_template_8hpp_source.html#l00074">74</a> 行目に定義があります。</p>
 
 </div>
 </div>
