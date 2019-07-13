@@ -9,7 +9,9 @@
  *
  */
 
+//! @cond
 #define BOOST_TEST_MAIN
+//! @endcond
 #include "graph/HeavyLightDecomposition.hpp"
 #include "structure/Buffer.hpp"
 #include <boost/test/included/unit_test.hpp>

@@ -7,7 +7,9 @@
  * @copyright Copyright (c) 2019
  *
  */
+//! @cond
 #define BOOST_TEST_MAIN
+//! @endcond
 #include "structure/Buffer.hpp"
 #include <boost/test/included/unit_test.hpp>
 

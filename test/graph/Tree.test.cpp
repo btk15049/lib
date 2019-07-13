@@ -7,7 +7,9 @@
  * @copyright Copyright (c) 2019
  *
  */
+//! @cond
 #define BOOST_TEST_MAIN
+//! @endcond
 #include "graph/Tree.hpp"
 #include <boost/test/included/unit_test.hpp>
 
@@ -65,7 +67,7 @@ vector<int> collect_component(int v, Forest<>& forest) {
     return vs;
 }
 
-BOOST_AUTO_TEST_SUITE(Tree)
+BOOST_AUTO_TEST_SUITE(TreeFile)
 /* #region class Forest */
 BOOST_AUTO_TEST_SUITE(ForestClass)
 
@@ -175,7 +177,7 @@ BOOST_AUTO_TEST_SUITE(TreeClass)
  */
 BOOST_AUTO_TEST_CASE(Tree_createTest1) {
     Graph<> arg = treeSample();
-    _Tree_::Tree<> tree(arg);
+    Tree<> tree(arg);
     unused_var(tree);
 }
 
@@ -184,7 +186,7 @@ BOOST_AUTO_TEST_CASE(Tree_createTest1) {
  */
 BOOST_AUTO_TEST_CASE(Tree_checkRoot1) {
     Graph<> arg = treeSample();
-    _Tree_::Tree<> tree(arg);
+    Tree<> tree(arg);
     BOOST_CHECK_EQUAL(tree.get_root(), 0);
 }
 
@@ -193,7 +195,7 @@ BOOST_AUTO_TEST_CASE(Tree_checkRoot1) {
  */
 BOOST_AUTO_TEST_CASE(Tree_checkRoot2) {
     Graph<> arg = treeSample();
-    _Tree_::Tree<> tree(arg, 3);
+    Tree<> tree(arg, 3);
     BOOST_CHECK_EQUAL(tree.get_root(), 3);
 }
 
@@ -202,7 +204,7 @@ BOOST_AUTO_TEST_CASE(Tree_checkRoot2) {
  */
 BOOST_AUTO_TEST_CASE(Tree_checkAllSize) {
     Graph<> arg = treeSample();
-    _Tree_::Tree<> tree(arg);
+    Tree<> tree(arg);
     BOOST_CHECK_EQUAL(tree.size(), 8);
 }
 
@@ -211,7 +213,7 @@ BOOST_AUTO_TEST_CASE(Tree_checkAllSize) {
  */
 BOOST_AUTO_TEST_CASE(Tree_checkAllDegree) {
     Graph<> arg = treeSample();
-    _Tree_::Tree<> tree(arg);
+    Tree<> tree(arg);
     BOOST_CHECK_EQUAL(tree.degree(), 7);
 }
 
@@ -220,7 +222,7 @@ BOOST_AUTO_TEST_CASE(Tree_checkAllDegree) {
  */
 BOOST_AUTO_TEST_CASE(Tree_checkEachDegree) {
     Graph<> arg = treeSample();
-    _Tree_::Tree<> tree(arg);
+    Tree<> tree(arg);
     vector<int> degrees;
     for (int v : range(tree.size())) {
         degrees.push_back(tree.degree(v));
@@ -235,7 +237,7 @@ BOOST_AUTO_TEST_CASE(Tree_checkEachDegree) {
  */
 BOOST_AUTO_TEST_CASE(Tree_checkComponents) {
     Graph<> arg = treeSample();
-    _Tree_::Tree<> tree(arg);
+    Tree<> tree(arg);
     vector<int> component = collect_component(tree.get_root(), tree);
     sort(ALL(component));
     vector<int> expected = {0, 1, 2, 3, 4, 5, 6, 7};
@@ -249,7 +251,7 @@ BOOST_AUTO_TEST_CASE(Tree_checkComponents) {
  */
 BOOST_AUTO_TEST_CASE(resize) {
     Graph<> arg = treeSample();
-    _Tree_::Tree<> tree(arg);
+    Tree<> tree(arg);
     tree.resize(10);
     BOOST_CHECK_EQUAL(tree.size(), 10);
     vector<int> degrees;

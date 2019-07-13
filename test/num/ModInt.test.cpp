@@ -9,6 +9,8 @@
  * @copyright Copyright (c) 2019
  *
  */
+//! @cond
 #define BOOST_TEST_MAIN
+//! @endcond
 #include "num/ModInt.hpp"
 #include <boost/test/included/unit_test.hpp>

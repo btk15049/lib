@@ -1,6 +1,5 @@
 var _tree_8test_8cpp =
 [
-    [ "BOOST_TEST_MAIN", "d6/d94/_tree_8test_8cpp.html#ab340a5e76af466a5f20ec5500d30a80b", null ],
     [ "BOOST_AUTO_TEST_CASE", "d6/d94/_tree_8test_8cpp.html#a75cc9abdb7c669b6862b95739d152719", null ],
     [ "BOOST_AUTO_TEST_CASE", "d6/d94/_tree_8test_8cpp.html#a5071f6447232dea223babceca2156e47", null ],
     [ "BOOST_AUTO_TEST_CASE", "d6/d94/_tree_8test_8cpp.html#a7c56f6fcb69164320109cf9d08d684a2", null ],

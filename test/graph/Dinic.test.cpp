@@ -7,6 +7,8 @@
  * @date 2019-06-28
  * @copyright Copyright (c) 2019
  */
+//! @cond
 #define BOOST_TEST_MAIN
+//! @endcond
 #include "graph/Dinic.hpp"
 #include <boost/test/included/unit_test.hpp>

@@ -22,20 +22,20 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"総合概要",url:"index.html"},
-{text:"諸情報",url:"pages.html"},
-{text:"名前空間",url:"namespaces.html",children:[
-{text:"名前空間一覧",url:"namespaces.html"},
-{text:"名前空間メンバ",url:"namespacemembers.html",children:[
-{text:"全て",url:"namespacemembers.html"},
-{text:"関数",url:"namespacemembers_func.html"},
-{text:"変数",url:"namespacemembers_vars.html"}]}]},
-{text:"クラス",url:"annotated.html",children:[
-{text:"クラス一覧",url:"annotated.html"},
-{text:"クラス索引",url:"classes.html"},
-{text:"クラス階層",url:"inherits.html"},
-{text:"クラスメンバ",url:"functions.html",children:[
-{text:"全て",url:"functions.html",children:[
+{text:"Main Page",url:"index.html"},
+{text:"Related Pages",url:"pages.html"},
+{text:"Namespaces",url:"namespaces.html",children:[
+{text:"Namespace List",url:"namespaces.html"},
+{text:"Namespace Members",url:"namespacemembers.html",children:[
+{text:"All",url:"namespacemembers.html"},
+{text:"Functions",url:"namespacemembers_func.html"},
+{text:"Variables",url:"namespacemembers_vars.html"}]}]},
+{text:"Classes",url:"annotated.html",children:[
+{text:"Class List",url:"annotated.html"},
+{text:"Class Index",url:"classes.html"},
+{text:"Class Hierarchy",url:"inherits.html"},
+{text:"Class Members",url:"functions.html",children:[
+{text:"All",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
 {text:"b",url:"functions.html#index_b"},
 {text:"c",url:"functions.html#index_c"},
@@ -59,7 +59,7 @@ var menudata={children:[
 {text:"w",url:"functions.html#index_w"},
 {text:"x",url:"functions.html#index_x"},
 {text:"~",url:"functions.html#index__7E"}]},
-{text:"関数",url:"functions_func.html",children:[
+{text:"Functions",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"b",url:"functions_func.html#index_b"},
 {text:"c",url:"functions_func.html#index_c"},
@@ -83,12 +83,12 @@ var menudata={children:[
 {text:"w",url:"functions_func.html#index_w"},
 {text:"x",url:"functions_func.html#index_x"},
 {text:"~",url:"functions_func.html#index__7E"}]},
-{text:"変数",url:"functions_vars.html"},
-{text:"型定義",url:"functions_type.html"}]}]},
-{text:"ファイル",url:"files.html",children:[
-{text:"ファイル一覧",url:"files.html"},
-{text:"ファイルメンバ",url:"globals.html",children:[
-{text:"全て",url:"globals.html",children:[
+{text:"Variables",url:"functions_vars.html"},
+{text:"Typedefs",url:"functions_type.html"}]}]},
+{text:"Files",url:"files.html",children:[
+{text:"File List",url:"files.html"},
+{text:"File Members",url:"globals.html",children:[
+{text:"All",url:"globals.html",children:[
 {text:"a",url:"globals.html#index_a"},
 {text:"b",url:"globals.html#index_b"},
 {text:"c",url:"globals.html#index_c"},
@@ -103,7 +103,7 @@ var menudata={children:[
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"},
 {text:"u",url:"globals.html#index_u"}]},
-{text:"関数",url:"globals_func.html",children:[
+{text:"Functions",url:"globals_func.html",children:[
 {text:"a",url:"globals_func.html#index_a"},
 {text:"b",url:"globals_func.html#index_b"},
 {text:"c",url:"globals_func.html#index_c"},
@@ -116,6 +116,6 @@ var menudata={children:[
 {text:"s",url:"globals_func.html#index_s"},
 {text:"t",url:"globals_func.html#index_t"},
 {text:"u",url:"globals_func.html#index_u"}]},
-{text:"変数",url:"globals_vars.html"},
-{text:"型定義",url:"globals_type.html"},
-{text:"マクロ定義",url:"globals_defs.html"}]}]}]}
+{text:"Variables",url:"globals_vars.html"},
+{text:"Typedefs",url:"globals_type.html"},
+{text:"Macros",url:"globals_defs.html"}]}]}]}

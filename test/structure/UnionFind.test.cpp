@@ -8,6 +8,7 @@
  *
  */
 
+//! @cond
 #define BOOST_TEST_MAIN
-#include "structure/UnionFind.hpp"
+//! @endcond#include "structure/UnionFind.hpp"
 #include <boost/test/included/unit_test.hpp>

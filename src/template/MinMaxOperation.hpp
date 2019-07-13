@@ -19,6 +19,13 @@
  */
 template <typename T>
 struct min_op {
+    /**
+     * @brief 本体
+     *
+     * @param l
+     * @param r
+     * @return T
+     */
     static T exec(const T l, const T r) { return l < r ? l : r; }
 };
 
@@ -29,6 +36,13 @@ struct min_op {
  */
 template <typename T>
 struct max_op {
+    /**
+     * @brief 本体
+     *
+     * @param l
+     * @param r
+     * @return T
+     */
     static T exec(const T l, const T r) { return l > r ? l : r; }
 };
 

@@ -8,15 +8,19 @@
  * @copyright Copyright (c) 2019
  *
  */
+//! @cond
 #define BOOST_TEST_MAIN
+//! @endcond
 #include "template/Random.hpp"
 #include <boost/test/included/unit_test.hpp>
 #include <set>
 #include <vector>
 
+//! @cond
 BOOST_AUTO_TEST_SUITE(RandomClass)
 
 BOOST_AUTO_TEST_SUITE(XorShift32Class)
+//! @endcond
 
 /**
  * @brief XorShift32::next_int の テスト
@@ -75,5 +79,7 @@ BOOST_AUTO_TEST_CASE(ParamSignedStress) {
                                   std::begin(expected), std::end(expected));
 }
 
+//! @cond
 BOOST_AUTO_TEST_SUITE_END();
 BOOST_AUTO_TEST_SUITE_END();
+//! @endcond

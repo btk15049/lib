@@ -24,34 +24,34 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "btk's library", "index.html", [
-    [ "todo一覧", "dd/da0/todo.html", null ],
-    [ "名前空間", "namespaces.html", [
-      [ "名前空間一覧", "namespaces.html", "namespaces_dup" ],
-      [ "名前空間メンバ", "namespacemembers.html", [
-        [ "全て", "namespacemembers.html", null ],
-        [ "関数", "namespacemembers_func.html", null ],
-        [ "変数", "namespacemembers_vars.html", null ]
+    [ "Todo List", "dd/da0/todo.html", null ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
-    [ "クラス", "annotated.html", [
-      [ "クラス一覧", "annotated.html", "annotated_dup" ],
-      [ "クラス索引", "classes.html", null ],
-      [ "クラス階層", "hierarchy.html", "hierarchy" ],
-      [ "クラスメンバ", "functions.html", [
-        [ "全て", "functions.html", null ],
-        [ "関数", "functions_func.html", null ],
-        [ "変数", "functions_vars.html", null ],
-        [ "型定義", "functions_type.html", null ]
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Typedefs", "functions_type.html", null ]
       ] ]
     ] ],
-    [ "ファイル", "files.html", [
-      [ "ファイル一覧", "files.html", "files_dup" ],
-      [ "ファイルメンバ", "globals.html", [
-        [ "全て", "globals.html", null ],
-        [ "関数", "globals_func.html", null ],
-        [ "変数", "globals_vars.html", null ],
-        [ "型定義", "globals_type.html", null ],
-        [ "マクロ定義", "globals_defs.html", null ]
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -60,8 +60,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"dd/d33/_mod_int_8hpp.html#a68aabc5acdff34fb59054c001d87445d"
+"dd/d33/_mod_int_8hpp.html#ad0b64cf0af90b9ed3e5a0aa3b92d879e"
 ];
 
-var SYNCONMSG = 'クリックで同期表示が無効になります';
-var SYNCOFFMSG = 'クリックで同期表示が有効になります';
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';
