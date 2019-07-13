@@ -1,7 +1,7 @@
 /**
  * @file Buffer.test.cpp
  * @author btk
- * @brief Buffer.hppのテスト
+ * @brief Buffer.hpp のテスト
  * @date 2019-06-28
  *
  * @copyright Copyright (c) 2019

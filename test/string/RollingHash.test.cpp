@@ -1,7 +1,8 @@
 /**
  * @file RollingHash.test.cpp
  * @author btk
- * @brief \todo 未実装
+ * @brief RollingHash.hpp のテスト
+ * @todo 未実装
  * @version 0.1
  * @date 2019-06-28
  *

@@ -1,7 +1,7 @@
 /**
  * @file Tree.test.cpp
  * @author btk
- * @brief Tree.hppのテスト
+ * @brief Tree.hpp のテスト
  * @date 2019-05-08
  *
  * @copyright Copyright (c) 2019
@@ -10,7 +10,6 @@
 #define BOOST_TEST_MAIN
 #include "graph/Tree.hpp"
 #include <boost/test/included/unit_test.hpp>
-
 
 /**
  * @brief 入力サンプル生成

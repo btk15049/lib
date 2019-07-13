@@ -1,7 +1,7 @@
 /**
  * @file HeavyLightDecomposition.test.cpp
  * @author btk
- * @brief
+ * @brief HeavyLightDecomposition.hpp のテスト
  * @version 0.1
  * @date 2019-06-11
  *

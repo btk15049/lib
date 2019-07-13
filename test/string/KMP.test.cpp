@@ -1,7 +1,7 @@
 /**
  * @file KMP.test.cpp
  * @author btk
- * @brief KMPのテスト
+ * @brief KMP.hpp のテスト
  * @date 2019-05-27
  *
  * @copyright Copyright (c) 2019
@@ -9,7 +9,9 @@
  */
 #define BOOST_TEST_MAIN
 #include "string/KMP.hpp"
+#include "template/Loop.hpp"
 #include <boost/test/included/unit_test.hpp>
+#include <string>
 
 BOOST_AUTO_TEST_SUITE(KMPClass)
 

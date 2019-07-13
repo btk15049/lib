@@ -1,7 +1,7 @@
 /**
  * @file Matrix.test.cpp
  * @author btk
- * @brief Matrix.hppのテスト
+ * @brief Matrix.hpp のテスト
  * @date 2019-06-10
  *
  * @copyright Copyright (c) 2019
