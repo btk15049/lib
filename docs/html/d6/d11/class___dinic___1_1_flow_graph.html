@@ -9,6 +9,14 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d6/d11/class___dinic___1_1_flow_graph.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>_Dinic_</b></li><li class="navelem"><a class="el" href="../../d6/d11/class___dinic___1_1_flow_graph.html">FlowGraph</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
@@ -80,12 +100,21 @@ $(function() {
 <div class="dynheader">
 _Dinic_::FlowGraph&lt; E &gt; の継承関係図</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="../../d6/d11/class___dinic___1_1_flow_graph.png" usemap="#_5FDinic_5F::FlowGraph_3C_20E_20_3E_map" alt=""/>
-  <map id="_5FDinic_5F::FlowGraph_3C_20E_20_3E_map" name="_5FDinic_5F::FlowGraph_3C_20E_20_3E_map">
-<area href="../../d3/da5/class___graph___1_1_graph.html" title="グラフクラス" alt="_Graph_::Graph&lt; E &gt;" shape="rect" coords="0,0,155,24"/>
-  </map>
-</div></div>
+<div class="center"><img src="../../da/d8f/class___dinic___1_1_flow_graph__inherit__graph.png" border="0" usemap="#___dinic___1_1_flow_graph_3_01_e_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="___dinic___1_1_flow_graph_3_01_e_01_4_inherit__map" id="___dinic___1_1_flow_graph_3_01_e_01_4_inherit__map">
+<area shape="rect"  title="ãã­ã¼ç¨ã®ã°ã©ãã¯ã©ã¹,Graphãç¶æ¿" alt="" coords="5,79,176,104"/>
+<area shape="rect"  href="../../d3/da5/class___graph___1_1_graph.html" title="ã°ã©ãã¯ã©ã¹" alt="" coords="16,5,165,31"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+_Dinic_::FlowGraph&lt; E &gt; 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/de9/class___dinic___1_1_flow_graph__coll__graph.png" border="0" usemap="#___dinic___1_1_flow_graph_3_01_e_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="___dinic___1_1_flow_graph_3_01_e_01_4_coll__map" id="___dinic___1_1_flow_graph_3_01_e_01_4_coll__map">
+<area shape="rect"  title="ãã­ã¼ç¨ã®ã°ã©ãã¯ã©ã¹,Graphãç¶æ¿" alt="" coords="5,79,176,104"/>
+<area shape="rect"  href="../../d3/da5/class___graph___1_1_graph.html" title="ã°ã©ãã¯ã©ã¹" alt="" coords="16,5,165,31"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
@@ -149,7 +178,7 @@ class _Dinic_::FlowGraph&lt; E &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a> の <a class="el" href="../../db/dd6/_dinic_8hpp_source.html#l00056">56</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a> の <a class="el" href="../../db/dd6/_dinic_8hpp_source.html#l00058">58</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a9e5001ebfbbddd18a4436d63c98b5872"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e5001ebfbbddd18a4436d63c98b5872">&#9670;&nbsp;</a></span>FlowGraph()</h2>
@@ -182,7 +211,7 @@ template&lt;typename... Ts&gt; </div>
 <p>Construct a new Flow Graph object </p>
 <p>完全転送してるので詳しくはGraphクラスのコンストラクタを参照． </p>
 
-<p class="definition"> <a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a> の <a class="el" href="../../db/dd6/_dinic_8hpp_source.html#l00080">80</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a> の <a class="el" href="../../db/dd6/_dinic_8hpp_source.html#l00082">82</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -248,7 +277,7 @@ template&lt;typename F &gt; </div>
 </dl>
 <p>Graph::add_edge をオーバーライドしている． </p>
 
-<p class="definition"> <a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a> の <a class="el" href="../../db/dd6/_dinic_8hpp_source.html#l00069">69</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a> の <a class="el" href="../../db/dd6/_dinic_8hpp_source.html#l00071">71</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -256,11 +285,15 @@ template&lt;typename F &gt; </div>
 <li>src/graph/<a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>_Dinic_</b></li><li class="navelem"><a class="el" href="../../d6/d11/class___dinic___1_1_flow_graph.html">FlowGraph</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

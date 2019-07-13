@@ -9,6 +9,14 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d2/d1f/classrange.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">クラス</a> &#124;
@@ -69,37 +93,223 @@ $(function() {
 <div class="title">range クラス</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>python みたいな range-based for を実現  
+ <a href="../../d2/d1f/classrange.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d7/d75/_loop_8hpp_source.html">Loop.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:ad1941fb02d2c8cdcdc281d8d63ba7a63"><td class="memItemLeft" align="right" valign="top"><a id="ad1941fb02d2c8cdcdc281d8d63ba7a63"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>range</b> (int n)</td></tr>
+<tr class="memitem:ad1941fb02d2c8cdcdc281d8d63ba7a63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/classrange.html#ad1941fb02d2c8cdcdc281d8d63ba7a63">range</a> (int n)</td></tr>
+<tr class="memdesc:ad1941fb02d2c8cdcdc281d8d63ba7a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new range object  <a href="#ad1941fb02d2c8cdcdc281d8d63ba7a63">[詳解]</a><br /></td></tr>
 <tr class="separator:ad1941fb02d2c8cdcdc281d8d63ba7a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a458a13f8bcc86731a8beafba108ea84b"><td class="memItemLeft" align="right" valign="top"><a id="a458a13f8bcc86731a8beafba108ea84b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>range</b> (int i, int n)</td></tr>
+<tr class="memitem:a458a13f8bcc86731a8beafba108ea84b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/classrange.html#a458a13f8bcc86731a8beafba108ea84b">range</a> (int i, int n)</td></tr>
+<tr class="memdesc:a458a13f8bcc86731a8beafba108ea84b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new range object  <a href="#a458a13f8bcc86731a8beafba108ea84b">[詳解]</a><br /></td></tr>
 <tr class="separator:a458a13f8bcc86731a8beafba108ea84b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a294089c179337afecc9d065877528a28"><td class="memItemLeft" align="right" valign="top"><a id="a294089c179337afecc9d065877528a28"></a>
-I &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="memitem:a294089c179337afecc9d065877528a28"><td class="memItemLeft" align="right" valign="top">I &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/classrange.html#a294089c179337afecc9d065877528a28">begin</a> ()</td></tr>
+<tr class="memdesc:a294089c179337afecc9d065877528a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">begin iterator  <a href="#a294089c179337afecc9d065877528a28">[詳解]</a><br /></td></tr>
 <tr class="separator:a294089c179337afecc9d065877528a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2b4eded415b13dcdcb39e48b196a324"><td class="memItemLeft" align="right" valign="top"><a id="af2b4eded415b13dcdcb39e48b196a324"></a>
-I &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+<tr class="memitem:af2b4eded415b13dcdcb39e48b196a324"><td class="memItemLeft" align="right" valign="top">I &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/classrange.html#af2b4eded415b13dcdcb39e48b196a324">end</a> ()</td></tr>
+<tr class="memdesc:af2b4eded415b13dcdcb39e48b196a324"><td class="mdescLeft">&#160;</td><td class="mdescRight">end iterator  <a href="#af2b4eded415b13dcdcb39e48b196a324">[詳解]</a><br /></td></tr>
 <tr class="separator:af2b4eded415b13dcdcb39e48b196a324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6272e718d5577753d924fc35b85bcea2"><td class="memItemLeft" align="right" valign="top"><a id="a6272e718d5577753d924fc35b85bcea2"></a>
-<a class="el" href="../../d1/d4f/classreverse__range.html">reverse_range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator!</b> ()</td></tr>
+<tr class="memitem:a6272e718d5577753d924fc35b85bcea2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d4f/classreverse__range.html">reverse_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/classrange.html#a6272e718d5577753d924fc35b85bcea2">operator!</a> ()</td></tr>
+<tr class="memdesc:a6272e718d5577753d924fc35b85bcea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆向きに参照するrange(reverse_rangeを取得できるs)  <a href="#a6272e718d5577753d924fc35b85bcea2">[詳解]</a><br /></td></tr>
 <tr class="separator:a6272e718d5577753d924fc35b85bcea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="datail" id="datail"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="../../db/dfe/_template_8cpp_source.html">Template.cpp</a> の <a class="el" href="../../db/dfe/_template_8cpp_source.html#l00023">23</a> 行目に定義があります。</p>
-</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li><a class="el" href="../../db/dfe/_template_8cpp_source.html">Template.cpp</a></li>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>python みたいな range-based for を実現 </p>
+<p>ループの範囲は[bg,ed)なので注意 !つけると逆向きにループが回る (<a class="el" href="../../d1/d4f/classreverse__range.html" title="rangeを逆向きに操作したいとき用">reverse_range</a>) 空間計算量はO(1) 使わない変数ができて警告が出がちなので，unused_varとかを使って警告消しするとよい </p>
+
+<p class="definition"> <a class="el" href="../../d7/d75/_loop_8hpp_source.html">Loop.hpp</a> の <a class="el" href="../../d7/d75/_loop_8hpp_source.html#l00069">69</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ad1941fb02d2c8cdcdc281d8d63ba7a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1941fb02d2c8cdcdc281d8d63ba7a63">&#9670;&nbsp;</a></span>range() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">range::range </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new range object </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="../../d7/d75/_loop_8hpp_source.html">Loop.hpp</a> の <a class="el" href="../../d7/d75/_loop_8hpp_source.html#l00085">85</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a458a13f8bcc86731a8beafba108ea84b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a458a13f8bcc86731a8beafba108ea84b">&#9670;&nbsp;</a></span>range() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">range::range </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new range object </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td></td></tr>
+    <tr><td class="paramname">n</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="../../d7/d75/_loop_8hpp_source.html">Loop.hpp</a> の <a class="el" href="../../d7/d75/_loop_8hpp_source.html#l00092">92</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a294089c179337afecc9d065877528a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a294089c179337afecc9d065877528a28">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">I&amp; range::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>begin iterator </p>
+<dl class="section return"><dt>戻り値</dt><dd>I&amp; </dd></dl>
+
+<p class="definition"> <a class="el" href="../../d7/d75/_loop_8hpp_source.html">Loop.hpp</a> の <a class="el" href="../../d7/d75/_loop_8hpp_source.html#l00098">98</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af2b4eded415b13dcdcb39e48b196a324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b4eded415b13dcdcb39e48b196a324">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">I&amp; range::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>end iterator </p>
+<dl class="section return"><dt>戻り値</dt><dd>I&amp; </dd></dl>
+
+<p class="definition"> <a class="el" href="../../d7/d75/_loop_8hpp_source.html">Loop.hpp</a> の <a class="el" href="../../d7/d75/_loop_8hpp_source.html#l00104">104</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6272e718d5577753d924fc35b85bcea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6272e718d5577753d924fc35b85bcea2">&#9670;&nbsp;</a></span>operator!()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d4f/classreverse__range.html">reverse_range</a> range::operator! </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>逆向きに参照するrange(reverse_rangeを取得できるs) </p>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="../../d1/d4f/classreverse__range.html" title="rangeを逆向きに操作したいとき用">reverse_range</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="../../d7/d75/_loop_8hpp_source.html">Loop.hpp</a> の <a class="el" href="../../d7/d75/_loop_8hpp_source.html#l00110">110</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>src/template/<a class="el" href="../../d7/d75/_loop_8hpp_source.html">Loop.hpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d2/d1f/classrange.html">range</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

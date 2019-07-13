@@ -1,0 +1,8 @@
+<map id="factorial::permutation" name="factorial::permutation">
+<area shape="rect" id="node1" title="nPkを求める" alt="" coords="5,31,151,56"/>
+<area shape="rect" id="node2" href="$d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="整数から高速にModIntを作りたいときに使う" alt="" coords="351,5,442,31"/>
+<area shape="rect" id="node4" href="$db/d1d/namespacefactorial.html#a18522a4facdc5307a6980e06593b57c5" title="順列数の前計算" alt="" coords="199,56,303,81"/>
+<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される．" alt="" coords="626,31,736,56"/>
+<area shape="rect" id="node5" href="$dd/d33/_mod_int_8hpp.html#a1cfb10c958b1ab7e64ff6cb109feee84" title="x^&#45;1 modを求める" alt="" coords="377,56,416,81"/>
+<area shape="rect" id="node6" href="$d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="整数から安全にModIntを作りたいときに使う" alt="" coords="490,56,578,81"/>
+</map>

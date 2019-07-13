@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +54,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions_func.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -65,28 +89,28 @@ $(function() {
 
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>add_arc()
-: <a class="el" href="d3/da5/class___graph___1_1_graph.html#a3c57faa08a4af59b891003a57ec7638f">_Graph_::Graph&lt; E &gt;</a>
+: <a class="el" href="da/d9a/class_graph.html#ab815e4862ba9a1d44bf1271429f33d5e">Graph&lt; E &gt;</a>
 </li>
 <li>add_edge()
-: <a class="el" href="d6/d11/class___dinic___1_1_flow_graph.html#ad9f87f163cce18777350df1f2cf12cf9">_Dinic_::FlowGraph&lt; E &gt;</a>
-, <a class="el" href="d3/da5/class___graph___1_1_graph.html#a4b778ebb9c6c266d87f20c78e5e74e3c">_Graph_::Graph&lt; E &gt;</a>
+: <a class="el" href="de/d66/class_flow_graph.html#a81580bd95fc1194c8356c6de97591ba8">FlowGraph&lt; E &gt;</a>
+, <a class="el" href="da/d9a/class_graph.html#a600b949cc6b53adfb4edfd0d2813edc2">Graph&lt; E &gt;</a>
 </li>
 <li>advance()
-: <a class="el" href="da/de9/class___k_m_p___1_1_k_m_p.html#a3c25a977d4de132fcde34909dd4a9219">_KMP_::KMP</a>
+: <a class="el" href="de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b">KMP</a>
 </li>
 </ul>
 
 
 <h3><a id="index_b"></a>- b -</h3><ul>
 <li>begin()
-: <a class="el" href="d0/d1d/class___template___1_1range.html#a32fb452fa7f2379fcbe093af17e7a1b9">_Template_::range</a>
-, <a class="el" href="dd/d4f/class___template___1_1reverse__range.html#a9d157328a1e6f775350f271316b62c52">_Template_::reverse_range</a>
+: <a class="el" href="d2/d1f/classrange.html#a294089c179337afecc9d065877528a28">range</a>
+, <a class="el" href="d1/d4f/classreverse__range.html#af265e1883d9c99560632a08f6078cd3d">reverse_range</a>
 </li>
 <li>BlockBufferManager()
-: <a class="el" href="d4/d68/class___buffer___1_1_block_buffer_manager.html#aa9cac6ac11f839a7491fb2897ed55f8d">_Buffer_::BlockBufferManager&lt; T &gt;</a>
+: <a class="el" href="d0/d40/class_block_buffer_manager.html#a2e6c1297cffbd75573419e91b7c2446f">BlockBufferManager&lt; T &gt;</a>
 </li>
 <li>BufferManager()
-: <a class="el" href="d7/d2e/class___buffer___1_1_buffer_manager.html#acae08fb2ed51477be120049b2151521a">_Buffer_::BufferManager&lt; T &gt;</a>
+: <a class="el" href="da/dd6/class_buffer_manager.html#a0c4608b5095c749f56ab88100ee7b0b3">BufferManager&lt; T &gt;</a>
 </li>
 <li>BufferTest()
 : <a class="el" href="d4/df3/class_buffer_test.html#afd2fafc178d5f2bac0369fb8d9c387bb">BufferTest</a>
@@ -96,250 +120,269 @@ $(function() {
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>Chain()
-: <a class="el" href="d7/d7f/class___m_a_t_r_i_x___1_1_chain.html#abdc2369317bf164c2c18522aadea7d45">_MATRIX_::Chain&lt; T, r, size &gt;</a>
+: <a class="el" href="d7/dfb/class_chain.html#a130e9e29ffdc448c88184093ac4a9c0e">Chain&lt; T, r, size &gt;</a>
 </li>
 <li>clear()
-: <a class="el" href="d4/d68/class___buffer___1_1_block_buffer_manager.html#aa052831f21904d4ca6faa3d3b0c3f4d3">_Buffer_::BlockBufferManager&lt; T &gt;</a>
-, <a class="el" href="d7/d2e/class___buffer___1_1_buffer_manager.html#aa04e5e4aed36ae9083ac1b9e220772e7">_Buffer_::BufferManager&lt; T &gt;</a>
-, <a class="el" href="d4/d73/class___buffer___1_1_disposable_buffer_manager.html#a59e2d1014b2b3449bf94f68c29f01ab8">_Buffer_::DisposableBufferManager&lt; T &gt;</a>
+: <a class="el" href="d0/d40/class_block_buffer_manager.html#a3dd9be73cfe80e14c29c08e8831fc951">BlockBufferManager&lt; T &gt;</a>
+, <a class="el" href="da/dd6/class_buffer_manager.html#ac8383714ccdf8e53b7a9bcd4e0b840fc">BufferManager&lt; T &gt;</a>
+, <a class="el" href="d0/d62/class_disposable_buffer_manager.html#a5c53088d0a5d618beb345eefeba7ac54">DisposableBufferManager&lt; T &gt;</a>
 </li>
 <li>color()
-: <a class="el" href="d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#a099993bd1fef9456f89c9042a3f75124">_HeavyLightDecomposition_::HeavyLightDecomposition&lt; E &gt;</a>
+: <a class="el" href="d3/d4c/class_heavy_light_decomposition.html#a15fd1f0ad3c1c17b68463cdff8cb5e67">HeavyLightDecomposition&lt; E &gt;</a>
 </li>
 <li>compute()
-: <a class="el" href="d7/d7f/class___m_a_t_r_i_x___1_1_chain.html#a0ba5008914dadb888365f62e72179458">_MATRIX_::Chain&lt; T, r, size &gt;</a>
+: <a class="el" href="d7/dfb/class_chain.html#a12990fc8425bb7a1f5d8c608ac24a693">Chain&lt; T, r, size &gt;</a>
+</li>
+<li>cww()
+: <a class="el" href="d8/d22/structcww.html#a5e40c19c8061c67e7327080a6633190c">cww</a>
 </li>
 </ul>
 
 
 <h3><a id="index_d"></a>- d -</h3><ul>
 <li>degree()
-: <a class="el" href="d3/da5/class___graph___1_1_graph.html#abb7a39238694ffc9fcfe462d497d0a0a">_Graph_::Graph&lt; E &gt;</a>
+: <a class="el" href="da/d9a/class_graph.html#a4b38dc02322759eff4f3859f9cb1fd7c">Graph&lt; E &gt;</a>
 </li>
 <li>Dinic()
-: <a class="el" href="d4/d02/class___dinic___1_1_dinic.html#afd3eee8cd008c8605845e5593d1d64e4">_Dinic_::Dinic&lt; F, flow_inf &gt;</a>
+: <a class="el" href="d2/dbc/class_dinic.html#a8316c0212092b1dbae6ddc729866d8dd">Dinic&lt; F, flow_inf &gt;</a>
 </li>
 <li>DisposableBufferManager()
-: <a class="el" href="d4/d73/class___buffer___1_1_disposable_buffer_manager.html#ae1fd05e2ed75b42d89d1debed53accac">_Buffer_::DisposableBufferManager&lt; T &gt;</a>
+: <a class="el" href="d0/d62/class_disposable_buffer_manager.html#abac9d32b2d46afd96b0d8296a5368e2b">DisposableBufferManager&lt; T &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
 <li>Edge()
-: <a class="el" href="d8/dda/struct___graph___1_1_edge.html#a700d8734335239110c1e9754c23ad73d">_Graph_::Edge</a>
+: <a class="el" href="d5/db4/struct_edge.html#a0da7a6ea250043a033579dc8891911ff">Edge</a>
 </li>
 <li>end()
-: <a class="el" href="d0/d1d/class___template___1_1range.html#a83a593e05507f021973bcaa027480b88">_Template_::range</a>
-, <a class="el" href="dd/d4f/class___template___1_1reverse__range.html#a10f54b587b4d5ecb480d43ce418e3936">_Template_::reverse_range</a>
+: <a class="el" href="d2/d1f/classrange.html#af2b4eded415b13dcdcb39e48b196a324">range</a>
+, <a class="el" href="d1/d4f/classreverse__range.html#ab57190085f75d58a7aabb32ce44e2fe3">reverse_range</a>
 </li>
 </ul>
 
 
 <h3><a id="index_f"></a>- f -</h3><ul>
 <li>find()
-: <a class="el" href="da/de9/class___k_m_p___1_1_k_m_p.html#a263e13025d15e1abc300693a8cf7240e">_KMP_::KMP</a>
-, <a class="el" href="d1/d06/class___union_find___1_1_union_find.html#ae1925394f5b672b7667b2c716a6d0456">_UnionFind_::UnionFind</a>
+: <a class="el" href="de/df2/class_k_m_p.html#a3de2899abd598d9106554c5098bbd344">KMP</a>
+, <a class="el" href="d1/d4b/class_union_find.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">UnionFind</a>
 </li>
 <li>find_all()
-: <a class="el" href="da/de9/class___k_m_p___1_1_k_m_p.html#a6248e9887cde37d954e7945942c46a64">_KMP_::KMP</a>
+: <a class="el" href="de/df2/class_k_m_p.html#a0b2d2ed0e860b696b607f20c39cea5a1">KMP</a>
 </li>
 <li>FlowEdge()
-: <a class="el" href="d7/daf/struct___dinic___1_1_flow_edge.html#a089669e1dd843b5b1ad30d6611b05d7a">_Dinic_::FlowEdge&lt; F &gt;</a>
+: <a class="el" href="d4/d12/struct_flow_edge.html#a20443948cf688340023b43ce929c34f8">FlowEdge&lt; F &gt;</a>
 </li>
 <li>FlowGraph()
-: <a class="el" href="d6/d11/class___dinic___1_1_flow_graph.html#a9e5001ebfbbddd18a4436d63c98b5872">_Dinic_::FlowGraph&lt; E &gt;</a>
+: <a class="el" href="de/d66/class_flow_graph.html#ab3d1c106d22211360d41a104ba0cf87b">FlowGraph&lt; E &gt;</a>
 </li>
 <li>Forest()
-: <a class="el" href="dc/d20/class___tree___1_1_forest.html#a6194d85ef3d9f0874560938fcda91c64">_Tree_::Forest&lt; E &gt;</a>
+: <a class="el" href="d4/d2f/class_forest.html#a685fbf0361f516909c907d390c07aedb">Forest&lt; E &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>get()
-: <a class="el" href="dc/d6d/class___mod_int___1_1_mod_int.html#ae10dd8f7b8752c8e5f4bd38ccc4c86da">_ModInt_::ModInt</a>
+: <a class="el" href="d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68">ModInt</a>
 </li>
 <li>get_ptr()
-: <a class="el" href="d4/d73/class___buffer___1_1_disposable_buffer_manager.html#a739f8e06ea5219f3ca9c44ed27844578">_Buffer_::DisposableBufferManager&lt; T &gt;</a>
+: <a class="el" href="d0/d62/class_disposable_buffer_manager.html#a840a1aacfdad8e19249c9c420cb546de">DisposableBufferManager&lt; T &gt;</a>
 </li>
 <li>get_queue_size()
-: <a class="el" href="d4/d68/class___buffer___1_1_block_buffer_manager.html#ab72fff7103e776e400f9776d832dfd23">_Buffer_::BlockBufferManager&lt; T &gt;</a>
+: <a class="el" href="d0/d40/class_block_buffer_manager.html#a030263823c77814b444e245e3a8c17d0">BlockBufferManager&lt; T &gt;</a>
 </li>
 <li>get_root()
-: <a class="el" href="d4/d30/class___tree___1_1_tree.html#a2ef42e9f60072687a07e1a0484f0f5b2">_Tree_::Tree&lt; E &gt;</a>
+: <a class="el" href="dd/df8/class_tree.html#ab6e04e3106fc2fb91edbcad410e8fcb9">Tree&lt; E &gt;</a>
 </li>
 <li>get_roots()
-: <a class="el" href="dc/d20/class___tree___1_1_forest.html#a34557356baa6368b1f47bf52075c0a6c">_Tree_::Forest&lt; E &gt;</a>
+: <a class="el" href="d4/d2f/class_forest.html#a5dd07915b65d929d6ddca6c8e1064833">Forest&lt; E &gt;</a>
 </li>
 <li>Graph()
-: <a class="el" href="d3/da5/class___graph___1_1_graph.html#a54fc2c12c38905ccf545aaaf136fd723">_Graph_::Graph&lt; E &gt;</a>
+: <a class="el" href="da/d9a/class_graph.html#a65fd4fac9796de051aa4b25d59ab372c">Graph&lt; E &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_h"></a>- h -</h3><ul>
 <li>HeavyLightDecomposition()
-: <a class="el" href="d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#a434e77f9c12f16b2c7c216af17a90c0c">_HeavyLightDecomposition_::HeavyLightDecomposition&lt; E &gt;</a>
+: <a class="el" href="d3/d4c/class_heavy_light_decomposition.html#ad4102d7e2ad72d05cf0b9e3a8a31cc06">HeavyLightDecomposition&lt; E &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>i2e()
-: <a class="el" href="d3/da5/class___graph___1_1_graph.html#afbed11443b21faeaf19c0da4bade6db4">_Graph_::Graph&lt; E &gt;</a>
+: <a class="el" href="da/d9a/class_graph.html#a2ab07cab9c48c18daebf7c8aaad861af">Graph&lt; E &gt;</a>
 </li>
 <li>id()
-: <a class="el" href="d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#a2dd8aa7b33a31d17ffa99ab4323dea36">_HeavyLightDecomposition_::HeavyLightDecomposition&lt; E &gt;</a>
+: <a class="el" href="d3/d4c/class_heavy_light_decomposition.html#a88eca546b60752896fdf5c0a5bb7bb88">HeavyLightDecomposition&lt; E &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_k"></a>- k -</h3><ul>
 <li>KMP()
-: <a class="el" href="da/de9/class___k_m_p___1_1_k_m_p.html#a93a25f66a479447bb3a971d2aea44d6e">_KMP_::KMP</a>
+: <a class="el" href="de/df2/class_k_m_p.html#a067130b42b915b33b852a69a80f14688">KMP</a>
 </li>
 </ul>
 
 
 <h3><a id="index_l"></a>- l -</h3><ul>
 <li>lca()
-: <a class="el" href="d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#ac2589a91289bbeb5bc10a4d913afb286">_HeavyLightDecomposition_::HeavyLightDecomposition&lt; E &gt;</a>
+: <a class="el" href="d3/d4c/class_heavy_light_decomposition.html#a25f3abb2a51d7a74158033b4c1fb7c92">HeavyLightDecomposition&lt; E &gt;</a>
 </li>
 <li>len()
-: <a class="el" href="d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#a4c1b906f6a11b3819db1a1cdc93cda75">_HeavyLightDecomposition_::HeavyLightDecomposition&lt; E &gt;</a>
+: <a class="el" href="d3/d4c/class_heavy_light_decomposition.html#a92fdf6ed5425088dd36c33b08a4543d9">HeavyLightDecomposition&lt; E &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>ModInt()
-: <a class="el" href="dc/d6d/class___mod_int___1_1_mod_int.html#a949ec7944a808783b7b49adb0098f6d6">_ModInt_::ModInt</a>
+: <a class="el" href="d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835">ModInt</a>
 </li>
 </ul>
 
 
 <h3><a id="index_n"></a>- n -</h3><ul>
+<li>next_int()
+: <a class="el" href="db/d2c/class_xor_shift32.html#ad4c32ab3d160cc0febc762d91f9f1177">XorShift32</a>
+</li>
+<li>next_signed()
+: <a class="el" href="db/d2c/class_xor_shift32.html#ad0ebf682966c8946a0c31698abb331dc">XorShift32</a>
+</li>
 <li>Ns()
-: <a class="el" href="d3/da5/class___graph___1_1_graph.html#ae8852cbb9444df0cfebcb791462f696a">_Graph_::Graph&lt; E &gt;</a>
+: <a class="el" href="da/d9a/class_graph.html#ae4a71c49c152093734eb16d71c20662d">Graph&lt; E &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>operator *()
-: <a class="el" href="dc/d6d/class___mod_int___1_1_mod_int.html#a0c5769a5f93b0eae19df42ddde389965">_ModInt_::ModInt</a>
+: <a class="el" href="d2/de3/class_mod_int.html#a08c34bc2305246fe78632aa279f45b94">ModInt</a>
 </li>
 <li>operator!()
-: <a class="el" href="d0/d1d/class___template___1_1range.html#a323e7c3eb0849b1a5abf15e6544075f2">_Template_::range</a>
+: <a class="el" href="d2/d1f/classrange.html#a6272e718d5577753d924fc35b85bcea2">range</a>
 </li>
 <li>operator+()
-: <a class="el" href="d1/d3a/class___rolling_hash___1_1_rolling_hash.html#a2434e7fd6bd0f76cd3fa6f3cf8fd5e12">_RollingHash_::RollingHash&lt; base, mod &gt;</a>
+: <a class="el" href="d5/d61/class_rolling_hash.html#a37e5d37c66d377cb8180ce4387261153">RollingHash&lt; base, mod &gt;</a>
 </li>
 <li>operator=()
-: <a class="el" href="dc/d6d/class___mod_int___1_1_mod_int.html#a101df96e36b0b164f851fb3785140110">_ModInt_::ModInt</a>
+: <a class="el" href="d2/de3/class_mod_int.html#a2a75f8ba5ce4e43326b3d80493793a7b">ModInt</a>
 </li>
 <li>operator==()
-: <a class="el" href="d1/d3a/class___rolling_hash___1_1_rolling_hash.html#af88a23dbc87ef6a0cd51afbd12b50c54">_RollingHash_::RollingHash&lt; base, mod &gt;</a>
+: <a class="el" href="d5/d61/class_rolling_hash.html#a7291840bab6b73cea0951d126baad264">RollingHash&lt; base, mod &gt;</a>
 </li>
 <li>operator[]()
-: <a class="el" href="d3/da5/class___graph___1_1_graph.html#a10a4e026134bdf9e851946b1b7c87c73">_Graph_::Graph&lt; E &gt;</a>
-, <a class="el" href="d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html#a12a4fe60635753be055e58f09a3a4f9a">_MATRIX_::Matrix&lt; T, row_size, col_size &gt;</a>
-, <a class="el" href="d4/df3/class_buffer_test.html#a0493d55a98b45263356678bdb363a331">BufferTest</a>
+: <a class="el" href="d4/df3/class_buffer_test.html#a0493d55a98b45263356678bdb363a331">BufferTest</a>
+, <a class="el" href="da/d9a/class_graph.html#abaffb6edfcfe6381efe1934fb5428c23">Graph&lt; E &gt;</a>
+, <a class="el" href="d6/d3f/class_matrix.html#a6d7cda9c2e0f4e8dafb15c1c36924e1b">Matrix&lt; T, row_size, col_size &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>parent()
-: <a class="el" href="d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#a8b1d7daa7e5758385dc3a5fe3446de32">_HeavyLightDecomposition_::HeavyLightDecomposition&lt; E &gt;</a>
+: <a class="el" href="d3/d4c/class_heavy_light_decomposition.html#af92c68866c6147369a14722c5e774eca">HeavyLightDecomposition&lt; E &gt;</a>
 </li>
 <li>period()
-: <a class="el" href="da/de9/class___k_m_p___1_1_k_m_p.html#ab2a1bee09c1582ab2fb1a2f86e321aa8">_KMP_::KMP</a>
+: <a class="el" href="de/df2/class_k_m_p.html#aecff60bd039e1790d6f93bff4ccab9e7">KMP</a>
 </li>
 <li>pop()
-: <a class="el" href="d4/d68/class___buffer___1_1_block_buffer_manager.html#a21c7fe92b8b2e34a3cab379cf2978f2c">_Buffer_::BlockBufferManager&lt; T &gt;</a>
-, <a class="el" href="d7/d2e/class___buffer___1_1_buffer_manager.html#af246130caab43d5ce6cc43c06526b625">_Buffer_::BufferManager&lt; T &gt;</a>
-, <a class="el" href="d4/d73/class___buffer___1_1_disposable_buffer_manager.html#a81fe4a5e7eb976f3f940a0a4021af873">_Buffer_::DisposableBufferManager&lt; T &gt;</a>
+: <a class="el" href="d0/d40/class_block_buffer_manager.html#ae3ccf1c1a2d0e6fc5cb78ea375fc158c">BlockBufferManager&lt; T &gt;</a>
+, <a class="el" href="da/dd6/class_buffer_manager.html#af4f2f2c5011a0bf14df77b0ef786cf4f">BufferManager&lt; T &gt;</a>
+, <a class="el" href="d0/d62/class_disposable_buffer_manager.html#a16da59b2c482df4d578206e0a64e0ff8">DisposableBufferManager&lt; T &gt;</a>
 </li>
 <li>push()
-: <a class="el" href="d4/d68/class___buffer___1_1_block_buffer_manager.html#a8dcac70ec0b8fc99ef2706935e1ce966">_Buffer_::BlockBufferManager&lt; T &gt;</a>
-, <a class="el" href="d7/d2e/class___buffer___1_1_buffer_manager.html#a812eddacb7a77e28c83e554bc4703e6f">_Buffer_::BufferManager&lt; T &gt;</a>
-, <a class="el" href="d4/d73/class___buffer___1_1_disposable_buffer_manager.html#a0d94a4dae3b5d4c344af28167f46190f">_Buffer_::DisposableBufferManager&lt; T &gt;</a>
+: <a class="el" href="d0/d40/class_block_buffer_manager.html#a3af2163309dc202a1993ed6104af9792">BlockBufferManager&lt; T &gt;</a>
+, <a class="el" href="da/dd6/class_buffer_manager.html#aed9ea13069182ed797abedddee2bb404">BufferManager&lt; T &gt;</a>
+, <a class="el" href="d0/d62/class_disposable_buffer_manager.html#ac369fe6cd514a198b0318fd77f61654b">DisposableBufferManager&lt; T &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>range()
-: <a class="el" href="d0/d1d/class___template___1_1range.html#a38d828ea8b58432540b53b1bd491d38f">_Template_::range</a>
+: <a class="el" href="d2/d1f/classrange.html#ad1941fb02d2c8cdcdc281d8d63ba7a63">range</a>
+</li>
+<li>range_max()
+: <a class="el" href="db/d2c/class_xor_shift32.html#a31dbeb5a85455abfe599e73dba3b7a4b">XorShift32</a>
 </li>
 <li>raw()
-: <a class="el" href="dc/d6d/class___mod_int___1_1_mod_int.html#a1d8d8ae8a87473e6cdc41476984b9ae1">_ModInt_::ModInt</a>
+: <a class="el" href="d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546">ModInt</a>
 </li>
 <li>resize()
-: <a class="el" href="d3/da5/class___graph___1_1_graph.html#a543b8eaddce22b09de6ebced69c25bb0">_Graph_::Graph&lt; E &gt;</a>
+: <a class="el" href="da/d9a/class_graph.html#acd74a091d791e166b1126b355b5e8325">Graph&lt; E &gt;</a>
 </li>
 <li>reverse_range()
-: <a class="el" href="dd/d4f/class___template___1_1reverse__range.html#a23c4a3f2476d920f0fa2e5c48780ecf7">_Template_::reverse_range</a>
+: <a class="el" href="d1/d4f/classreverse__range.html#af6187d9958de336cd61af477ae280d0f">reverse_range</a>
 </li>
 <li>RollingHash()
-: <a class="el" href="d1/d3a/class___rolling_hash___1_1_rolling_hash.html#a74cdefd9abbe3f8f91abd0ac7b63ad75">_RollingHash_::RollingHash&lt; base, mod &gt;</a>
+: <a class="el" href="d5/d61/class_rolling_hash.html#a70c6380902840f5f8126d7160308d46a">RollingHash&lt; base, mod &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>same()
-: <a class="el" href="d1/d06/class___union_find___1_1_union_find.html#a0d3cac2af21a7804fb117009d00794a2">_UnionFind_::UnionFind</a>
+: <a class="el" href="d1/d4b/class_union_find.html#aa1580fa407277914913231a7d752c7d8">UnionFind</a>
 </li>
 <li>size()
-: <a class="el" href="d3/da5/class___graph___1_1_graph.html#a431026058353fd89798b7a2cad2cd250">_Graph_::Graph&lt; E &gt;</a>
+: <a class="el" href="da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34">Graph&lt; E &gt;</a>
 </li>
 <li>solve()
-: <a class="el" href="d4/d02/class___dinic___1_1_dinic.html#aa3e73324618134d18805c4781a979f9d">_Dinic_::Dinic&lt; F, flow_inf &gt;</a>
+: <a class="el" href="d2/dbc/class_dinic.html#aeefe9f03a6db6c6bc25384adfc84ef1a">Dinic&lt; F, flow_inf &gt;</a>
 </li>
 <li>substr()
-: <a class="el" href="df/d3d/class___rolling_hash___1_1_rolling_hash_1_1_table.html#a52f2df44bcf237b25d6f51b9a96b8570">_RollingHash_::RollingHash&lt; base, mod &gt;::Table</a>
+: <a class="el" href="d3/d84/class_rolling_hash_1_1_table.html#aaf3591f60bb8157ae1d6aa2d5846f1e5">RollingHash&lt; base, mod &gt;::Table</a>
 </li>
 </ul>
 
 
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>Table()
-: <a class="el" href="df/d3d/class___rolling_hash___1_1_rolling_hash_1_1_table.html#a4ccbac294733ca4c3401823017507657">_RollingHash_::RollingHash&lt; base, mod &gt;::Table</a>
+: <a class="el" href="d3/d84/class_rolling_hash_1_1_table.html#adfb5dd828639983ee9769e8d72662709">RollingHash&lt; base, mod &gt;::Table</a>
 </li>
 <li>Tree()
-: <a class="el" href="d4/d30/class___tree___1_1_tree.html#a0e5c684bc9a30b58f24c150946742360">_Tree_::Tree&lt; E &gt;</a>
+: <a class="el" href="dd/df8/class_tree.html#a792974d037944f639535854a579f445d">Tree&lt; E &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>UnionFind()
-: <a class="el" href="d1/d06/class___union_find___1_1_union_find.html#aa3741e177a47a16b90677fcd8e55bfd4">_UnionFind_::UnionFind</a>
+: <a class="el" href="d1/d4b/class_union_find.html#aab2b783c6c2b20c187844788e3f3dd0a">UnionFind</a>
 </li>
 <li>unite()
-: <a class="el" href="d1/d06/class___union_find___1_1_union_find.html#a0285b0fa3ee2a72e9fe7043c10f8e144">_UnionFind_::UnionFind</a>
+: <a class="el" href="d1/d4b/class_union_find.html#ac293e615592ebd4ff06d86e1fa4ab644">UnionFind</a>
 </li>
 </ul>
 
 
 <h3><a id="index_v"></a>- v -</h3><ul>
 <li>versus()
-: <a class="el" href="d7/daf/struct___dinic___1_1_flow_edge.html#ab62a280b97bc65524c575021971ec259">_Dinic_::FlowEdge&lt; F &gt;</a>
-, <a class="el" href="d8/dda/struct___graph___1_1_edge.html#ab44a5c7a7848c5db53883f2b69decb18">_Graph_::Edge</a>
-, <a class="el" href="dd/d9b/struct___graph___1_1_weighted_edge.html#a0d587aceb90cd6f3bc9f04eae55adc55">_Graph_::WeightedEdge&lt; COST_TYPE &gt;</a>
+: <a class="el" href="d5/db4/struct_edge.html#ad64e3784e3c89b2832f50aa383532854">Edge</a>
+, <a class="el" href="d4/d12/struct_flow_edge.html#af924d65173b5d955ded2093ac190992d">FlowEdge&lt; F &gt;</a>
+, <a class="el" href="d4/d91/struct_weighted_edge.html#acc0195845631ccb723dc9e3b28389c20">WeightedEdge&lt; COST_TYPE &gt;</a>
 </li>
 <li>vertex()
-: <a class="el" href="d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#a1ef1e791c45431a472890c6f69f916e5">_HeavyLightDecomposition_::HeavyLightDecomposition&lt; E &gt;</a>
+: <a class="el" href="d3/d4c/class_heavy_light_decomposition.html#aeff7eb920bfda8b48b65423beda60738">HeavyLightDecomposition&lt; E &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_w"></a>- w -</h3><ul>
 <li>WeightedEdge()
-: <a class="el" href="dd/d9b/struct___graph___1_1_weighted_edge.html#af4c2af2c7c109230136938e0276f5d39">_Graph_::WeightedEdge&lt; COST_TYPE &gt;</a>
+: <a class="el" href="d4/d91/struct_weighted_edge.html#adfd05b44f72c85a8eb6af864631bce59">WeightedEdge&lt; COST_TYPE &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_x"></a>- x -</h3><ul>
+<li>XorShift32()
+: <a class="el" href="db/d2c/class_xor_shift32.html#a01f0ee551df5e868887ab1568e595007">XorShift32</a>
 </li>
 </ul>
 
@@ -349,15 +392,18 @@ $(function() {
 : <a class="el" href="d4/df3/class_buffer_test.html#a71eb409569962138156dd19af7ace17a">BufferTest</a>
 </li>
 <li>~HeavyLightDecomposition()
-: <a class="el" href="d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#a96ddabece99db949168f0c052cecb815">_HeavyLightDecomposition_::HeavyLightDecomposition&lt; E &gt;</a>
+: <a class="el" href="d3/d4c/class_heavy_light_decomposition.html#ac86713caf08b989dd3b73f5934689c4f">HeavyLightDecomposition&lt; E &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

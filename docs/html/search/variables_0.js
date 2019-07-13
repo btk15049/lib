@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['a',['a',['../d8/dda/struct___graph___1_1_edge.html#a1ecbf3492e2121499712fa934d1eadd0',1,'_Graph_::Edge::a()'],['../dd/d9b/struct___graph___1_1_weighted_edge.html#a4166c390cd2e3a04b36e30b8fc6e2de8',1,'_Graph_::WeightedEdge::a()'],['../d7/daf/struct___dinic___1_1_flow_edge.html#a141ac35b1aaaaba4e8775f6842fe1921',1,'_Dinic_::FlowEdge::a()']]]
+  ['a',['a',['../d4/d12/struct_flow_edge.html#addd69e8a3da3b763cd2deef8e74ff684',1,'FlowEdge::a()'],['../d5/db4/struct_edge.html#a768226912acc6e80c2ecb5f72c5b21e5',1,'Edge::a()'],['../d4/d91/struct_weighted_edge.html#a83cb786595c6ed6e329baae66ec6b1cf',1,'WeightedEdge::a()']]]
 ];

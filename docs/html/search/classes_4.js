@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['flowedge',['FlowEdge',['../d7/daf/struct___dinic___1_1_flow_edge.html',1,'_Dinic_']]],
-  ['flowgraph',['FlowGraph',['../d6/d11/class___dinic___1_1_flow_graph.html',1,'_Dinic_']]],
-  ['flowgraph_3c_20_5fdinic_5f_3a_3aflowedge_20_3e',['FlowGraph&lt; _Dinic_::FlowEdge &gt;',['../d6/d11/class___dinic___1_1_flow_graph.html',1,'_Dinic_']]],
-  ['forest',['Forest',['../dc/d20/class___tree___1_1_forest.html',1,'_Tree_']]]
+  ['flowedge',['FlowEdge',['../d4/d12/struct_flow_edge.html',1,'']]],
+  ['flowgraph',['FlowGraph',['../de/d66/class_flow_graph.html',1,'']]],
+  ['flowgraph_3c_20flowedge_20_3e',['FlowGraph&lt; FlowEdge &gt;',['../de/d66/class_flow_graph.html',1,'']]],
+  ['forest',['Forest',['../d4/d2f/class_forest.html',1,'']]]
 ];

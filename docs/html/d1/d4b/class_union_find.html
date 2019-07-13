@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>btk&#39;s library: UnionFind クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">btk&#39;s library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/d4b/class_union_find.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../dd/dc3/class_union_find-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">UnionFind クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>unionとfindとsameができる普通のUnion-Find  
+ <a href="../../d1/d4b/class_union_find.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/_union_find_8hpp_source.html">UnionFind.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa3fe04bfd2e9ce2e33c3edf8c91c3aea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4b/class_union_find.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a> (int x)</td></tr>
+<tr class="memdesc:aa3fe04bfd2e9ce2e33c3edf8c91c3aea"><td class="mdescLeft">&#160;</td><td class="mdescRight">xの親を探す  <a href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">[詳解]</a><br /></td></tr>
+<tr class="separator:aa3fe04bfd2e9ce2e33c3edf8c91c3aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2b783c6c2b20c187844788e3f3dd0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4b/class_union_find.html#aab2b783c6c2b20c187844788e3f3dd0a">UnionFind</a> (int n)</td></tr>
+<tr class="memdesc:aab2b783c6c2b20c187844788e3f3dd0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Union Find object  <a href="#aab2b783c6c2b20c187844788e3f3dd0a">[詳解]</a><br /></td></tr>
+<tr class="separator:aab2b783c6c2b20c187844788e3f3dd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac293e615592ebd4ff06d86e1fa4ab644"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4b/class_union_find.html#ac293e615592ebd4ff06d86e1fa4ab644">unite</a> (int x, int y)</td></tr>
+<tr class="memdesc:ac293e615592ebd4ff06d86e1fa4ab644"><td class="mdescLeft">&#160;</td><td class="mdescRight">{xの属する集合}と{yの属する集合}をマージする  <a href="#ac293e615592ebd4ff06d86e1fa4ab644">[詳解]</a><br /></td></tr>
+<tr class="separator:ac293e615592ebd4ff06d86e1fa4ab644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1580fa407277914913231a7d752c7d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4b/class_union_find.html#aa1580fa407277914913231a7d752c7d8">same</a> (int x, int y)</td></tr>
+<tr class="memdesc:aa1580fa407277914913231a7d752c7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">　xとyが同じ集合に属しているかどうか判定する  <a href="#aa1580fa407277914913231a7d752c7d8">[詳解]</a><br /></td></tr>
+<tr class="separator:aa1580fa407277914913231a7d752c7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>unionとfindとsameができる普通のUnion-Find </p>
+
+<p class="definition"> <a class="el" href="../../df/dbf/_union_find_8hpp_source.html">UnionFind.hpp</a> の <a class="el" href="../../df/dbf/_union_find_8hpp_source.html#l00019">19</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="aab2b783c6c2b20c187844788e3f3dd0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2b783c6c2b20c187844788e3f3dd0a">&#9670;&nbsp;</a></span>UnionFind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnionFind::UnionFind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new Union Find object </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="../../df/dbf/_union_find_8hpp_source.html">UnionFind.hpp</a> の <a class="el" href="../../df/dbf/_union_find_8hpp_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aa3fe04bfd2e9ce2e33c3edf8c91c3aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">&#9670;&nbsp;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnionFind::find </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>xの親を探す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int </dd></dl>
+
+<p class="definition"> <a class="el" href="../../df/dbf/_union_find_8hpp_source.html">UnionFind.hpp</a> の <a class="el" href="../../df/dbf/_union_find_8hpp_source.html#l00036">36</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d4b/class_union_find_aa3fe04bfd2e9ce2e33c3edf8c91c3aea_icgraph.png" border="0" usemap="#d1/d4b/class_union_find_aa3fe04bfd2e9ce2e33c3edf8c91c3aea_icgraph" alt=""/></div>
+<map name="d1/d4b/class_union_find_aa3fe04bfd2e9ce2e33c3edf8c91c3aea_icgraph" id="d1/d4b/class_union_find_aa3fe04bfd2e9ce2e33c3edf8c91c3aea_icgraph">
+<area shape="rect"  title="xã®è¦ªãæ¢ã" alt="" coords="175,31,286,56"/>
+<area shape="rect"  href="../../d1/d4b/class_union_find.html#ac293e615592ebd4ff06d86e1fa4ab644" title="{xã®å±ããéå}ã¨{yã®å±ããéå}ããã¼ã¸ãã" alt="" coords="7,5,126,31"/>
+<area shape="rect"  href="../../d1/d4b/class_union_find.html#aa1580fa407277914913231a7d752c7d8" title="ãxã¨yãåãéåã«å±ãã¦ãããã©ããå¤å®ãã" alt="" coords="5,55,127,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa1580fa407277914913231a7d752c7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1580fa407277914913231a7d752c7d8">&#9670;&nbsp;</a></span>same()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnionFind::same </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>　xとyが同じ集合に属しているかどうか判定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p class="definition"> <a class="el" href="../../df/dbf/_union_find_8hpp_source.html">UnionFind.hpp</a> の <a class="el" href="../../df/dbf/_union_find_8hpp_source.html#l00080">80</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d4b/class_union_find_aa1580fa407277914913231a7d752c7d8_cgraph.png" border="0" usemap="#d1/d4b/class_union_find_aa1580fa407277914913231a7d752c7d8_cgraph" alt=""/></div>
+<map name="d1/d4b/class_union_find_aa1580fa407277914913231a7d752c7d8_cgraph" id="d1/d4b/class_union_find_aa1580fa407277914913231a7d752c7d8_cgraph">
+<area shape="rect"  title="ãxã¨yãåãéåã«å±ãã¦ãããã©ããå¤å®ãã" alt="" coords="5,5,127,31"/>
+<area shape="rect"  href="../../d1/d4b/class_union_find.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea" title="xã®è¦ªãæ¢ã" alt="" coords="175,5,286,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac293e615592ebd4ff06d86e1fa4ab644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac293e615592ebd4ff06d86e1fa4ab644">&#9670;&nbsp;</a></span>unite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnionFind::unite </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>{xの属する集合}と{yの属する集合}をマージする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true マージに成功したとき </dd>
+<dd>
+false マージに失敗したとき（もともと同じ集合に属していた時） </dd></dl>
+
+<p class="definition"> <a class="el" href="../../df/dbf/_union_find_8hpp_source.html">UnionFind.hpp</a> の <a class="el" href="../../df/dbf/_union_find_8hpp_source.html#l00063">63</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d4b/class_union_find_ac293e615592ebd4ff06d86e1fa4ab644_cgraph.png" border="0" usemap="#d1/d4b/class_union_find_ac293e615592ebd4ff06d86e1fa4ab644_cgraph" alt=""/></div>
+<map name="d1/d4b/class_union_find_ac293e615592ebd4ff06d86e1fa4ab644_cgraph" id="d1/d4b/class_union_find_ac293e615592ebd4ff06d86e1fa4ab644_cgraph">
+<area shape="rect"  title="{xã®å±ããéå}ã¨{yã®å±ããéå}ããã¼ã¸ãã" alt="" coords="5,5,124,31"/>
+<area shape="rect"  href="../../d1/d4b/class_union_find.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea" title="xã®è¦ªãæ¢ã" alt="" coords="172,5,283,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>src/structure/<a class="el" href="../../df/dbf/_union_find_8hpp_source.html">UnionFind.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d4b/class_union_find.html">UnionFind</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

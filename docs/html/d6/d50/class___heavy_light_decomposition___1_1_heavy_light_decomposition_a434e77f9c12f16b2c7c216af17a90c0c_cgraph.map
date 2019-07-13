@@ -1,0 +1,6 @@
+<map id="_HeavyLightDecomposition_::HeavyLightDecomposition::HeavyLightDecomposition" name="_HeavyLightDecomposition_::HeavyLightDecomposition::HeavyLightDecomposition">
+<area shape="rect" id="node1" title="Construct a new Heavy Light Decomposition object lenderにはBlockBufferを使うのを推奨 N*5メモリがいるよ" alt="" coords="5,41,196,93"/>
+<area shape="rect" id="node2" href="$d3/da5/class___graph___1_1_graph.html#a431026058353fd89798b7a2cad2cd250" title="グラフの頂点数を返す" alt="" coords="268,5,417,31"/>
+<area shape="rect" id="node3" href="$d7/d2e/class___buffer___1_1_buffer_manager.html#af246130caab43d5ce6cc43c06526b625" title="size分バッファを取得" alt="" coords="244,55,441,80"/>
+<area shape="rect" id="node4" href="$dc/d20/class___tree___1_1_forest.html#a34557356baa6368b1f47bf52075c0a6c" title="Get the roots object" alt="" coords="276,104,410,143"/>
+</map>

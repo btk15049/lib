@@ -1,0 +1,5 @@
+<map id="BufferManager&lt; T &gt;" name="BufferManager&lt; T &gt;">
+<area shape="rect" id="node1" title="バッファは基本的にこれを継承する" alt="" coords="128,5,268,31"/>
+<area shape="rect" id="node2" href="$d0/d40/class_block_buffer_manager.html" title="blocks*block_size分の領域をblocks個に区切って、やりくりする。 使わなくなったらpopで返すのを忘れずに" alt="" coords="5,79,178,104"/>
+<area shape="rect" id="node3" href="$d0/d62/class_disposable_buffer_manager.html" title="使った分だけメモリを使い捨てするmaneger 使い回ししたい場合には不向き" alt="" coords="202,79,408,104"/>
+</map>

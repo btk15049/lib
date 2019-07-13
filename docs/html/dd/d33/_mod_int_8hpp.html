@@ -9,6 +9,14 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dd/d33/_mod_int_8hpp.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_130f957cc777e1e7397821d3ae1b6d18.html">num</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">クラス</a> &#124;
@@ -77,14 +97,32 @@ $(function() {
 
 <p>mod構造体  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="../../df/dc0/_template_8hpp_source.html">Template.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;utility&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ModInt.hpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d6c/_mod_int_8hpp__incl.png" border="0" usemap="#src_2num_2_mod_int_8hpp" alt=""/></div>
+<map name="src_2num_2_mod_int_8hpp" id="src_2num_2_mod_int_8hpp">
+<area shape="rect"  title="modæ§é ä½" alt="" coords="5,5,144,31"/>
+<area shape="rect"  title=" " alt="" coords="49,79,101,104"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d51/_mod_int_8hpp__dep__incl.png" border="0" usemap="#src_2num_2_mod_int_8hppdep" alt=""/></div>
+<map name="src_2num_2_mod_int_8hppdep" id="src_2num_2_mod_int_8hppdep">
+<area shape="rect"  title="modæ§é ä½" alt="" coords="19,5,159,31"/>
+<area shape="rect"  href="../../d1/d41/_mod_int_8test_8cpp.html" title="ModInt.hpp ã®ãã¹ã" alt="" coords="5,79,173,104"/>
+</map>
+</div>
 </div>
 <p><a href="../../dd/d33/_mod_int_8hpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 クラス</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">_ModInt_::ModInt</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">mod構造体  <a href="../../dc/d6d/class___mod_int___1_1_mod_int.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">mod構造体  <a href="../../d2/de3/class_mod_int.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -95,64 +133,64 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a019213ff5d0277a89c399ae57c16a754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a019213ff5d0277a89c399ae57c16a754">_ModInt_::add</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> r)</td></tr>
-<tr class="separator:a019213ff5d0277a89c399ae57c16a754"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aede365bf8dae1d95a0e726837d2fe31a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#aede365bf8dae1d95a0e726837d2fe31a">_ModInt_::mul</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> r)</td></tr>
-<tr class="separator:aede365bf8dae1d95a0e726837d2fe31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5808d324c10bae7dfbac6bb554c104"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a4c5808d324c10bae7dfbac6bb554c104">_ModInt_::pow</a> (<a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> a, long long x)</td></tr>
-<tr class="memdesc:a4c5808d324c10bae7dfbac6bb554c104"><td class="mdescLeft">&#160;</td><td class="mdescRight">a^x modを求める  <a href="../../dd/d33/_mod_int_8hpp.html#a4c5808d324c10bae7dfbac6bb554c104">[詳解]</a><br /></td></tr>
-<tr class="separator:a4c5808d324c10bae7dfbac6bb554c104"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace7b91e5edc3937c4d13a39c58b80707"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#ace7b91e5edc3937c4d13a39c58b80707">_ModInt_::inv</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> x)</td></tr>
-<tr class="memdesc:ace7b91e5edc3937c4d13a39c58b80707"><td class="mdescLeft">&#160;</td><td class="mdescRight">x^-1 modを求める  <a href="../../dd/d33/_mod_int_8hpp.html#ace7b91e5edc3937c4d13a39c58b80707">[詳解]</a><br /></td></tr>
-<tr class="separator:ace7b91e5edc3937c4d13a39c58b80707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47afe0b07b9337c48c06a130c16c9ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a47afe0b07b9337c48c06a130c16c9ceb">_ModInt_::operator-</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> x)</td></tr>
-<tr class="memdesc:a47afe0b07b9337c48c06a130c16c9ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">負数を求める単項演算子  <a href="../../dd/d33/_mod_int_8hpp.html#a47afe0b07b9337c48c06a130c16c9ceb">[詳解]</a><br /></td></tr>
-<tr class="separator:a47afe0b07b9337c48c06a130c16c9ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1c8decd379379412a718e53c49e4cb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#ae1c8decd379379412a718e53c49e4cb7">_ModInt_::operator+</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> r)</td></tr>
-<tr class="separator:ae1c8decd379379412a718e53c49e4cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a846ff2e4e375fc0308c8bd96866372db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a846ff2e4e375fc0308c8bd96866372db">_ModInt_::operator *</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> r)</td></tr>
-<tr class="separator:a846ff2e4e375fc0308c8bd96866372db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad94327917e4c98056ead3d7c668d3b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#aad94327917e4c98056ead3d7c668d3b8">_ModInt_::operator-</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> r)</td></tr>
-<tr class="separator:aad94327917e4c98056ead3d7c668d3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25fcb6be246f0d684930da77bfcd4974"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a25fcb6be246f0d684930da77bfcd4974">_ModInt_::operator+</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const int r)</td></tr>
-<tr class="separator:a25fcb6be246f0d684930da77bfcd4974"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1085cf37b5dcd4abfa0ca045643418fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a1085cf37b5dcd4abfa0ca045643418fe">_ModInt_::operator+</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const long long r)</td></tr>
-<tr class="separator:a1085cf37b5dcd4abfa0ca045643418fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a925001387010b304d19571dd3fe9fd65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a925001387010b304d19571dd3fe9fd65">_ModInt_::operator *</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const int r)</td></tr>
-<tr class="separator:a925001387010b304d19571dd3fe9fd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeca74d382e6f1fa34bc7d5957c457686"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#aeca74d382e6f1fa34bc7d5957c457686">_ModInt_::operator *</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const long long r)</td></tr>
-<tr class="separator:aeca74d382e6f1fa34bc7d5957c457686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4ae28ccf92088cecb53226a8f59c842"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#ae4ae28ccf92088cecb53226a8f59c842">_ModInt_::operator-</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const int r)</td></tr>
-<tr class="separator:ae4ae28ccf92088cecb53226a8f59c842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59837c0a81dedea60383a2a677c44113"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a59837c0a81dedea60383a2a677c44113">_ModInt_::operator-</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const long long r)</td></tr>
-<tr class="separator:a59837c0a81dedea60383a2a677c44113"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05a875d1aafdd048f704a1b6fd47994e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a05a875d1aafdd048f704a1b6fd47994e">_ModInt_::operator/</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const int r)</td></tr>
-<tr class="separator:a05a875d1aafdd048f704a1b6fd47994e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab20c1e23d8ccf0dd845eadbbe8a12fad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#ab20c1e23d8ccf0dd845eadbbe8a12fad">_ModInt_::operator/</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const long long r)</td></tr>
-<tr class="separator:ab20c1e23d8ccf0dd845eadbbe8a12fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b59ce535ebda37b5c4c0e6c26833bb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a9b59ce535ebda37b5c4c0e6c26833bb1">_ModInt_::operator^</a> (const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> l, const long long r)</td></tr>
-<tr class="separator:a9b59ce535ebda37b5c4c0e6c26833bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6500a4850c26e8370153a7343552bbd0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a6500a4850c26e8370153a7343552bbd0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a6500a4850c26e8370153a7343552bbd0">_ModInt_::operator+=</a> (<a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> &amp;l, T r)</td></tr>
-<tr class="memdesc:a6500a4850c26e8370153a7343552bbd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">+=の実装、各operator+を呼ぶだけ  <a href="../../dd/d33/_mod_int_8hpp.html#a6500a4850c26e8370153a7343552bbd0">[詳解]</a><br /></td></tr>
-<tr class="separator:a6500a4850c26e8370153a7343552bbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a399ca02a9eeebeac15d911b5cb4dd10f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a399ca02a9eeebeac15d911b5cb4dd10f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a399ca02a9eeebeac15d911b5cb4dd10f">_ModInt_::operator-=</a> (<a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> &amp;l, T r)</td></tr>
-<tr class="memdesc:a399ca02a9eeebeac15d911b5cb4dd10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">-=の実装、各operator-を呼ぶだけ  <a href="../../dd/d33/_mod_int_8hpp.html#a399ca02a9eeebeac15d911b5cb4dd10f">[詳解]</a><br /></td></tr>
-<tr class="separator:a399ca02a9eeebeac15d911b5cb4dd10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacf2e20dc80e5d412ccc3256fb985b16"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aacf2e20dc80e5d412ccc3256fb985b16"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#aacf2e20dc80e5d412ccc3256fb985b16">_ModInt_::operator *=</a> (<a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> &amp;l, T r)</td></tr>
-<tr class="memdesc:aacf2e20dc80e5d412ccc3256fb985b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">*=の実装、各operator*を呼ぶだけ  <a href="../../dd/d33/_mod_int_8hpp.html#aacf2e20dc80e5d412ccc3256fb985b16">[詳解]</a><br /></td></tr>
-<tr class="separator:aacf2e20dc80e5d412ccc3256fb985b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d8a734697af0a324eb774d44e191a1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a5d8a734697af0a324eb774d44e191a1e">_ModInt_::factorial::build</a> ()</td></tr>
-<tr class="memdesc:a5d8a734697af0a324eb774d44e191a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">順列数の前計算  <a href="../../dd/d33/_mod_int_8hpp.html#a5d8a734697af0a324eb774d44e191a1e">[詳解]</a><br /></td></tr>
-<tr class="separator:a5d8a734697af0a324eb774d44e191a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1823beb563e4a7db99cf7eedc6ca1b14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a1823beb563e4a7db99cf7eedc6ca1b14">_ModInt_::factorial::permutation</a> (int n, int k)</td></tr>
-<tr class="memdesc:a1823beb563e4a7db99cf7eedc6ca1b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">nPkを求める  <a href="../../dd/d33/_mod_int_8hpp.html#a1823beb563e4a7db99cf7eedc6ca1b14">[詳解]</a><br /></td></tr>
-<tr class="separator:a1823beb563e4a7db99cf7eedc6ca1b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76fb6d76d665d1a744a49cab4532895a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a76fb6d76d665d1a744a49cab4532895a">_ModInt_::factorial::combination</a> (int n, int k)</td></tr>
-<tr class="memdesc:a76fb6d76d665d1a744a49cab4532895a"><td class="mdescLeft">&#160;</td><td class="mdescRight">nCkを求める  <a href="../../dd/d33/_mod_int_8hpp.html#a76fb6d76d665d1a744a49cab4532895a">[詳解]</a><br /></td></tr>
-<tr class="separator:a76fb6d76d665d1a744a49cab4532895a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de982c7442ef3e5c7b437bc8977dca5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a5de982c7442ef3e5c7b437bc8977dca5">add</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> r)</td></tr>
+<tr class="separator:a5de982c7442ef3e5c7b437bc8977dca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1198752fa49c0cfcedf1a6ea96035058"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058">mul</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> r)</td></tr>
+<tr class="separator:a1198752fa49c0cfcedf1a6ea96035058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b64cf0af90b9ed3e5a0aa3b92d879e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#ad0b64cf0af90b9ed3e5a0aa3b92d879e">pow</a> (<a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> a, long long x)</td></tr>
+<tr class="memdesc:ad0b64cf0af90b9ed3e5a0aa3b92d879e"><td class="mdescLeft">&#160;</td><td class="mdescRight">a^x modを求める  <a href="#ad0b64cf0af90b9ed3e5a0aa3b92d879e">[詳解]</a><br /></td></tr>
+<tr class="separator:ad0b64cf0af90b9ed3e5a0aa3b92d879e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cfb10c958b1ab7e64ff6cb109feee84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a1cfb10c958b1ab7e64ff6cb109feee84">inv</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> x)</td></tr>
+<tr class="memdesc:a1cfb10c958b1ab7e64ff6cb109feee84"><td class="mdescLeft">&#160;</td><td class="mdescRight">x^-1 modを求める  <a href="#a1cfb10c958b1ab7e64ff6cb109feee84">[詳解]</a><br /></td></tr>
+<tr class="separator:a1cfb10c958b1ab7e64ff6cb109feee84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bd37fa7efeb660e7fcf583c1362c079"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a6bd37fa7efeb660e7fcf583c1362c079">operator-</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> x)</td></tr>
+<tr class="memdesc:a6bd37fa7efeb660e7fcf583c1362c079"><td class="mdescLeft">&#160;</td><td class="mdescRight">負数を求める単項演算子  <a href="#a6bd37fa7efeb660e7fcf583c1362c079">[詳解]</a><br /></td></tr>
+<tr class="separator:a6bd37fa7efeb660e7fcf583c1362c079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad16a48d570bd34e72eac924aafeb1351"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#ad16a48d570bd34e72eac924aafeb1351">operator+</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> r)</td></tr>
+<tr class="separator:ad16a48d570bd34e72eac924aafeb1351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ac736be44d2c598b9f4b6a68a7e223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a64ac736be44d2c598b9f4b6a68a7e223">operator *</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> r)</td></tr>
+<tr class="separator:a64ac736be44d2c598b9f4b6a68a7e223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf2e56540e672156e63d7939b9bf344d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#abf2e56540e672156e63d7939b9bf344d">operator-</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> r)</td></tr>
+<tr class="separator:abf2e56540e672156e63d7939b9bf344d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24e701c3303e28fef7fd1239cd3f72b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#ae24e701c3303e28fef7fd1239cd3f72b">operator+</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const int r)</td></tr>
+<tr class="separator:ae24e701c3303e28fef7fd1239cd3f72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5825e75d699d6d34688be2edd821fc37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a5825e75d699d6d34688be2edd821fc37">operator+</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const long long r)</td></tr>
+<tr class="separator:a5825e75d699d6d34688be2edd821fc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a015eff2bf9eefa59d94151c16f8023a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a015eff2bf9eefa59d94151c16f8023a4">operator *</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const int r)</td></tr>
+<tr class="separator:a015eff2bf9eefa59d94151c16f8023a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99ccdb779389def3b4ac38ad4d8cfe45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a99ccdb779389def3b4ac38ad4d8cfe45">operator *</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const long long r)</td></tr>
+<tr class="separator:a99ccdb779389def3b4ac38ad4d8cfe45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5aeb8e4dade4e7d7ecd766b942a253"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a4c5aeb8e4dade4e7d7ecd766b942a253">operator-</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const int r)</td></tr>
+<tr class="separator:a4c5aeb8e4dade4e7d7ecd766b942a253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74141f50ef17546a923f4b15339e3c7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a74141f50ef17546a923f4b15339e3c7c">operator-</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const long long r)</td></tr>
+<tr class="separator:a74141f50ef17546a923f4b15339e3c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab586c102bec08ad72f0e5c82d19626"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#abab586c102bec08ad72f0e5c82d19626">operator/</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const int r)</td></tr>
+<tr class="separator:abab586c102bec08ad72f0e5c82d19626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2474a41068de64d3635d116c26418dd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a2474a41068de64d3635d116c26418dd7">operator/</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const long long r)</td></tr>
+<tr class="separator:a2474a41068de64d3635d116c26418dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d4f5e9d44bdb18ddd9fea72c7dde8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#af7d4f5e9d44bdb18ddd9fea72c7dde8b">operator^</a> (const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> l, const long long r)</td></tr>
+<tr class="separator:af7d4f5e9d44bdb18ddd9fea72c7dde8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad80fdf2fd3334c29354d6329baf7ab6e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad80fdf2fd3334c29354d6329baf7ab6e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#ad80fdf2fd3334c29354d6329baf7ab6e">operator+=</a> (<a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> &amp;l, T r)</td></tr>
+<tr class="memdesc:ad80fdf2fd3334c29354d6329baf7ab6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">+=の実装、各operator+を呼ぶだけ  <a href="#ad80fdf2fd3334c29354d6329baf7ab6e">[詳解]</a><br /></td></tr>
+<tr class="separator:ad80fdf2fd3334c29354d6329baf7ab6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea573a44d5a34506e2c04fa0369d6fa"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afea573a44d5a34506e2c04fa0369d6fa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#afea573a44d5a34506e2c04fa0369d6fa">operator-=</a> (<a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> &amp;l, T r)</td></tr>
+<tr class="memdesc:afea573a44d5a34506e2c04fa0369d6fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">-=の実装、各operator-を呼ぶだけ  <a href="#afea573a44d5a34506e2c04fa0369d6fa">[詳解]</a><br /></td></tr>
+<tr class="separator:afea573a44d5a34506e2c04fa0369d6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06498246ffc503be6b0bc86a8c215fb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae06498246ffc503be6b0bc86a8c215fb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#ae06498246ffc503be6b0bc86a8c215fb">operator *=</a> (<a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> &amp;l, T r)</td></tr>
+<tr class="memdesc:ae06498246ffc503be6b0bc86a8c215fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">*=の実装、各operator*を呼ぶだけ  <a href="#ae06498246ffc503be6b0bc86a8c215fb">[詳解]</a><br /></td></tr>
+<tr class="separator:ae06498246ffc503be6b0bc86a8c215fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18522a4facdc5307a6980e06593b57c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1d/namespacefactorial.html#a18522a4facdc5307a6980e06593b57c5">factorial::build</a> ()</td></tr>
+<tr class="memdesc:a18522a4facdc5307a6980e06593b57c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">順列数の前計算  <a href="../../db/d1d/namespacefactorial.html#a18522a4facdc5307a6980e06593b57c5">[詳解]</a><br /></td></tr>
+<tr class="separator:a18522a4facdc5307a6980e06593b57c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49158f0c5745811b40efefadad42a49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1d/namespacefactorial.html#af49158f0c5745811b40efefadad42a49">factorial::permutation</a> (int n, int k)</td></tr>
+<tr class="memdesc:af49158f0c5745811b40efefadad42a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">nPkを求める  <a href="../../db/d1d/namespacefactorial.html#af49158f0c5745811b40efefadad42a49">[詳解]</a><br /></td></tr>
+<tr class="separator:af49158f0c5745811b40efefadad42a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dfbf1497818a073c6b35c59bec734fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1d/namespacefactorial.html#a7dfbf1497818a073c6b35c59bec734fa">factorial::combination</a> (int n, int k)</td></tr>
+<tr class="memdesc:a7dfbf1497818a073c6b35c59bec734fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">nCkを求める  <a href="../../db/d1d/namespacefactorial.html#a7dfbf1497818a073c6b35c59bec734fa">[詳解]</a><br /></td></tr>
+<tr class="separator:a7dfbf1497818a073c6b35c59bec734fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
@@ -160,33 +198,33 @@ $(function() {
 constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#aa3e4f6f7382b886f19eb9b2a891dba74">mod</a> = 1e9 + 7</td></tr>
 <tr class="memdesc:aa3e4f6f7382b886f19eb9b2a891dba74"><td class="mdescLeft">&#160;</td><td class="mdescRight">[WARNING!] mod が入力で与えられる場合はconstexprを外す <br /></td></tr>
 <tr class="separator:aa3e4f6f7382b886f19eb9b2a891dba74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accd7ae2024a358c79492c80537e31859"><td class="memItemLeft" align="right" valign="top"><a id="accd7ae2024a358c79492c80537e31859"></a>
-constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#accd7ae2024a358c79492c80537e31859">_ModInt_::factorial::size</a> = 1123456</td></tr>
-<tr class="memdesc:accd7ae2024a358c79492c80537e31859"><td class="mdescLeft">&#160;</td><td class="mdescRight">順列数を格納する配列のサイズ <br /></td></tr>
-<tr class="separator:accd7ae2024a358c79492c80537e31859"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f6e05980e2cc5452b527115a705060c"><td class="memItemLeft" align="right" valign="top"><a id="a1f6e05980e2cc5452b527115a705060c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#a1f6e05980e2cc5452b527115a705060c">_ModInt_::factorial::is_build</a> = false</td></tr>
-<tr class="memdesc:a1f6e05980e2cc5452b527115a705060c"><td class="mdescLeft">&#160;</td><td class="mdescRight">前計算ができているかどうかのフラグ <br /></td></tr>
-<tr class="separator:a1f6e05980e2cc5452b527115a705060c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe72e59d3655d3c4d0ca9bd6fbcfe797"><td class="memItemLeft" align="right" valign="top"><a id="abe72e59d3655d3c4d0ca9bd6fbcfe797"></a>
-<a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#abe72e59d3655d3c4d0ca9bd6fbcfe797">_ModInt_::factorial::factorial</a> [size]</td></tr>
-<tr class="memdesc:abe72e59d3655d3c4d0ca9bd6fbcfe797"><td class="mdescLeft">&#160;</td><td class="mdescRight">順列数を格納する配列 <br /></td></tr>
-<tr class="separator:abe72e59d3655d3c4d0ca9bd6fbcfe797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb50de2c53758bc5a3d438e1d60b1a85"><td class="memItemLeft" align="right" valign="top"><a id="abb50de2c53758bc5a3d438e1d60b1a85"></a>
-<a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d33/_mod_int_8hpp.html#abb50de2c53758bc5a3d438e1d60b1a85">_ModInt_::factorial::inverse_factorial</a> [size]</td></tr>
-<tr class="memdesc:abb50de2c53758bc5a3d438e1d60b1a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">(順列数)^-1を格納する配列 <br /></td></tr>
-<tr class="separator:abb50de2c53758bc5a3d438e1d60b1a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bbd137b4b995b45e2c08792ae42492c"><td class="memItemLeft" align="right" valign="top"><a id="a6bbd137b4b995b45e2c08792ae42492c"></a>
+constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1d/namespacefactorial.html#a6bbd137b4b995b45e2c08792ae42492c">factorial::size</a> = 1123456</td></tr>
+<tr class="memdesc:a6bbd137b4b995b45e2c08792ae42492c"><td class="mdescLeft">&#160;</td><td class="mdescRight">順列数を格納する配列のサイズ <br /></td></tr>
+<tr class="separator:a6bbd137b4b995b45e2c08792ae42492c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68aabc5acdff34fb59054c001d87445d"><td class="memItemLeft" align="right" valign="top"><a id="a68aabc5acdff34fb59054c001d87445d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1d/namespacefactorial.html#a68aabc5acdff34fb59054c001d87445d">factorial::is_build</a> = false</td></tr>
+<tr class="memdesc:a68aabc5acdff34fb59054c001d87445d"><td class="mdescLeft">&#160;</td><td class="mdescRight">前計算ができているかどうかのフラグ <br /></td></tr>
+<tr class="separator:a68aabc5acdff34fb59054c001d87445d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0be36dd20bdae932866f2446a97bfa"><td class="memItemLeft" align="right" valign="top"><a id="a8b0be36dd20bdae932866f2446a97bfa"></a>
+<a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1d/namespacefactorial.html#a8b0be36dd20bdae932866f2446a97bfa">factorial::factorial</a> [size]</td></tr>
+<tr class="memdesc:a8b0be36dd20bdae932866f2446a97bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">順列数を格納する配列 <br /></td></tr>
+<tr class="separator:a8b0be36dd20bdae932866f2446a97bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309cec376e52645879058a96197b13d3"><td class="memItemLeft" align="right" valign="top"><a id="a309cec376e52645879058a96197b13d3"></a>
+<a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1d/namespacefactorial.html#a309cec376e52645879058a96197b13d3">factorial::inverse_factorial</a> [size]</td></tr>
+<tr class="memdesc:a309cec376e52645879058a96197b13d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(順列数)^-1を格納する配列 <br /></td></tr>
+<tr class="separator:a309cec376e52645879058a96197b13d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>mod構造体 </p>
 <dl class="section author"><dt>著者</dt><dd>btk15049 </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2019/03/08</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">todo:</a></b></dt><dd>verifyが足りない verify: CSA12E，RUPC day3 F </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">todo:</a></b></dt><dd>verifyが足りない verify: CSA12E，RUPC day3 F </dd></dl>
 
 <p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="file_a019213ff5d0277a89c399ae57c16a754"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a019213ff5d0277a89c399ae57c16a754">&#9670;&nbsp;</a></span>add()</h2>
+<a id="a5de982c7442ef3e5c7b437bc8977dca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de982c7442ef3e5c7b437bc8977dca5">&#9670;&nbsp;</a></span>add()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,15 +233,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::add </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> add </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>r</em>&#160;</td>
         </tr>
         <tr>
@@ -220,82 +258,39 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>ModInt</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a></td></tr>
   </table>
   </dd>
 </dl>
 <p>if文使って少し高速化． </p>
 
 <p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00116">116</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a5de982c7442ef3e5c7b437bc8977dca5_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a5de982c7442ef3e5c7b437bc8977dca5_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a5de982c7442ef3e5c7b437bc8977dca5_cgraph" id="dd/d33/_mod_int_8hpp_a5de982c7442ef3e5c7b437bc8977dca5_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,49,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="97,5,188,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="236,5,346,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a5de982c7442ef3e5c7b437bc8977dca5_icgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a5de982c7442ef3e5c7b437bc8977dca5_icgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a5de982c7442ef3e5c7b437bc8977dca5_icgraph" id="dd/d33/_mod_int_8hpp_a5de982c7442ef3e5c7b437bc8977dca5_icgraph">
+<area shape="rect"  title=" " alt="" coords="132,31,176,56"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a6bd37fa7efeb660e7fcf583c1362c079" title="è² æ°ãæ±ããåé æ¼ç®å­" alt="" coords="7,5,82,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#ad16a48d570bd34e72eac924aafeb1351" title=" " alt="" coords="5,55,84,80"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_a5d8a734697af0a324eb774d44e191a1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a5d8a734697af0a324eb774d44e191a1e">&#9670;&nbsp;</a></span>build()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void _ModInt_::factorial::build </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>順列数の前計算 </p>
-<p>順列数と，その逆元を[0,size)まで求める. 計算量は，O(size + log(mod)) </p>
-
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00343">343</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a76fb6d76d665d1a744a49cab4532895a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a76fb6d76d665d1a744a49cab4532895a">&#9670;&nbsp;</a></span>combination()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::factorial::combination </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>k</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>nCkを求める </p>
-<p>前計算がしてあれば O(1)．前計算してない場合は is_build を読み取って前計算をする． </p>
-
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00373">373</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_ace7b91e5edc3937c4d13a39c58b80707"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ace7b91e5edc3937c4d13a39c58b80707">&#9670;&nbsp;</a></span>inv()</h2>
+<a id="a1cfb10c958b1ab7e64ff6cb109feee84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cfb10c958b1ab7e64ff6cb109feee84">&#9670;&nbsp;</a></span>inv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,9 +299,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::inv </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> inv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -328,11 +323,33 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <p>内部ではユークリッドの拡張互助法を使っている． O(log(mod)) </p>
 
 <p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00153">153</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a1cfb10c958b1ab7e64ff6cb109feee84_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a1cfb10c958b1ab7e64ff6cb109feee84_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a1cfb10c958b1ab7e64ff6cb109feee84_cgraph" id="dd/d33/_mod_int_8hpp_a1cfb10c958b1ab7e64ff6cb109feee84_cgraph">
+<area shape="rect"  title="x^&#45;1 modãæ±ãã" alt="" coords="5,5,44,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="æ´æ°ããå®å¨ã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="92,5,180,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="228,5,338,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a1cfb10c958b1ab7e64ff6cb109feee84_icgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a1cfb10c958b1ab7e64ff6cb109feee84_icgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a1cfb10c958b1ab7e64ff6cb109feee84_icgraph" id="dd/d33/_mod_int_8hpp_a1cfb10c958b1ab7e64ff6cb109feee84_icgraph">
+<area shape="rect"  title="x^&#45;1 modãæ±ãã" alt="" coords="352,31,391,56"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#abab586c102bec08ad72f0e5c82d19626" title=" " alt="" coords="215,5,290,31"/>
+<area shape="rect"  href="../../db/d1d/namespacefactorial.html#a18522a4facdc5307a6980e06593b57c5" title="é åæ°ã®åè¨ç®" alt="" coords="201,55,304,80"/>
+<area shape="rect"  href="../../db/d1d/namespacefactorial.html#af49158f0c5745811b40efefadad42a49" title="nPkãæ±ãã" alt="" coords="6,29,152,55"/>
+<area shape="rect"  href="../../db/d1d/namespacefactorial.html#a7dfbf1497818a073c6b35c59bec734fa" title="nCkãæ±ãã" alt="" coords="5,79,153,104"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_aede365bf8dae1d95a0e726837d2fe31a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aede365bf8dae1d95a0e726837d2fe31a">&#9670;&nbsp;</a></span>mul()</h2>
+<a id="a1198752fa49c0cfcedf1a6ea96035058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1198752fa49c0cfcedf1a6ea96035058">&#9670;&nbsp;</a></span>mul()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,15 +358,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::mul </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> mul </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>r</em>&#160;</td>
         </tr>
         <tr>
@@ -366,18 +383,40 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>ModInt． </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00125">125</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a1198752fa49c0cfcedf1a6ea96035058_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a1198752fa49c0cfcedf1a6ea96035058_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a1198752fa49c0cfcedf1a6ea96035058_cgraph" id="dd/d33/_mod_int_8hpp_a1198752fa49c0cfcedf1a6ea96035058_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,48,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="96,5,187,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="235,5,345,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a1198752fa49c0cfcedf1a6ea96035058_icgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a1198752fa49c0cfcedf1a6ea96035058_icgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a1198752fa49c0cfcedf1a6ea96035058_icgraph" id="dd/d33/_mod_int_8hpp_a1198752fa49c0cfcedf1a6ea96035058_icgraph">
+<area shape="rect"  title=" " alt="" coords="258,55,301,80"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#ad0b64cf0af90b9ed3e5a0aa3b92d879e" title="a^x modãæ±ãã" alt="" coords="148,5,193,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a64ac736be44d2c598b9f4b6a68a7e223" title=" " alt="" coords="131,55,210,80"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#abab586c102bec08ad72f0e5c82d19626" title=" " alt="" coords="133,104,208,129"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#af7d4f5e9d44bdb18ddd9fea72c7dde8b" title=" " alt="" coords="5,5,83,31"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_a846ff2e4e375fc0308c8bd96866372db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a846ff2e4e375fc0308c8bd96866372db">&#9670;&nbsp;</a></span>operator *() <span class="overload">[1/3]</span></h2>
+<a id="a64ac736be44d2c598b9f4b6a68a7e223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ac736be44d2c598b9f4b6a68a7e223">&#9670;&nbsp;</a></span>operator *() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -386,15 +425,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator * </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator * </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>r</em>&#160;</td>
         </tr>
         <tr>
@@ -411,18 +450,29 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00181">181</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00179">179</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a64ac736be44d2c598b9f4b6a68a7e223_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a64ac736be44d2c598b9f4b6a68a7e223_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a64ac736be44d2c598b9f4b6a68a7e223_cgraph" id="dd/d33/_mod_int_8hpp_a64ac736be44d2c598b9f4b6a68a7e223_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,85,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title=" " alt="" coords="133,5,176,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="224,5,315,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="363,5,473,31"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_a925001387010b304d19571dd3fe9fd65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a925001387010b304d19571dd3fe9fd65">&#9670;&nbsp;</a></span>operator *() <span class="overload">[2/3]</span></h2>
+<a id="a015eff2bf9eefa59d94151c16f8023a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a015eff2bf9eefa59d94151c16f8023a4">&#9670;&nbsp;</a></span>operator *() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -431,9 +481,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator * </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator * </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -456,19 +506,30 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int</td></tr>
   </table>
   </dd>
 </dl>
 <p>右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意． </p>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00217">217</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00211">211</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a015eff2bf9eefa59d94151c16f8023a4_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a015eff2bf9eefa59d94151c16f8023a4_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a015eff2bf9eefa59d94151c16f8023a4_cgraph" id="dd/d33/_mod_int_8hpp_a015eff2bf9eefa59d94151c16f8023a4_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,31,85,56"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title=" " alt="" coords="133,5,176,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="224,31,315,56"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="363,31,473,56"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_aeca74d382e6f1fa34bc7d5957c457686"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aeca74d382e6f1fa34bc7d5957c457686">&#9670;&nbsp;</a></span>operator *() <span class="overload">[3/3]</span></h2>
+<a id="a99ccdb779389def3b4ac38ad4d8cfe45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ccdb779389def3b4ac38ad4d8cfe45">&#9670;&nbsp;</a></span>operator *() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -477,9 +538,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator * </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator * </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -502,18 +563,30 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00225">225</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00219">219</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a99ccdb779389def3b4ac38ad4d8cfe45_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a99ccdb779389def3b4ac38ad4d8cfe45_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a99ccdb779389def3b4ac38ad4d8cfe45_cgraph" id="dd/d33/_mod_int_8hpp_a99ccdb779389def3b4ac38ad4d8cfe45_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,31,85,56"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title=" " alt="" coords="133,5,176,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="æ´æ°ããå®å¨ã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="226,56,314,81"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="224,7,315,32"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="363,32,473,57"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_aacf2e20dc80e5d412ccc3256fb985b16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aacf2e20dc80e5d412ccc3256fb985b16">&#9670;&nbsp;</a></span>operator *=()</h2>
+<a id="ae06498246ffc503be6b0bc86a8c215fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae06498246ffc503be6b0bc86a8c215fb">&#9670;&nbsp;</a></span>operator *=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -521,9 +594,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&amp; _ModInt_::operator *= </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&amp; operator *= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> &amp;&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -549,19 +622,19 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramname">r</td><td>かけるやつ </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>ModInt&amp; </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a>&amp; </dd></dl>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00313">313</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00305">305</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="file_ae1c8decd379379412a718e53c49e4cb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ae1c8decd379379412a718e53c49e4cb7">&#9670;&nbsp;</a></span>operator+() <span class="overload">[1/3]</span></h2>
+<a id="ad16a48d570bd34e72eac924aafeb1351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad16a48d570bd34e72eac924aafeb1351">&#9670;&nbsp;</a></span>operator+() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -570,15 +643,15 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator+ </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator+ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>r</em>&#160;</td>
         </tr>
         <tr>
@@ -595,18 +668,29 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00173">173</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_ad16a48d570bd34e72eac924aafeb1351_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_ad16a48d570bd34e72eac924aafeb1351_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_ad16a48d570bd34e72eac924aafeb1351_cgraph" id="dd/d33/_mod_int_8hpp_ad16a48d570bd34e72eac924aafeb1351_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,84,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a5de982c7442ef3e5c7b437bc8977dca5" title=" " alt="" coords="132,5,176,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="224,5,315,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="363,5,473,31"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_a25fcb6be246f0d684930da77bfcd4974"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a25fcb6be246f0d684930da77bfcd4974">&#9670;&nbsp;</a></span>operator+() <span class="overload">[2/3]</span></h2>
+<a id="ae24e701c3303e28fef7fd1239cd3f72b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24e701c3303e28fef7fd1239cd3f72b">&#9670;&nbsp;</a></span>operator+() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -615,9 +699,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator+ </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator+ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -640,19 +724,30 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int</td></tr>
   </table>
   </dd>
 </dl>
 <p>右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意． </p>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00199">199</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00193">193</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_ae24e701c3303e28fef7fd1239cd3f72b_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_ae24e701c3303e28fef7fd1239cd3f72b_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_ae24e701c3303e28fef7fd1239cd3f72b_cgraph" id="dd/d33/_mod_int_8hpp_ae24e701c3303e28fef7fd1239cd3f72b_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,31,84,56"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a5de982c7442ef3e5c7b437bc8977dca5" title=" " alt="" coords="132,5,176,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="224,31,315,56"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="363,31,473,56"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_a1085cf37b5dcd4abfa0ca045643418fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a1085cf37b5dcd4abfa0ca045643418fe">&#9670;&nbsp;</a></span>operator+() <span class="overload">[3/3]</span></h2>
+<a id="a5825e75d699d6d34688be2edd821fc37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5825e75d699d6d34688be2edd821fc37">&#9670;&nbsp;</a></span>operator+() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,9 +756,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator+ </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator+ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -686,18 +781,30 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00207">207</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00201">201</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a5825e75d699d6d34688be2edd821fc37_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a5825e75d699d6d34688be2edd821fc37_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a5825e75d699d6d34688be2edd821fc37_cgraph" id="dd/d33/_mod_int_8hpp_a5825e75d699d6d34688be2edd821fc37_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,31,84,56"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a5de982c7442ef3e5c7b437bc8977dca5" title=" " alt="" coords="132,5,176,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="æ´æ°ããå®å¨ã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="225,56,313,81"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="224,7,315,32"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="363,32,473,57"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_a6500a4850c26e8370153a7343552bbd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a6500a4850c26e8370153a7343552bbd0">&#9670;&nbsp;</a></span>operator+=()</h2>
+<a id="ad80fdf2fd3334c29354d6329baf7ab6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad80fdf2fd3334c29354d6329baf7ab6e">&#9670;&nbsp;</a></span>operator+=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -705,9 +812,9 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&amp; _ModInt_::operator+= </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&amp; operator+= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> &amp;&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -733,19 +840,19 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramname">r</td><td>足すやつ </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>ModInt&amp; </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a>&amp; </dd></dl>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00285">285</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00277">277</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="file_a47afe0b07b9337c48c06a130c16c9ceb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a47afe0b07b9337c48c06a130c16c9ceb">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/4]</span></h2>
+<a id="a6bd37fa7efeb660e7fcf583c1362c079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd37fa7efeb660e7fcf583c1362c079">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -754,9 +861,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator- </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator- </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -771,17 +878,28 @@ template&lt;typename T &gt; </div>
 <p>負数を求める単項演算子 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00167">167</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a6bd37fa7efeb660e7fcf583c1362c079_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a6bd37fa7efeb660e7fcf583c1362c079_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a6bd37fa7efeb660e7fcf583c1362c079_cgraph" id="dd/d33/_mod_int_8hpp_a6bd37fa7efeb660e7fcf583c1362c079_cgraph">
+<area shape="rect"  title="è² æ°ãæ±ããåé æ¼ç®å­" alt="" coords="5,5,81,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a5de982c7442ef3e5c7b437bc8977dca5" title=" " alt="" coords="129,5,172,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="220,5,311,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="359,5,470,31"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_aad94327917e4c98056ead3d7c668d3b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aad94327917e4c98056ead3d7c668d3b8">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/4]</span></h2>
+<a id="abf2e56540e672156e63d7939b9bf344d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf2e56540e672156e63d7939b9bf344d">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -790,15 +908,15 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator- </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator- </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>r</em>&#160;</td>
         </tr>
         <tr>
@@ -815,18 +933,29 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00189">189</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00185">185</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_abf2e56540e672156e63d7939b9bf344d_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_abf2e56540e672156e63d7939b9bf344d_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_abf2e56540e672156e63d7939b9bf344d_cgraph" id="dd/d33/_mod_int_8hpp_abf2e56540e672156e63d7939b9bf344d_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,81,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a5de982c7442ef3e5c7b437bc8977dca5" title=" " alt="" coords="129,5,172,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="220,5,311,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="359,5,470,31"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_ae4ae28ccf92088cecb53226a8f59c842"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ae4ae28ccf92088cecb53226a8f59c842">&#9670;&nbsp;</a></span>operator-() <span class="overload">[3/4]</span></h2>
+<a id="a4c5aeb8e4dade4e7d7ecd766b942a253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c5aeb8e4dade4e7d7ecd766b942a253">&#9670;&nbsp;</a></span>operator-() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -835,9 +964,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator- </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator- </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -860,19 +989,30 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int</td></tr>
   </table>
   </dd>
 </dl>
 <p>右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意． </p>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00235">235</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00229">229</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a4c5aeb8e4dade4e7d7ecd766b942a253_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a4c5aeb8e4dade4e7d7ecd766b942a253_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a4c5aeb8e4dade4e7d7ecd766b942a253_cgraph" id="dd/d33/_mod_int_8hpp_a4c5aeb8e4dade4e7d7ecd766b942a253_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,31,81,56"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a5de982c7442ef3e5c7b437bc8977dca5" title=" " alt="" coords="129,5,172,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="220,31,311,56"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="359,31,470,56"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_a59837c0a81dedea60383a2a677c44113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a59837c0a81dedea60383a2a677c44113">&#9670;&nbsp;</a></span>operator-() <span class="overload">[4/4]</span></h2>
+<a id="a74141f50ef17546a923f4b15339e3c7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74141f50ef17546a923f4b15339e3c7c">&#9670;&nbsp;</a></span>operator-() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -881,9 +1021,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator- </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator- </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -906,18 +1046,30 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00243">243</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00237">237</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a74141f50ef17546a923f4b15339e3c7c_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a74141f50ef17546a923f4b15339e3c7c_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a74141f50ef17546a923f4b15339e3c7c_cgraph" id="dd/d33/_mod_int_8hpp_a74141f50ef17546a923f4b15339e3c7c_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,31,81,56"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a5de982c7442ef3e5c7b437bc8977dca5" title=" " alt="" coords="129,5,172,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="æ´æ°ããå®å¨ã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="222,56,310,81"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="220,7,311,32"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="359,32,470,57"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_a399ca02a9eeebeac15d911b5cb4dd10f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a399ca02a9eeebeac15d911b5cb4dd10f">&#9670;&nbsp;</a></span>operator-=()</h2>
+<a id="afea573a44d5a34506e2c04fa0369d6fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea573a44d5a34506e2c04fa0369d6fa">&#9670;&nbsp;</a></span>operator-=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -925,9 +1077,9 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&amp; _ModInt_::operator-= </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&amp; operator-= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> &amp;&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -953,19 +1105,19 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramname">r</td><td>引くやつ </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>ModInt&amp; </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a>&amp; </dd></dl>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00299">299</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00291">291</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="file_a05a875d1aafdd048f704a1b6fd47994e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a05a875d1aafdd048f704a1b6fd47994e">&#9670;&nbsp;</a></span>operator/() <span class="overload">[1/2]</span></h2>
+<a id="abab586c102bec08ad72f0e5c82d19626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab586c102bec08ad72f0e5c82d19626">&#9670;&nbsp;</a></span>operator/() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -974,9 +1126,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator/ </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator/ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -999,19 +1151,32 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int</td></tr>
   </table>
   </dd>
 </dl>
 <p>右辺は定数を想定しているのでmodをとらないrawを使ってModIntに変換している．ただしmodより大きい値や負の数を入れると事故るので注意． </p>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00253">253</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00247">247</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_abab586c102bec08ad72f0e5c82d19626_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_abab586c102bec08ad72f0e5c82d19626_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_abab586c102bec08ad72f0e5c82d19626_cgraph" id="dd/d33/_mod_int_8hpp_abab586c102bec08ad72f0e5c82d19626_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,56,80,81"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title=" " alt="" coords="128,5,171,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="219,56,310,81"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a1cfb10c958b1ab7e64ff6cb109feee84" title="x^&#45;1 modãæ±ãã" alt="" coords="130,107,169,132"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="358,81,468,107"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="æ´æ°ããå®å¨ã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="220,105,308,131"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_ab20c1e23d8ccf0dd845eadbbe8a12fad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ab20c1e23d8ccf0dd845eadbbe8a12fad">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/2]</span></h2>
+<a id="a2474a41068de64d3635d116c26418dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2474a41068de64d3635d116c26418dd7">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1020,9 +1185,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator/ </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator/ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -1045,18 +1210,31 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>int </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00261">261</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00255">255</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_a2474a41068de64d3635d116c26418dd7_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_a2474a41068de64d3635d116c26418dd7_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_a2474a41068de64d3635d116c26418dd7_cgraph" id="dd/d33/_mod_int_8hpp_a2474a41068de64d3635d116c26418dd7_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,55,80,80"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title=" " alt="" coords="128,5,171,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a1cfb10c958b1ab7e64ff6cb109feee84" title="x^&#45;1 modãæ±ãã" alt="" coords="130,55,169,80"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="æ´æ°ããå®å¨ã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="220,55,308,80"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="219,5,310,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="358,31,468,56"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_a9b59ce535ebda37b5c4c0e6c26833bb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a9b59ce535ebda37b5c4c0e6c26833bb1">&#9670;&nbsp;</a></span>operator^()</h2>
+<a id="af7d4f5e9d44bdb18ddd9fea72c7dde8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d4f5e9d44bdb18ddd9fea72c7dde8b">&#9670;&nbsp;</a></span>operator^()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1065,9 +1243,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::operator^ </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> operator^ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -1090,19 +1268,31 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>long long</td></tr>
   </table>
   </dd>
 </dl>
 <p>pow(l,r)を呼び出すだけなのでpowを参照のこと． 計算量はO(log mod) </p>
 
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00272">272</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00266">266</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_af7d4f5e9d44bdb18ddd9fea72c7dde8b_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_af7d4f5e9d44bdb18ddd9fea72c7dde8b_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_af7d4f5e9d44bdb18ddd9fea72c7dde8b_cgraph" id="dd/d33/_mod_int_8hpp_af7d4f5e9d44bdb18ddd9fea72c7dde8b_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,83,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#ad0b64cf0af90b9ed3e5a0aa3b92d879e" title="a^x modãæ±ãã" alt="" coords="131,5,176,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="315,5,406,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title=" " alt="" coords="224,31,267,56"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="454,5,564,31"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="file_a1823beb563e4a7db99cf7eedc6ca1b14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a1823beb563e4a7db99cf7eedc6ca1b14">&#9670;&nbsp;</a></span>permutation()</h2>
+<a id="ad0b64cf0af90b9ed3e5a0aa3b92d879e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0b64cf0af90b9ed3e5a0aa3b92d879e">&#9670;&nbsp;</a></span>pow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1111,50 +1301,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::factorial::permutation </td>
+          <td class="memname"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a> pow </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>k</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>nPkを求める </p>
-<p>前計算がしてあれば O(1)．前計算してない場合は is_build を読み取って前計算をする． </p>
-
-<p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00361">361</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="file_a4c5808d324c10bae7dfbac6bb554c104"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a4c5808d324c10bae7dfbac6bb554c104">&#9670;&nbsp;</a></span>pow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> _ModInt_::pow </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d2/de3/class_mod_int.html">ModInt</a>&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
@@ -1179,22 +1328,46 @@ template&lt;typename T &gt; </div>
 <p>a^x modを求める </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>ModInt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td><a class="el" href="../../d2/de3/class_mod_int.html" title="mod構造体">ModInt</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>long long． </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition"> <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html">ModInt.hpp</a> の <a class="el" href="../../dd/d33/_mod_int_8hpp_source.html#l00134">134</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_ad0b64cf0af90b9ed3e5a0aa3b92d879e_cgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_ad0b64cf0af90b9ed3e5a0aa3b92d879e_cgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_ad0b64cf0af90b9ed3e5a0aa3b92d879e_cgraph" id="dd/d33/_mod_int_8hpp_ad0b64cf0af90b9ed3e5a0aa3b92d879e_cgraph">
+<area shape="rect"  title="a^x modãæ±ãã" alt="" coords="5,5,51,31"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="æ´æ°ããé«éã«ModIntãä½ãããã¨ãã«ä½¿ã" alt="" coords="190,5,281,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title=" " alt="" coords="99,31,142,56"/>
+<area shape="rect"  href="../../d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="ããã©ã«ãã³ã³ã¹ãã©ã¯ã¿ï¼0ã§åæåãããï¼" alt="" coords="329,5,439,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d33/_mod_int_8hpp_ad0b64cf0af90b9ed3e5a0aa3b92d879e_icgraph.png" border="0" usemap="#dd/d33/_mod_int_8hpp_ad0b64cf0af90b9ed3e5a0aa3b92d879e_icgraph" alt=""/></div>
+<map name="dd/d33/_mod_int_8hpp_ad0b64cf0af90b9ed3e5a0aa3b92d879e_icgraph" id="dd/d33/_mod_int_8hpp_ad0b64cf0af90b9ed3e5a0aa3b92d879e_icgraph">
+<area shape="rect"  title="a^x modãæ±ãã" alt="" coords="131,5,176,31"/>
+<area shape="rect"  href="../../dd/d33/_mod_int_8hpp.html#af7d4f5e9d44bdb18ddd9fea72c7dde8b" title=" " alt="" coords="5,5,83,31"/>
+</map>
+</div>
 
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_130f957cc777e1e7397821d3ae1b6d18.html">num</a></li><li class="navelem"><a class="el" href="../../dd/d33/_mod_int_8hpp.html">ModInt.hpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

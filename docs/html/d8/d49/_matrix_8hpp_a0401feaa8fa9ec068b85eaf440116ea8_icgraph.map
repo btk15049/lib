@@ -1,0 +1,6 @@
+<map id="_MATRIX_::mul" name="_MATRIX_::mul">
+<area shape="rect" id="node1" title="行列積" alt="" coords="485,31,600,56"/>
+<area shape="rect" id="node2" href="$d7/d7f/class___m_a_t_r_i_x___1_1_chain.html#abdc2369317bf164c2c18522aadea7d45" title="Construct a new Chain object 行列累乗用にビルドをしておく" alt="" coords="259,5,429,31"/>
+<area shape="rect" id="node3" href="$d7/d7f/class___m_a_t_r_i_x___1_1_chain.html#a0ba5008914dadb888365f62e72179458" title="コンストラクタで与えた正方行列を M, 引数のベクトルを v として M^n * v を計算" alt="" coords="251,55,437,80"/>
+<area shape="rect" id="node4" href="$d0/de1/_matrix_8test_8cpp.html#a39307ed68514a68c0c228568dcb758dd" title="行列累乗のテストをフィボナッチで" alt="" coords="5,55,203,80"/>
+</map>

@@ -9,6 +9,14 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/dff/_k_m_p_8test_8cpp.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a class="el" href="../../dir_1439c9d351dd978c38b2510729161b97.html">string</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#define-members">マクロ定義</a> &#124;
@@ -73,10 +93,26 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>KMPのテスト  
+<p><a class="el" href="../../dd/d72/_k_m_p_8hpp.html" title="KMP">KMP.hpp</a> のテスト  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../dd/d72/_k_m_p_8hpp_source.html">string/KMP.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d75/_loop_8hpp_source.html">template/Loop.hpp</a>&quot;</code><br />
 <code>#include &lt;boost/test/included/unit_test.hpp&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+KMP.test.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/dbb/_k_m_p_8test_8cpp__incl.png" border="0" usemap="#test_2string_2_k_m_p_8test_8cpp" alt=""/></div>
+<map name="test_2string_2_k_m_p_8test_8cpp" id="test_2string_2_k_m_p_8test_8cpp">
+<area shape="rect"  title="KMP.hpp ã®ãã¹ã" alt="" coords="257,5,418,31"/>
+<area shape="rect"  href="../../dd/d72/_k_m_p_8hpp.html" title="KMP" alt="" coords="138,85,249,111"/>
+<area shape="rect"  title=" " alt="" coords="257,165,311,191"/>
+<area shape="rect"  href="../../d7/d75/_loop_8hpp.html" title="rangeã¨ãã«ã¼ãç³»ã®ã¯ã©ã¹" alt="" coords="324,85,455,111"/>
+<area shape="rect"  title=" " alt="" coords="479,79,612,117"/>
+<area shape="rect"  href="../../de/d09/_macro_8hpp.html" title="ãã¯ã­ã¨ãï¼LLã¨ã" alt="" coords="5,165,145,191"/>
+<area shape="rect"  title=" " alt="" coords="169,165,226,191"/>
+</map>
+</div>
 </div>
 <p><a href="../../de/dff/_k_m_p_8test_8cpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -111,7 +147,7 @@ $(function() {
 <tr class="separator:a2451e9ce76329da0fd0df4dbc59d4c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>KMPのテスト </p>
+<div class="textblock"><p><a class="el" href="../../dd/d72/_k_m_p_8hpp.html" title="KMP">KMP.hpp</a> のテスト </p>
 <dl class="section author"><dt>著者</dt><dd>btk </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2019-05-27</dd></dl>
 <dl class="section copyright"><dt>著作権所有</dt><dd>Copyright (c) 2019 </dd></dl>
@@ -136,7 +172,17 @@ $(function() {
 
 <p>Construct a new boost auto test case object </p>
 
-<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00020">20</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00022">22</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dff/_k_m_p_8test_8cpp_ad0bff9fa7207fa82f45940d9e50e3d6b_cgraph.png" border="0" usemap="#de/dff/_k_m_p_8test_8cpp_ad0bff9fa7207fa82f45940d9e50e3d6b_cgraph" alt=""/></div>
+<map name="de/dff/_k_m_p_8test_8cpp_ad0bff9fa7207fa82f45940d9e50e3d6b_cgraph" id="de/dff/_k_m_p_8test_8cpp_ad0bff9fa7207fa82f45940d9e50e3d6b_cgraph">
+<area shape="rect"  title="Construct a new boost auto test case object" alt="" coords="5,5,203,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a3de2899abd598d9106554c5098bbd344" title="æ¬¡ã®ã­ã¼ã¯ã¼ããè¦ã¤ãã" alt="" coords="251,5,330,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b" title="next_charãèª­ãã ã¨ãã« KMP ãã¼ãã«ã®ãã¤ã³ã¿ï¼ã©ãã¾ã§ä¸è´ãã¦ãããï¼reading_len) ãé²ãã" alt="" coords="378,5,486,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -158,7 +204,17 @@ $(function() {
 
 <p>Construct a new boost auto test case object </p>
 
-<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00032">32</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dff/_k_m_p_8test_8cpp_a75d79ab1517187826ed80a427e7419e0_cgraph.png" border="0" usemap="#de/dff/_k_m_p_8test_8cpp_a75d79ab1517187826ed80a427e7419e0_cgraph" alt=""/></div>
+<map name="de/dff/_k_m_p_8test_8cpp_a75d79ab1517187826ed80a427e7419e0_cgraph" id="de/dff/_k_m_p_8test_8cpp_a75d79ab1517187826ed80a427e7419e0_cgraph">
+<area shape="rect"  title="Construct a new boost auto test case object" alt="" coords="5,5,203,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a3de2899abd598d9106554c5098bbd344" title="æ¬¡ã®ã­ã¼ã¯ã¼ããè¦ã¤ãã" alt="" coords="251,5,330,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b" title="next_charãèª­ãã ã¨ãã« KMP ãã¼ãã«ã®ãã¤ã³ã¿ï¼ã©ãã¾ã§ä¸è´ãã¦ãããï¼reading_len) ãé²ãã" alt="" coords="378,5,486,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -180,7 +236,17 @@ $(function() {
 
 <p>Construct a new boost auto test case object </p>
 
-<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00044">44</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00046">46</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dff/_k_m_p_8test_8cpp_ad01c8d5a732dc0bed575e7ca3d4c4e43_cgraph.png" border="0" usemap="#de/dff/_k_m_p_8test_8cpp_ad01c8d5a732dc0bed575e7ca3d4c4e43_cgraph" alt=""/></div>
+<map name="de/dff/_k_m_p_8test_8cpp_ad01c8d5a732dc0bed575e7ca3d4c4e43_cgraph" id="de/dff/_k_m_p_8test_8cpp_ad01c8d5a732dc0bed575e7ca3d4c4e43_cgraph">
+<area shape="rect"  title="Construct a new boost auto test case object" alt="" coords="5,5,203,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a3de2899abd598d9106554c5098bbd344" title="æ¬¡ã®ã­ã¼ã¯ã¼ããè¦ã¤ãã" alt="" coords="251,5,330,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b" title="next_charãèª­ãã ã¨ãã« KMP ãã¼ãã«ã®ãã¤ã³ã¿ï¼ã©ãã¾ã§ä¸è´ãã¦ãããï¼reading_len) ãé²ãã" alt="" coords="378,5,486,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -202,7 +268,18 @@ $(function() {
 
 <p>Construct a new boost auto test case object </p>
 
-<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00056">56</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dff/_k_m_p_8test_8cpp_abccb6375970caf3ca9ef49b2e7bf09d7_cgraph.png" border="0" usemap="#de/dff/_k_m_p_8test_8cpp_abccb6375970caf3ca9ef49b2e7bf09d7_cgraph" alt=""/></div>
+<map name="de/dff/_k_m_p_8test_8cpp_abccb6375970caf3ca9ef49b2e7bf09d7_cgraph" id="de/dff/_k_m_p_8test_8cpp_abccb6375970caf3ca9ef49b2e7bf09d7_cgraph">
+<area shape="rect"  title="Construct a new boost auto test case object" alt="" coords="5,5,203,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a0b2d2ed0e860b696b607f20c39cea5a1" title="sentence ã®ä¸­ã® keyword ã®éå§ä½ç½®ãå¨é¨æã£ã¦ãã" alt="" coords="251,5,351,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a3de2899abd598d9106554c5098bbd344" title="æ¬¡ã®ã­ã¼ã¯ã¼ããè¦ã¤ãã" alt="" coords="399,5,478,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b" title="next_charãèª­ãã ã¨ãã« KMP ãã¼ãã«ã®ãã¤ã³ã¿ï¼ã©ãã¾ã§ä¸è´ãã¦ãããï¼reading_len) ãé²ãã" alt="" coords="526,5,634,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -224,7 +301,18 @@ $(function() {
 
 <p>Construct a new boost auto test case object </p>
 
-<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00069">69</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00071">71</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dff/_k_m_p_8test_8cpp_ab6c143763946598385eebddca8a93eed_cgraph.png" border="0" usemap="#de/dff/_k_m_p_8test_8cpp_ab6c143763946598385eebddca8a93eed_cgraph" alt=""/></div>
+<map name="de/dff/_k_m_p_8test_8cpp_ab6c143763946598385eebddca8a93eed_cgraph" id="de/dff/_k_m_p_8test_8cpp_ab6c143763946598385eebddca8a93eed_cgraph">
+<area shape="rect"  title="Construct a new boost auto test case object" alt="" coords="5,5,203,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a0b2d2ed0e860b696b607f20c39cea5a1" title="sentence ã®ä¸­ã® keyword ã®éå§ä½ç½®ãå¨é¨æã£ã¦ãã" alt="" coords="251,5,351,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a3de2899abd598d9106554c5098bbd344" title="æ¬¡ã®ã­ã¼ã¯ã¼ããè¦ã¤ãã" alt="" coords="399,5,478,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b" title="next_charãèª­ãã ã¨ãã« KMP ãã¼ãã«ã®ãã¤ã³ã¿ï¼ã©ãã¾ã§ä¸è´ãã¦ãããï¼reading_len) ãé²ãã" alt="" coords="526,5,634,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -246,7 +334,18 @@ $(function() {
 
 <p>Construct a new boost auto test case object </p>
 
-<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00082">82</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00084">84</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dff/_k_m_p_8test_8cpp_a3cf3cbc8ea3793e74a5946d784be1dbc_cgraph.png" border="0" usemap="#de/dff/_k_m_p_8test_8cpp_a3cf3cbc8ea3793e74a5946d784be1dbc_cgraph" alt=""/></div>
+<map name="de/dff/_k_m_p_8test_8cpp_a3cf3cbc8ea3793e74a5946d784be1dbc_cgraph" id="de/dff/_k_m_p_8test_8cpp_a3cf3cbc8ea3793e74a5946d784be1dbc_cgraph">
+<area shape="rect"  title="Construct a new boost auto test case object" alt="" coords="5,5,203,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a0b2d2ed0e860b696b607f20c39cea5a1" title="sentence ã®ä¸­ã® keyword ã®éå§ä½ç½®ãå¨é¨æã£ã¦ãã" alt="" coords="251,5,351,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a3de2899abd598d9106554c5098bbd344" title="æ¬¡ã®ã­ã¼ã¯ã¼ããè¦ã¤ãã" alt="" coords="399,5,478,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b" title="next_charãèª­ãã ã¨ãã« KMP ãã¼ãã«ã®ãã¤ã³ã¿ï¼ã©ãã¾ã§ä¸è´ãã¦ãããï¼reading_len) ãé²ãã" alt="" coords="526,5,634,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -268,7 +367,18 @@ $(function() {
 
 <p>Construct a new boost auto test case object </p>
 
-<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00095">95</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00097">97</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dff/_k_m_p_8test_8cpp_a975ac8bb53872d5b7a743bfe31621b8b_cgraph.png" border="0" usemap="#de/dff/_k_m_p_8test_8cpp_a975ac8bb53872d5b7a743bfe31621b8b_cgraph" alt=""/></div>
+<map name="de/dff/_k_m_p_8test_8cpp_a975ac8bb53872d5b7a743bfe31621b8b_cgraph" id="de/dff/_k_m_p_8test_8cpp_a975ac8bb53872d5b7a743bfe31621b8b_cgraph">
+<area shape="rect"  title="Construct a new boost auto test case object" alt="" coords="5,5,203,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a0b2d2ed0e860b696b607f20c39cea5a1" title="sentence ã®ä¸­ã® keyword ã®éå§ä½ç½®ãå¨é¨æã£ã¦ãã" alt="" coords="251,5,351,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a3de2899abd598d9106554c5098bbd344" title="æ¬¡ã®ã­ã¼ã¯ã¼ããè¦ã¤ãã" alt="" coords="399,5,478,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b" title="next_charãèª­ãã ã¨ãã« KMP ãã¼ãã«ã®ãã¤ã³ã¿ï¼ã©ãã¾ã§ä¸è´ãã¦ãããï¼reading_len) ãé²ãã" alt="" coords="526,5,634,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -290,7 +400,18 @@ $(function() {
 
 <p>Construct a new boost auto test case object </p>
 
-<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00108">108</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00110">110</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dff/_k_m_p_8test_8cpp_ad417db8f15ce0496ef7b20deb8fd8efc_cgraph.png" border="0" usemap="#de/dff/_k_m_p_8test_8cpp_ad417db8f15ce0496ef7b20deb8fd8efc_cgraph" alt=""/></div>
+<map name="de/dff/_k_m_p_8test_8cpp_ad417db8f15ce0496ef7b20deb8fd8efc_cgraph" id="de/dff/_k_m_p_8test_8cpp_ad417db8f15ce0496ef7b20deb8fd8efc_cgraph">
+<area shape="rect"  title="Construct a new boost auto test case object" alt="" coords="5,5,203,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a0b2d2ed0e860b696b607f20c39cea5a1" title="sentence ã®ä¸­ã® keyword ã®éå§ä½ç½®ãå¨é¨æã£ã¦ãã" alt="" coords="251,5,351,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#a3de2899abd598d9106554c5098bbd344" title="æ¬¡ã®ã­ã¼ã¯ã¼ããè¦ã¤ãã" alt="" coords="399,5,478,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b" title="next_charãèª­ãã ã¨ãã« KMP ãã¼ãã«ã®ãã¤ã³ã¿ï¼ã©ãã¾ã§ä¸è´ãã¦ãããï¼reading_len) ãé²ãã" alt="" coords="526,5,634,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -312,16 +433,29 @@ $(function() {
 
 <p>Construct a new boost auto test case object </p>
 
-<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00121">121</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html">KMP.test.cpp</a> の <a class="el" href="../../de/dff/_k_m_p_8test_8cpp_source.html#l00123">123</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dff/_k_m_p_8test_8cpp_a2451e9ce76329da0fd0df4dbc59d4c82_cgraph.png" border="0" usemap="#de/dff/_k_m_p_8test_8cpp_a2451e9ce76329da0fd0df4dbc59d4c82_cgraph" alt=""/></div>
+<map name="de/dff/_k_m_p_8test_8cpp_a2451e9ce76329da0fd0df4dbc59d4c82_cgraph" id="de/dff/_k_m_p_8test_8cpp_a2451e9ce76329da0fd0df4dbc59d4c82_cgraph">
+<area shape="rect"  title="Construct a new boost auto test case object" alt="" coords="5,5,203,31"/>
+<area shape="rect"  href="../../de/df2/class_k_m_p.html#aecff60bd039e1790d6f93bff4ccab9e7" title="keyword[0,i)ã®æå°å¨æãæ±ãã" alt="" coords="251,5,345,31"/>
+</map>
+</div>
 
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a class="el" href="../../dir_1439c9d351dd978c38b2510729161b97.html">string</a></li><li class="navelem"><a class="el" href="../../de/dff/_k_m_p_8test_8cpp.html">KMP.test.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

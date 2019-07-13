@@ -1,0 +1,5 @@
+<map id="factorial::build" name="factorial::build">
+<area shape="rect" id="node1" title="順列数の前計算" alt="" coords="201,31,304,56"/>
+<area shape="rect" id="node2" href="$db/d1d/namespacefactorial.html#af49158f0c5745811b40efefadad42a49" title="nPkを求める" alt="" coords="6,5,152,31"/>
+<area shape="rect" id="node3" href="$db/d1d/namespacefactorial.html#a7dfbf1497818a073c6b35c59bec734fa" title="nCkを求める" alt="" coords="5,55,153,80"/>
+</map>

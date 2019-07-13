@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['cap',['cap',['../d7/daf/struct___dinic___1_1_flow_edge.html#a23c72bb35e4c613cd45960ed4bc78612',1,'_Dinic_::FlowEdge']]],
-  ['cost',['cost',['../dd/d9b/struct___graph___1_1_weighted_edge.html#ad81790c8bbd2b12609b9291001615d43',1,'_Graph_::WeightedEdge']]]
+  ['cap',['cap',['../d4/d12/struct_flow_edge.html#af8902ae829a0f598c5714c61900242e1',1,'FlowEdge']]],
+  ['cost',['cost',['../d4/d91/struct_weighted_edge.html#ac277a832dda5b850d5d049a69b2a065b',1,'WeightedEdge']]]
 ];

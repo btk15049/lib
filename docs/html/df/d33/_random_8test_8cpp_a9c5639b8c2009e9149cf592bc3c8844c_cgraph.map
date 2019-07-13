@@ -1,0 +1,4 @@
+<map id="BOOST_AUTO_TEST_CASE" name="BOOST_AUTO_TEST_CASE">
+<area shape="rect" id="node1" title="XorShift32::next_int の テスト" alt="" coords="5,5,203,31"/>
+<area shape="rect" id="node2" href="$db/d2c/class_xor_shift32.html#ad4c32ab3d160cc0febc762d91f9f1177" title="[0, 2^bit) の範囲の乱数値を取り出す" alt="" coords="251,5,388,31"/>
+</map>

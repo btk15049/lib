@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +54,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classes.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -65,42 +89,47 @@ $(function() {
 <div class="title">クラス索引</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="qindex"><a class="qindex" href="#letter_b">b</a>&#160;|&#160;<a class="qindex" href="#letter_c">c</a>&#160;|&#160;<a class="qindex" href="#letter_d">d</a>&#160;|&#160;<a class="qindex" href="#letter_e">e</a>&#160;|&#160;<a class="qindex" href="#letter_f">f</a>&#160;|&#160;<a class="qindex" href="#letter_g">g</a>&#160;|&#160;<a class="qindex" href="#letter_h">h</a>&#160;|&#160;<a class="qindex" href="#letter_k">k</a>&#160;|&#160;<a class="qindex" href="#letter_m">m</a>&#160;|&#160;<a class="qindex" href="#letter_r">r</a>&#160;|&#160;<a class="qindex" href="#letter_t">t</a>&#160;|&#160;<a class="qindex" href="#letter_u">u</a>&#160;|&#160;<a class="qindex" href="#letter_w">w</a></div>
+<div class="qindex"><a class="qindex" href="#letter_b">b</a>&#160;|&#160;<a class="qindex" href="#letter_c">c</a>&#160;|&#160;<a class="qindex" href="#letter_d">d</a>&#160;|&#160;<a class="qindex" href="#letter_e">e</a>&#160;|&#160;<a class="qindex" href="#letter_f">f</a>&#160;|&#160;<a class="qindex" href="#letter_g">g</a>&#160;|&#160;<a class="qindex" href="#letter_h">h</a>&#160;|&#160;<a class="qindex" href="#letter_k">k</a>&#160;|&#160;<a class="qindex" href="#letter_m">m</a>&#160;|&#160;<a class="qindex" href="#letter_n">n</a>&#160;|&#160;<a class="qindex" href="#letter_r">r</a>&#160;|&#160;<a class="qindex" href="#letter_t">t</a>&#160;|&#160;<a class="qindex" href="#letter_u">u</a>&#160;|&#160;<a class="qindex" href="#letter_w">w</a>&#160;|&#160;<a class="qindex" href="#letter_x">x</a></div>
 <table class="classindex">
 <tr><td rowspan="2" valign="bottom"><a name="letter_b"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;b&#160;&#160;</div></td></tr></table>
-</td><td valign="top"><a class="el" href="d4/d73/class___buffer___1_1_disposable_buffer_manager.html">DisposableBufferManager</a> (_Buffer_)&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_h"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;h&#160;&#160;</div></td></tr></table>
-</td><td rowspan="2" valign="bottom"><a name="letter_r"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;r&#160;&#160;</div></td></tr></table>
-</td><td rowspan="2" valign="bottom"><a name="letter_w"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;w&#160;&#160;</div></td></tr></table>
+</td><td valign="top"><a class="el" href="d0/d62/class_disposable_buffer_manager.html">DisposableBufferManager</a>&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_h"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;h&#160;&#160;</div></td></tr></table>
+</td><td rowspan="2" valign="bottom"><a name="letter_n"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;n&#160;&#160;</div></td></tr></table>
+</td><td rowspan="2" valign="bottom"><a name="letter_u"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;u&#160;&#160;</div></td></tr></table>
 </td></tr>
 <tr><td></td><td rowspan="2" valign="bottom"><a name="letter_e"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;e&#160;&#160;</div></td></tr></table>
 </td><td></td><td></td><td></td></tr>
-<tr><td valign="top"><a class="el" href="d4/d68/class___buffer___1_1_block_buffer_manager.html">BlockBufferManager</a> (_Buffer_)&#160;&#160;&#160;</td><td></td><td valign="top"><a class="el" href="d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html">HeavyLightDecomposition</a> (_HeavyLightDecomposition_)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d0/d1d/class___template___1_1range.html">range</a> (_Template_)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="dd/d9b/struct___graph___1_1_weighted_edge.html">WeightedEdge</a> (_Graph_)&#160;&#160;&#160;</td></tr>
-<tr><td valign="top"><a class="el" href="d7/d2e/class___buffer___1_1_buffer_manager.html">BufferManager</a> (_Buffer_)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d8/dda/struct___graph___1_1_edge.html">Edge</a> (_Graph_)&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_k"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;k&#160;&#160;</div></td></tr></table>
-</td><td valign="top"><a class="el" href="dd/d4f/class___template___1_1reverse__range.html">reverse_range</a> (_Template_)&#160;&#160;&#160;</td><td></td></tr>
+<tr><td valign="top"><a class="el" href="d0/d40/class_block_buffer_manager.html">BlockBufferManager</a>&#160;&#160;&#160;</td><td></td><td valign="top"><a class="el" href="d3/d4c/class_heavy_light_decomposition.html">HeavyLightDecomposition</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d4/d9e/class_n_d_array.html">NDArray</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d1/d4b/class_union_find.html">UnionFind</a>&#160;&#160;&#160;</td></tr>
+<tr><td valign="top"><a class="el" href="da/dd6/class_buffer_manager.html">BufferManager</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d5/db4/struct_edge.html">Edge</a>&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_k"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;k&#160;&#160;</div></td></tr></table>
+</td><td rowspan="2" valign="bottom"><a name="letter_r"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;r&#160;&#160;</div></td></tr></table>
+</td><td rowspan="2" valign="bottom"><a name="letter_w"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;w&#160;&#160;</div></td></tr></table>
+</td></tr>
 <tr><td valign="top"><a class="el" href="d4/df3/class_buffer_test.html">BufferTest</a>&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_f"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;f&#160;&#160;</div></td></tr></table>
-</td><td></td><td valign="top"><a class="el" href="d1/d3a/class___rolling_hash___1_1_rolling_hash.html">RollingHash</a> (_RollingHash_)&#160;&#160;&#160;</td><td></td></tr>
+</td><td></td><td></td><td></td></tr>
 <tr><td rowspan="2" valign="bottom"><a name="letter_c"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;c&#160;&#160;</div></td></tr></table>
-</td><td></td><td valign="top"><a class="el" href="da/de9/class___k_m_p___1_1_k_m_p.html">KMP</a> (_KMP_)&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_t"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;t&#160;&#160;</div></td></tr></table>
-</td><td></td></tr>
-<tr><td></td><td valign="top"><a class="el" href="d7/daf/struct___dinic___1_1_flow_edge.html">FlowEdge</a> (_Dinic_)&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_m"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;m&#160;&#160;</div></td></tr></table>
-</td><td></td><td></td></tr>
-<tr><td valign="top"><a class="el" href="d7/d7f/class___m_a_t_r_i_x___1_1_chain.html">Chain</a> (_MATRIX_)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d6/d11/class___dinic___1_1_flow_graph.html">FlowGraph</a> (_Dinic_)&#160;&#160;&#160;</td><td></td><td valign="top"><a class="el" href="df/d3d/class___rolling_hash___1_1_rolling_hash_1_1_table.html">RollingHash::Table</a> (_RollingHash_)&#160;&#160;&#160;</td><td></td></tr>
-<tr><td valign="top"><a class="el" href="d7/d77/struct___template___1_1cww.html">cww</a> (_Template_)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="dc/d20/class___tree___1_1_forest.html">Forest</a> (_Tree_)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html">Matrix</a> (_MATRIX_)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d4/d30/class___tree___1_1_tree.html">Tree</a> (_Tree_)&#160;&#160;&#160;</td><td></td></tr>
+</td><td></td><td valign="top"><a class="el" href="de/df2/class_k_m_p.html">KMP</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d2/d1f/classrange.html">range</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d4/d91/struct_weighted_edge.html">WeightedEdge</a>&#160;&#160;&#160;</td></tr>
+<tr><td></td><td valign="top"><a class="el" href="d4/d12/struct_flow_edge.html">FlowEdge</a>&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_m"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;m&#160;&#160;</div></td></tr></table>
+</td><td valign="top"><a class="el" href="d1/d4f/classreverse__range.html">reverse_range</a>&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_x"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;x&#160;&#160;</div></td></tr></table>
+</td></tr>
+<tr><td valign="top"><a class="el" href="d7/dfb/class_chain.html">Chain</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="de/d66/class_flow_graph.html">FlowGraph</a>&#160;&#160;&#160;</td><td></td><td valign="top"><a class="el" href="d5/d61/class_rolling_hash.html">RollingHash</a>&#160;&#160;&#160;</td><td></td></tr>
+<tr><td valign="top"><a class="el" href="d8/d22/structcww.html">cww</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d4/d2f/class_forest.html">Forest</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d6/d3f/class_matrix.html">Matrix</a>&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_t"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;t&#160;&#160;</div></td></tr></table>
+</td><td valign="top"><a class="el" href="db/d2c/class_xor_shift32.html">XorShift32</a>&#160;&#160;&#160;</td></tr>
 <tr><td rowspan="2" valign="bottom"><a name="letter_d"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;d&#160;&#160;</div></td></tr></table>
 </td><td rowspan="2" valign="bottom"><a name="letter_g"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;g&#160;&#160;</div></td></tr></table>
-</td><td valign="top"><a class="el" href="dc/d6d/class___mod_int___1_1_mod_int.html">ModInt</a> (_ModInt_)&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_u"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;u&#160;&#160;</div></td></tr></table>
-</td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td valign="top"><a class="el" href="d4/d02/class___dinic___1_1_dinic.html">Dinic</a> (_Dinic_)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d3/da5/class___graph___1_1_graph.html">Graph</a> (_Graph_)&#160;&#160;&#160;</td><td></td><td valign="top"><a class="el" href="d1/d06/class___union_find___1_1_union_find.html">UnionFind</a> (_UnionFind_)&#160;&#160;&#160;</td><td></td></tr>
+</td><td valign="top"><a class="el" href="dd/dbb/structmax__op.html">max_op</a>&#160;&#160;&#160;</td><td></td><td></td></tr>
+<tr><td></td><td></td><td valign="top"><a class="el" href="d5/ddb/structmin__op.html">min_op</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d3/d84/class_rolling_hash_1_1_table.html">RollingHash::Table</a>&#160;&#160;&#160;</td><td></td></tr>
+<tr><td valign="top"><a class="el" href="d2/dbc/class_dinic.html">Dinic</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="da/d9a/class_graph.html">Graph</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="d2/de3/class_mod_int.html">ModInt</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="dd/df8/class_tree.html">Tree</a>&#160;&#160;&#160;</td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
 </table>
-<div class="qindex"><a class="qindex" href="#letter_b">b</a>&#160;|&#160;<a class="qindex" href="#letter_c">c</a>&#160;|&#160;<a class="qindex" href="#letter_d">d</a>&#160;|&#160;<a class="qindex" href="#letter_e">e</a>&#160;|&#160;<a class="qindex" href="#letter_f">f</a>&#160;|&#160;<a class="qindex" href="#letter_g">g</a>&#160;|&#160;<a class="qindex" href="#letter_h">h</a>&#160;|&#160;<a class="qindex" href="#letter_k">k</a>&#160;|&#160;<a class="qindex" href="#letter_m">m</a>&#160;|&#160;<a class="qindex" href="#letter_r">r</a>&#160;|&#160;<a class="qindex" href="#letter_t">t</a>&#160;|&#160;<a class="qindex" href="#letter_u">u</a>&#160;|&#160;<a class="qindex" href="#letter_w">w</a></div>
+<div class="qindex"><a class="qindex" href="#letter_b">b</a>&#160;|&#160;<a class="qindex" href="#letter_c">c</a>&#160;|&#160;<a class="qindex" href="#letter_d">d</a>&#160;|&#160;<a class="qindex" href="#letter_e">e</a>&#160;|&#160;<a class="qindex" href="#letter_f">f</a>&#160;|&#160;<a class="qindex" href="#letter_g">g</a>&#160;|&#160;<a class="qindex" href="#letter_h">h</a>&#160;|&#160;<a class="qindex" href="#letter_k">k</a>&#160;|&#160;<a class="qindex" href="#letter_m">m</a>&#160;|&#160;<a class="qindex" href="#letter_n">n</a>&#160;|&#160;<a class="qindex" href="#letter_r">r</a>&#160;|&#160;<a class="qindex" href="#letter_t">t</a>&#160;|&#160;<a class="qindex" href="#letter_u">u</a>&#160;|&#160;<a class="qindex" href="#letter_w">w</a>&#160;|&#160;<a class="qindex" href="#letter_x">x</a></div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

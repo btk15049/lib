@@ -1,0 +1,6 @@
+<map id="_Buffer_::BufferManager::push" name="_Buffer_::BufferManager::push">
+<area shape="rect" id="node1" title="領域をマネージャに返却（解放）する" alt="" coords="253,81,420,120"/>
+<area shape="rect" id="node2" href="$d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html#a96ddabece99db949168f0c052cecb815" title="Destroy the Heavy Light Decomposition object デストラクタ メモリを返すよ" alt="" coords="9,5,201,57"/>
+<area shape="rect" id="node3" href="$d4/d68/class___buffer___1_1_block_buffer_manager.html#aa9cac6ac11f839a7491fb2897ed55f8d" title="Construct a new Block Buffer Manager object" alt="" coords="5,81,205,120"/>
+<area shape="rect" id="node4" href="$d4/df3/class_buffer_test.html#a71eb409569962138156dd19af7ace17a" title="デストラクタ、借りたものを返す" alt="" coords="27,144,183,169"/>
+</map>

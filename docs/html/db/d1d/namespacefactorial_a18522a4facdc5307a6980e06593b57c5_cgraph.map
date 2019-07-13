@@ -1,0 +1,6 @@
+<map id="factorial::build" name="factorial::build">
+<area shape="rect" id="node1" title="順列数の前計算" alt="" coords="5,5,109,31"/>
+<area shape="rect" id="node2" href="$dd/d33/_mod_int_8hpp.html#a1cfb10c958b1ab7e64ff6cb109feee84" title="x^&#45;1 modを求める" alt="" coords="157,5,196,31"/>
+<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="整数から安全にModIntを作りたいときに使う" alt="" coords="244,5,332,31"/>
+<area shape="rect" id="node4" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される．" alt="" coords="380,5,490,31"/>
+</map>

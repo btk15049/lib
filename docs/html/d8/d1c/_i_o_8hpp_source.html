@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>btk&#39;s library: src/template/IO.hpp ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">btk&#39;s library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d8/d1c/_i_o_8hpp_source.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">IO.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d1c/_i_o_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*&lt;head&gt;*/</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d09/_macro_8hpp.html">template/Macro.hpp</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*&lt;/head&gt;*/</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d8/d22/structcww.html">   22</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/d22/structcww.html">cww</a> {</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d8/d22/structcww.html#a5e40c19c8061c67e7327080a6633190c">   29</a></span>&#160;    <a class="code" href="../../d8/d22/structcww.html#a5e40c19c8061c67e7327080a6633190c">cww</a>() {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifdef FAST_IO</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        ios::sync_with_stdio(<span class="keyword">false</span>);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        cin.tie(0);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifdef DECIMAL_DIGITS</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        cout &lt;&lt; fixed;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        cout &lt;&lt; setprecision(DECIMAL_DIGITS);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d8/d1c/_i_o_8hpp.html#a2300ec6c7ff1e212d19431b279cd329c">   42</a></span>&#160;<a class="code" href="../../d8/d22/structcww.html">cww</a> <a class="code" href="../../d8/d1c/_i_o_8hpp.html#a2300ec6c7ff1e212d19431b279cd329c">star</a>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d8/d1c/_i_o_8hpp.html#aba8866189cbcaeb96147aeb86e33be2a">   53</a></span>&#160;istream&amp; <a class="code" href="../../d8/d1c/_i_o_8hpp.html#aba8866189cbcaeb96147aeb86e33be2a">operator&gt;&gt;</a>(istream&amp; is, vector&lt;T&gt;&amp; v) {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; it : v) is &gt;&gt; it;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> is;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div><div class="ttc" id="structcww_html_a5e40c19c8061c67e7327080a6633190c"><div class="ttname"><a href="../../d8/d22/structcww.html#a5e40c19c8061c67e7327080a6633190c">cww::cww</a></div><div class="ttdeci">cww()</div><div class="ttdoc">Construct a new cww::cww object</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1c/_i_o_8hpp_source.html#l00029">IO.hpp:29</a></div></div>
+<div class="ttc" id="_macro_8hpp_html"><div class="ttname"><a href="../../de/d09/_macro_8hpp.html">Macro.hpp</a></div><div class="ttdoc">マクロとか，LLとか</div></div>
+<div class="ttc" id="structcww_html"><div class="ttname"><a href="../../d8/d22/structcww.html">cww</a></div><div class="ttdoc">入出力の設定を行うための構造体</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1c/_i_o_8hpp_source.html#l00022">IO.hpp:22</a></div></div>
+<div class="ttc" id="_i_o_8hpp_html_a2300ec6c7ff1e212d19431b279cd329c"><div class="ttname"><a href="../../d8/d1c/_i_o_8hpp.html#a2300ec6c7ff1e212d19431b279cd329c">star</a></div><div class="ttdeci">cww star</div><div class="ttdoc">入出力設定構造体を実体化</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1c/_i_o_8hpp_source.html#l00042">IO.hpp:42</a></div></div>
+<div class="ttc" id="_i_o_8hpp_html_aba8866189cbcaeb96147aeb86e33be2a"><div class="ttname"><a href="../../d8/d1c/_i_o_8hpp.html#aba8866189cbcaeb96147aeb86e33be2a">operator&gt;&gt;</a></div><div class="ttdeci">istream &amp; operator&gt;&gt;(istream &amp;is, vector&lt; T &gt; &amp;v)</div><div class="ttdoc">vectorに直接cin流すためのやつ</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1c/_i_o_8hpp_source.html#l00053">IO.hpp:53</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_f5f72c0707506975c00b8e2fcde009a7.html">template</a></li><li class="navelem"><a class="el" href="../../d8/d1c/_i_o_8hpp.html">IO.hpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

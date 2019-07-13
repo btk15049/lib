@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +54,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('annotated.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -66,49 +90,45 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock">クラス・構造体・共用体・インターフェースの一覧です。</div><div class="directory">
-<div class="levels">[表示階層 <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_Buffer_</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/d68/class___buffer___1_1_block_buffer_manager.html" target="_self">BlockBufferManager</a></td><td class="desc">Blocks*block_size分の領域をblocks個に区切って、やりくりする。 使わなくなったらpopで返すのを忘れずに </td></tr>
-<tr id="row_0_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d7/d2e/class___buffer___1_1_buffer_manager.html" target="_self">BufferManager</a></td><td class="desc">バッファは基本的にこれを継承する </td></tr>
-<tr id="row_0_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/d73/class___buffer___1_1_disposable_buffer_manager.html" target="_self">DisposableBufferManager</a></td><td class="desc">使った分だけメモリを使い捨てするmaneger 使い回ししたい場合には不向き </td></tr>
-<tr id="row_1_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="toggleFolder('1_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_Dinic_</b></td><td class="desc"></td></tr>
-<tr id="row_1_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/d02/class___dinic___1_1_dinic.html" target="_self">Dinic</a></td><td class="desc">Dinic法の実装 </td></tr>
-<tr id="row_1_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d7/daf/struct___dinic___1_1_flow_edge.html" target="_self">FlowEdge</a></td><td class="desc">フロー用の辺構造体 </td></tr>
-<tr id="row_1_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d6/d11/class___dinic___1_1_flow_graph.html" target="_self">FlowGraph</a></td><td class="desc">フロー用のグラフクラス,Graphを継承 </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_2_" class="arrow" onclick="toggleFolder('2_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_Graph_</b></td><td class="desc"></td></tr>
-<tr id="row_2_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d8/dda/struct___graph___1_1_edge.html" target="_self">Edge</a></td><td class="desc">辺を扱う構造体の例 </td></tr>
-<tr id="row_2_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d3/da5/class___graph___1_1_graph.html" target="_self">Graph</a></td><td class="desc">グラフクラス </td></tr>
-<tr id="row_2_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="dd/d9b/struct___graph___1_1_weighted_edge.html" target="_self">WeightedEdge</a></td><td class="desc">重み付き辺を扱う構造体の例 </td></tr>
-<tr id="row_3_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_3_" class="arrow" onclick="toggleFolder('3_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_HeavyLightDecomposition_</b></td><td class="desc"></td></tr>
-<tr id="row_3_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d6/d50/class___heavy_light_decomposition___1_1_heavy_light_decomposition.html" target="_self">HeavyLightDecomposition</a></td><td class="desc">重軽分解 </td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_4_" class="arrow" onclick="toggleFolder('4_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_KMP_</b></td><td class="desc"></td></tr>
-<tr id="row_4_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="da/de9/class___k_m_p___1_1_k_m_p.html" target="_self">KMP</a></td><td class="desc">KMPをするクラス </td></tr>
-<tr id="row_5_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_5_" class="arrow" onclick="toggleFolder('5_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_MATRIX_</b></td><td class="desc"></td></tr>
-<tr id="row_5_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d7/d7f/class___m_a_t_r_i_x___1_1_chain.html" target="_self">Chain</a></td><td class="desc">行列累乗用のクラス </td></tr>
-<tr id="row_5_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/dcc/class___m_a_t_r_i_x___1_1_matrix.html" target="_self">Matrix</a></td><td class="desc">行列クラス </td></tr>
-<tr id="row_6_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_6_" class="arrow" onclick="toggleFolder('6_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_ModInt_</b></td><td class="desc"></td></tr>
-<tr id="row_6_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="dc/d6d/class___mod_int___1_1_mod_int.html" target="_self">ModInt</a></td><td class="desc">Mod構造体 </td></tr>
-<tr id="row_7_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_7_" class="arrow" onclick="toggleFolder('7_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_RollingHash_</b></td><td class="desc"></td></tr>
-<tr id="row_7_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_7_0_" class="arrow" onclick="toggleFolder('7_0_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d1/d3a/class___rolling_hash___1_1_rolling_hash.html" target="_self">RollingHash</a></td><td class="desc">ローリングハッシュ </td></tr>
-<tr id="row_7_0_0_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="df/d3d/class___rolling_hash___1_1_rolling_hash_1_1_table.html" target="_self">Table</a></td><td class="desc">文字列をハッシュ化した配列を管理するクラス． </td></tr>
-<tr id="row_8_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_8_" class="arrow" onclick="toggleFolder('8_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_Template_</b></td><td class="desc"></td></tr>
-<tr id="row_8_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d7/d77/struct___template___1_1cww.html" target="_self">cww</a></td><td class="desc">Cin高速化処理を行うための構造体 </td></tr>
-<tr id="row_8_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d0/d1d/class___template___1_1range.html" target="_self">range</a></td><td class="desc">Python みたいな range-based for を実現 </td></tr>
-<tr id="row_8_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="dd/d4f/class___template___1_1reverse__range.html" target="_self">reverse_range</a></td><td class="desc">Rangeを逆向きに操作したいとき用 </td></tr>
-<tr id="row_9_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_9_" class="arrow" onclick="toggleFolder('9_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_Tree_</b></td><td class="desc"></td></tr>
-<tr id="row_9_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="dc/d20/class___tree___1_1_forest.html" target="_self">Forest</a></td><td class="desc">根付き森クラス </td></tr>
-<tr id="row_9_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/d30/class___tree___1_1_tree.html" target="_self">Tree</a></td><td class="desc">"木"に限定したクラス </td></tr>
-<tr id="row_10_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_10_" class="arrow" onclick="toggleFolder('10_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><b>_UnionFind_</b></td><td class="desc"></td></tr>
-<tr id="row_10_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d1/d06/class___union_find___1_1_union_find.html" target="_self">UnionFind</a></td><td class="desc">Unionとfindとsameができる普通のUnion-Find </td></tr>
-<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/df3/class_buffer_test.html" target="_self">BufferTest</a></td><td class="desc">BufferManagerからsize分メモリ領域を持ってくるクラス </td></tr>
+<div class="levels">[表示階層 <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d0/d40/class_block_buffer_manager.html" target="_self">BlockBufferManager</a></td><td class="desc">Blocks*block_size分の領域をblocks個に区切って、やりくりする。 使わなくなったらpopで返すのを忘れずに </td></tr>
+<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="da/dd6/class_buffer_manager.html" target="_self">BufferManager</a></td><td class="desc">バッファは基本的にこれを継承する </td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/df3/class_buffer_test.html" target="_self">BufferTest</a></td><td class="desc">BufferManagerからsize分メモリ領域を持ってくるクラス </td></tr>
+<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d7/dfb/class_chain.html" target="_self">Chain</a></td><td class="desc">行列累乗用のクラス </td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d8/d22/structcww.html" target="_self">cww</a></td><td class="desc">入出力の設定を行うための構造体 </td></tr>
+<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d2/dbc/class_dinic.html" target="_self">Dinic</a></td><td class="desc">Dinic法の実装 </td></tr>
+<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d0/d62/class_disposable_buffer_manager.html" target="_self">DisposableBufferManager</a></td><td class="desc">使った分だけメモリを使い捨てするmaneger 使い回ししたい場合には不向き </td></tr>
+<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d5/db4/struct_edge.html" target="_self">Edge</a></td><td class="desc">辺を扱う構造体の例 </td></tr>
+<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/d12/struct_flow_edge.html" target="_self">FlowEdge</a></td><td class="desc">フロー用の辺構造体 </td></tr>
+<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="de/d66/class_flow_graph.html" target="_self">FlowGraph</a></td><td class="desc">フロー用のグラフクラス,Graphを継承 </td></tr>
+<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/d2f/class_forest.html" target="_self">Forest</a></td><td class="desc">根付き森クラス </td></tr>
+<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="da/d9a/class_graph.html" target="_self">Graph</a></td><td class="desc">グラフクラス </td></tr>
+<tr id="row_12_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d3/d4c/class_heavy_light_decomposition.html" target="_self">HeavyLightDecomposition</a></td><td class="desc">重軽分解 </td></tr>
+<tr id="row_13_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="de/df2/class_k_m_p.html" target="_self">KMP</a></td><td class="desc">KMPをするクラス </td></tr>
+<tr id="row_14_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d6/d3f/class_matrix.html" target="_self">Matrix</a></td><td class="desc">行列クラス </td></tr>
+<tr id="row_15_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="dd/dbb/structmax__op.html" target="_self">max_op</a></td><td class="desc">2項の最大値求める </td></tr>
+<tr id="row_16_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d5/ddb/structmin__op.html" target="_self">min_op</a></td><td class="desc">2項の最小値求める </td></tr>
+<tr id="row_17_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d2/de3/class_mod_int.html" target="_self">ModInt</a></td><td class="desc">Mod構造体 </td></tr>
+<tr id="row_18_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/d9e/class_n_d_array.html" target="_self">NDArray</a></td><td class="desc"></td></tr>
+<tr id="row_19_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d2/d1f/classrange.html" target="_self">range</a></td><td class="desc">Python みたいな range-based for を実現 </td></tr>
+<tr id="row_20_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d1/d4f/classreverse__range.html" target="_self">reverse_range</a></td><td class="desc">Rangeを逆向きに操作したいとき用 </td></tr>
+<tr id="row_21_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_21_" class="arrow" onclick="toggleFolder('21_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d5/d61/class_rolling_hash.html" target="_self">RollingHash</a></td><td class="desc">ローリングハッシュ </td></tr>
+<tr id="row_21_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d3/d84/class_rolling_hash_1_1_table.html" target="_self">Table</a></td><td class="desc">文字列をハッシュ化した配列を管理するクラス． </td></tr>
+<tr id="row_22_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="dd/df8/class_tree.html" target="_self">Tree</a></td><td class="desc">"木"に限定したクラス </td></tr>
+<tr id="row_23_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d1/d4b/class_union_find.html" target="_self">UnionFind</a></td><td class="desc">Unionとfindとsameができる普通のUnion-Find </td></tr>
+<tr id="row_24_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d4/d91/struct_weighted_edge.html" target="_self">WeightedEdge</a></td><td class="desc">重み付き辺を扱う構造体の例 </td></tr>
+<tr id="row_25_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="db/d2c/class_xor_shift32.html" target="_self">XorShift32</a></td><td class="desc">XorShift32の実装 </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

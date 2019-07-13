@@ -9,6 +9,14 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/df3/class_buffer_test.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
@@ -74,7 +98,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:afd2fafc178d5f2bac0369fb8d9c387bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/class_buffer_test.html#afd2fafc178d5f2bac0369fb8d9c387bb">BufferTest</a> (<a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html">BufferManager</a>&lt; int &gt; &amp;lender, const int size)</td></tr>
+<tr class="memitem:afd2fafc178d5f2bac0369fb8d9c387bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/class_buffer_test.html#afd2fafc178d5f2bac0369fb8d9c387bb">BufferTest</a> (<a class="el" href="../../da/dd6/class_buffer_manager.html">BufferManager</a>&lt; int &gt; &amp;lender, const int size)</td></tr>
 <tr class="memdesc:afd2fafc178d5f2bac0369fb8d9c387bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ lenderからメモリ領域（ポインタを引っ張ってくる）  <a href="#afd2fafc178d5f2bac0369fb8d9c387bb">[詳解]</a><br /></td></tr>
 <tr class="separator:afd2fafc178d5f2bac0369fb8d9c387bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71eb409569962138156dd19af7ace17a"><td class="memItemLeft" align="right" valign="top"><a id="a71eb409569962138156dd19af7ace17a"></a>
@@ -102,7 +126,7 @@ $(function() {
         <tr>
           <td class="memname">BufferTest::BufferTest </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d2e/class___buffer___1_1_buffer_manager.html">BufferManager</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../da/dd6/class_buffer_manager.html">BufferManager</a>&lt; int &gt; &amp;&#160;</td>
           <td class="paramname"><em>lender</em>, </td>
         </tr>
         <tr>
@@ -179,11 +203,15 @@ $(function() {
 <li>test/structure/<a class="el" href="../../d2/d13/_buffer_8test_8cpp_source.html">Buffer.test.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d4/df3/class_buffer_test.html">BufferTest</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

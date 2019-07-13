@@ -9,6 +9,14 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/d9a/class_graph.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Graph&lt; E &gt; メンバ一覧</div>  </div>
@@ -69,17 +93,26 @@ $(function() {
 <p>継承メンバを含む <a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a> の全メンバ一覧です。</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#ab815e4862ba9a1d44bf1271429f33d5e">add_arc</a>(int a, int b, Ts &amp;&amp;... params)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#a600b949cc6b53adfb4edfd0d2813edc2">add_edge</a>(int a, int b, Ts &amp;&amp;... params)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#a0a471f3f10488e55b5a17fced74d61b6">add_arc</a>(E e)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#a600b949cc6b53adfb4edfd0d2813edc2">add_edge</a>(int a, int b, Ts &amp;&amp;... params)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#ad6d81686426de4c1ad86901090f0f672">add_edge</a>(E e)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#a4b38dc02322759eff4f3859f9cb1fd7c">degree</a>(const int v)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#a65fd4fac9796de051aa4b25d59ab372c">Graph</a>(int reserved_vertex_size=1, int reserved_edge_size=-1)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#aada8c15dfc43d310d135f7ad9543bd42">degree</a>()</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#a65fd4fac9796de051aa4b25d59ab372c">Graph</a>(int reserved_vertex_size=1, int reserved_edge_size=-1)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#a2ab07cab9c48c18daebf7c8aaad861af">i2e</a>(const int edge_id)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#ae4a71c49c152093734eb16d71c20662d">Ns</a>(const int v)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#ab70ba37d5383dd140091d25b2635bd55">operator[]</a>(const int v)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#abaffb6edfcfe6381efe1934fb5428c23">operator[]</a>(const int v)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#acd74a091d791e166b1126b355b5e8325">resize</a>(const int n)</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34">size</a>()</td><td class="entry"><a class="el" href="../../da/d9a/class_graph.html">Graph&lt; E &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

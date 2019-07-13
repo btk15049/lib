@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dir_6cc8961f7f77054fb84f95c9f23f5ca0.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,32 +84,42 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6cc8961f7f77054fb84f95c9f23f5ca0.html">string</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">string ディレクトリリファレンス</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+string のディレクトリ依存関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="dir_6cc8961f7f77054fb84f95c9f23f5ca0_dep.png" border="0" usemap="#dir__6cc8961f7f77054fb84f95c9f23f5ca0__dep" alt="src/string"/></div>
+<map name="dir__6cc8961f7f77054fb84f95c9f23f5ca0__dep" id="dir__6cc8961f7f77054fb84f95c9f23f5ca0__dep">
+<area shape="rect"  href="dir_6cc8961f7f77054fb84f95c9f23f5ca0.html" title="string" alt="" coords="27,51,99,99"/>
+<area shape="rect"  href="dir_f5f72c0707506975c00b8e2fcde009a7.html" title="template" alt="" coords="26,147,99,195"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000003_000005.html" title="2" alt="" coords="67,121,75,135"/>
+<area shape="rect" id="clust1" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" title="src" alt="" coords="16,16,109,109"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
 ファイル</h2></td></tr>
 <tr class="memitem:dd/d72/_k_m_p_8hpp"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dd/d72/_k_m_p_8hpp.html">KMP.hpp</a> <a href="dd/d72/_k_m_p_8hpp_source.html">[コード]</a></td></tr>
-<tr class="memdesc:dd/d72/_k_m_p_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">KMP <br /></td></tr>
+<tr class="memdesc:dd/d72/_k_m_p_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="de/df2/class_k_m_p.html" title="KMPをするクラス">KMP</a> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:df/d01/_rolling_hash_8hpp"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="df/d01/_rolling_hash_8hpp.html">RollingHash.hpp</a> <a href="df/d01/_rolling_hash_8hpp_source.html">[コード]</a></td></tr>
 <tr class="memdesc:df/d01/_rolling_hash_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローリングハッシュ <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6cc8961f7f77054fb84f95c9f23f5ca0.html">string</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

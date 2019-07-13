@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>btk&#39;s library: FlowEdge&lt; F &gt; 構造体テンプレート</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">btk&#39;s library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/d12/struct_flow_edge.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="../../d5/d91/struct_flow_edge-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">FlowEdge&lt; F &gt; 構造体テンプレート</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>フロー用の辺構造体  
+ <a href="../../d4/d12/struct_flow_edge.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a20443948cf688340023b43ce929c34f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/struct_flow_edge.html#a20443948cf688340023b43ce929c34f8">FlowEdge</a> (int <a class="el" href="../../d4/d12/struct_flow_edge.html#a32349a6a524d341a2942ad8b5ad47c83">id</a>=0, int <a class="el" href="../../d4/d12/struct_flow_edge.html#addd69e8a3da3b763cd2deef8e74ff684">a</a>=0, int <a class="el" href="../../d4/d12/struct_flow_edge.html#ae9c8a27d61112f87adf16721125733cd">b</a>=0, F <a class="el" href="../../d4/d12/struct_flow_edge.html#af8902ae829a0f598c5714c61900242e1">cap</a>=0, int <a class="el" href="../../d4/d12/struct_flow_edge.html#a6f6aede74b1de01f3ab05e69d5a141af">rev</a>=0)</td></tr>
+<tr class="memdesc:a20443948cf688340023b43ce929c34f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="../../d5/db4/struct_edge.html" title="辺を扱う構造体の例">Edge</a> object  <a href="#a20443948cf688340023b43ce929c34f8">[詳解]</a><br /></td></tr>
+<tr class="separator:a20443948cf688340023b43ce929c34f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af924d65173b5d955ded2093ac190992d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/struct_flow_edge.html#af924d65173b5d955ded2093ac190992d">versus</a> (const int v) const</td></tr>
+<tr class="memdesc:af924d65173b5d955ded2093ac190992d"><td class="mdescLeft">&#160;</td><td class="mdescRight">辺における，vの対になってる頂点番号を取得する  <a href="#af924d65173b5d955ded2093ac190992d">[詳解]</a><br /></td></tr>
+<tr class="separator:af924d65173b5d955ded2093ac190992d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a32349a6a524d341a2942ad8b5ad47c83"><td class="memItemLeft" align="right" valign="top"><a id="a32349a6a524d341a2942ad8b5ad47c83"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/struct_flow_edge.html#a32349a6a524d341a2942ad8b5ad47c83">id</a></td></tr>
+<tr class="memdesc:a32349a6a524d341a2942ad8b5ad47c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">辺id <br /></td></tr>
+<tr class="separator:a32349a6a524d341a2942ad8b5ad47c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd69e8a3da3b763cd2deef8e74ff684"><td class="memItemLeft" align="right" valign="top"><a id="addd69e8a3da3b763cd2deef8e74ff684"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/struct_flow_edge.html#addd69e8a3da3b763cd2deef8e74ff684">a</a></td></tr>
+<tr class="memdesc:addd69e8a3da3b763cd2deef8e74ff684"><td class="mdescLeft">&#160;</td><td class="mdescRight">端点 <br /></td></tr>
+<tr class="separator:addd69e8a3da3b763cd2deef8e74ff684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c8a27d61112f87adf16721125733cd"><td class="memItemLeft" align="right" valign="top"><a id="ae9c8a27d61112f87adf16721125733cd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/struct_flow_edge.html#ae9c8a27d61112f87adf16721125733cd">b</a></td></tr>
+<tr class="memdesc:ae9c8a27d61112f87adf16721125733cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">端点 <br /></td></tr>
+<tr class="separator:ae9c8a27d61112f87adf16721125733cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8902ae829a0f598c5714c61900242e1"><td class="memItemLeft" align="right" valign="top"><a id="af8902ae829a0f598c5714c61900242e1"></a>
+F&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/struct_flow_edge.html#af8902ae829a0f598c5714c61900242e1">cap</a></td></tr>
+<tr class="memdesc:af8902ae829a0f598c5714c61900242e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">その辺に流せる流量 <br /></td></tr>
+<tr class="separator:af8902ae829a0f598c5714c61900242e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6aede74b1de01f3ab05e69d5a141af"><td class="memItemLeft" align="right" valign="top"><a id="a6f6aede74b1de01f3ab05e69d5a141af"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/struct_flow_edge.html#a6f6aede74b1de01f3ab05e69d5a141af">rev</a></td></tr>
+<tr class="memdesc:a6f6aede74b1de01f3ab05e69d5a141af"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆向き辺のid <br /></td></tr>
+<tr class="separator:a6f6aede74b1de01f3ab05e69d5a141af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><h3>template&lt;typename F&gt;<br />
+struct FlowEdge&lt; F &gt;</h3>
+
+<p>フロー用の辺構造体 </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">F</td><td>流量の型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a> の <a class="el" href="../../db/dd6/_dinic_8hpp_source.html#l00023">23</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a20443948cf688340023b43ce929c34f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20443948cf688340023b43ce929c34f8">&#9670;&nbsp;</a></span>FlowEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d12/struct_flow_edge.html">FlowEdge</a>&lt; F &gt;::<a class="el" href="../../d4/d12/struct_flow_edge.html">FlowEdge</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>cap</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rev</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="../../d5/db4/struct_edge.html" title="辺を扱う構造体の例">Edge</a> object </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>辺番号 </td></tr>
+    <tr><td class="paramname">a</td><td>辺に接続する頂点番号 </td></tr>
+    <tr><td class="paramname">b</td><td>辺に接続する頂点番号 </td></tr>
+    <tr><td class="paramname">cap</td><td>辺に許容できる流量 </td></tr>
+    <tr><td class="paramname">rev</td><td>対応する逆向き辺のid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a> の <a class="el" href="../../db/dd6/_dinic_8hpp_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="af924d65173b5d955ded2093ac190992d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af924d65173b5d955ded2093ac190992d">&#9670;&nbsp;</a></span>versus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="../../d4/d12/struct_flow_edge.html">FlowEdge</a>&lt; F &gt;::versus </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>辺における，vの対になってる頂点番号を取得する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>頂点番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int vじゃない方の頂点番号 </dd></dl>
+
+<p class="definition"> <a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a> の <a class="el" href="../../db/dd6/_dinic_8hpp_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>src/graph/<a class="el" href="../../db/dd6/_dinic_8hpp_source.html">Dinic.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d4/d12/struct_flow_edge.html">FlowEdge</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

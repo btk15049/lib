@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['b',['b',['../d8/dda/struct___graph___1_1_edge.html#a34ed9afcc1b8873a141392ee9069604f',1,'_Graph_::Edge::b()'],['../dd/d9b/struct___graph___1_1_weighted_edge.html#aa6ccbd2f5a5eff527cf052d1dca03462',1,'_Graph_::WeightedEdge::b()'],['../d7/daf/struct___dinic___1_1_flow_edge.html#a3c3ab26da61a1d2d5f4eab597ad87683',1,'_Dinic_::FlowEdge::b()']]],
-  ['buf',['buf',['../d7/d2e/class___buffer___1_1_buffer_manager.html#add8184d3b94b0f226400b01f44c6775a',1,'_Buffer_::BufferManager']]]
+  ['b',['b',['../d4/d12/struct_flow_edge.html#ae9c8a27d61112f87adf16721125733cd',1,'FlowEdge::b()'],['../d5/db4/struct_edge.html#ab1803682d77abfd121d10cdbb25e9234',1,'Edge::b()'],['../d4/d91/struct_weighted_edge.html#ab2f9d0d1e6de1607a56cbd0a81f38d7b',1,'WeightedEdge::b()']]],
+  ['buf',['buf',['../da/dd6/class_buffer_manager.html#a445e66a9e41568c90c6e1fe3a9acf39e',1,'BufferManager']]]
 ];

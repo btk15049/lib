@@ -1,0 +1,5 @@
+<map id="_ModInt_::factorial::build" name="_ModInt_::factorial::build">
+<area shape="rect" id="node1" title="順列数の前計算" alt="" coords="184,73,315,112"/>
+<area shape="rect" id="node2" href="$dd/d33/_mod_int_8hpp.html#a1823beb563e4a7db99cf7eedc6ca1b14" title="nPkを求める" alt="" coords="5,29,136,68"/>
+<area shape="rect" id="node3" href="$dd/d33/_mod_int_8hpp.html#a76fb6d76d665d1a744a49cab4532895a" title="nCkを求める" alt="" coords="5,116,136,155"/>
+</map>

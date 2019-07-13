@@ -1,0 +1,4 @@
+<map id="Graph::resize" name="Graph::resize">
+<area shape="rect" id="node1" title="グラフの頂点数を変更する" alt="" coords="158,5,259,31"/>
+<area shape="rect" id="node2" href="$d4/d2f/class_forest.html#a685fbf0361f516909c907d390c07aedb" title="無向グラフから根付き森を作る" alt="" coords="5,5,110,31"/>
+</map>
