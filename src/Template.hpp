@@ -5,9 +5,6 @@
  * @date 2019/05/02
  */
 
-#include <bits/stdc++.h>
-#include <sys/types.h>
-
 /*<head>*/
 #pragma once
 #include "template/IO.hpp"
