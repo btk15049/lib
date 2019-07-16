@@ -13,7 +13,7 @@
 
 ビルド時のコマンドを環境変数で設定しているので`settings.json`の`settings`の項にパスを書く
 
-````json
+```json
     "cmake": {
       "configureOnOpen": true,
       "ctestArgs": ["-V"],
@@ -22,5 +22,5 @@
         "LIB_PATH": "/Users/btk/btk15049/lib/src",
         "BOOST_PATH": "/usr/local/Cellar/boost/1.68.0/include"
       }
-    }```
-````
+    }
+```
