@@ -10,11 +10,10 @@
 /*<head>*/
 #pragma once
 #include "template/Loop.hpp"
-#include "template/Macro.hpp"
-/*</head>*/
-
 #include <algorithm>
 #include <vector>
+/*</head>*/
+
 
 /**
  * @brief 辺を扱う構造体の例
@@ -91,9 +90,9 @@ template <typename E = Edge>
 class Graph {
   private:
     //! 辺集合
-    vector<E> edges;
+    std::vector<E> edges;
     //! 隣接リスト
-    vector<vector<int>> g;
+    std::vector<std::vector<int>> g;
 
   public:
     /**
@@ -103,7 +102,7 @@ class Graph {
      */
     Graph(int reserved_vertex_size = 1, int reserved_edge_size = -1) {
         g.reserve(reserved_vertex_size);
-        edges.reserve(max(reserved_vertex_size, reserved_edge_size));
+        edges.reserve(std::max(reserved_vertex_size, reserved_edge_size));
     }
 
     /**
@@ -142,12 +141,12 @@ class Graph {
     template <typename... Ts>
     inline void add_edge(int a, int b, Ts&&... params) {
         const int id = edges.size();
-        if ((int)g.size() <= max(a, b)) {
-            g.resize(max(a, b) + 1);
+        if ((int)g.size() <= std::max(a, b)) {
+            g.resize(std::max(a, b) + 1);
         }
         g[a].emplace_back(id);
         g[b].emplace_back(id);
-        edges.emplace_back(id, a, b, forward<Ts>(params)...);
+        edges.emplace_back(id, a, b, std::forward<Ts>(params)...);
     }
 
     /**
@@ -180,11 +179,11 @@ class Graph {
     template <typename... Ts>
     inline void add_arc(int a, int b, Ts&&... params) {
         const int id = edges.size();
-        if ((int)g.size() <= max(a, b)) {
-            g.resize(max(a, b) + 1);
+        if ((int)g.size() <= std::max(a, b)) {
+            g.resize(std::max(a, b) + 1);
         }
         g[a].emplace_back(id);
-        edges.emplace_back(id, a, b, forward<Ts>(params)...);
+        edges.emplace_back(id, a, b, std::forward<Ts>(params)...);
     }
 
     /**
@@ -193,8 +192,8 @@ class Graph {
      */
     inline void add_arc(E e) {
         e.id = edges.size();
-        if ((int)g.size() <= max(e.a, e.b)) {
-            g.resize(max(e.a, e.b) + 1);
+        if ((int)g.size() <= std::max(e.a, e.b)) {
+            g.resize(std::max(e.a, e.b) + 1);
         }
         g[e.a].emplace_back(e.id);
         edges.emplace_back(e);
@@ -205,8 +204,8 @@ class Graph {
      * @param v int
      * @return vector<int>
      */
-    inline vector<int> Ns(const int v) {
-        vector<int> ns(g[v].size());
+    inline std::vector<int> Ns(const int v) {
+        std::vector<int> ns(g[v].size());
         for (int i = 0; i < degree(v); i++) {
             ns[i] = edges[g[v][i]].versus(v);
         }
@@ -218,7 +217,7 @@ class Graph {
      * @param v int
      * @return vector<int>
      */
-    inline const vector<int>& operator[](const int v) { return g[v]; }
+    inline const std::vector<int>& operator[](const int v) { return g[v]; }
 
     /**
      * @brief 辺番号から辺の参照を取得する

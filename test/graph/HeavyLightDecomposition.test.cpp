@@ -58,13 +58,13 @@ BOOST_AUTO_TEST_CASE(init) {
 BOOST_AUTO_TEST_CASE(coloringTest) {
     auto forest = forestSample();
     HeavyLightDecomposition<Edge> hld(forest, blocks);
-    vector<int> expected = {0, 0, 0, 0, 2, 0, 3, 3, 4, 5, 4, 4, 1};
-    vector<int> actual;
+    std::vector<int> expected = {0, 0, 0, 0, 2, 0, 3, 3, 4, 5, 4, 4, 1};
+    std::vector<int> actual;
     for (int v : range(forest.size())) {
         actual.push_back(hld.color(v));
     }
-    BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
-                                  end(expected));
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual),
+                                  std::begin(expected), std::end(expected));
 }
 
 /**

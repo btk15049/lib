@@ -9,16 +9,15 @@
 /*<head>*/
 #pragma once
 #include "template/Macro.hpp"
-/*</head>*/
-
 #include <vector>
+/*</head>*/
 
 /**
  * @brief unionとfindとsameができる普通のUnion-Find
  */
 class UnionFind {
   private:
-    vector<int> par, rank;
+    std::vector<int> par, rank;
 
     /**
      * @brief ${x}の親を${new_par}に設定åå
@@ -64,7 +63,7 @@ class UnionFind {
         x = find(x);
         y = find(y);
         if (x == y) return false;
-        if (rank[x] < rank[y]) swap(x, y);
+        if (rank[x] < rank[y]) std::swap(x, y);
         set_par(y, x);
         if (rank[x] == rank[y]) rank[x]++;
         return true;

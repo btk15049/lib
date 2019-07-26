@@ -22,17 +22,17 @@
  * @param g グラフ
  * @param inf 流量のinf
  * @param s 始点
- * @return vector<int>
+ * @return std::vector<int>
  */
 template <typename E, typename COST_TYPE>
-vector<COST_TYPE> dijkstra(Graph<E>& g, COST_TYPE inf, const int s = 0) {
+std::vector<COST_TYPE> dijkstra(Graph<E>& g, COST_TYPE inf, const int s = 0) {
     //! TODO interval heapを使う
-    priority_queue<pair<COST_TYPE, int>> que;
-    vector<COST_TYPE> d(g.size(), inf);
+    std::priority_queue<std::pair<COST_TYPE, int>> que;
+    std::vector<COST_TYPE> d(g.size(), inf);
 
     // init
     d[s] = 0;
-    que.push(make_pair((COST_TYPE)0, s));
+    que.push(std::make_pair((COST_TYPE)0, s));
 
     while (!que.empty()) {
         const int v       = que.top().second;
@@ -43,7 +43,7 @@ vector<COST_TYPE> dijkstra(Graph<E>& g, COST_TYPE inf, const int s = 0) {
             E& e        = g.i2e(eid);
             const int u = e.versus(v);
             if (chmin(d[u], c + e.cost)) {
-                que.push(make_pair(-(c + e.cost), u));
+                que.push(std::make_pair(-(c + e.cost), u));
             }
         }
     }

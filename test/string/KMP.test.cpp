@@ -24,7 +24,7 @@ BOOST_AUTO_TEST_SUITE(KMPClass)
  */
 BOOST_AUTO_TEST_CASE(find1) {
     KMP finder("abc");
-    string sentence = "---abc---";
+    std::string sentence = "---abc---";
     int reading_len = 0;
     BOOST_CHECK_EQUAL(finder.find(sentence, reading_len), 6);
     BOOST_CHECK_EQUAL(reading_len, 3);
@@ -36,7 +36,7 @@ BOOST_AUTO_TEST_CASE(find1) {
  */
 BOOST_AUTO_TEST_CASE(find2) {
     KMP finder("abc");
-    string sentence = "abaabc---";
+    std::string sentence = "abaabc---";
     int reading_len = 0;
     BOOST_CHECK_EQUAL(finder.find(sentence, reading_len), 6);
     BOOST_CHECK_EQUAL(reading_len, 3);
@@ -48,7 +48,7 @@ BOOST_AUTO_TEST_CASE(find2) {
  */
 BOOST_AUTO_TEST_CASE(find3) {
     KMP finder("abc");
-    string sentence = "abababab";
+    std::string sentence = "abababab";
     int reading_len = 0;
     BOOST_CHECK_EQUAL(finder.find(sentence, reading_len), -1);
     BOOST_CHECK_EQUAL(reading_len, 2);
@@ -60,11 +60,11 @@ BOOST_AUTO_TEST_CASE(find3) {
  */
 BOOST_AUTO_TEST_CASE(find_all1) {
     KMP finder("abc");
-    string sentence      = "abcabc";
-    vector<int> actual   = finder.find_all(sentence);
-    vector<int> expected = {0, 3};
-    BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
-                                  end(expected));
+    std::string sentence      = "abcabc";
+    std::vector<int> actual   = finder.find_all(sentence);
+    std::vector<int> expected = {0, 3};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual), std::begin(expected),
+                                  std::end(expected));
 }
 
 /**
@@ -73,11 +73,11 @@ BOOST_AUTO_TEST_CASE(find_all1) {
  */
 BOOST_AUTO_TEST_CASE(find_all2) {
     KMP finder("abc");
-    string sentence      = "abc_abc";
-    vector<int> actual   = finder.find_all(sentence);
-    vector<int> expected = {0, 4};
-    BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
-                                  end(expected));
+    std::string sentence      = "abc_abc";
+    std::vector<int> actual   = finder.find_all(sentence);
+    std::vector<int> expected = {0, 4};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual), std::begin(expected),
+                                  std::end(expected));
 }
 
 /**
@@ -86,11 +86,11 @@ BOOST_AUTO_TEST_CASE(find_all2) {
  */
 BOOST_AUTO_TEST_CASE(find_all3) {
     KMP finder("a");
-    string sentence      = "aaaaa";
-    vector<int> actual   = finder.find_all(sentence);
-    vector<int> expected = {0, 1, 2, 3, 4};
-    BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
-                                  end(expected));
+    std::string sentence      = "aaaaa";
+    std::vector<int> actual   = finder.find_all(sentence);
+    std::vector<int> expected = {0, 1, 2, 3, 4};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual), std::begin(expected),
+                                  std::end(expected));
 }
 
 /**
@@ -99,11 +99,11 @@ BOOST_AUTO_TEST_CASE(find_all3) {
  */
 BOOST_AUTO_TEST_CASE(find_all4) {
     KMP finder("aa");
-    string sentence      = "aaaaa";
-    vector<int> actual   = finder.find_all(sentence);
-    vector<int> expected = {0, 1, 2, 3};
-    BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
-                                  end(expected));
+    std::string sentence      = "aaaaa";
+    std::vector<int> actual   = finder.find_all(sentence);
+    std::vector<int> expected = {0, 1, 2, 3};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual), std::begin(expected),
+                                  std::end(expected));
 }
 
 /**
@@ -112,11 +112,11 @@ BOOST_AUTO_TEST_CASE(find_all4) {
  */
 BOOST_AUTO_TEST_CASE(find_all5) {
     KMP finder("abcabc");
-    string sentence      = "abcabcabcabc";
-    vector<int> actual   = finder.find_all(sentence);
-    vector<int> expected = {0, 3, 6};
-    BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
-                                  end(expected));
+    std::string sentence      = "abcabcabcabc";
+    std::vector<int> actual   = finder.find_all(sentence);
+    std::vector<int> expected = {0, 3, 6};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual), std::begin(expected),
+                                  std::end(expected));
 }
 
 /**
@@ -125,11 +125,11 @@ BOOST_AUTO_TEST_CASE(find_all5) {
  */
 BOOST_AUTO_TEST_CASE(period) {
     KMP finder("abcabc");
-    vector<int> actual(7);
+   std::vector<int> actual(7);
     for (int i : range(7)) actual[i] = finder.period(i);
-    vector<int> expected = {3, 1, 2, 3, 3, 3, 3};
-    BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
-                                  end(expected));
+    std::vector<int> expected = {3, 1, 2, 3, 3, 3, 3};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual), std::begin(expected),
+                                  std::end(expected));
 }
 
 BOOST_AUTO_TEST_SUITE_END()

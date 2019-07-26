@@ -44,7 +44,7 @@ class HeavyLightDecomposition {
      * @param sub
      * @param f
      */
-    void compute_subtrees(int v, vector<int>& sub, Forest<E>& f) {
+    void compute_subtrees(int v, std::vector<int>& sub, Forest<E>& f) {
         sub[v]++;
         for (int u : f.Ns(v)) {
             compute_subtrees(u, sub, f);
@@ -64,7 +64,7 @@ class HeavyLightDecomposition {
      * 太い枝を優先に色ぬりをしていく(細い枝に進むたびcol_idを進める)
      * 頂点に訪れる度seg_idを進める
      */
-    void coloring(int v, vector<int>& sub, Forest<E>& f, int& seg_id,
+    void coloring(int v, std::vector<int>& sub, Forest<E>& f, int& seg_id,
                   int& col_id) {
         col[v]      = col_id;
         i2v[seg_id] = v;
@@ -149,11 +149,11 @@ class HeavyLightDecomposition {
      */
     inline int lca(int v, int u) const {
         while (v != super_root && u != super_root && col[v] != col[u]) {
-            if (col[v] > col[u]) swap(v, u);
+            if (col[v] > col[u]) std::swap(v, u);
             u = par[i2v[col_root[col[u]]]];
         }
         if (v == super_root || u == super_root) return super_root;
-        return i2v[min(v2i[v], v2i[u])];
+        return i2v[std::min(v2i[v], v2i[u])];
     }
 
     /**
@@ -174,7 +174,7 @@ class HeavyLightDecomposition {
 
         int col_id = 0;
         int seg_id = 0;
-        vector<int> sub(n, 0);
+        std::vector<int> sub(n, 0);
         for (int r : f.get_roots()) {
             compute_subtrees(r, sub, f);
             par[r]           = super_root;

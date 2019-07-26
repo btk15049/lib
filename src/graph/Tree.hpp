@@ -24,13 +24,13 @@ class Forest : public Graph<E> {
     using Graph<E>::add_edge;
 
     //! 根の集合
-    vector<int> roots;
+    std::vector<int> roots;
 
     /**
      * @brief
      * DFSで木を作る
      */
-    void build_tree(Graph<E>& g, const int v, vector<bool>& used) {
+    void build_tree(Graph<E>& g, const int v, std::vector<bool>& used) {
         used[v] = true;
         for (int edge_id : g[v]) {
             auto e      = g.i2e(edge_id);
@@ -52,7 +52,7 @@ class Forest : public Graph<E> {
     Forest(Graph<E>& g, const int loop_begin_vtx = 0)
         : Graph<E>(g.size(), g.size() - 1) {
         this->resize(g.size());
-        vector<bool> used(g.size());
+        std::vector<bool> used(g.size());
         for (int v : range(loop_begin_vtx, g.size() + loop_begin_vtx)) {
             v = v % g.size();
             if (used[v] == false) {
@@ -66,7 +66,7 @@ class Forest : public Graph<E> {
      * @brief Get the roots object
      * @return vector<int>
      */
-    vector<int> get_roots() { return roots; }
+    std::vector<int> get_roots() { return roots; }
 };
 
 /**

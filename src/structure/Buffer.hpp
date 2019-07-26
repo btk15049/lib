@@ -126,7 +126,7 @@ template <typename T>
 class BlockBufferManager : public BufferManager<T> {
   private:
     //! 使われてないblockをキューで管理
-    queue<T*> que;
+    std::queue<T*> que;
 
   public:
     /**

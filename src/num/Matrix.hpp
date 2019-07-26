@@ -12,10 +12,8 @@
 /*<head>*/
 #pragma once
 #include "template/Loop.hpp"
-#include "template/Macro.hpp"
-/*</head>*/
-
 #include <array>
+/*</head>*/
 
 /**
  * @brief
@@ -34,11 +32,11 @@ class Matrix {
     //! 列サイズを4の倍数に
     static constexpr int fixed_row_size = ((row_size + 3) / 4) * 4;
     //! 行ベクトル 横
-    using col_array = array<T, fixed_col_size>;
+    using col_array = std::array<T, fixed_col_size>;
     //! 列ベクトル 縦
-    using row_array = array<T, fixed_row_size>;
+    using row_array = std::array<T, fixed_row_size>;
     //! 行列
-    using matrix = array<col_array, row_size>;
+    using matrix = std::array<col_array, row_size>;
 
   private:
     //! 本体
@@ -102,7 +100,7 @@ void mul(Matrix<T, r1, c1>& in1, Matrix<T, c1, c2>& in2,
  * @param out
  */
 template <typename T, size_t r, size_t c>
-inline void mul(Matrix<T, r, c> m, array<T, c> in, array<T, r>& out) {
+inline void mul(Matrix<T, r, c> m, std::array<T, c> in, std::array<T, r>& out) {
     for (int i : range(r)) {
         out[i] = 0;
         for (int j : range(c)) {
@@ -121,7 +119,7 @@ inline void mul(Matrix<T, r, c> m, array<T, c> in, array<T, r>& out) {
 template <typename T, size_t r, int size = 64>
 class Chain {
     using matrix = Matrix<T, r, r>;
-    using vec    = array<T, r>;
+    using vec    = std::array<T, r>;
 
   private:
     matrix bin[size];

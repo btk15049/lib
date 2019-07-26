@@ -37,15 +37,15 @@ BOOST_AUTO_TEST_CASE(fibonacci) {
     }());
     auto actual = chain.compute(
         []() {
-            array<int, 2> in;
+            std::array<int, 2> in;
             in[0] = 1;
             in[1] = 0;
             return in;
         }(),
         6);
-    array<int, 2> expected = {13, 8};
-    BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
-                                  end(expected));
+    std::array<int, 2> expected = {13, 8};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual), std::begin(expected),
+                                  std::end(expected));
 }
 
 

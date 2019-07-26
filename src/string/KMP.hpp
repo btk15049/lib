@@ -22,8 +22,8 @@
  */
 class KMP {
   private:
-    string keyword;
-    vector<int> table;
+    std::string keyword;
+    std::vector<int> table;
 
   public:
     /**
@@ -32,7 +32,7 @@ class KMP {
      * @param keyword
      * @param eow
      */
-    KMP(string keyword, string eow = "$") : keyword(keyword + eow) {
+    KMP(std::string keyword, std::string eow = "$") : keyword(keyword + eow) {
         const int n = this->keyword.size();
         table.resize(n);
         table[0] = -1;
@@ -77,7 +77,7 @@ class KMP {
      * @param tail_pos
      * @return int
      */
-    inline int find(string& sentence, int& reading_len, int tail_pos = 0) {
+    inline int find(std::string& sentence, int& reading_len, int tail_pos = 0) {
         const int sentence_size = sentence.size();
         for (; tail_pos < sentence_size; tail_pos++) {
             if (advance(sentence[tail_pos], reading_len)) {
@@ -94,10 +94,10 @@ class KMP {
      * @details O(n+m)
      * @return vector<int>
      */
-    vector<int> find_all(string sentence) {
+    std::vector<int> find_all(std::string sentence) {
         int reading_len = 0;
         int tail_pos    = 0;
-        vector<int> position;
+        std::vector<int> position;
         while (1) {
             tail_pos = find(sentence, reading_len, tail_pos);
             if (tail_pos == -1) {

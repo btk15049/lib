@@ -67,10 +67,10 @@ Graph<WeightedEdge<int>> sample_weighted_graph() {
  */
 BOOST_AUTO_TEST_CASE(Dijkstra) {
     auto target          = sample_weighted_graph();
-    vector<int> actual   = dijkstra(target, (int)1e9, 2);
-    vector<int> expected = {3, 1, 0, 3};
-    BOOST_CHECK_EQUAL_COLLECTIONS(begin(actual), end(actual), begin(expected),
-                                  end(expected));
+    std::vector<int> actual   = dijkstra(target, (int)1e9, 2);
+    std::vector<int> expected = {3, 1, 0, 3};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual), std::begin(expected),
+                                  std::end(expected));
 }
 
 

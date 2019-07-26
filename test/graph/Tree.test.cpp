@@ -11,6 +11,7 @@
 #define BOOST_TEST_MAIN
 //! @endcond
 #include "graph/Tree.hpp"
+#include "template/Macro.hpp"
 #include <boost/test/included/unit_test.hpp>
 
 /**
@@ -56,8 +57,8 @@ Graph<> treeSample() {
  * @param forest
  * @return vector<int>
  */
-vector<int> collect_component(int v, Forest<>& forest) {
-    vector<int> vs;
+std::vector<int> collect_component(int v, Forest<>& forest) {
+    std::vector<int> vs;
     vs.push_back(v);
     for (int u : forest.Ns(v)) {
         for (auto c : collect_component(u, forest)) {
@@ -88,8 +89,8 @@ BOOST_AUTO_TEST_CASE(Forest_createTest) {
 BOOST_AUTO_TEST_CASE(Forest_checkRoots1) {
     Graph<> arg = forestSample();
     Forest<> forest(arg);
-    vector<int> roots    = forest.get_roots();
-    vector<int> expected = {0, 6};
+    std::vector<int> roots    = forest.get_roots();
+    std::vector<int> expected = {0, 6};
     BOOST_CHECK_EQUAL_COLLECTIONS(roots.begin(), roots.end(), expected.begin(),
                                   expected.end());
 }
@@ -100,8 +101,8 @@ BOOST_AUTO_TEST_CASE(Forest_checkRoots1) {
 BOOST_AUTO_TEST_CASE(Forest_checkRoots2) {
     Graph<> arg = forestSample();
     Forest<> forest(arg, 8);
-    vector<int> roots    = forest.get_roots();
-    vector<int> expected = {8, 0};
+    std::vector<int> roots    = forest.get_roots();
+    std::vector<int> expected = {8, 0};
     BOOST_CHECK_EQUAL_COLLECTIONS(roots.begin(), roots.end(), expected.begin(),
                                   expected.end());
 }
@@ -130,11 +131,11 @@ BOOST_AUTO_TEST_CASE(Forest_checkAllDegree) {
 BOOST_AUTO_TEST_CASE(Forest_checkEachDegree) {
     Graph<> arg = forestSample();
     Forest<> forest(arg);
-    vector<int> degrees;
+    std::vector<int> degrees;
     for (int v : range(forest.size())) {
         degrees.push_back(forest.degree(v));
     }
-    vector<int> expected = {2, 2, 0, 1, 0, 0, 1, 1, 1, 1, 0};
+    std::vector<int> expected = {2, 2, 0, 1, 0, 0, 1, 1, 1, 1, 0};
     BOOST_CHECK_EQUAL_COLLECTIONS(degrees.begin(), degrees.end(),
                                   expected.begin(), expected.end());
 }
@@ -146,9 +147,10 @@ BOOST_AUTO_TEST_CASE(Forest_checkEachDegree) {
 BOOST_AUTO_TEST_CASE(Forest_checkComponents1) {
     Graph<> arg = forestSample();
     Forest<> forest(arg);
-    vector<int> component = collect_component(forest.get_roots()[0], forest);
+    std::vector<int> component =
+        collect_component(forest.get_roots()[0], forest);
     sort(ALL(component));
-    vector<int> expected = {0, 1, 2, 3, 4, 5};
+    std::vector<int> expected = {0, 1, 2, 3, 4, 5};
     BOOST_CHECK_EQUAL_COLLECTIONS(component.begin(), component.end(),
                                   expected.begin(), expected.end());
 }
@@ -159,9 +161,10 @@ BOOST_AUTO_TEST_CASE(Forest_checkComponents1) {
 BOOST_AUTO_TEST_CASE(Forest_checkComponents2) {
     Graph<> arg = forestSample();
     Forest<> forest(arg);
-    vector<int> component = collect_component(forest.get_roots()[1], forest);
+    std::vector<int> component =
+        collect_component(forest.get_roots()[1], forest);
     sort(ALL(component));
-    vector<int> expected = {6, 7, 8, 9, 10};
+    std::vector<int> expected = {6, 7, 8, 9, 10};
     BOOST_CHECK_EQUAL_COLLECTIONS(component.begin(), component.end(),
                                   expected.begin(), expected.end());
 }
@@ -223,11 +226,11 @@ BOOST_AUTO_TEST_CASE(Tree_checkAllDegree) {
 BOOST_AUTO_TEST_CASE(Tree_checkEachDegree) {
     Graph<> arg = treeSample();
     Tree<> tree(arg);
-    vector<int> degrees;
+    std::vector<int> degrees;
     for (int v : range(tree.size())) {
         degrees.push_back(tree.degree(v));
     }
-    vector<int> expected = {3, 2, 0, 1, 0, 0, 1, 0};
+    std::vector<int> expected = {3, 2, 0, 1, 0, 0, 1, 0};
     BOOST_CHECK_EQUAL_COLLECTIONS(degrees.begin(), degrees.end(),
                                   expected.begin(), expected.end());
 }
@@ -238,9 +241,9 @@ BOOST_AUTO_TEST_CASE(Tree_checkEachDegree) {
 BOOST_AUTO_TEST_CASE(Tree_checkComponents) {
     Graph<> arg = treeSample();
     Tree<> tree(arg);
-    vector<int> component = collect_component(tree.get_root(), tree);
-    sort(ALL(component));
-    vector<int> expected = {0, 1, 2, 3, 4, 5, 6, 7};
+    std::vector<int> component = collect_component(tree.get_root(), tree);
+    std::sort(std::begin(component),std::end(component));
+    std::vector<int> expected = {0, 1, 2, 3, 4, 5, 6, 7};
     BOOST_CHECK_EQUAL_COLLECTIONS(component.begin(), component.end(),
                                   expected.begin(), expected.end());
 }
@@ -254,11 +257,11 @@ BOOST_AUTO_TEST_CASE(resize) {
     Tree<> tree(arg);
     tree.resize(10);
     BOOST_CHECK_EQUAL(tree.size(), 10);
-    vector<int> degrees;
+    std::vector<int> degrees;
     for (int v : range(tree.size())) {
         degrees.push_back(tree.degree(v));
     }
-    vector<int> expected = {3, 2, 0, 1, 0, 0, 1, 0, 0, 0};
+    std::vector<int> expected = {3, 2, 0, 1, 0, 0, 1, 0, 0, 0};
 
     BOOST_CHECK_EQUAL_COLLECTIONS(degrees.begin(), degrees.end(),
                                   expected.begin(), expected.end());

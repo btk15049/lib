@@ -78,7 +78,7 @@ class FlowGraph : public Graph<E> {
      * 完全転送してるので詳しくはGraphクラスのコンストラクタを参照．
      */
     template <typename... Ts>
-    FlowGraph(Ts&&... params) : Graph<E>(forward<Ts>(params)...) {}
+    FlowGraph(Ts&&... params) : Graph<E>(std::forward<Ts>(params)...) {}
 };
 
 /**
@@ -96,10 +96,10 @@ class Dinic {
      * @param s 始点
      * @return vector<int> sから各頂点への最短距離
      */
-    vector<int> bfs(const int s) {
+    std::vector<int> bfs(const int s) {
         int N = G->size();
-        queue<int> que;
-        vector<int> dist(N, -1);
+        std::queue<int> que;
+        std::vector<int> dist(N, -1);
         dist[s] = 0;
         que.push(s);
         for (; !que.empty(); que.pop()) {
@@ -118,16 +118,16 @@ class Dinic {
     /**
      * @brief s->tに向けてできるだけフローを流す
      */
-    F dfs(const int v, const int s, const F f, vector<unsigned>& I,
-          vector<int>& D) {
+    F dfs(const int v, const int s, const F f, std::vector<unsigned>& I,
+          std::vector<int>& D) {
         if (v == s) return f;
-        const vector<int>& edge_ids = (*G)[v];
+        const std::vector<int>& edge_ids = (*G)[v];
         for (unsigned& i = I[v]; i < edge_ids.size(); i++) {
             E& e        = G->i2e(edge_ids[i]);
             E& re       = G->i2e(e.rev);
             const int u = e.versus(v);
             if (re.cap > 0 && D[v] > D[u]) {
-                F d = dfs(u, s, min(f, re.cap), I, D);
+                F d = dfs(u, s, std::min(f, re.cap), I, D);
                 if (d > 0) {
                     e.cap += d;
                     re.cap -= d;
@@ -148,9 +148,9 @@ class Dinic {
     F solve(const int s, const int t) {
         F res = 0;
         while (true) {
-            vector<int> dist = bfs(s);
+            std::vector<int> dist = bfs(s);
             if (dist[t] < 0) break;
-            vector<unsigned> iter(G->size(), 0);
+            std::vector<unsigned> iter(G->size(), 0);
             while (true) {
                 F f = dfs(t, s, flow_inf, iter, dist);
                 if (f == 0) break;

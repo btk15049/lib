@@ -45,6 +45,12 @@ using LL = long long;
 #define REC(ret, ...) std::function<ret(__VA_ARGS__)>
 
 /**
+ * @def VAR_NAME(var)
+ * @brief 変数名を取得する
+ */
+#define VAR_NAME(var) #var
+
+/**
  * @brief
  * rangeで生まれる使わない変数を消す用（警告消し）
  */
