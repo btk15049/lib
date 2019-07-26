@@ -16,5 +16,8 @@
 #include "template/Macro.hpp"
 #include <boost/test/included/unit_test.hpp>
 BOOST_AUTO_TEST_SUITE(Macro)
+/**
+ * @brief 提出時にDebugマクロが消えるかどうかテスト
+ */
 BOOST_AUTO_TEST_CASE(WhenSubmit) { DEBUG BOOST_FAIL("ここには来ないはず"); }
 BOOST_AUTO_TEST_SUITE_END()

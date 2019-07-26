@@ -17,6 +17,9 @@
 #include <string>
 
 BOOST_AUTO_TEST_SUITE(Macro)
+/**
+ * @brief 変数名表示マクロのテスト
+ */
 BOOST_AUTO_TEST_CASE(VarName) {
     int a = 0;
     BOOST_CHECK_EQUAL(VAR_NAME(a), "a");
@@ -32,6 +35,9 @@ BOOST_AUTO_TEST_CASE(VarName) {
     unused_var(c);
 }
 
+/**
+ * @brief ローカル実行時のDEBUGマクロをテスト
+ */
 BOOST_AUTO_TEST_CASE(WhenLocal) {
     DEBUG;
     else BOOST_FAIL("ここには来ないはず");

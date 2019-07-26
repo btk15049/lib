@@ -16,7 +16,7 @@ var _tree_8test_8cpp =
     [ "BOOST_AUTO_TEST_CASE", "d6/d94/_tree_8test_8cpp.html#a7221e0498551657357a3138ecbec07a2", null ],
     [ "BOOST_AUTO_TEST_CASE", "d6/d94/_tree_8test_8cpp.html#a631fd900b640d4ab4c1ebc886d7f1f34", null ],
     [ "BOOST_AUTO_TEST_CASE", "d6/d94/_tree_8test_8cpp.html#ada342a5543e014688330c5bca3843dcf", null ],
-    [ "collect_component", "d6/d94/_tree_8test_8cpp.html#a4ef637faf1bac1b2b06f194d926785b3", null ],
+    [ "collect_component", "d6/d94/_tree_8test_8cpp.html#a53f9f703b3a44bb1e8f4368b9cc60a41", null ],
     [ "forestSample", "d6/d94/_tree_8test_8cpp.html#a599fc0538b527372f3b7fe9fdb8bf063", null ],
     [ "treeSample", "d6/d94/_tree_8test_8cpp.html#a8650c7bec5069b9877678230db3345a7", null ]
 ];

@@ -1,5 +1,7 @@
 <map id="UnionFind::find" name="UnionFind::find">
-<area shape="rect" id="node1" title="xの親を探す" alt="" coords="175,31,286,56"/>
-<area shape="rect" id="node2" href="$d1/d4b/class_union_find.html#ac293e615592ebd4ff06d86e1fa4ab644" title="{xの属する集合}と{yの属する集合}をマージする" alt="" coords="7,5,126,31"/>
-<area shape="rect" id="node3" href="$d1/d4b/class_union_find.html#aa1580fa407277914913231a7d752c7d8" title="　xとyが同じ集合に属しているかどうか判定する" alt="" coords="5,55,127,80"/>
+<area shape="rect" id="node1" title="xの親を探す" alt="" coords="496,55,607,80"/>
+<area shape="rect" id="node2" href="$d1/d4b/class_union_find.html#ac293e615592ebd4ff06d86e1fa4ab644" title="{xの属する集合}と{yの属する集合}をマージする" alt="" coords="290,5,409,31"/>
+<area shape="rect" id="node4" href="$d1/d4b/class_union_find.html#aa1580fa407277914913231a7d752c7d8" title="　xとyが同じ集合に属しているかどうか判定する" alt="" coords="288,55,411,80"/>
+<area shape="rect" id="node5" href="$d0/d03/_union_find_8test_8cpp.html#a317a5073f2dc6f46814abe8117e886a3" title="初期化時のテスト" alt="" coords="251,104,448,129"/>
+<area shape="rect" id="node3" href="$d0/d03/_union_find_8test_8cpp.html#aaf62496244e99e35b27b9c7af4405d0c" title="雑なストレステスト,localでも3秒超えないようにみたいな調整" alt="" coords="5,31,203,56"/>
 </map>

@@ -16,6 +16,9 @@
 #include <boost/test/included/unit_test.hpp>
 
 BOOST_AUTO_TEST_SUITE(UnionFindClass)
+/**
+ * @brief 初期化時のテスト
+ */
 BOOST_AUTO_TEST_CASE(Construct) {
     UnionFind uf(10);
     for (int i = 0; i < 10; i++) {
@@ -23,6 +26,9 @@ BOOST_AUTO_TEST_CASE(Construct) {
     }
 }
 
+/**
+ * @brief 雑なストレステスト,localでも3秒超えないようにみたいな調整
+ */
 BOOST_AUTO_TEST_CASE(StressTest, *boost::unit_test::timeout(3)) {
     constexpr int N = 112345;
     UnionFind uf(N);

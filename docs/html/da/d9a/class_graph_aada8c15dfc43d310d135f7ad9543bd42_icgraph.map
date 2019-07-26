@@ -1,5 +1,5 @@
 <map id="Graph::degree" name="Graph::degree">
 <area shape="rect" id="node1" title="グラフ全体の辺の数を返す" alt="" coords="218,40,325,65"/>
 <area shape="rect" id="node2" href="$de/d66/class_flow_graph.html#a81580bd95fc1194c8356c6de97591ba8" title="a&#45;&gt;bへ流量fの辺を追加" alt="" coords="9,5,166,44"/>
-<area shape="rect" id="node3" href="$da/d9a/class_graph.html#ae4a71c49c152093734eb16d71c20662d" title="vの隣接頂点を返す" alt="" coords="5,68,170,93"/>
+<area shape="rect" id="node3" href="$da/d9a/class_graph.html#ac4dd9b5d89afcaad333de14fb7b242f8" title="vの隣接頂点を返す" alt="" coords="5,68,170,93"/>
 </map>

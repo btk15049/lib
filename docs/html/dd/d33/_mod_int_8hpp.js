@@ -27,6 +27,6 @@ var _mod_int_8hpp =
     [ "factorial", "dd/d33/_mod_int_8hpp.html#a8b0be36dd20bdae932866f2446a97bfa", null ],
     [ "inverse_factorial", "dd/d33/_mod_int_8hpp.html#a309cec376e52645879058a96197b13d3", null ],
     [ "is_build", "dd/d33/_mod_int_8hpp.html#a68aabc5acdff34fb59054c001d87445d", null ],
-    [ "mod", "dd/d33/_mod_int_8hpp.html#aa3e4f6f7382b886f19eb9b2a891dba74", null ],
+    [ "mod", "dd/d33/_mod_int_8hpp.html#a9a72f3dcc6f4a19af79744c85a319f32", null ],
     [ "size", "dd/d33/_mod_int_8hpp.html#a6bbd137b4b995b45e2c08792ae42492c", null ]
 ];
