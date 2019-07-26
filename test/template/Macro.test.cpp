@@ -1,7 +1,7 @@
 /**
  * @file Macro.test.cpp
  * @author btk
- * @brief
+ * @brief Macro.hppのテスト
  * @version 0.1
  * @date 2019-07-26
  *
@@ -30,5 +30,10 @@ BOOST_AUTO_TEST_CASE(VarName) {
     unused_var(a);
     unused_var(b);
     unused_var(c);
+}
+
+BOOST_AUTO_TEST_CASE(WhenLocal) {
+    DEBUG;
+    else BOOST_FAIL("ここには来ないはず");
 }
 BOOST_AUTO_TEST_SUITE_END()
