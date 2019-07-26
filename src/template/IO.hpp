@@ -50,7 +50,7 @@ cww star;
  * @return istream&
  */
 template <typename T>
-istream& operator>>(istream& is, vector<T>& v) {
+std::istream& operator>>(std::istream& is, std::vector<T>& v) {
     for (auto& it : v) is >> it;
     return is;
 }

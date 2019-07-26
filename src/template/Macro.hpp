@@ -13,8 +13,6 @@
 #pragma once
 /*</head>*/
 
-using namespace std;
-
 //! LL
 using LL = long long;
 

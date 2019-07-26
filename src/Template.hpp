@@ -5,8 +5,11 @@
  * @date 2019/05/02
  */
 
+
+
 /*<head>*/
 #pragma once
+#include "template/IncludeSTL.hpp"
 #include "template/IO.hpp"
 #include "template/Loop.hpp"
 #include "template/Macro.hpp"

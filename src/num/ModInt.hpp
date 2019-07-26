@@ -15,7 +15,11 @@
  */
 
 //! [WARNING!] mod が入力で与えられる場合はconstexprを外す
-constexpr int mod = 1e9 + 7;
+#ifdef STATIC_MOD
+constexpr int mod = STATIC_MOD;
+#else
+int mod;
+#endif
 
 /**
  * @brief mod構造体
@@ -316,7 +320,7 @@ ModInt& operator*=(ModInt& l, T r) {
  */
 namespace factorial {
     //! 順列数を格納する配列のサイズ
-    constexpr int size = 1123456;
+    constexpr int size = 3123456;
 
     //! 前計算ができているかどうかのフラグ
     bool is_build = false;
