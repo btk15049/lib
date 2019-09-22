@@ -36,7 +36,7 @@ class Matrix {
     //! 列ベクトル 縦
     using row_array = std::array<T, fixed_row_size>;
     //! 行列
-    using matrix = std::array<col_array, row_size>;
+    using matrix = std::array<col_array, fixed_row_size>;
 
   private:
     //! 本体
@@ -50,6 +50,34 @@ class Matrix {
      * @return col_array&
      */
     inline col_array& operator[](const int idx) { return value[idx]; }
+
+    /**
+     * @brief Construct a new Matrix object
+     */
+    Matrix() {}
+
+    /**
+     * @brief Matrixをコピーするメソッド
+     * @param o
+     * @return Matrix&
+     */
+    inline Matrix& copy(Matrix& o) {
+        for (int i = 0; i < fixed_row_size; i++) value[i] = o[i];
+        return *this;
+    }
+
+    /**
+     * @brief ディープコピーをします
+     * @param o
+     * @return Matrix&
+     */
+    inline Matrix& operator=(Matrix& o) { return copy(o); }
+
+    /**
+     * @brief コピーコンストラクタ
+     * @param o
+     */
+    Matrix(Matrix& o) { copy(o); }
 };
 
 /**

@@ -44,8 +44,8 @@ BOOST_AUTO_TEST_CASE(fibonacci) {
         }(),
         6);
     std::array<int, 2> expected = {13, 8};
-    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual), std::begin(expected),
-                                  std::end(expected));
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual),
+                                  std::begin(expected), std::end(expected));
 }
 
 

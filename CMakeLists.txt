@@ -7,7 +7,7 @@ find_package(Boost 1.4.8 REQUIRED)
 set(Boost_USE_STATIC_LIBS ON)
 
 add_definitions(-DBTK)
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -std=c++17")
+set(CMAKE_CXX_FLAGS "-O2 -Wall -Wextra -std=c++17")
 add_compile_definitions("BTK")
 enable_testing()
 

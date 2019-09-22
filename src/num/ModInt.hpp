@@ -317,11 +317,16 @@ ModInt& operator*=(ModInt& l, T r) {
  * @details
  *   - combination
  *   - permutation
+ *   - multiChoose
  */
 namespace factorial {
     //! 順列数を格納する配列のサイズ
-    constexpr int size = 3123456;
-
+    constexpr int size =
+#ifdef FACTORIAL_SIZE
+        FACTORIAL_SIZE;
+#else
+        3123456;
+#endif
     //! 前計算ができているかどうかのフラグ
     bool is_build = false;
 
@@ -367,6 +372,18 @@ namespace factorial {
      * を読み取って前計算をする．
      */
     inline ModInt combination(int n, int k) {
+        if (k < 0 || k > n) return ModInt::raw(0);
+        if (!is_build) build();
+        return factorial[n] * inverse_factorial[k] * inverse_factorial[n - k];
+    }
+
+    /**
+     * @brief nCkを求める
+     * @details
+     *   前計算がしてあれば O(1)．前計算してない場合は is_build
+     * を読み取って前計算をする．
+     */
+    inline ModInt multiChoose(int n, int k) {
         if (k < 0 || k > n) return ModInt::raw(0);
         if (!is_build) build();
         return factorial[n] * inverse_factorial[k] * inverse_factorial[n - k];

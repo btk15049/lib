@@ -27,9 +27,9 @@ BOOST_AUTO_TEST_CASE(Construct) {
 }
 
 /**
- * @brief 雑なストレステスト,localでも3秒超えないようにみたいな調整
+ * @brief 雑なストレステスト,localでも1秒超えないようにみたいな調整
  */
-BOOST_AUTO_TEST_CASE(StressTest, *boost::unit_test::timeout(3)) {
+BOOST_AUTO_TEST_CASE(StressTest, *boost::unit_test::timeout(1)) {
     constexpr int N = 112345;
     UnionFind uf(N);
 
