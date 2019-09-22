@@ -70,7 +70,7 @@ class UnionFind {
     }
 
     /**
-     * @brief　xとyが同じ集合に属しているかどうか判定する
+     * @brief xとyが同じ集合に属しているかどうか判定する
      * @param x
      * @param y
      * @return true
