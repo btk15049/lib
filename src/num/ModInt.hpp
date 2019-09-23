@@ -378,14 +378,33 @@ namespace factorial {
     }
 
     /**
-     * @brief nCkを求める
-     * @details
-     *   前計算がしてあれば O(1)．前計算してない場合は is_build
-     * を読み取って前計算をする．
+     * @brief 重複組合せ
+     * @param n 何種類のものを
+     * @param r いくつ並べるか
+     * @return ModInt nHr
      */
-    inline ModInt multiChoose(int n, int k) {
-        if (k < 0 || k > n) return ModInt::raw(0);
-        if (!is_build) build();
-        return factorial[n] * inverse_factorial[k] * inverse_factorial[n - k];
+    ModInt multiChoose(int n, int r) {
+        if (n == 0 && r == 0)return ModInt::raw(1);
+        return combination(n + r - 1, r);
     }
+
+        /**
+     * @brief 上限付き重複組合せ
+     * @details 包除原理を用いて，lim個以上の品物が1,2,...,i種類の場合を足したり引いたりしていく
+     * 計算量は O(min(n, r / lim))
+     * @param n 何種類のものを
+     * @param r いくつ並べるか
+     * @param lim 1種類のものを選べる上限
+     * @return ModInt
+     */
+    ModInt multiChoose(int n, int r, int lim) {
+        ModInt ret = 0;
+        for (int i = 0; i <=n;i++) {
+            if (i * (lim + 1) > r) break;
+            ret += ((i & 1) ? mod - 1 : 1) * combination(n, i)
+                   * multiChoose(n, r - i * (lim + 1));
+        }
+        return ret;
+    }
+
 } // namespace factorial
