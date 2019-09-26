@@ -1,7 +1,7 @@
 project(btk_library CXX)
 
 set(CMAKE_CXX_COMPILER $ENV{BUILD_CMD})
-cmake_minimum_required(VERSION 3.14.5)
+cmake_minimum_required(VERSION 3.12.4)
 find_package(Boost 1.4.8 REQUIRED)
 
 set(Boost_USE_STATIC_LIBS ON)
