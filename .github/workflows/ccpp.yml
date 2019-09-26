@@ -15,7 +15,7 @@ jobs:
           tar xfz ${BOOST_FILE}.tar.gz
           rm ${BOOST_FILE}.tar.gz
           ls
-      env:
-        BUILD_PATH: /opt
-        BOOST_VERSION: 1.71.0
-        BOOST_FILE: boost_1_71_0
+        env:
+          BUILD_PATH: /opt
+          BOOST_VERSION: 1.71.0
+          BOOST_FILE: boost_1_71_0
