@@ -4,14 +4,18 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v1
-    - name: build
-      run: |
-        mkdir build/
-        cd build/
-        cmake ..
-        make
+      - uses: actions/checkout@v1
+      - name: build
+        run: |
+          cd ${BUILD_PATH}
+          wget https://dl.bintray.com/boostorg/release/${BOOST_VERSION}/source/${BOOST_FILE}.tar.gz --no-check-certificate
+          tar xfz ${BOOST_FILE}.tar.gz
+          rm ${BOOST_FILE}.tar.gz
+          ls
+      env:
+        BUILD_PATH: /opt
+        BOOST_VERSION: 1.71.0
+        BOOST_FILE: boost_1_71_0
