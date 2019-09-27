@@ -19,7 +19,6 @@ jobs:
 
       - name: install/boost
         run: |
-          which gcc-5
           which g++-5
           cd ${BUILD_PATH}
           git clone --recursive https://github.com/boostorg/boost.git
