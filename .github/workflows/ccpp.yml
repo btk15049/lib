@@ -13,13 +13,12 @@ jobs:
           sudo apt-get update
           sudo apt-get -y install build-essential
 
-      - name: install/env
+      - name: install/gcc-5
         run: |
-          sudo apt-get -y install gcc-5
+          sudo apt-get -y install gcc-5 g++-5
 
       - name: install/boost
         run: |
-          which g++-5
           cd ${BUILD_PATH}
           git clone --recursive https://github.com/boostorg/boost.git
           cd boost
