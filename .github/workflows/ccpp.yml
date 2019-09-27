@@ -19,6 +19,7 @@ jobs:
 
       - name: install/boost
         run: |
+          cd ${BUILD_PATH}
           git clone --recursive git@github.com:boostorg/boost.git
           cd boost
           ./bootstrap.sh
