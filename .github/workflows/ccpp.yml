@@ -56,4 +56,6 @@ jobs:
           LIB_PATH: /home/runner/work/lib/lib/src
           BUILD_CND: /usr/bin/g++-5
           BOOST_PATH: /usr/local/include
+          CC: gcc-5
+          CXX: g++-5
           CMAKE_ROOT: /usr/local/share/cmake-3.15

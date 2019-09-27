@@ -77,7 +77,7 @@ class Matrix {
      * @brief コピーコンストラクタ
      * @param o
      */
-    Matrix(Matrix& o) { copy(o); }
+    Matrix(Matrix& o) : value() { copy(o); }
 };
 
 /**
