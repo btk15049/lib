@@ -13,18 +13,27 @@ jobs:
           sudo apt-get update
           sudo apt-get -y install build-essential
 
-      - name: install/gcc-5
+      - name: install/gcc-7
         run: |
           sudo apt-get -y install gcc-5
 
-      - name: build
+      - name: install/boost
         run: |
-          cd ${BUILD_PATH}
-          wget https://dl.bintray.com/boostorg/release/${BOOST_VERSION}/source/${BOOST_FILE}.tar.gz --no-check-certificate
-          tar xfz ${BOOST_FILE}.tar.gz
-          rm ${BOOST_FILE}.tar.gz
-          ls
+          git clone --recursive git@github.com:boostorg/boost.git
+          cd boost
+          ./bootstrap.sh
+          ./b2 toolset=gcc-5 --prefix=/usr/local -j5
+          sudo ./b2 install toolset=gcc-5 --prefix=/usr/local -j5
         env:
           BUILD_PATH: /opt
-          BOOST_VERSION: 1.71.0
-          BOOST_FILE: boost_1_71_0
+
+      - name: install/cmake
+        run: |
+          cd ${BUILD_PATH}
+          git clone https://gitlab.kitware.com/cmake/cmake.git
+          cd cmake
+          ./bootstrap --prefix=/usr/local
+          make -j5
+          sudo make install
+        env:
+          BUILD_PATH: /opt
