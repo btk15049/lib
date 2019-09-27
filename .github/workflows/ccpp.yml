@@ -23,8 +23,8 @@ jobs:
           git clone --recursive https://github.com/boostorg/boost.git
           cd boost
           ./bootstrap.sh
-          ./b2 toolset=gcc-5 --prefix=/opt -j5
-          sudo ./b2 install toolset=gcc-5 --prefix=/opt -j5
+          ./b2 toolset=gcc-5 --prefix=/usr/local -j5
+          sudo ./b2 install toolset=gcc-5 --prefix=/usr/local -j5
         env:
           BUILD_PATH: /opt
 
