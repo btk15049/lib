@@ -12,9 +12,11 @@ jobs:
         run: |
           apt-get update
           apt-get -y install build-essential
+
       - name: install/gcc-5
         run: |
           apt-get -y install gcc-5
+
       - name: build
         run: |
           cd ${BUILD_PATH}
