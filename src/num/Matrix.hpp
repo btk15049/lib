@@ -52,6 +52,17 @@ class Matrix {
     inline col_array& operator[](const int idx) { return value[idx]; }
 
     /**
+     * @brief
+     * idx行目の行ベクトルのconst参照を取得
+     * @param idx
+     * @return col_array&
+     */
+    inline const col_array& operator[](const int idx) const {
+        return value[idx];
+    }
+
+
+    /**
      * @brief Construct a new Matrix object
      */
     Matrix() {}
@@ -61,7 +72,7 @@ class Matrix {
      * @param o
      * @return Matrix&
      */
-    inline Matrix& copy(Matrix& o) {
+    inline Matrix& copy(const Matrix& o) {
         for (int i = 0; i < fixed_row_size; i++) value[i] = o[i];
         return *this;
     }
@@ -71,13 +82,13 @@ class Matrix {
      * @param o
      * @return Matrix&
      */
-    inline Matrix& operator=(Matrix& o) { return copy(o); }
+    inline Matrix& operator=(const Matrix& o) { return copy(o); }
 
     /**
      * @brief コピーコンストラクタ
      * @param o
      */
-    Matrix(Matrix& o) : value() { copy(o); }
+    Matrix(const Matrix& o) : value() { copy(o); }
 };
 
 /**
