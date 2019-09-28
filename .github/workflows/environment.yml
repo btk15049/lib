@@ -1,0 +1,40 @@
+name: CI environment-setup
+
+on:
+  push:
+    branches:
+      - environment
+
+jobs:
+  build:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Python 3.7 for awscli
+        uses: actions/setup-python@v1
+        with:
+          version: "3.7"
+          architecture: "x64"
+      - name: Install awscli
+        run: pip install --upgrade pip awscli
+      - name: Login to ECR
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: $(aws ecr get-login --no-include-email --region ap-northeast-1)
+      - name: Build docker image
+        env:
+          CONTAINER_REGISTRY_PATH: ${{ secrets.CONTAINER_REGISTRY_PATH }}
+          IMAGE_NAME: ci-env
+        run: |
+          cd env
+          TAG=`echo $GITHUB_REF | sed 's@refs\/heads\/@@g'`
+          docker build -t ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} .
+      - name: Push image to ECR
+        env:
+          CONTAINER_REGISTRY_PATH: ${{ secrets.CONTAINER_REGISTRY_PATH }}
+          IMAGE_NAME: ci-env
+        run: |
+          TAG=`echo $GITHUB_REF | sed 's@refs\/heads\/@@g'`
+          docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
