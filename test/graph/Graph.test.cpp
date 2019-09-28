@@ -33,7 +33,7 @@ Graph<> sample_undirected_path() {
  * @brief Construct a new boost auto test case object
  *
  */
-BOOST_AUTO_TEST_CASE(resize) {
+BOOST_AUTO_TEST_CASE(Resize) {
     auto target = sample_undirected_path();
     target.resize(10);
     BOOST_CHECK_EQUAL(target.degree(0), 1);
@@ -66,11 +66,11 @@ Graph<WeightedEdge<int>> sample_weighted_graph() {
  * ダイクストラのテスト
  */
 BOOST_AUTO_TEST_CASE(Dijkstra) {
-    auto target          = sample_weighted_graph();
+    auto target               = sample_weighted_graph();
     std::vector<int> actual   = dijkstra(target, (int)1e9, 2);
     std::vector<int> expected = {3, 1, 0, 3};
-    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual), std::begin(expected),
-                                  std::end(expected));
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(actual), std::end(actual),
+                                  std::begin(expected), std::end(expected));
 }
 
 

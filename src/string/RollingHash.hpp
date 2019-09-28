@@ -12,6 +12,7 @@
 #include "template/Macro.hpp"
 /*</head>*/
 
+#include <ostream>
 #include <string>
 #include <vector>
 
@@ -92,3 +93,17 @@ class RollingHash {
         }
     };
 };
+
+template <int i, int j>
+std::ostream& operator<<(std::ostream& os, const RollingHash<i, j>& rh) {
+    os << "RollingHash";
+    os << "<";
+    os << "base=" << i << ", ";
+    os << "mod=" << j;
+    os << ">";
+    os << "(";
+    os << "p=" << rh.potential << ", ";
+    os << "h=" << rh.hash;
+    os << ")";
+    return os;
+}

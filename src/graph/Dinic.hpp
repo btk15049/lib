@@ -51,11 +51,12 @@ struct FlowEdge {
 
 /**
  * @brief フロー用のグラフクラス,Graphを継承
- * @tparam E 辺構造体
+ * @tparam T 辺構造体
  */
-template <typename E>
-class FlowGraph : public Graph<E> {
+template <typename T>
+class FlowGraph : public Graph<T> {
   private:
+    using E = T;
     using Graph<E>::add_arc; // add_arcは外から呼び出せないようにする
   public:
     /**
@@ -83,12 +84,13 @@ class FlowGraph : public Graph<E> {
 
 /**
  * @brief Dinic法の実装
- * @tparam F 流量の型
+ * @tparam T 流量の型
  * @tparam flow_inf 流量の最大値
  */
-template <typename F, F flow_inf>
+template <typename T, T flow_inf>
 class Dinic {
   private:
+    using F = T;
     using E = FlowEdge<F>;
     FlowGraph<E>* G;
     /**

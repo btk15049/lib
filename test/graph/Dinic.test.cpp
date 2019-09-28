@@ -12,3 +12,11 @@
 //! @endcond
 #include "graph/Dinic.hpp"
 #include <boost/test/included/unit_test.hpp>
+
+BOOST_AUTO_TEST_CASE(Init) {
+    FlowGraph<FlowEdge<int>> g;
+    g.resize(2);
+    int actual   = Dinic<int, 10>(g).solve(0, 1);
+    int expected = 0;
+    BOOST_CHECK_EQUAL(actual, expected);
+}
