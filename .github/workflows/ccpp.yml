@@ -3,44 +3,10 @@ name: C/C++ CI
 on: [push]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  test:
     steps:
+      - uses: docker://btk15049/ci-env:20190929
       - uses: actions/checkout@v1
-      - name: install/setup
-        run: |
-          sudo apt-get update
-          sudo apt-get -y install build-essential
-
-      - name: install/gcc-5
-        run: |
-          sudo apt-get -y install gcc-5 g++-5
-
-      - name: install/boost
-        run: |
-          cd ${BUILD_PATH}
-          git clone --recursive https://github.com/boostorg/boost.git
-          cd boost
-          ./bootstrap.sh
-          ./b2 toolset=gcc-5 --prefix=/usr/local -j5
-          sudo ./b2 install toolset=gcc-5 --prefix=/usr/local -j5
-        env:
-          BUILD_PATH: /opt
-
-      - name: install/cmake
-        run: |
-          cd ${BUILD_PATH}
-          git clone https://gitlab.kitware.com/cmake/cmake.git
-          cd cmake
-          ./bootstrap --prefix=/usr/local
-          make -j5
-          sudo make install
-        env:
-          BUILD_PATH: /opt
-          CC: gcc-5
-          CXX: g++-5
-
       - name: build and test
         run: |
           export CMAKE_ROOT
