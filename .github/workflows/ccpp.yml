@@ -11,11 +11,11 @@ jobs:
         uses: docker://btk15049/ci-env:20190929
         with:
           args: 
-            mkdir build/ \
-            && cd build/ \
-            && cmake .. \
-            && make \
-            && ctest -V
+            mkdir build/
+            && cd build/
+            && cmake ..
+            && make
+            && ctest
         env:
           BUILD_PATH: /home/runner/work/lib/lib
           LIB_PATH: /home/runner/work/lib/lib/src
