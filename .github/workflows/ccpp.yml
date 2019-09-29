@@ -11,17 +11,12 @@ jobs:
         uses: docker://btk15049/ci-env:20190929
         with:
           args: |
-            ls
-      - name: tmp
-        run: |
-          export CMAKE_ROOT
-          cd ${BUILD_PATH}
-          mkdir build/
-          cd build/
-          cmake ..
-          make
-          ctest -V
-
+            echo $LIB_PATH
+            mkdir build/
+            cd build/
+            cmake ..
+            make
+            ctest -V
         env:
           BUILD_PATH: /home/runner/work/lib/lib
           LIB_PATH: /home/runner/work/lib/lib/src
