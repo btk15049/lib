@@ -6,9 +6,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker://btk15049/ci-env:20190929
       - uses: actions/checkout@v1
-      - name: build and test
+      - name: test
+        uses: docker://btk15049/ci-env:20190929
         run: |
           export CMAKE_ROOT
           cd ${BUILD_PATH}
