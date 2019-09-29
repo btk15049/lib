@@ -24,8 +24,9 @@ jobs:
           TAG=`date "+%Y%m%d"`
           docker build -t ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} .
       - name: Build docker image
+        env:
           CONTAINER_REGISTRY_PATH: btk15049
           IMAGE_NAME: ci-env
-        run:
+        run: |
           TAG=`date "+%Y%m%d"`
           docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
