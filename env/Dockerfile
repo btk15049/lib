@@ -15,6 +15,7 @@ RUN apt-get update \
     gcc-5 \
     git \
     g++-5 \
+    libssl-dev \
     # 不要なキャッシュを削除
     && apt-get clean \
     # boost install
