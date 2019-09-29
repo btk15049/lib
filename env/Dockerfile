@@ -1,6 +1,5 @@
 FROM ubuntu:latest
 
-
 WORKDIR /opt
 
 RUN apt-get update \
@@ -37,6 +36,8 @@ RUN git clone https://gitlab.kitware.com/cmake/cmake.git \
     && cd .. \
     && rm -rf cmake \
     && mkdir /app
+
 ENV CMAKE_ROOT /usr/local/share/cmake-3.15
 WORKDIR /app
-CMD [ bash -c "mkdir build && cd build && cmake .. && make && ctest -V" ]
+
+CMD ["mkdir","build","&&","cd","build","&&","cmake","..","&&","make","&&","ctest","-V"]
