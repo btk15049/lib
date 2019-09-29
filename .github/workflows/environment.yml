@@ -29,6 +29,6 @@ jobs:
           IMAGE_NAME: ci-env
         run: |
           cd env
-          TAG=`date + "%Y%m%d"`
+          TAG=`date "+%Y%m%d"`
           docker build -t ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} .
           docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
