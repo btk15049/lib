@@ -9,23 +9,13 @@ jobs:
   build:
     name: Build and Push Docker Image
     runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v1
-      - name: Setup Python 3.7 for awscli
-        uses: actions/setup-python@v1
-        with:
-          python-version: "3.7"
-          architecture: "x64"
-      - name: Install awscli
-        run: pip install --upgrade pip awscli
-      - name: Login to ECR
+    - name: Login to GitHub Package Registry
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PUSH_TO_PACKAGE_REGISTRY }}
+      run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
+    - name: Build and Push docker image
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: $(aws ecr get-login --no-include-email --region ap-northeast-1)
-      - name: Build and Push docker image
-        env:
-          CONTAINER_REGISTRY_PATH: ${{ secrets.CONTAINER_REGISTRY_PATH }}
+          CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
           IMAGE_NAME: ci-env
         run: |
           cd env
