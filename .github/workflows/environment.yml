@@ -1,4 +1,4 @@
-name: CI environment-setup
+name: CI environment setup
 
 on:
   push:
