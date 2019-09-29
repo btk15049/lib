@@ -23,18 +23,12 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: $(aws ecr get-login --no-include-email --region ap-northeast-1)
-      - name: Build docker image
+      - name: Build and Push docker image
         env:
           CONTAINER_REGISTRY_PATH: ${{ secrets.CONTAINER_REGISTRY_PATH }}
           IMAGE_NAME: ci-env
         run: |
           cd env
-          TAG=`echo $GITHUB_REF | sed 's@refs\/heads\/@@g'`
+          TAG=`date + "%Y%m%d"`
           docker build -t ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} .
-      - name: Push image to ECR
-        env:
-          CONTAINER_REGISTRY_PATH: ${{ secrets.CONTAINER_REGISTRY_PATH }}
-          IMAGE_NAME: ci-env
-        run: |
-          TAG=`echo $GITHUB_REF | sed 's@refs\/heads\/@@g'`
           docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
