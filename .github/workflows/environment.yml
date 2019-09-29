@@ -11,16 +11,21 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: Login to GitHub Package Registry
+      - name: Login to DockerHub
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PUSH_TO_PACKAGE_REGISTRY }}
-        run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
-      - name: Build and Push docker image
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_SECRET_TOKEN }}
+        run: docker login -u btk15049 -p $DOCKERHUB_TOKEN
+      - name: Build docker image
         env:
-          CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
+          CONTAINER_REGISTRY_PATH: btk15049
           IMAGE_NAME: ci-env
         run: |
           cd env
           TAG=`date "+%Y%m%d"`
           docker build -t ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} .
+      - name: Build docker image
+          CONTAINER_REGISTRY_PATH: btk15049
+          IMAGE_NAME: ci-env
+        run:
+          TAG=`date "+%Y%m%d"`
           docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
