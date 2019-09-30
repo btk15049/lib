@@ -11,5 +11,5 @@ jobs:
         uses: docker://btk15049/ci-env:20190930
         env:
           LIB_PATH: /app/lib/src
-          BUILD_CND: /usr/bin/g++-5
+          BUILD_CMD: /usr/bin/g++-5
           BOOST_PATH: /usr/local/include
