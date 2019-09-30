@@ -1,0 +1,15 @@
+name: C/C++ CI
+
+on: "!docker*"
+
+jobs:
+  CTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Cmake test
+        uses: docker://btk15049/ci-env:20190930
+        env:
+          LIB_PATH: /github/workspace/src
+          BUILD_CMD: /usr/bin/g++-5
+          BOOST_PATH: /usr/local/include
