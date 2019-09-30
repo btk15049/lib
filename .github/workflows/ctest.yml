@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Cmake test
-        uses: docker://btk15049/ci-env:20190929
+        uses: docker://btk15049/ci-env:20190930
         env:
           LIB_PATH: /app/lib/src
           BUILD_CND: /usr/bin/g++-5
