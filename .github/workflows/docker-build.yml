@@ -1,0 +1,31 @@
+name: Docker build CI
+
+on:
+  push:
+    branches:
+      - "docker*"
+
+jobs:
+  build:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Login to DockerHub
+        env:
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_SECRET_TOKEN }}
+        run: docker login -u btk15049 -p $DOCKERHUB_TOKEN
+      - name: Build docker image
+        env:
+          CONTAINER_REGISTRY_PATH: btk15049
+          IMAGE_NAME: ci-env
+        run: |
+          TAG=`date "+%Y%m%d"`
+          docker build -t ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} .
+      - name: Push docker image
+        env:
+          CONTAINER_REGISTRY_PATH: btk15049
+          IMAGE_NAME: ci-env
+        run: |
+          TAG=`date "+%Y%m%d"`
+          docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
