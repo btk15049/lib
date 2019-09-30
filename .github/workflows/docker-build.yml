@@ -2,8 +2,7 @@ name: Docker build CI
 
 on:
   push:
-    branches:
-      - environment
+    branches: "docker*"
 
 jobs:
   build:

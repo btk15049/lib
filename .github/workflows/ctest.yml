@@ -1,6 +1,8 @@
 name: C/C++ CI
 
-on: "!docker*"
+on:
+  push:
+    branches: "!docker*"
 
 jobs:
   CTest:
