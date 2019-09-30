@@ -40,4 +40,4 @@ RUN git clone https://gitlab.kitware.com/cmake/cmake.git \
 ENV CMAKE_ROOT /usr/local/share/cmake-3.15
 WORKDIR /app
 
-CMD ["mkdir","build","&&","cd","build","&&","cmake","..","&&","make","&&","ctest","-V"]
+CMD bash -c "mkdir build && cd build && cmake .. && make && ctest -V"
