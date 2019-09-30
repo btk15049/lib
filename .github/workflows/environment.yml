@@ -1,4 +1,4 @@
-name: CI environment setup
+name: Docker build CI
 
 on:
   push:
@@ -20,10 +20,9 @@ jobs:
           CONTAINER_REGISTRY_PATH: btk15049
           IMAGE_NAME: ci-env
         run: |
-          cd env
           TAG=`date "+%Y%m%d"`
           docker build -t ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} .
-      - name: Build docker image
+      - name: Push docker image
         env:
           CONTAINER_REGISTRY_PATH: btk15049
           IMAGE_NAME: ci-env
