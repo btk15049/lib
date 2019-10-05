@@ -18,14 +18,14 @@ jobs:
       - name: Build docker image
         env:
           CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
-          IMAGE_NAME: test
+          IMAGE_NAME: ctest-with-boost
         run: |
           TAG=`date "+%Y%m%d"`
           docker build -t ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} .
       - name: Push docker image
         env:
           CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
-          IMAGE_NAME: test
+          IMAGE_NAME: ctest-with-boost
         run: |
           TAG=`date "+%Y%m%d"`
           docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
