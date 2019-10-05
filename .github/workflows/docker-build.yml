@@ -16,19 +16,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PUSH_TO_PACKAGE_REGISTRY }}
         run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
       - name: Build docker image
-        env:
-          CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
-          IMAGE_NAME: ctest-with-boost
         run: |
-          TAG=`date "+%Y%m%d"`
-          docker build -t ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} .
+          docker build -t current .
       - name: Push docker image
         env:
           CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
           IMAGE_NAME: ctest-with-boost
         run: |
           TAG=`date "+%Y%m%d"`
+          docker tag current ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
           docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
+          docker tag current ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
+          docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
   test:
     needs: build
     name: CTest using published image
