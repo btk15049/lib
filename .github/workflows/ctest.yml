@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Cmake test
-        uses: docker://docker.pkg.github.com/btk15049/ctest-with-boost:20191005
+        uses: docker://docker.pkg.github.com/btk15049/lib/ctest-with-boost:20191005
         env:
           LIB_PATH: /github/workspace/src
           BUILD_CMD: /usr/bin/g++-5
