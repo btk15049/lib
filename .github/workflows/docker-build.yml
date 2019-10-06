@@ -46,3 +46,11 @@ jobs:
         env:
           CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
           IMAGE_NAME: ctest-with-boost
+      - name: Run image
+        uses: actions/docker/cli@master
+        with:
+          args: 'run -e LIB_PATH -e BUILD_CMD -e BOOST_PATH -v "/github/workspace":"/app" current'
+        env:
+          LIB_PATH: /github/workspace/src
+          BUILD_CMD: /usr/bin/g++-5
+          BOOST_PATH: /usr/local/include
