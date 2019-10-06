@@ -1,6 +1,5 @@
 <map id="HeavyLightDecomposition::HeavyLightDecomposition" name="HeavyLightDecomposition::HeavyLightDecomposition">
-<area shape="rect" id="node1" title="Construct a new Heavy Light Decomposition object lenderにはBlockBufferを使うのを推奨 N*5メモリがいるよ" alt="" coords="5,48,189,87"/>
-<area shape="rect" id="node2" href="$da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34" title="グラフの頂点数を返す" alt="" coords="262,5,351,31"/>
-<area shape="rect" id="node3" href="$da/dd6/class_buffer_manager.html#af4f2f2c5011a0bf14df77b0ef786cf4f" title="size分バッファを取得" alt="" coords="237,55,376,80"/>
-<area shape="rect" id="node4" href="$d4/d2f/class_forest.html#aa4754ace0b25707afe8d6a851193c9d8" title="Get the roots object." alt="" coords="245,104,368,129"/>
+<area shape="rect" id="node2" href="$da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34" title="グラフの頂点数を返す " alt="" coords="259,5,349,32"/>
+<area shape="rect" id="node3" href="$da/dd6/class_buffer_manager.html#af4f2f2c5011a0bf14df77b0ef786cf4f" title="size分バッファを取得 " alt="" coords="236,56,372,83"/>
+<area shape="rect" id="node4" href="$d4/d2f/class_forest.html#aa4754ace0b25707afe8d6a851193c9d8" title="Get the roots object. " alt="" coords="243,107,365,133"/>
 </map>

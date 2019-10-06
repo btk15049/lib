@@ -1,15 +1,8 @@
 <map id="src/Template.hpp" name="src/Template.hpp">
-<area shape="rect" id="node1" title="競技プログラミング用テンプレート" alt="" coords="403,5,526,31"/>
-<area shape="rect" id="node2" href="$de/d69/_include_s_t_l_8hpp.html" title="標準ライブラリをincludeするだけ" alt="" coords="33,79,203,104"/>
-<area shape="rect" id="node6" href="$d8/d1c/_i_o_8hpp.html" title="cin高速化とか，出力の小数桁固定とか" alt="" coords="454,79,571,104"/>
-<area shape="rect" id="node7" href="$de/d09/_macro_8hpp.html" title="マクロとか，LLとか" alt="" coords="331,152,470,177"/>
-<area shape="rect" id="node11" href="$d7/d75/_loop_8hpp.html" title="rangeとかループ系のクラス" alt="" coords="595,79,726,104"/>
-<area shape="rect" id="node12" href="$d1/d0d/_min_max_operation_8hpp.html" title="最大値とか最小値を求める" alt="" coords="750,79,957,104"/>
-<area shape="rect" id="node13" href="$d0/d57/_random_8hpp.html" title="乱数生成系" alt="" coords="227,79,379,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,152,102,177"/>
-<area shape="rect" id="node4" title=" " alt="" coords="219,152,307,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="126,152,194,177"/>
-<area shape="rect" id="node8" title=" " alt="" coords="494,152,562,177"/>
-<area shape="rect" id="node9" title=" " alt="" coords="587,152,659,177"/>
-<area shape="rect" id="node10" title=" " alt="" coords="684,152,741,177"/>
+<area shape="rect" id="node2" href="$de/d69/_include_s_t_l_8hpp.html" title="標準ライブラリをincludeするだけ " alt="" coords="42,80,209,107"/>
+<area shape="rect" id="node6" href="$d8/d1c/_i_o_8hpp.html" title="cin高速化とか，出力の小数桁固定とか " alt="" coords="459,80,573,107"/>
+<area shape="rect" id="node7" href="$de/d09/_macro_8hpp.html" title="マクロとか，LLとか " alt="" coords="337,155,474,181"/>
+<area shape="rect" id="node11" href="$d7/d75/_loop_8hpp.html" title="rangeとかループ系のクラス " alt="" coords="598,80,727,107"/>
+<area shape="rect" id="node12" href="$d1/d0d/_min_max_operation_8hpp.html" title="最大値とか最小値を求める " alt="" coords="752,80,955,107"/>
+<area shape="rect" id="node13" href="$d0/d57/_random_8hpp.html" title="乱数生成系 " alt="" coords="233,80,383,107"/>
 </map>

@@ -1,11 +1,6 @@
 <map id="test/graph/Graph.test.cpp" name="test/graph/Graph.test.cpp">
-<area shape="rect" id="node1" title="Graph.hpp のテスト" alt="" coords="281,5,453,31"/>
-<area shape="rect" id="node2" href="$da/d72/_graph_8hpp.html" title="グラフクラス" alt="" coords="138,165,260,191"/>
-<area shape="rect" id="node6" href="$d3/d22/_graph_util_8hpp.html" title="Graphクラスを使ったライブラリ(dijkstraなど)を管理" alt="" coords="297,85,438,111"/>
-<area shape="rect" id="node9" title=" " alt="" coords="462,79,595,117"/>
-<area shape="rect" id="node3" href="$d7/d75/_loop_8hpp.html" title="rangeとかループ系のクラス" alt="" coords="5,239,137,264"/>
-<area shape="rect" id="node4" title=" " alt="" coords="161,239,237,264"/>
-<area shape="rect" id="node5" title=" " alt="" coords="261,239,319,264"/>
-<area shape="rect" id="node7" href="$d1/d0d/_min_max_operation_8hpp.html" title="最大値とか最小値を求める" alt="" coords="285,165,492,191"/>
-<area shape="rect" id="node8" title=" " alt="" coords="517,165,575,191"/>
+<area shape="rect" id="node2" href="$da/d72/_graph_8hpp.html" title="グラフクラス " alt="" coords="137,169,256,196"/>
+<area shape="rect" id="node6" href="$d3/d22/_graph_util_8hpp.html" title="Graphクラスを使ったライブラリ(dijkstraなど)を管理 " alt="" coords="293,87,431,114"/>
+<area shape="rect" id="node3" href="$d7/d75/_loop_8hpp.html" title="rangeとかループ系のクラス " alt="" coords="5,244,135,271"/>
+<area shape="rect" id="node7" href="$d1/d0d/_min_max_operation_8hpp.html" title="最大値とか最小値を求める " alt="" coords="281,169,483,196"/>
 </map>

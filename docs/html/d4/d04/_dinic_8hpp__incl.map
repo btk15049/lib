@@ -1,8 +1,4 @@
 <map id="src/graph/Dinic.hpp" name="src/graph/Dinic.hpp">
-<area shape="rect" id="node1" title="Dinic法の実装" alt="" coords="188,5,325,31"/>
-<area shape="rect" id="node2" href="$da/d72/_graph_8hpp.html" title="グラフクラス" alt="" coords="138,79,260,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="285,79,343,104"/>
-<area shape="rect" id="node3" href="$d7/d75/_loop_8hpp.html" title="rangeとかループ系のクラス" alt="" coords="5,152,137,177"/>
-<area shape="rect" id="node4" title=" " alt="" coords="161,152,237,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="261,152,319,177"/>
+<area shape="rect" id="node2" href="$da/d72/_graph_8hpp.html" title="グラフクラス " alt="" coords="137,80,256,107"/>
+<area shape="rect" id="node3" href="$d7/d75/_loop_8hpp.html" title="rangeとかループ系のクラス " alt="" coords="5,155,135,181"/>
 </map>

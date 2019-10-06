@@ -8,17 +8,19 @@ var hierarchy =
     [ "BufferTest", "d4/df3/class_buffer_test.html", null ],
     [ "Chain< T, r, size >", "d7/dfb/class_chain.html", null ],
     [ "cww", "d8/d22/structcww.html", null ],
-    [ "Dinic< F, flow_inf >", "d2/dbc/class_dinic.html", null ],
+    [ "Dinic< T, flow_inf >", "d2/dbc/class_dinic.html", null ],
     [ "Edge", "d5/db4/struct_edge.html", null ],
     [ "FlowEdge< F >", "d4/d12/struct_flow_edge.html", null ],
     [ "Graph< E >", "da/d9a/class_graph.html", [
-      [ "FlowGraph< E >", "de/d66/class_flow_graph.html", null ],
       [ "Forest< E >", "d4/d2f/class_forest.html", [
         [ "Tree< E >", "dd/df8/class_tree.html", null ]
       ] ]
     ] ],
     [ "Graph< FlowEdge >", "da/d9a/class_graph.html", [
       [ "FlowGraph< FlowEdge >", "de/d66/class_flow_graph.html", null ]
+    ] ],
+    [ "Graph< T >", "da/d9a/class_graph.html", [
+      [ "FlowGraph< T >", "de/d66/class_flow_graph.html", null ]
     ] ],
     [ "HeavyLightDecomposition< E >", "d3/d4c/class_heavy_light_decomposition.html", null ],
     [ "KMP", "de/df2/class_k_m_p.html", null ],

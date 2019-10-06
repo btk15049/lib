@@ -1,11 +1,10 @@
 <map id="Graph::add_edge" name="Graph::add_edge">
-<area shape="rect" id="node1" title="&quot;無向&quot;辺(a,b)を追加する．" alt="" coords="466,80,591,105"/>
-<area shape="rect" id="node2" href="$d8/dad/_graph_8test_8cpp.html#ae5ad63b37b9a3d2dda920b11c577390c" title="頂点数4の無向パスを生成" alt="" coords="251,5,418,31"/>
-<area shape="rect" id="node4" href="$d8/dad/_graph_8test_8cpp.html#aa5e7c6355a558695f66ecf6af795a960" title=" " alt="" coords="251,55,418,80"/>
-<area shape="rect" id="node6" href="$d5/d9a/_heavy_light_decomposition_8test_8cpp.html#a220bbc275af07581769122d39d25357b" title="入力サンプル生成" alt="" coords="285,104,384,129"/>
-<area shape="rect" id="node8" href="$d6/d94/_tree_8test_8cpp.html#a8650c7bec5069b9877678230db3345a7" title="入力サンプル生成" alt="" coords="290,153,379,179"/>
-<area shape="rect" id="node3" href="$d8/dad/_graph_8test_8cpp.html#ada342a5543e014688330c5bca3843dcf" title="Construct a new boost auto test case object." alt="" coords="5,5,203,31"/>
-<area shape="rect" id="node5" href="$d8/dad/_graph_8test_8cpp.html#a886fab0f694a9447bfd980403af56fff" title="Construct a new boost auto test case object ダイクストラのテスト" alt="" coords="5,55,203,80"/>
-<area shape="rect" id="node7" href="$d5/d9a/_heavy_light_decomposition_8test_8cpp.html#ab0b4ab6c6c3db19299f3ee3c19b5512a" title="オブジェクト生成ができるかのテスト" alt="" coords="5,104,203,129"/>
-<area shape="rect" id="node9" href="$d6/d94/_tree_8test_8cpp.html#a2bd3c59b0cc0e8a31fb6818cb68c0e87" title="インスタンス生成ができるかどうかのテスト" alt="" coords="5,153,203,179"/>
+<area shape="rect" id="node2" href="$d8/dad/_graph_8test_8cpp.html#ae5ad63b37b9a3d2dda920b11c577390c" title="頂点数4の無向パスを生成 " alt="" coords="175,5,337,32"/>
+<area shape="rect" id="node4" href="$d8/dad/_graph_8test_8cpp.html#aa5e7c6355a558695f66ecf6af795a960" title="sample_weighted_graph" alt="" coords="175,56,337,83"/>
+<area shape="rect" id="node6" href="$d5/d9a/_heavy_light_decomposition_8test_8cpp.html#a220bbc275af07581769122d39d25357b" title="入力サンプル生成 " alt="" coords="207,107,305,133"/>
+<area shape="rect" id="node8" href="$d6/d94/_tree_8test_8cpp.html#a8650c7bec5069b9877678230db3345a7" title="入力サンプル生成 " alt="" coords="212,157,300,184"/>
+<area shape="rect" id="node3" href="$d8/dad/_graph_8test_8cpp.html#ae89f07cefc1372ae86908a653a3ae432" title="Construct a new boost auto test case object. " alt="" coords="385,5,583,32"/>
+<area shape="rect" id="node5" href="$d8/dad/_graph_8test_8cpp.html#a886fab0f694a9447bfd980403af56fff" title="Construct a new boost auto test case object ダイクストラのテスト " alt="" coords="385,56,583,83"/>
+<area shape="rect" id="node7" href="$d5/d9a/_heavy_light_decomposition_8test_8cpp.html#ab0b4ab6c6c3db19299f3ee3c19b5512a" title="オブジェクト生成ができるかのテスト " alt="" coords="385,107,583,133"/>
+<area shape="rect" id="node9" href="$d6/d94/_tree_8test_8cpp.html#a2bd3c59b0cc0e8a31fb6818cb68c0e87" title="インスタンス生成ができるかどうかのテスト " alt="" coords="385,157,583,184"/>
 </map>

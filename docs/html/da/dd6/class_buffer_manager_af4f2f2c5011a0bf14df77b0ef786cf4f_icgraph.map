@@ -1,4 +1,4 @@
 <map id="BufferManager::pop" name="BufferManager::pop">
-<area shape="rect" id="node1" title="size分バッファを取得" alt="" coords="237,12,376,37"/>
-<area shape="rect" id="node2" href="$d3/d4c/class_heavy_light_decomposition.html#ad4102d7e2ad72d05cf0b9e3a8a31cc06" title="Construct a new Heavy Light Decomposition object lenderにはBlockBufferを使うのを推奨 N*5メモリがいるよ" alt="" coords="5,5,189,44"/>
+<area shape="rect" id="node2" href="$d3/d4c/class_heavy_light_decomposition.html#ad4102d7e2ad72d05cf0b9e3a8a31cc06" title="Construct a new Heavy Light Decomposition object lenderにはBlockBufferを使うのを推奨 N*5メモリがいる�..." alt="" coords="189,5,372,47"/>
+<area shape="rect" id="node3" href="$da/dd6/class_buffer_manager.html#a0c4608b5095c749f56ab88100ee7b0b3" title="Construct a new Buffer Manager object. " alt="" coords="214,71,347,112"/>
 </map>

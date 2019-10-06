@@ -1,5 +1,5 @@
 var class_dinic =
 [
-    [ "Dinic", "d2/dbc/class_dinic.html#a8316c0212092b1dbae6ddc729866d8dd", null ],
-    [ "solve", "d2/dbc/class_dinic.html#aeefe9f03a6db6c6bc25384adfc84ef1a", null ]
+    [ "Dinic", "d2/dbc/class_dinic.html#a148b166f8f5c5e6fff06881abd4fc526", null ],
+    [ "solve", "d2/dbc/class_dinic.html#a106e1fc1675c2316780bbc7cc906fbb0", null ]
 ];
