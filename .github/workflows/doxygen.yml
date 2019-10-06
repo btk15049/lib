@@ -26,7 +26,7 @@ jobs:
           GITHUB_EMAIL: ${{ secrets.GITHUB_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          PREV=`git rev-parse HEAD`
+          test -n `git status --porcelain` && echo "diff is nothing." && exit
           git config --global user.email ${GITHUB_EMAIL}
           git config --global user.name ${GITHUB_USER}
           git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
@@ -34,5 +34,4 @@ jobs:
           git commit -m '[ci] update documents'
           BRANCH=`echo ${{ github.ref }} | sed -e "s@^refs/heads/@@g"`
           git checkout -b ${BRANCH}
-          NEXT=`git rev-parse HEAD`
-          if [ "${PREV}" != "${NEXT}" ];then git push origin ${BRANCH};else echo "no commit.";fi
+          git push origin ${BRANCH}
