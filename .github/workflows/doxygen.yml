@@ -35,4 +35,4 @@ jobs:
           BRANCH=`echo ${{ github.ref }} | sed -e "s@^refs/heads/@@g"`
           git checkout -b ${BRANCH}
           NEXT=`git rev-parse HEAD`
-          if [ "${PREV}" = "${NEXT}" ];then git push origin ${BRANCH};else echo "no commit.";fi
+          if [ "${PREV}" != "${NEXT}" ];then git push origin ${BRANCH};else echo "no commit.";fi
