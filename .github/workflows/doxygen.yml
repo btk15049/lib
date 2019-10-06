@@ -27,14 +27,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           PREV=`git rev-parse HEAD`
-          echo ${PREV}
           git config --global user.email ${GITHUB_EMAIL}
           git config --global user.name ${GITHUB_USER}
           git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git add .
           git commit -m '[ci] update documents'
-          BRANCH_NAME=`echo ${{ github.ref }} | sed -e "s@^refs/heads/@@g"`
-          git checkout -b ${BRANCH_NAME}
+          BRANCH=`echo ${{ github.ref }} | sed -e "s@^refs/heads/@@g"`
+          git checkout -b ${BRANCH}
           NEXT=`git rev-parse HEAD`
-          echo ${NEXT}
-          git push origin ${BRANCH_NAME}
+          if [ "${PREV}" = "${NEXT}" ];then git push origin ${BRANCH};else echo "no commit.";fi
