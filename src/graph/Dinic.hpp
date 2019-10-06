@@ -4,7 +4,7 @@
  * @author btk15049
  * @date 2019/03/13
  * @details
- *  \todo verify
+ * @todo project selection problem
  *  verify: WUPC F
  */
 
