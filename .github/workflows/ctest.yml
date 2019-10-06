@@ -11,9 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Cmake test
-        uses: docker://docker.pkg.github.com/btk15049/lib/ctest-with-boost:20191005
+      - name: Login to GitHub Package Registry
         env:
-          LIB_PATH: /github/workspace/src
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PULL_FROM_PACKAGE_REGISTRY }}
+        run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
+      - name: Pull image from GitHub Package Registry
+        env:
+          CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
+          IMAGE_NAME: ctest-with-boost
+          TAG: 20191006
+        run: |
+          docker pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
+          docker tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} ctest
+      - name: CTest using docker image
+        env:
+          LIB_PATH: /app/src
           BUILD_CMD: /usr/bin/g++-5
           BOOST_PATH: /usr/local/include
+        run: docker run -e LIB_PATH -e BUILD_CMD -e BOOST_PATH -v /home/runner/work/lib/lib:/app ctest
