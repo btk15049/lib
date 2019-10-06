@@ -34,23 +34,19 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Login to GitHub Package Registry
-        uses: actions/docker/login@master
         env:
-          DOCKER_REGISTRY_URL: docker.pkg.github.com
-          DOCKER_USERNAME: btk15049
-          DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN_TO_PULL_FROM_PACKAGE_REGISTRY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PULL_FROM_PACKAGE_REGISTRY }}
+        run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
       - name: Pull image from GitHub Package Registry
-        uses: actions/docker/cli-multi@master
-        with:
-          args: '"pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest" "tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest current"'
+        run: |
+          docker pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
+          docker tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest current
         env:
           CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
           IMAGE_NAME: ctest-with-boost
       - name: Run image
-        uses: actions/docker/cli@master
-        with:
-          args: run -e LIB_PATH -e BUILD_CMD -e BOOST_PATH -v /github/workspace:/app current
         env:
           LIB_PATH: /app/src
           BUILD_CMD: /usr/bin/g++-5
           BOOST_PATH: /usr/local/include
+        run: docker run -e LIB_PATH -e BUILD_CMD -e BOOST_PATH -v /home/runner/work/lib/lib:/app current
