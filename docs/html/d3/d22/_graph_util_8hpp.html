@@ -115,10 +115,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aef9e0698b396c73a9f4ab9018610ee34"><td class="memTemplParams" colspan="2">template&lt;typename E , typename COST_TYPE &gt; </td></tr>
-<tr class="memitem:aef9e0698b396c73a9f4ab9018610ee34"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; COST_TYPE &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d22/_graph_util_8hpp.html#aef9e0698b396c73a9f4ab9018610ee34">dijkstra</a> (<a class="el" href="../../da/d9a/class_graph.html">Graph</a>&lt; E &gt; &amp;g, COST_TYPE inf, const int s=0)</td></tr>
-<tr class="memdesc:aef9e0698b396c73a9f4ab9018610ee34"><td class="mdescLeft">&#160;</td><td class="mdescRight">通常のダイクストラ  <a href="#aef9e0698b396c73a9f4ab9018610ee34">More...</a><br /></td></tr>
-<tr class="separator:aef9e0698b396c73a9f4ab9018610ee34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46fc58b7a7ce98f52b0417e3994287dd"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a46fc58b7a7ce98f52b0417e3994287dd"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d22/_graph_util_8hpp.html#a46fc58b7a7ce98f52b0417e3994287dd">dijkstra</a> (<a class="el" href="../../da/d9a/class_graph.html">Graph</a>&lt; T &gt; &amp;g, U inf, const int s=0)</td></tr>
+<tr class="memdesc:a46fc58b7a7ce98f52b0417e3994287dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">通常のダイクストラ  <a href="#a46fc58b7a7ce98f52b0417e3994287dd">More...</a><br /></td></tr>
+<tr class="separator:a46fc58b7a7ce98f52b0417e3994287dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Graphクラスを使ったライブラリ(dijkstraなど)を管理 </p>
@@ -128,24 +128,24 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="../../d3/d22/_graph_util_8hpp_source.html">GraphUtil.hpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="aef9e0698b396c73a9f4ab9018610ee34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef9e0698b396c73a9f4ab9018610ee34">&#9670;&nbsp;</a></span>dijkstra()</h2>
+<a id="a46fc58b7a7ce98f52b0417e3994287dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46fc58b7a7ce98f52b0417e3994287dd">&#9670;&nbsp;</a></span>dijkstra()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename E , typename COST_TYPE &gt; </div>
+template&lt;typename T , typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;COST_TYPE&gt; dijkstra </td>
+          <td class="memname">std::vector&lt;U&gt; dijkstra </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../da/d9a/class_graph.html">Graph</a>&lt; E &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../da/d9a/class_graph.html">Graph</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>g</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">COST_TYPE&#160;</td>
+          <td class="paramtype">U&#160;</td>
           <td class="paramname"><em>inf</em>, </td>
         </tr>
         <tr>
@@ -165,8 +165,8 @@ template&lt;typename E , typename COST_TYPE &gt; </div>
 <p>通常のダイクストラ </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">E</td><td>重み付き辺構造体　.costをメンバにもつ必要あり </td></tr>
-    <tr><td class="paramname">COST_TYPE</td><td>コストの型 </td></tr>
+    <tr><td class="paramname">T</td><td>重み付き辺構造体　.costをメンバにもつ必要あり </td></tr>
+    <tr><td class="paramname">U</td><td>コストの型 </td></tr>
   </table>
   </dd>
 </dl>
@@ -185,8 +185,8 @@ template&lt;typename E , typename COST_TYPE &gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d22/_graph_util_8hpp_aef9e0698b396c73a9f4ab9018610ee34_cgraph.png" border="0" usemap="#d3/d22/_graph_util_8hpp_aef9e0698b396c73a9f4ab9018610ee34_cgraph" alt=""/></div>
-<map name="d3/d22/_graph_util_8hpp_aef9e0698b396c73a9f4ab9018610ee34_cgraph" id="d3/d22/_graph_util_8hpp_aef9e0698b396c73a9f4ab9018610ee34_cgraph">
+<div class="center"><img src="../../d3/d22/_graph_util_8hpp_a46fc58b7a7ce98f52b0417e3994287dd_cgraph.png" border="0" usemap="#d3/d22/_graph_util_8hpp_a46fc58b7a7ce98f52b0417e3994287dd_cgraph" alt=""/></div>
+<map name="d3/d22/_graph_util_8hpp_a46fc58b7a7ce98f52b0417e3994287dd_cgraph" id="d3/d22/_graph_util_8hpp_a46fc58b7a7ce98f52b0417e3994287dd_cgraph">
 <area shape="rect" id="node2" href="../../da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34" title="グラフの頂点数を返す " alt="" coords="117,5,207,32"/>
 <area shape="rect" id="node3" href="../../da/d9a/class_graph.html#a2ab07cab9c48c18daebf7c8aaad861af" title="辺番号から辺の参照を取得する " alt="" coords="121,56,203,83"/>
 <area shape="rect" id="node4" href="../../d1/d0d/_min_max_operation_8hpp.html#ad7dddcbb7d239d6f6b6507057e1af8a0" title="change min " alt="" coords="133,107,191,133"/>
@@ -195,8 +195,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d22/_graph_util_8hpp_aef9e0698b396c73a9f4ab9018610ee34_icgraph.png" border="0" usemap="#d3/d22/_graph_util_8hpp_aef9e0698b396c73a9f4ab9018610ee34_icgraph" alt=""/></div>
-<map name="d3/d22/_graph_util_8hpp_aef9e0698b396c73a9f4ab9018610ee34_icgraph" id="d3/d22/_graph_util_8hpp_aef9e0698b396c73a9f4ab9018610ee34_icgraph">
+<div class="center"><img src="../../d3/d22/_graph_util_8hpp_a46fc58b7a7ce98f52b0417e3994287dd_icgraph.png" border="0" usemap="#d3/d22/_graph_util_8hpp_a46fc58b7a7ce98f52b0417e3994287dd_icgraph" alt=""/></div>
+<map name="d3/d22/_graph_util_8hpp_a46fc58b7a7ce98f52b0417e3994287dd_icgraph" id="d3/d22/_graph_util_8hpp_a46fc58b7a7ce98f52b0417e3994287dd_icgraph">
 <area shape="rect" id="node2" href="../../d8/dad/_graph_8test_8cpp.html#a886fab0f694a9447bfd980403af56fff" title="Construct a new boost auto test case object ダイクストラのテスト " alt="" coords="117,5,315,32"/>
 </map>
 </div>
