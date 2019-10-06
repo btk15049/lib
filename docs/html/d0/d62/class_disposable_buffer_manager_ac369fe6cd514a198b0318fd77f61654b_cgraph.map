@@ -1,4 +1,3 @@
 <map id="DisposableBufferManager::push" name="DisposableBufferManager::push">
-<area shape="rect" id="node1" title="何もしない" alt="" coords="5,5,181,44"/>
-<area shape="rect" id="node2" href="$de/d09/_macro_8hpp.html#a7b97af0bf6ca36e557d8ce0d612a05a3" title="rangeで生まれる使わない変数を消す用（警告消し）" alt="" coords="229,12,320,37"/>
+<area shape="rect" id="node2" href="$de/d09/_macro_8hpp.html#a7b97af0bf6ca36e557d8ce0d612a05a3" title="rangeで生まれる使わない変数を消す用（警告消し） " alt="" coords="225,13,315,39"/>
 </map>

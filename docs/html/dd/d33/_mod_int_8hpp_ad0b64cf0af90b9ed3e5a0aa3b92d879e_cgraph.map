@@ -1,6 +1,5 @@
 <map id="pow" name="pow">
-<area shape="rect" id="node1" title="a^x modを求める" alt="" coords="5,5,51,31"/>
-<area shape="rect" id="node2" href="$d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="整数から高速にModIntを作りたいときに使う" alt="" coords="190,5,281,31"/>
-<area shape="rect" id="node4" href="$dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title=" " alt="" coords="99,31,142,56"/>
-<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される．" alt="" coords="329,5,439,31"/>
+<area shape="rect" id="node2" href="$d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="整数から高速にModIntを作りたいときに使う " alt="" coords="191,5,281,32"/>
+<area shape="rect" id="node4" href="$dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title="mul" alt="" coords="100,31,143,57"/>
+<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される． " alt="" coords="329,5,440,32"/>
 </map>

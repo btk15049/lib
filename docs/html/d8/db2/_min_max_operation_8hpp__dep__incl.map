@@ -1,7 +1,6 @@
 <map id="src/template/MinMaxOperation.hpp" name="src/template/MinMaxOperation.hpp">
-<area shape="rect" id="node1" title="最大値とか最小値を求める" alt="" coords="119,5,348,31"/>
-<area shape="rect" id="node2" href="$df/dc0/_template_8hpp.html" title="競技プログラミング用テンプレート" alt="" coords="5,79,128,104"/>
-<area shape="rect" id="node3" href="$d3/d22/_graph_util_8hpp.html" title="Graphクラスを使ったライブラリ(dijkstraなど)を管理" alt="" coords="152,79,315,104"/>
-<area shape="rect" id="node5" href="$d4/d0d/_min_max_operation_8test_8cpp.html" title="MinMaxOperation.hpp のテスト" alt="" coords="338,79,595,104"/>
-<area shape="rect" id="node4" href="$d8/dad/_graph_8test_8cpp.html" title="Graph.hpp のテスト" alt="" coords="148,152,319,177"/>
+<area shape="rect" id="node2" href="$df/dc0/_template_8hpp.html" title="競技プログラミング用テンプレート " alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node3" href="$d3/d22/_graph_util_8hpp.html" title="Graphクラスを使ったライブラリ(dijkstraなど)を管理 " alt="" coords="152,80,312,107"/>
+<area shape="rect" id="node5" href="$d4/d0d/_min_max_operation_8test_8cpp.html" title="MinMaxOperation.hpp のテスト " alt="" coords="337,80,591,107"/>
+<area shape="rect" id="node4" href="$d8/dad/_graph_8test_8cpp.html" title="Graph.hpp のテスト " alt="" coords="147,155,317,181"/>
 </map>

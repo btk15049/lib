@@ -1,5 +1,4 @@
 <map id="KMP::find_all" name="KMP::find_all">
-<area shape="rect" id="node1" title="sentence の中の keyword の開始位置を全部持ってくる" alt="" coords="5,5,105,31"/>
-<area shape="rect" id="node2" href="$de/df2/class_k_m_p.html#adfe9c7a652f6de090a14c0d5d5fbd44c" title="次のキーワードを見つける" alt="" coords="153,5,232,31"/>
-<area shape="rect" id="node3" href="$de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b" title="next_charを読んだときに KMP テーブルのポインタ（どこまで一致しているか，reading_len) を進める" alt="" coords="280,5,388,31"/>
+<area shape="rect" id="node2" href="$de/df2/class_k_m_p.html#adfe9c7a652f6de090a14c0d5d5fbd44c" title="次のキーワードを見つける " alt="" coords="153,5,233,32"/>
+<area shape="rect" id="node3" href="$de/df2/class_k_m_p.html#ae5071017969b112d8ff4d7e05636cc3b" title="next_charを読んだときに KMP テーブルのポインタ（どこまで一致しているか，reading_len) を進める ..." alt="" coords="281,5,389,32"/>
 </map>

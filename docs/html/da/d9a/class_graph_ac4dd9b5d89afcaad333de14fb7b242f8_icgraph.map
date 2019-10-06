@@ -1,5 +1,4 @@
 <map id="Graph::Ns" name="Graph::Ns">
-<area shape="rect" id="node1" title="vの隣接頂点を返す" alt="" coords="431,5,513,31"/>
-<area shape="rect" id="node2" href="$d6/d94/_tree_8test_8cpp.html#a53f9f703b3a44bb1e8f4368b9cc60a41" title="DFSをして連結成分を取得 処理をサボってN^2." alt="" coords="251,5,383,31"/>
-<area shape="rect" id="node3" href="$d6/d94/_tree_8test_8cpp.html#a8dc9d88477cfd505fffaf2d3a0d5861a" title="連結成分が正しいかのテスト1" alt="" coords="5,5,203,31"/>
+<area shape="rect" id="node2" href="$d6/d94/_tree_8test_8cpp.html#a53f9f703b3a44bb1e8f4368b9cc60a41" title="DFSをして連結成分を取得 処理をサボってN^2. " alt="" coords="136,5,267,32"/>
+<area shape="rect" id="node3" href="$d6/d94/_tree_8test_8cpp.html#a8dc9d88477cfd505fffaf2d3a0d5861a" title="連結成分が正しいかのテスト1 " alt="" coords="315,5,512,32"/>
 </map>

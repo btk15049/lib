@@ -1,6 +1,5 @@
 <map id="src/structure/Buffer.hpp" name="src/structure/Buffer.hpp">
-<area shape="rect" id="node1" title="メモリ管理クラス" alt="" coords="225,5,384,31"/>
-<area shape="rect" id="node2" href="$d8/d10/_heavy_light_decomposition_8hpp.html" title="重軽分解" alt="" coords="5,79,267,104"/>
-<area shape="rect" id="node3" href="$d5/d9a/_heavy_light_decomposition_8test_8cpp.html" title="HeavyLightDecomposition.hpp のテスト" alt="" coords="75,152,365,177"/>
-<area shape="rect" id="node4" href="$d2/d13/_buffer_8test_8cpp.html" title="Buffer.hpp のテスト" alt="" coords="341,79,528,104"/>
+<area shape="rect" id="node2" href="$d8/d10/_heavy_light_decomposition_8hpp.html" title="重軽分解 " alt="" coords="5,80,264,107"/>
+<area shape="rect" id="node3" href="$d5/d9a/_heavy_light_decomposition_8test_8cpp.html" title="HeavyLightDecomposition.hpp のテスト " alt="" coords="73,155,361,181"/>
+<area shape="rect" id="node4" href="$d2/d13/_buffer_8test_8cpp.html" title="Buffer.hpp のテスト " alt="" coords="339,80,528,107"/>
 </map>

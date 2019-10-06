@@ -1,0 +1,5 @@
+<map id="operator*" name="operator*">
+<area shape="rect" id="node2" href="$dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title="mul" alt="" coords="128,5,171,32"/>
+<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="整数から高速にModIntを作りたいときに使う " alt="" coords="219,31,309,57"/>
+<area shape="rect" id="node4" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される． " alt="" coords="357,31,468,57"/>
+</map>

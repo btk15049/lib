@@ -1,7 +1,6 @@
 <map id="operator^" name="operator^">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,83,31"/>
-<area shape="rect" id="node2" href="$dd/d33/_mod_int_8hpp.html#ad0b64cf0af90b9ed3e5a0aa3b92d879e" title="a^x modを求める" alt="" coords="131,5,176,31"/>
-<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="整数から高速にModIntを作りたいときに使う" alt="" coords="315,5,406,31"/>
-<area shape="rect" id="node5" href="$dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title=" " alt="" coords="224,31,267,56"/>
-<area shape="rect" id="node4" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される．" alt="" coords="454,5,564,31"/>
+<area shape="rect" id="node2" href="$dd/d33/_mod_int_8hpp.html#ad0b64cf0af90b9ed3e5a0aa3b92d879e" title="a^x modを求める " alt="" coords="128,5,175,32"/>
+<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="整数から高速にModIntを作りたいときに使う " alt="" coords="313,5,404,32"/>
+<area shape="rect" id="node5" href="$dd/d33/_mod_int_8hpp.html#a1198752fa49c0cfcedf1a6ea96035058" title="mul" alt="" coords="223,31,265,57"/>
+<area shape="rect" id="node4" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される． " alt="" coords="452,5,563,32"/>
 </map>

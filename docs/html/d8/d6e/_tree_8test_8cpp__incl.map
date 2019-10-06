@@ -1,10 +1,6 @@
 <map id="test/graph/Tree.test.cpp" name="test/graph/Tree.test.cpp">
-<area shape="rect" id="node1" title="Tree.hpp のテスト" alt="" coords="268,5,429,31"/>
-<area shape="rect" id="node2" href="$d2/d21/_tree_8hpp.html" title="根付き森と根付き木" alt="" coords="143,85,255,111"/>
-<area shape="rect" id="node7" href="$de/d09/_macro_8hpp.html" title="マクロとか，LLとか" alt="" coords="279,85,418,111"/>
-<area shape="rect" id="node8" title=" " alt="" coords="442,79,575,117"/>
-<area shape="rect" id="node3" href="$da/d72/_graph_8hpp.html" title="グラフクラス" alt="" coords="138,165,260,191"/>
-<area shape="rect" id="node4" href="$d7/d75/_loop_8hpp.html" title="rangeとかループ系のクラス" alt="" coords="5,239,137,264"/>
-<area shape="rect" id="node5" title=" " alt="" coords="161,239,237,264"/>
-<area shape="rect" id="node6" title=" " alt="" coords="261,239,319,264"/>
+<area shape="rect" id="node2" href="$d2/d21/_tree_8hpp.html" title="根付き森と根付き木 " alt="" coords="142,87,251,114"/>
+<area shape="rect" id="node7" href="$de/d09/_macro_8hpp.html" title="マクロとか，LLとか " alt="" coords="276,87,413,114"/>
+<area shape="rect" id="node3" href="$da/d72/_graph_8hpp.html" title="グラフクラス " alt="" coords="137,169,256,196"/>
+<area shape="rect" id="node4" href="$d7/d75/_loop_8hpp.html" title="rangeとかループ系のクラス " alt="" coords="5,244,135,271"/>
 </map>
