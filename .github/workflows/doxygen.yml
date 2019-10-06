@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "Doxyfile"
+      - "src/*"
       - ".github/workflows/doxygen.yml"
 
 jobs:
@@ -18,3 +19,14 @@ jobs:
       - name: Generate Documents
         run: |
           doxygen
+      - name: Push Documents
+        env:
+          GITHUB_USER: btk15049
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          git checkout -b master
+          git branch -a
+          git add .
+          git commit -m '[ci] update documents'
+          git push origin HEAD
