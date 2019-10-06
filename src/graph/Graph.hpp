@@ -125,8 +125,8 @@ class Graph {
     inline int degree() { return edges.size(); }
 
     /**
-     * @brief
-     * グラフの頂点数を変更する
+     * @brief グラフの頂点数を変更する
+     * @todo 分かりづらいので，set_vertex_sizeとかに変える
      * @return int
      */
     inline void resize(const int n) { g.resize(n); }
