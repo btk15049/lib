@@ -39,7 +39,7 @@ jobs:
           DOCKER_REGISTRY_URL: docker.pkg.github.com
           DOCKER_USERNAME: btk15049
           DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN_TO_PULL_FROM_PACKAGE_REGISTRY }}
-      - name: Pull from GitHub Package Registry
+      - name: Pull image from GitHub Package Registry
         uses: actions/docker/cli-multi@master
         with:
           args: '"pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest" "tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest current"'
