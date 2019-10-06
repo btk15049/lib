@@ -1,10 +1,12 @@
 name: Doxygen CI
 
-on.push.paths:
-  - "Doxyfile"
-  - "src/*"
-  - "test/*"
-  - ".github/workflows/doxygen.yml"
+on:
+  push:
+    paths:
+      - "Doxyfile"
+      - "src/*"
+      - "test/*"
+      - ".github/workflows/doxygen.yml"
 
 jobs:
   Doxygen:
