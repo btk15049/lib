@@ -3,8 +3,8 @@ name: Docker build CI
 on:
   push:
     paths:
-      - "docker/*"
-      - ".github/workflows/docker-build.yml"
+      - 'docker/*'
+      - '.github/workflows/docker-build.yml'
 
 jobs:
   build:
