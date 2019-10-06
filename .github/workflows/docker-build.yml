@@ -33,13 +33,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/docker/login@master
+      - name: Login to GitHub Package Registry
+        uses: actions/docker/login@master
         env:
           DOCKER_REGISTRY_URL: docker.pkg.github.com
           DOCKER_USERNAME: btk15049
           DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN_TO_PULL_FROM_PACKAGE_REGISTRY }}
-      - uses: docker://docker.pkg.github.com/btk15049/lib/ctest-with-boost:latest
+      - uses: actions/docker/cli@master
+        with:
+          args: "pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest"
         env:
-          LIB_PATH: /github/workspace/src
-          BUILD_CMD: /usr/bin/g++-5
-          BOOST_PATH: /usr/local/include
+          CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
+          IMAGE_NAME: ctest-with-boost
