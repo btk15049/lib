@@ -3,9 +3,10 @@ name: C/C++ CI
 on:
   push:
     paths:
-      - "src/*"
-      - "test/*"
-      - ".github/workflows/ctest.yml"
+      - 'src/*'
+      - 'test/*'
+      - 'CMakeLists.txt'
+      - '.github/workflows/ctest.yml'
 
 jobs:
   CTest:
