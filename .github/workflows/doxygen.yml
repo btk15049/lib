@@ -4,8 +4,8 @@ on:
   push:
     paths:
       - "Doxyfile"
-      - "src/*"
-      - "test/*"
+      - "*.cpp"
+      - "*.hpp"
       - ".github/workflows/doxygen.yml"
 
 jobs:
