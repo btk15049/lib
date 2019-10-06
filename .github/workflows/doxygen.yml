@@ -3,10 +3,10 @@ name: Doxygen CI
 on:
   push:
     paths:
-      - "Doxyfile"
-      - "*.cpp"
-      - "*.hpp"
-      - ".github/workflows/doxygen.yml"
+      - Doxyfile
+      - .github/workflows/doxygen.yml
+      - '*.cpp'
+      - '*.hpp'
 
 jobs:
   Doxygen:
