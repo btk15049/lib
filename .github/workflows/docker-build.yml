@@ -51,6 +51,6 @@ jobs:
         with:
           args: run -e LIB_PATH -e BUILD_CMD -e BOOST_PATH -v /github/workspace:/app current
         env:
-          LIB_PATH: /github/workspace/src
+          LIB_PATH: /app/src
           BUILD_CMD: /usr/bin/g++-5
           BOOST_PATH: /usr/local/include
