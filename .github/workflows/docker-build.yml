@@ -39,9 +39,12 @@ jobs:
           DOCKER_REGISTRY_URL: docker.pkg.github.com
           DOCKER_USERNAME: btk15049
           DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN_TO_PULL_FROM_PACKAGE_REGISTRY }}
-      - uses: actions/docker/cli@master
+      - name: Pull from GitHub Package Registry
+        uses: actions/docker/cli@master
         with:
-          args: "pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest"
+          args: |
+          pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
+          tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest current
         env:
           CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
           IMAGE_NAME: ctest-with-boost
