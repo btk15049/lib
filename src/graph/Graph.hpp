@@ -214,8 +214,8 @@ class Graph {
 
     /**
      * @brief vに隣接する辺番号の集合を返す
-     * @param v int
-     * @return vector<int>
+     * @param v int 頂点番号
+     * @return vector<int> 辺番号の集合
      */
     inline const std::vector<int>& operator[](const int v) { return g[v]; }
 

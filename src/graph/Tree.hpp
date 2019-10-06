@@ -79,12 +79,11 @@ class Tree : public Forest<E> {
   private:
     using Forest<E>::get_roots;
     //! 根
-    int root;
+    const int root;
 
   public:
     /**
      * @brief Construct a new Tree object
-     *
      * @param g 元のグラフ
      * @param root 根を明示的に指定したい時
      */
@@ -92,7 +91,6 @@ class Tree : public Forest<E> {
 
     /**
      * @brief Get the root object
-     *
      * @return int
      */
     inline int get_root() { return root; }
