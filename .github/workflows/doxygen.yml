@@ -25,9 +25,13 @@ jobs:
           GITHUB_EMAIL: ${{ secrets.GITHUB_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          PREV=`git rev-parse HEAD`
+          echo ${PRE}
           git config --global user.email ${GITHUB_EMAIL}
           git config --global user.name ${GITHUB_USER}
           git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git add .
           git commit -m '[ci] update documents'
           echo ${{ github.ref }}
+          BRANCH_NAME=`echo ${{ github.ref }} | sed -e "s@head/ref@@g"`
+          echo ${BRANCH_NAME}
