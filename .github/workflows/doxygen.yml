@@ -5,8 +5,8 @@ on:
     paths:
       - Doxyfile
       - .github/workflows/doxygen.yml
-      - '*.cpp'
-      - '*.hpp'
+      - 'src/**'
+      - 'test/**'
 
 jobs:
   Doxygen:
