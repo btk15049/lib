@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "Doxyfile"
+      - ".github/workflows/doxygen.yml"
 
 jobs:
   Doxygen:
