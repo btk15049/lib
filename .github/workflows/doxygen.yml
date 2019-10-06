@@ -1,0 +1,19 @@
+name: Doxygen CI
+
+on:
+  push:
+    paths:
+      - "Doxyfile"
+
+jobs:
+  Doxygen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install doxygen graphviz
+      - name: Generate Documents
+        run: |
+          doxygen
