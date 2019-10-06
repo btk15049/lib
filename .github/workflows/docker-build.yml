@@ -43,8 +43,8 @@ jobs:
         uses: actions/docker/cli@master
         with:
           args: |
-          pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
-          tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest current
+            pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
+            tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest current
         env:
           CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
           IMAGE_NAME: ctest-with-boost
