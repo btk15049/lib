@@ -33,10 +33,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Login to GitHub Package Registry
+      - uses: actions/docker/login@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PULL_FROM_PACKAGE_REGISTRY }}
-        run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
+          DOCKER_REGISTRY_URL: docker.pkg.github.com
+          DOCKER_USERNAME: btk15049
+          DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN_TO_PULL_FROM_PACKAGE_REGISTRY }}
       - name: Cmake test
         uses: docker://docker.pkg.github.com/btk15049/lib/ctest-with-boost:latest
         env:
