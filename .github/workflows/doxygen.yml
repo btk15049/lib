@@ -28,7 +28,7 @@ jobs:
           git config --global user.email ${GITHUB_EMAIL}
           git config --global user.name ${GITHUB_USER}
           git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
-          git branch -b master
+          git checkout -b master
           git add .
           git commit -m '[ci] update documents'
           git push origin master
