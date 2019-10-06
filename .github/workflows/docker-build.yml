@@ -2,8 +2,9 @@ name: Docker build CI
 
 on:
   push:
-    branches:
-      - "docker*"
+    paths:
+      - "docker/*"
+      - ".github/workflows/docker-build.yml"
 
 jobs:
   build:
@@ -11,21 +12,43 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: Login to DockerHub
+      - name: Login to GitHub Package Registry
         env:
-          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_SECRET_TOKEN }}
-        run: docker login -u btk15049 -p $DOCKERHUB_TOKEN
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PUSH_TO_PACKAGE_REGISTRY }}
+        run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
       - name: Build docker image
-        env:
-          CONTAINER_REGISTRY_PATH: btk15049
-          IMAGE_NAME: ci-env
         run: |
-          TAG=`date "+%Y%m%d"`
-          docker build -t ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} .
+          docker build -t current docker
       - name: Push docker image
         env:
-          CONTAINER_REGISTRY_PATH: btk15049
-          IMAGE_NAME: ci-env
+          CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
+          IMAGE_NAME: ctest-with-boost
         run: |
           TAG=`date "+%Y%m%d"`
+          docker tag current ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
           docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
+          docker tag current ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
+          docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
+  test:
+    name: CTest using published image
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Login to GitHub Package Registry
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PULL_FROM_PACKAGE_REGISTRY }}
+        run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
+      - name: Pull image from GitHub Package Registry
+        env:
+          CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
+          IMAGE_NAME: ctest-with-boost
+        run: |
+          docker pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
+          docker tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest current
+      - name: Run image
+        env:
+          LIB_PATH: /app/src
+          BUILD_CMD: /usr/bin/g++-5
+          BOOST_PATH: /usr/local/include
+        run: docker run -e LIB_PATH -e BUILD_CMD -e BOOST_PATH -v /home/runner/work/lib/lib:/app current

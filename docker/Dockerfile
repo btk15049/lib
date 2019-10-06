@@ -18,7 +18,7 @@ RUN apt-get update \
 ENV CC gcc-5
 ENV CXX g++-5
 
-    # boost install
+# boost install
 RUN git clone --recursive https://github.com/boostorg/boost.git \
     && cd boost \
     && ./bootstrap.sh \
@@ -27,7 +27,7 @@ RUN git clone --recursive https://github.com/boostorg/boost.git \
     && cd .. \
     && rm -rf boost/
 
-    # cmake install
+# cmake install
 RUN git clone https://gitlab.kitware.com/cmake/cmake.git \
     && cd cmake \
     && ./bootstrap --prefix=/usr/local \
