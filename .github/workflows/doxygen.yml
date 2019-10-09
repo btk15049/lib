@@ -2,6 +2,8 @@ name: Doxygen CI
 
 on:
   push:
+    branches: 
+      - master
     paths:
       - Doxyfile
       - .github/workflows/doxygen.yml
@@ -22,6 +24,7 @@ jobs:
           doxygen
       - name: Push Documents
         env:
+          BRANCH: master
           GITHUB_USER: btk15049
           GITHUB_EMAIL: ${{ secrets.GITHUB_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -32,6 +35,5 @@ jobs:
           git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git add .
           git commit -m '[ci] update documents'
-          BRANCH=`echo ${{ github.ref }} | sed -e "s@^refs/heads/@@g"`
           git checkout -b ${BRANCH}
           git push origin ${BRANCH}
