@@ -1,4 +1,4 @@
-name: Docker build CI
+name: Docker clean build CI with cron
 
 on:
   schedule:
