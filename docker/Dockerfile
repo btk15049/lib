@@ -19,13 +19,14 @@ ENV CC gcc-5
 ENV CXX g++-5
 
 # boost install
-RUN git clone --recursive https://github.com/boostorg/boost.git \
-    && cd boost \
+RUN curl -OL https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.gz \
+    && tar xvfz ./boost_1_71_0.tar.gz \
+    && cd boost* \
     && ./bootstrap.sh \
     && ./b2 toolset=gcc-5 --prefix=/usr/local -j5 \
     && ./b2 install toolset=gcc-5 --prefix=/usr/local -j5 \
     && cd .. \
-    && rm -rf boost/
+    && rm -rf boost*
 
 # cmake install
 RUN git clone https://gitlab.kitware.com/cmake/cmake.git \

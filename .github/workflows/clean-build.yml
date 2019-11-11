@@ -1,10 +1,8 @@
-name: Docker build CI
+name: Docker clean build CI with cron
 
 on:
-  push:
-    paths:
-      - 'docker/*'
-      - .github/workflows/docker-build.yml
+  schedule:
+    - cron: 0 12 * * *
 
 jobs:
   build:
@@ -16,16 +14,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PUSH_TO_PACKAGE_REGISTRY }}
         run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
-      - name: Get image for cache from Github Package Registry
-        env:
-          CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
-          IMAGE_NAME: ctest-with-boost
-        run: |
-          docker pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
-          docker tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest cache
       - name: Build docker image
         run: |
-          docker build --cache-from cache -t current docker
+          docker build -t current docker
       - name: Push docker image
         env:
           CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
