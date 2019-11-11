@@ -17,7 +17,7 @@
 /**
  * @brief
  * 通常のダイクストラ
- * @tparam T 重み付き辺構造体　.costをメンバにもつ必要あり
+ * @tparam T 重み付き辺構造体 .costをメンバにもつ必要あり
  * @tparam U コストの型
  * @param g グラフ
  * @param inf 流量のinf
@@ -31,8 +31,8 @@ std::vector<U> dijkstra(Graph<T>& g, U inf, const int s = 0) {
     std::vector<U> d(g.size(), inf);
 
     // init
-    d[s] = 0;
-    que.push(std::make_pair((U)0, s));
+    d[s] = U();
+    que.push(std::make_pair(-U(), s));
 
     while (!que.empty()) {
         const int v       = que.top().second;
