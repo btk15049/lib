@@ -3,7 +3,18 @@
 #include <memory>
 /*</head>*/
 
-
+/**
+ * @brief BinaryIndexedTreeの演算を抽象化したクラス。
+ * 演算の型をtemplateに埋め込む必要があるため、宣言が大変。
+ * そのために名前空間BinaryIndexedTreePreset
+ * が用意してあり、基本的にはそちらを使うと良い。
+ *
+ * @tparam T 扱うデータの型
+ * @tparam AddOperation
+ * 加算に相当する演算、関数オブジェクトを作ってdecltypeをするとよい
+ * @tparam InvOperation
+ * 逆元を取るための単項演算子に相当する演算、関数オブジェクトを作ってdecltypeをするとよい
+ */
 template <typename T, typename AddOperation, typename InvOperation>
 class BinaryIndexedTree {
   private:
@@ -15,11 +26,42 @@ class BinaryIndexedTree {
   public:
     BinaryIndexedTree(int _size, AddOperation addOperation,
                       InvOperation invOperation, T zero);
+    /**
+     * @brief [0, _size) の範囲を持つBITを生成する（特殊化の実装が必要）
+     * @param _size 要素数
+     */
     BinaryIndexedTree(int _size);
 
+    /**
+     * @brief コンストラクタで指定したBITに格納できる要素数を取得する
+     *
+     * @return int 要素数
+     */
     int size() const;
+
+    /**
+     * @brief 位置idにvを加算する
+     *
+     * @param id 位置
+     * @param v 加算する値
+     */
     void add(int id, T v);
+
+    /**
+     * @brief [0,n) に加算された値の総和を計算する
+     *
+     * @param n パラメータ
+     * @return T 総和
+     */
     T sum(int n) const;
+
+    /**
+     * @brief [l,r) に加算された値の総和を計算する
+     *
+     * @param l パラメータ
+     * @param r パラメータ
+     * @return T 総和
+     */
     T sum(int l, int r) const;
 
   private:
