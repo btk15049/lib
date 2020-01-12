@@ -151,10 +151,10 @@ class Dinic {
         F res = 0;
         while (true) {
             std::vector<int> dist = bfs(s);
-            if (dist[t] < 0) break;
+            if (dist[t] < 0 || flow_inf == res) break;
             std::vector<unsigned> iter(G->size(), 0);
             while (true) {
-                F f = dfs(t, s, flow_inf, iter, dist);
+                F f = dfs(t, s, flow_inf - res, iter, dist);
                 if (f == 0) break;
                 res += f;
             }
