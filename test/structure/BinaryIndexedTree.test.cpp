@@ -50,7 +50,7 @@ BOOST_AUTO_TEST_CASE(INT_SUM) {
     // 普通にやる場合
     BinaryIndexedTree tree1(5, add, inv, zero);
     // presetを使う場合
-    auto tree2 = Preset(10);
+    Preset tree2(10);
 
     // sizeメソッド
     BOOST_CHECK_EQUAL(tree1.size(), 5);
@@ -81,7 +81,7 @@ BOOST_AUTO_TEST_CASE(LONG_SUM) {
     // 普通にやる場合
     BinaryIndexedTree tree1(5, add, inv, zero);
     // presetを使う場合
-    auto tree2 = Preset(10);
+    Preset tree2(10);
 
     // sizeメソッド
     BOOST_CHECK_EQUAL(tree1.size(), 5);
@@ -112,7 +112,7 @@ BOOST_AUTO_TEST_CASE(INT_XOR) {
     // 普通にやる場合
     BinaryIndexedTree tree1(5, add, inv, zero);
     // presetを使う場合
-    auto tree2 = Preset(10);
+    Preset tree2(10);
 
     // sizeメソッド
     BOOST_CHECK_EQUAL(tree1.size(), 5);
@@ -143,7 +143,7 @@ BOOST_AUTO_TEST_CASE(LONG_XOR) {
     // 普通にやる場合
     BinaryIndexedTree tree1(5, add, inv, zero);
     // presetを使う場合
-    auto tree2 = Preset(10);
+    Preset tree2(10);
 
     // sizeメソッド
     BOOST_CHECK_EQUAL(tree1.size(), 5);
