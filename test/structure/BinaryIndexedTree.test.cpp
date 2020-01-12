@@ -97,7 +97,7 @@ BOOST_AUTO_TEST_CASE(LONG_SUM) {
     BOOST_CHECK_EQUAL(tree1.sum(5), 22);
     BOOST_CHECK_EQUAL(tree1.sum(4, 5), 15);
     validate_add(tree1, {7, 0, 0, 0, 15});
-    std::vector<long long> expected(10);
+    std::vector<int64_t> expected(10);
     XorShift32 rGen;
     for (int i = 0; i < 1000; i++) {
         int p = rGen.next_int<>() % 10;
@@ -161,7 +161,7 @@ BOOST_AUTO_TEST_CASE(LONG_XOR) {
     BOOST_CHECK_EQUAL(tree1.sum(5), 8);
     BOOST_CHECK_EQUAL(tree1.sum(4, 5), 15);
     validate_xor(tree1, {7, 0, 0, 0, 15});
-    std::vector<long long> expected(10);
+    std::vector<int64_t> expected(10);
     XorShift32 rGen;
     for (int i = 0; i < 1000; i++) {
         int p = rGen.next_int<>() % 10;
