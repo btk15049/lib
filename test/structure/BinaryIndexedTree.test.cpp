@@ -48,7 +48,8 @@ BOOST_AUTO_TEST_CASE(INT_SUM) {
     using namespace BinaryIndexedTreePreset::Int::Sum;
     // コンストラクタの検証
     // 普通にやる場合
-    BinaryIndexedTree tree1(5, add, inv, zero);
+    BinaryIndexedTree<int32_t, decltype(add), decltype(inv)> tree1(5, add, inv,
+                                                                   zero);
     // presetを使う場合
     Preset tree2(10);
 
@@ -79,7 +80,8 @@ BOOST_AUTO_TEST_CASE(LONG_SUM) {
     using namespace BinaryIndexedTreePreset::Long::Sum;
     // コンストラクタの検証
     // 普通にやる場合
-    BinaryIndexedTree tree1(5, add, inv, zero);
+    BinaryIndexedTree<int64_t, decltype(add), decltype(inv)> tree1(5, add, inv,
+                                                                   zero);
     // presetを使う場合
     Preset tree2(10);
 
@@ -110,7 +112,8 @@ BOOST_AUTO_TEST_CASE(INT_XOR) {
     using namespace BinaryIndexedTreePreset::Int::Xor;
     // コンストラクタの検証
     // 普通にやる場合
-    BinaryIndexedTree tree1(5, add, inv, zero);
+    BinaryIndexedTree<int32_t, decltype(add), decltype(inv)> tree1(5, add, inv,
+                                                                   zero);
     // presetを使う場合
     Preset tree2(10);
 
@@ -141,7 +144,8 @@ BOOST_AUTO_TEST_CASE(LONG_XOR) {
     using namespace BinaryIndexedTreePreset::Long::Xor;
     // コンストラクタの検証
     // 普通にやる場合
-    BinaryIndexedTree tree1(5, add, inv, zero);
+    BinaryIndexedTree<int64_t, decltype(add), decltype(inv)> tree1(5, add, inv,
+                                                                   zero);
     // presetを使う場合
     Preset tree2(10);
 
