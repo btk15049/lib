@@ -3,36 +3,28 @@
 #include <memory>
 /*</head>*/
 
-// namespace BinaryIndexedTreePreset
-// constexpr auto addInt64 = [](int64_t l, int64_t r) { return l + r; };
-// template <typename T>
-// constexpr decltype(auto) buildAddFunction() {
-//     return [](decltype(T) l, decltype(T) r) { return l + r; };
-// }
-// constexpr auto xorInt32 = [](int32_t l, int32_t r) { return l ^ r; };
-// constexpr auto xorInt64 = [](int64_t l, int64_t r) { return l ^ r; };
 
-
-template <typename T1, typename T2, typename T3>
+template <typename T, typename AddOperation, typename InvOperation>
 class BinaryIndexedTree {
   private:
     const int _size;
-    const T2 addOperation;
-    const T3 invOperation;
-    const std::unique_ptr<T1[]> value;
+    const AddOperation addOperation;
+    const InvOperation invOperation;
+    const std::unique_ptr<T[]> value;
 
   public:
-    BinaryIndexedTree(int _size, T2 addOperation, T3 invOperation, T1 zero);
+    BinaryIndexedTree(int _size, AddOperation addOperation,
+                      InvOperation invOperation, T zero);
     BinaryIndexedTree(int _size);
 
     int size() const;
-    void add(int id, T1 v);
-    T1 sum(int n) const;
-    T1 sum(int l, int r) const;
+    void add(int id, T v);
+    T sum(int n) const;
+    T sum(int l, int r) const;
 
   private:
-    void _add(int id, T1 v);
-    T1 _sum(int id) const;
+    void _add(int id, T v);
+    T _sum(int id) const;
 
     // v[1]+v[2]+...+v[x]>=wとなる最小のxを求める
     // int lowerbound(T w) {
@@ -138,35 +130,35 @@ BinaryIndexedTree<BinaryIndexedTreePreset::Long::type,
  */
 
 
-template <typename T1, typename T2, typename T3>
-BinaryIndexedTree<T1, T2, T3>::BinaryIndexedTree(int _size, T2 addOperation,
-                                                 T3 invOperation, T1 zero)
+template <typename T, typename AddOperation, typename InvOperation>
+BinaryIndexedTree<T, AddOperation, InvOperation>::BinaryIndexedTree(
+    int _size, AddOperation addOperation, InvOperation invOperation, T zero)
     : _size(_size),
       addOperation(addOperation),
       invOperation(invOperation),
-      value(new T1[_size + 1]) {
+      value(new T[_size + 1]) {
     for (int i = 0; i <= _size; i++) {
         value[i] = zero;
     }
 }
 
-template <typename T1, typename T2, typename T3>
-int BinaryIndexedTree<T1, T2, T3>::size() const {
+template <typename T, typename AddOperation, typename InvOperation>
+int BinaryIndexedTree<T, AddOperation, InvOperation>::size() const {
     return _size;
 }
 
 
-template <typename T1, typename T2, typename T3>
-void BinaryIndexedTree<T1, T2, T3>::_add(int id, T1 v) {
+template <typename T, typename AddOperation, typename InvOperation>
+void BinaryIndexedTree<T, AddOperation, InvOperation>::_add(int id, T v) {
     while (id <= _size) {
         value[id] = addOperation(value[id], v);
         id += id & -id;
     }
 }
 
-template <typename T1, typename T2, typename T3>
-T1 BinaryIndexedTree<T1, T2, T3>::_sum(int id) const {
-    T1 s = 0;
+template <typename T, typename AddOperation, typename InvOperation>
+T BinaryIndexedTree<T, AddOperation, InvOperation>::_sum(int id) const {
+    T s = 0;
     while (id > 0) {
         s = addOperation(s, value[id]);
         id -= id & -id;
@@ -174,18 +166,18 @@ T1 BinaryIndexedTree<T1, T2, T3>::_sum(int id) const {
     return s;
 }
 
-template <typename T1, typename T2, typename T3>
-T1 BinaryIndexedTree<T1, T2, T3>::sum(int id) const {
+template <typename T, typename AddOperation, typename InvOperation>
+T BinaryIndexedTree<T, AddOperation, InvOperation>::sum(int id) const {
     return _sum(id);
 }
 
-template <typename T1, typename T2, typename T3>
-T1 BinaryIndexedTree<T1, T2, T3>::sum(int l, int r) const {
+template <typename T, typename AddOperation, typename InvOperation>
+T BinaryIndexedTree<T, AddOperation, InvOperation>::sum(int l, int r) const {
     return addOperation(_sum(r), invOperation(_sum(l)));
 }
 
-template <typename T1, typename T2, typename T3>
-void BinaryIndexedTree<T1, T2, T3>::add(int id, T1 v) {
+template <typename T, typename AddOperation, typename InvOperation>
+void BinaryIndexedTree<T, AddOperation, InvOperation>::add(int id, T v) {
     return _add(id + 1, v);
 }
 
