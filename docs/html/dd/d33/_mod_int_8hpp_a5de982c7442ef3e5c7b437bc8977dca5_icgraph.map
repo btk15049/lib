@@ -1,4 +1,5 @@
 <map id="add" name="add">
-<area shape="rect" id="node2" href="$dd/d33/_mod_int_8hpp.html#a6bd37fa7efeb660e7fcf583c1362c079" title="負数を求める単項演算子 " alt="" coords="98,5,171,32"/>
-<area shape="rect" id="node3" href="$dd/d33/_mod_int_8hpp.html#ad16a48d570bd34e72eac924aafeb1351" title="operator+" alt="" coords="96,56,173,83"/>
+<area shape="rect" id="node2" href="$dd/d33/_mod_int_8hpp.html#a6bd37fa7efeb660e7fcf583c1362c079" title="負数を求める単項演算子 " alt="" coords="139,5,213,32"/>
+<area shape="rect" id="node3" href="$dd/d33/_mod_int_8hpp.html#ad16a48d570bd34e72eac924aafeb1351" title="operator+" alt="" coords="137,56,215,83"/>
+<area shape="rect" id="node4" href="$d3/db7/class_binary_indexed_tree.html#a9615521efa40ff74273d41564ecd73ff" title="位置idにvを加算する " alt="" coords="96,107,256,133"/>
 </map>

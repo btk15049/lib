@@ -1,0 +1,7 @@
+<map id="isRight" name="isRight">
+<area shape="rect" id="node2" href="$d9/d9f/_segment_manager_8hpp.html#a5ec8a5f53390aeb93e944d54956834cc" title="点が区間に対して厳密に外にあるかどうかを判定 " alt="" coords="116,56,156,83"/>
+<area shape="rect" id="node3" href="$d9/d9f/_segment_manager_8hpp.html#aacd0368b22c9243590ed1ae2bcd888af" title="点が区間に対して境界上または内にあるかどうかを判定 " alt="" coords="204,56,243,83"/>
+<area shape="rect" id="node4" href="$d9/d9f/_segment_manager_8hpp.html#a9d81f4bf4e79d06097f40ecd4b6a41d9" title="区間s1が区間s2に対して境界上を含む内側にあるかどうかを判定 " alt="" coords="370,5,409,32"/>
+<area shape="rect" id="node5" href="$d9/d9f/_segment_manager_8hpp.html#a83ce4dfa26f46be0eb4ef13cb70bd489" title="区間s1が区間s2に対して外側にあるかどうかを判定 " alt="" coords="357,56,421,83"/>
+<area shape="rect" id="node6" href="$d0/de1/_matrix_8test_8cpp.html#a39307ed68514a68c0c228568dcb758dd" title="行列累乗のテストをフィボナッチで " alt="" coords="291,107,488,133"/>
+</map>

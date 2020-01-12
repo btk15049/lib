@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weightededge',['WeightedEdge',['../d4/d91/struct_weighted_edge.html',1,'']]]
+  ['unionfind',['UnionFind',['../d1/d4b/class_union_find.html',1,'']]]
 ];

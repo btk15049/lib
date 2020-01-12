@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "BinaryIndexedTree", "d3/db7/class_binary_indexed_tree.html", "d3/db7/class_binary_indexed_tree" ],
     [ "BlockBufferManager", "d0/d40/class_block_buffer_manager.html", "d0/d40/class_block_buffer_manager" ],
     [ "BufferManager", "da/dd6/class_buffer_manager.html", "da/dd6/class_buffer_manager" ],
     [ "BufferTest", "d4/df3/class_buffer_test.html", "d4/df3/class_buffer_test" ],
@@ -22,6 +23,8 @@ var annotated_dup =
     [ "range", "d2/d1f/classrange.html", "d2/d1f/classrange" ],
     [ "reverse_range", "d1/d4f/classreverse__range.html", "d1/d4f/classreverse__range" ],
     [ "RollingHash", "d5/d61/class_rolling_hash.html", "d5/d61/class_rolling_hash" ],
+    [ "Segment", "d2/d49/struct_segment.html", "d2/d49/struct_segment" ],
+    [ "SegmentManager", "d5/d17/class_segment_manager.html", "d5/d17/class_segment_manager" ],
     [ "Tree", "dd/df8/class_tree.html", "dd/df8/class_tree" ],
     [ "UnionFind", "d1/d4b/class_union_find.html", "d1/d4b/class_union_find" ],
     [ "WeightedEdge", "d4/d91/struct_weighted_edge.html", "d4/d91/struct_weighted_edge" ],

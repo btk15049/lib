@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "BinaryIndexedTree< T, AddOperation, InvOperation >", "d3/db7/class_binary_indexed_tree.html", null ],
     [ "BufferManager< T >", "da/dd6/class_buffer_manager.html", [
       [ "BlockBufferManager< T >", "d0/d40/class_block_buffer_manager.html", null ],
       [ "DisposableBufferManager< T >", "d0/d62/class_disposable_buffer_manager.html", null ]
@@ -33,6 +34,8 @@ var hierarchy =
     [ "range", "d2/d1f/classrange.html", null ],
     [ "reverse_range", "d1/d4f/classreverse__range.html", null ],
     [ "RollingHash< base, mod >", "d5/d61/class_rolling_hash.html", null ],
+    [ "Segment", "d2/d49/struct_segment.html", null ],
+    [ "SegmentManager", "d5/d17/class_segment_manager.html", null ],
     [ "RollingHash< base, mod >::Table", "d3/d84/class_rolling_hash_1_1_table.html", null ],
     [ "UnionFind", "d1/d4b/class_union_find.html", null ],
     [ "WeightedEdge< COST_TYPE >", "d4/d91/struct_weighted_edge.html", null ],

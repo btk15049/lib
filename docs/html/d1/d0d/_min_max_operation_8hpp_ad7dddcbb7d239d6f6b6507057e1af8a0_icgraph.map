@@ -1,5 +1,6 @@
 <map id="chmin" name="chmin">
 <area shape="rect" id="node2" href="$d3/d22/_graph_util_8hpp.html#a46fc58b7a7ce98f52b0417e3994287dd" title="通常のダイクストラ " alt="" coords="177,5,241,32"/>
-<area shape="rect" id="node4" href="$d4/d0d/_min_max_operation_8test_8cpp.html#a2b57de584e20cb77747eea9ed4b6ac97" title="chminのテスト " alt="" coords="111,56,308,83"/>
+<area shape="rect" id="node4" href="$d5/d17/class_segment_manager.html#a05f0add582c9118b20550a4e3aeaf8fd" title="現在の状態に対してsを追加し、変化があった差分を戻り値として返す " alt="" coords="133,56,286,83"/>
+<area shape="rect" id="node5" href="$d4/d0d/_min_max_operation_8test_8cpp.html#a2b57de584e20cb77747eea9ed4b6ac97" title="chminのテスト " alt="" coords="111,107,308,133"/>
 <area shape="rect" id="node3" href="$d8/dad/_graph_8test_8cpp.html#a886fab0f694a9447bfd980403af56fff" title="Construct a new boost auto test case object ダイクストラのテスト " alt="" coords="356,5,553,32"/>
 </map>
