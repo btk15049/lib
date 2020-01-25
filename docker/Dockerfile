@@ -19,8 +19,8 @@ ENV CC gcc-5
 ENV CXX g++-5
 
 # boost install
-RUN curl -OL https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.gz \
-    && tar xvfz ./boost_1_71_0.tar.gz \
+RUN curl -OL https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz \
+    && tar xvfz ./boost_1_72_0.tar.gz \
     && cd boost* \
     && ./bootstrap.sh \
     && ./b2 toolset=gcc-5 --prefix=/usr/local -j5 \
