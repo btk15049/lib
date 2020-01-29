@@ -16,7 +16,7 @@
   ],
   "settings": {
     "cmake.environment": {
-      "BOOST_PATH": "/home/user/.linuxbrew/Cellar/boost/1.71.0/include"
+      "BOOST_PATH": "/home/user/.linuxbrew/Cellar/boost/1.72.0/include"
     },
     "terminal.integrated.shell.linux": "/home/user/.linuxbrew/bin/fish"
   }
