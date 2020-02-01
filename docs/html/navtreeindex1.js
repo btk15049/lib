@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"d9/d9f/_segment_manager_8hpp.html#a5ec8a5f53390aeb93e944d54956834cc":[3,0,0,3,3,7],
+"d9/d9f/_segment_manager_8hpp.html#a83ce4dfa26f46be0eb4ef13cb70bd489":[3,0,0,3,3,8],
+"d9/d9f/_segment_manager_8hpp.html#a86fe2f334e63c8ef0916fc9c4145efea":[3,0,0,3,3,5],
 "d9/d9f/_segment_manager_8hpp.html#a9d81f4bf4e79d06097f40ecd4b6a41d9":[3,0,0,3,3,3],
 "d9/d9f/_segment_manager_8hpp.html#aacd0368b22c9243590ed1ae2bcd888af":[3,0,0,3,3,2],
 "d9/d9f/_segment_manager_8hpp.html#ac5e31fc83231dadde64b63b221a7398d":[3,0,0,3,3,4],
