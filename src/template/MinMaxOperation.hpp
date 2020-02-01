@@ -84,7 +84,7 @@ inline T multi_op(const T head, Ts&&... tail) {
  * @return T
  */
 template <typename T, typename... Ts>
-inline T multi_min(T&& head, Ts&&... tail) {
+inline T multi_min(T head, Ts... tail) {
     return multi_op<min_op<T>>(head, tail...);
 }
 
@@ -98,7 +98,7 @@ inline T multi_min(T&& head, Ts&&... tail) {
  * @return T
  */
 template <typename T, typename... Ts>
-inline T multi_max(T&& head, Ts&&... tail) {
+inline T multi_max(T head, Ts... tail) {
     return multi_op<max_op<T>>(head, tail...);
 }
 

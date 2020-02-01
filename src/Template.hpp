@@ -15,4 +15,6 @@
 #include "template/Macro.hpp"
 #include "template/MinMaxOperation.hpp"
 #include "template/Random.hpp"
+#include "template/Grid.hpp"
+#include "template/Strings.hpp"
 /*</head>*/

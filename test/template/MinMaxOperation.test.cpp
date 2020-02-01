@@ -25,6 +25,8 @@ BOOST_AUTO_TEST_CASE(MultiMin) {
     BOOST_CHECK_EQUAL(multi_min(2, 3, 4), 2);
     BOOST_CHECK_EQUAL(multi_min(3, 4, 2), 2);
     BOOST_CHECK_EQUAL(multi_min(4, 2, 3), 2);
+    int x = 3, y = 2, z = 4;
+    BOOST_CHECK_EQUAL(multi_min(x, y, z), 2);
 }
 
 /**
@@ -35,6 +37,8 @@ BOOST_AUTO_TEST_CASE(MultiMax) {
     BOOST_CHECK_EQUAL(multi_max(2, 3, 4), 4);
     BOOST_CHECK_EQUAL(multi_max(3, 4, 2), 4);
     BOOST_CHECK_EQUAL(multi_max(4, 2, 3), 4);
+    int x = 3, y = 2, z = 4;
+    BOOST_CHECK_EQUAL(multi_max(x, y, z), 4);
 }
 
 /**
