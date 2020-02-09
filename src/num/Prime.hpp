@@ -3,8 +3,12 @@
 #include <vector>
 /*</head>*/
 
-#include <vector>
-
+/**
+ * @brief n 以下の素数をvectorに列挙する
+ * @details n 以下の素数はだいたい n / log n 個
+ * @param n 入力
+ * @return std::vector<int> 素数のリスト
+ */
 std::vector<int> Eratosthenes( const int n )
 {
     std::vector<bool> isPrime( n + 1 );
@@ -26,3 +30,5 @@ std::vector<int> Eratosthenes( const int n )
     }
     return primes;
 }
+
+
