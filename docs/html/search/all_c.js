@@ -3,6 +3,7 @@ var searchData=
   ['macro_2ehpp',['Macro.hpp',['../de/d09/_macro_8hpp.html',1,'']]],
   ['macro_2etest_2ecpp',['Macro.test.cpp',['../d4/d31/_macro_8test_8cpp.html',1,'']]],
   ['macro_2ewhensubmit_2etest_2ecpp',['Macro.WhenSubmit.test.cpp',['../d6/d28/_macro_8_when_submit_8test_8cpp.html',1,'']]],
+  ['math',['math',['../dd/d47/namespacemath.html',1,'']]],
   ['matrix',['Matrix',['../d6/d3f/class_matrix.html',1,'Matrix&lt; T, row_size, col_size &gt;'],['../d6/d3f/class_matrix.html#afdef7c02708aa8b42755c6ad27350720',1,'Matrix::matrix()'],['../d6/d3f/class_matrix.html#a085a54338b66ab1c5c4d40d9c80df812',1,'Matrix::Matrix()'],['../d6/d3f/class_matrix.html#a685df7bd4b2e4e08a1e4d207b08b4817',1,'Matrix::Matrix(const Matrix &amp;o)']]],
   ['matrix_2ehpp',['Matrix.hpp',['../d8/d49/_matrix_8hpp.html',1,'']]],
   ['matrix_2etest_2ecpp',['Matrix.test.cpp',['../d0/de1/_matrix_8test_8cpp.html',1,'']]],
