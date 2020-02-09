@@ -1,14 +1,17 @@
 var searchData=
 [
-  ['same',['same',['../d1/d4b/class_union_find.html#aa1580fa407277914913231a7d752c7d8',1,'UnionFind']]],
-  ['sample_5fundirected_5fpath',['sample_undirected_path',['../d8/dad/_graph_8test_8cpp.html#ae5ad63b37b9a3d2dda920b11c577390c',1,'Graph.test.cpp']]],
-  ['sample_5fweighted_5fgraph',['sample_weighted_graph',['../d8/dad/_graph_8test_8cpp.html#aa5e7c6355a558695f66ecf6af795a960',1,'Graph.test.cpp']]],
-  ['segment',['Segment',['../d2/d49/struct_segment.html',1,'']]],
-  ['segmentmanager',['SegmentManager',['../d5/d17/class_segment_manager.html',1,'SegmentManager'],['../d5/d17/class_segment_manager.html#a9b1e5ca5f87cf0dc222dc269c6895b11',1,'SegmentManager::SegmentManager()']]],
-  ['segmentmanager_2ehpp',['SegmentManager.hpp',['../d9/d9f/_segment_manager_8hpp.html',1,'']]],
-  ['size',['size',['../da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34',1,'Graph::size()'],['../d3/db7/class_binary_indexed_tree.html#a1b8d48d94af3f19bfe20f80a39136dc2',1,'BinaryIndexedTree::size()'],['../db/d1d/namespacefactorial.html#a6bbd137b4b995b45e2c08792ae42492c',1,'factorial::size()']]],
-  ['solve',['solve',['../d2/dbc/class_dinic.html#a106e1fc1675c2316780bbc7cc906fbb0',1,'Dinic']]],
-  ['star',['star',['../d8/d1c/_i_o_8hpp.html#a2300ec6c7ff1e212d19431b279cd329c',1,'IO.hpp']]],
-  ['substr',['substr',['../d3/d84/class_rolling_hash_1_1_table.html#aaf3591f60bb8157ae1d6aa2d5846f1e5',1,'RollingHash::Table']]],
-  ['sum',['sum',['../d3/db7/class_binary_indexed_tree.html#a965c2c1e05c371947d232c3429534a77',1,'BinaryIndexedTree::sum(int n) const'],['../d3/db7/class_binary_indexed_tree.html#a6b492357b29281d1b5e53ffcb0f84dba',1,'BinaryIndexedTree::sum(int l, int r) const']]]
+  ['random_2ehpp',['Random.hpp',['../d0/d57/_random_8hpp.html',1,'']]],
+  ['random_2etest_2ecpp',['Random.test.cpp',['../df/d33/_random_8test_8cpp.html',1,'']]],
+  ['random_5faccess',['random_access',['../d4/d9e/class_n_d_array.html#a13217b61d1517b70c28d3fad764b9dc7',1,'NDArray']]],
+  ['range',['range',['../d2/d1f/classrange.html',1,'range'],['../d2/d1f/classrange.html#ad1941fb02d2c8cdcdc281d8d63ba7a63',1,'range::range(int n)'],['../d2/d1f/classrange.html#a458a13f8bcc86731a8beafba108ea84b',1,'range::range(int i, int n)']]],
+  ['range_5fmax',['range_max',['../db/d2c/class_xor_shift32.html#a31dbeb5a85455abfe599e73dba3b7a4b',1,'XorShift32']]],
+  ['raw',['raw',['../d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546',1,'ModInt']]],
+  ['rec',['REC',['../de/d09/_macro_8hpp.html#a848e3840f6ce872df8a72301636ef20c',1,'Macro.hpp']]],
+  ['resize',['resize',['../da/d9a/class_graph.html#acd74a091d791e166b1126b355b5e8325',1,'Graph']]],
+  ['rev',['rev',['../d4/d12/struct_flow_edge.html#a6f6aede74b1de01f3ab05e69d5a141af',1,'FlowEdge']]],
+  ['reverse_5frange',['reverse_range',['../d1/d4f/classreverse__range.html',1,'reverse_range'],['../d1/d4f/classreverse__range.html#af6187d9958de336cd61af477ae280d0f',1,'reverse_range::reverse_range(int n)'],['../d1/d4f/classreverse__range.html#a90823b9c9e5bad59865cb1805c9eaf43',1,'reverse_range::reverse_range(int i, int n)']]],
+  ['rollinghash',['RollingHash',['../d5/d61/class_rolling_hash.html',1,'RollingHash&lt; base, mod &gt;'],['../d5/d61/class_rolling_hash.html#a70c6380902840f5f8126d7160308d46a',1,'RollingHash::RollingHash()']]],
+  ['rollinghash_2ehpp',['RollingHash.hpp',['../df/d01/_rolling_hash_8hpp.html',1,'']]],
+  ['rollinghash_2etest_2ecpp',['RollingHash.test.cpp',['../db/d9f/_rolling_hash_8test_8cpp.html',1,'']]],
+  ['row_5farray',['row_array',['../d6/d3f/class_matrix.html#a9c67489bb11557790e7e5e91fcac8712',1,'Matrix']]]
 ];

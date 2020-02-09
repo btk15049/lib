@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['kmp',['KMP',['../de/df2/class_k_m_p.html',1,'KMP'],['../de/df2/class_k_m_p.html#a59abd9029f978e7acbf08c00e6c821ca',1,'KMP::KMP()']]],
-  ['kmp_2ehpp',['KMP.hpp',['../dd/d72/_k_m_p_8hpp.html',1,'']]],
-  ['kmp_2etest_2ecpp',['KMP.test.cpp',['../de/dff/_k_m_p_8test_8cpp.html',1,'']]]
+  ['join',['join',['../d2/dfe/_strings_8hpp.html#ace9d293749214ed9593165c5f104ceac',1,'join(const T &amp;v, const U delimiter):&#160;Strings.hpp'],['../d2/dfe/_strings_8hpp.html#ab5c18d2bf92c95462fb24ba9b487a66a',1,'join(const ITR bg, const ITR ed, const T delimiter):&#160;Strings.hpp']]]
 ];
