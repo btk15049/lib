@@ -155,6 +155,18 @@ BOOST_AUTO_TEST_CASE(LONG_SUM) {
         expected[p] += r;
         validate_add(tree2, expected);
     }
+
+    Preset tree3(10);
+    tree3.add(1, 1);
+    tree3.add(4, 3);
+    tree3.add(6, 2);
+    tree3.add(8, 1);
+    BOOST_CHECK_EQUAL(tree3.lowerBound(0), 0);
+    BOOST_CHECK_EQUAL(tree3.lowerBound(1), 1);
+    BOOST_CHECK_EQUAL(tree3.lowerBound(2), 4);
+    BOOST_CHECK_EQUAL(tree3.lowerBound(4), 4);
+    BOOST_CHECK_EQUAL(tree3.lowerBound(5), 6);
+    BOOST_CHECK_EQUAL(tree3.lowerBound(6), 6);
 }
 
 BOOST_AUTO_TEST_CASE(INT_XOR) {

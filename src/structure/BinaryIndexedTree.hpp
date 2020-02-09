@@ -64,20 +64,19 @@ class BinaryIndexedTree {
      */
     T sum(int l, int r) const;
 
+    /**
+     * @brief v[0]+v[1]+...+v[x]>=wとなる最小のxを求める
+     * @param w
+     * @return int32_t x
+     */
+    int32_t lowerBound(T w) const;
+
   private:
     void _add(int id, T v);
     T _sum(int id) const;
 
     // v[1]+v[2]+...+v[x]>=wとなる最小のxを求める
     // int lowerbound(T w) {
-    //    if (w <= 0) return 0;
-    //    int x = 0;
-    //    for (int k = (1 << (31 - __builtin_clz(sz))); k > 0; k >>= 1)
-    //        if (x + k <= sz && bit[x + k] < w) {
-    //            w -= bit[x + k];
-    //            x += k;
-    //        }
-    //    return x + 1;
     // }
 };
 
@@ -85,42 +84,42 @@ namespace BinaryIndexedTreePreset {
     namespace Int {
         using type = int32_t;
         namespace Sum {
-            const auto add  = [](type l, type r) { return l + r; };
-            const auto inv  = [](type v) { return -v; };
+            const auto add      = [](type l, type r) { return l + r; };
+            const auto inv      = [](type v) { return -v; };
             constexpr type zero = 0;
             using Preset =
                 BinaryIndexedTree<type, decltype(add), decltype(inv)>;
         } // namespace Sum
         namespace Xor {
-            const auto add  = [](type l, type r) { return l ^ r; };
-            const auto inv  = [](type v) { return v; };
+            const auto add      = [](type l, type r) { return l ^ r; };
+            const auto inv      = [](type v) { return v; };
             constexpr type zero = 0;
             using Preset =
                 BinaryIndexedTree<type, decltype(add), decltype(inv)>;
         } // namespace Xor
         namespace Max {
-            const auto add  = [](type l, type r) { return l > r ? l : r; };
-            const auto inv  = [](type v) { return -v; };
+            const auto add      = [](type l, type r) { return l > r ? l : r; };
+            const auto inv      = [](type v) { return -v; };
             constexpr type zero = 0;
             using Preset =
                 BinaryIndexedTree<type, decltype(add), decltype(inv)>;
-        }
+        } // namespace Max
 
     } // namespace Int
 
     namespace Long {
         using type = int64_t;
         namespace Sum {
-            const auto add  = [](type l, type r) { return l + r; };
-            const auto inv  = [](type v) { return -v; };
+            const auto add      = [](type l, type r) { return l + r; };
+            const auto inv      = [](type v) { return -v; };
             constexpr type zero = 0;
             using Preset =
                 BinaryIndexedTree<type, decltype(add), decltype(inv)>;
         } // namespace Sum
 
         namespace Xor {
-            const auto add  = [](type l, type r) { return l ^ r; };
-            const auto inv  = [](type v) { return v; };
+            const auto add      = [](type l, type r) { return l ^ r; };
+            const auto inv      = [](type v) { return v; };
             constexpr type zero = 0;
             using Preset =
                 BinaryIndexedTree<type, decltype(add), decltype(inv)>;
@@ -185,8 +184,19 @@ BinaryIndexedTree<BinaryIndexedTreePreset::Long::type,
                   decltype(BinaryIndexedTreePreset::Long::Xor::inv)>::
     BinaryIndexedTree(int _size);
 
-/* ######################################################################################
+/**
+ * @brief v[0]+v[1]+...+v[x]>=wとなる最小のxを求める
+ * @param w
+ * @return int32_t x
  */
+template <>
+int32_t BinaryIndexedTree<BinaryIndexedTreePreset::Long::type,
+                          decltype(BinaryIndexedTreePreset::Long::Sum::add),
+                          decltype(BinaryIndexedTreePreset::Long::Sum::inv)>::
+    lowerBound(BinaryIndexedTreePreset::Long::type w) const;
+
+// ######################################################################################
+// //
 
 
 template <typename T, typename AddOperation, typename InvOperation>
@@ -285,3 +295,20 @@ BinaryIndexedTree<BinaryIndexedTreePreset::Long::type,
     : BinaryIndexedTree(_size, BinaryIndexedTreePreset::Long::Xor::add,
                         BinaryIndexedTreePreset::Long::Xor::inv,
                         BinaryIndexedTreePreset::Long::Xor::zero) {}
+
+
+template <>
+int32_t BinaryIndexedTree<BinaryIndexedTreePreset::Long::type,
+                          decltype(BinaryIndexedTreePreset::Long::Sum::add),
+                          decltype(BinaryIndexedTreePreset::Long::Sum::inv)>::
+    lowerBound(BinaryIndexedTreePreset::Long::type w) const {
+    if (w <= 0) return 0;
+    int32_t x = 0;
+    for (int32_t k = (1 << (31 - __builtin_clz(_size))); k > 0; k >>= 1){
+        if (x + k <= _size && value[x + k] < w) {
+            w = addOperation(w, invOperation(value[x + k]));
+            x += k;
+        }
+    }
+    return x;
+}

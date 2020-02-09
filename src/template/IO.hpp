@@ -28,12 +28,12 @@ struct cww {
      */
     cww() {
 #ifdef FAST_IO
-        ios::sync_with_stdio(false);
-        cin.tie(0);
+        std::ios::sync_with_stdio(false);
+        std::cin.tie(0);
 #endif
 #ifdef DECIMAL_DIGITS
-        cout << fixed;
-        cout << setprecision(DECIMAL_DIGITS);
+        std::cout << std::fixed;
+        std::cout << std::setprecision(DECIMAL_DIGITS);
 #endif
     }
 };
