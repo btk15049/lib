@@ -379,7 +379,7 @@ namespace factorial {
 
     /**
      * @brief 重複組合せ
-     * @param n 何種類のものを
+     * @param n 何種類のものを (仕切りがn-1個)
      * @param r いくつ並べるか
      * @return ModInt nHr
      */
