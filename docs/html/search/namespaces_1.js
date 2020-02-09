@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['factorial',['factorial',['../db/d1d/namespacefactorial.html',1,'']]]
+  ['math',['math',['../dd/d47/namespacemath.html',1,'']]]
 ];

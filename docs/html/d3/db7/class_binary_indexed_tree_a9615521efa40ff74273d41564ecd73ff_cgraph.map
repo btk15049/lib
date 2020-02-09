@@ -1,7 +1,8 @@
 <map id="BinaryIndexedTree::add" name="BinaryIndexedTree::add">
-<area shape="rect" id="node2" href="$dd/d33/_mod_int_8hpp.html#a5de982c7442ef3e5c7b437bc8977dca5" title="add" alt="" coords="213,5,256,32"/>
-<area shape="rect" id="node5" href="$dd/d33/_mod_int_8hpp.html#a1cfb10c958b1ab7e64ff6cb109feee84" title="x^&#45;1 modを求める " alt="" coords="215,56,254,83"/>
-<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="整数から高速にModIntを作りたいときに使う " alt="" coords="304,5,395,32"/>
-<area shape="rect" id="node4" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される． " alt="" coords="443,31,553,57"/>
-<area shape="rect" id="node6" href="$d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="整数から安全にModIntを作りたいときに使う " alt="" coords="305,56,393,83"/>
+<area shape="rect" id="node2" href="$dd/d33/_mod_int_8hpp.html#a5de982c7442ef3e5c7b437bc8977dca5" title="add" alt="" coords="261,5,304,32"/>
+<area shape="rect" id="node5" href="$dd/d33/_mod_int_8hpp.html#a1cfb10c958b1ab7e64ff6cb109feee84" title="x^&#45;1 modを求める " alt="" coords="263,56,302,83"/>
+<area shape="rect" id="node7" href="$d3/db7/class_binary_indexed_tree.html#ac6829c79d845f8e3f057410fe5fba209" title="v[0]+v[1]+...+v[x]&gt;=wとなる最小のxを求める " alt="" coords="213,107,352,149"/>
+<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="整数から高速にModIntを作りたいときに使う " alt="" coords="400,5,491,32"/>
+<area shape="rect" id="node4" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される． " alt="" coords="539,31,649,57"/>
+<area shape="rect" id="node6" href="$d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="整数から安全にModIntを作りたいときに使う " alt="" coords="401,56,489,83"/>
 </map>
