@@ -1,6 +1,7 @@
 /*<head>*/
 #pragma once
 #include <vector>
+#include <cstdint>
 /*</head>*/
 
 /**
@@ -32,3 +33,18 @@ std::vector<int> Eratosthenes( const int n )
 }
 
 
+struct PrimeFactor{
+    int64_t prime;
+    int count;
+    PrimeFactor(){};
+    PrimeFactor(int64_t p) :prime(p), count(1){};
+    PrimeFactor(int64_t p, int c) :prime(p), count(c){};
+};
+
+std::vector<PrimeFactor> PrimeFactorDecomposition(int64_t n) {
+
+}
+
+std::vector<PrimeFactor> PrimeFactorDecomposition(int64_t n, std::vector<int64_t> reservedPrimes) {
+
+}

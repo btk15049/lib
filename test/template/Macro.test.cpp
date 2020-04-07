@@ -42,4 +42,21 @@ BOOST_AUTO_TEST_CASE(WhenLocal) {
     DEBUG;
     else BOOST_FAIL("ここには来ないはず");
 }
+
+/**
+ * @brief 多次元vector関数のテスト
+ */
+BOOST_AUTO_TEST_CASE(NestingVector) {
+    {
+        std::vector<int> expected(10, 0);
+        auto actual = nestingVector<int>(10);
+        BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(expected), std::end(expected),
+                                      std::begin(actual), std::end(actual));
+    }
+    {
+        std::vector<std::vector<int>> expected(20, std::vector<int>(10, 0));
+        auto actual = nestingVector<int>(20, 10);
+        BOOST_ASSERT(actual == expected);
+    }
+}
 BOOST_AUTO_TEST_SUITE_END()
