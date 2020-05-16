@@ -68,16 +68,6 @@ class Matrix {
     Matrix() {}
 
     /**
-     * @brief Matrixをコピーするメソッド
-     * @param o
-     * @return Matrix&
-     */
-    inline Matrix& copy(const Matrix& o) {
-        for (int i = 0; i < fixed_row_size; i++) value[i] = o[i];
-        return *this;
-    }
-
-    /**
      * @brief ディープコピーをします
      * @param o
      * @return Matrix&
@@ -88,7 +78,10 @@ class Matrix {
      * @brief コピーコンストラクタ
      * @param o
      */
-    Matrix(const Matrix& o) : value() { copy(o); }
+    Matrix(const Matrix& o) : value() {
+        for (int i = 0; i < fixed_row_size; i++) value[i] = o[i];
+        return *this;
+    }
 };
 
 /**
