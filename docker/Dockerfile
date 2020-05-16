@@ -23,8 +23,8 @@ RUN curl -OL https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.
     && tar xvfz ./boost_1_72_0.tar.gz \
     && cd boost* \
     && ./bootstrap.sh \
-    && ./b2 toolset=gcc-5 --prefix=/usr/local -j5 \
-    && ./b2 install toolset=gcc-5 --prefix=/usr/local -j5 \
+    && ./b2 toolset=gcc-9 --prefix=/usr/local -j5 \
+    && ./b2 install toolset=gcc-9 --prefix=/usr/local -j5 \
     && cd .. \
     && rm -rf boost*
 
