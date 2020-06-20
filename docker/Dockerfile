@@ -8,23 +8,23 @@ RUN apt-get update \
     build-essential \
     curl \
     file \
-    gcc-5 \
+    gcc-9 \
     git \
-    g++-5 \
+    g++-9 \
     libssl-dev \
     # 不要なキャッシュを削除
     && apt-get clean
 
-ENV CC gcc-5
-ENV CXX g++-5
+ENV CC gcc-9
+ENV CXX g++-9
 
 # boost install
 RUN curl -OL https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz \
     && tar xvfz ./boost_1_72_0.tar.gz \
     && cd boost* \
     && ./bootstrap.sh \
-    && ./b2 toolset=gcc-5 --prefix=/usr/local -j5 \
-    && ./b2 install toolset=gcc-5 --prefix=/usr/local -j5 \
+    && ./b2 toolset=gcc-9 --prefix=/usr/local -j5 \
+    && ./b2 install toolset=gcc-9 --prefix=/usr/local -j5 \
     && cd .. \
     && rm -rf boost*
 
