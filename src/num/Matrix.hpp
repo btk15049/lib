@@ -12,6 +12,7 @@
 /*<head>*/
 #pragma once
 #include "template/Loop.hpp"
+#include <algorithm>
 #include <array>
 /*</head>*/
 
@@ -70,17 +71,23 @@ class Matrix {
     /**
      * @brief ディープコピーをします
      * @param o
-     * @return Matrix&
+     * @return Matrix& コピー後のインスタンス
      */
-    inline Matrix& operator=(const Matrix& o) { return copy(o); }
+    inline Matrix& operator=(const Matrix& o) {
+        for (int i = 0; i < fixed_row_size; i++) value[i] = o[i];
+        return *this;
+    }
 
     /**
      * @brief コピーコンストラクタ
      * @param o
      */
-    Matrix(const Matrix& o) : value() {
-        for (int i = 0; i < fixed_row_size; i++) value[i] = o[i];
-        return *this;
+    Matrix(const Matrix& o) {
+        for (int i = 0; i < fixed_row_size; i++) {
+            for (int j = 0; j < fixed_col_size; j++) {
+                value[i][j] = o[i][j];
+            }
+        }
     }
 };
 
