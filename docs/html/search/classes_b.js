@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['segment',['Segment',['../d2/d49/struct_segment.html',1,'']]],
-  ['segmentmanager',['SegmentManager',['../d5/d17/class_segment_manager.html',1,'']]]
+  ['range',['range',['../d2/d1f/classrange.html',1,'']]],
+  ['reverse_5frange',['reverse_range',['../d1/d4f/classreverse__range.html',1,'']]],
+  ['rollinghash',['RollingHash',['../d5/d61/class_rolling_hash.html',1,'']]]
 ];

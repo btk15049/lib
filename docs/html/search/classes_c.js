@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['table',['Table',['../d3/d84/class_rolling_hash_1_1_table.html',1,'RollingHash']]],
-  ['tree',['Tree',['../dd/df8/class_tree.html',1,'']]]
+  ['segment',['Segment',['../d2/d49/struct_segment.html',1,'']]],
+  ['segmentmanager',['SegmentManager',['../d5/d17/class_segment_manager.html',1,'']]]
 ];

@@ -31,6 +31,7 @@ var hierarchy =
     [ "min_op< T >", "d5/ddb/structmin__op.html", null ],
     [ "ModInt", "d2/de3/class_mod_int.html", null ],
     [ "NDArray< T >", "d4/d9e/class_n_d_array.html", null ],
+    [ "PrimeFactor", "d5/d8f/struct_prime_factor.html", null ],
     [ "range", "d2/d1f/classrange.html", null ],
     [ "reverse_range", "d1/d4f/classreverse__range.html", null ],
     [ "RollingHash< base, mod >", "d5/d61/class_rolling_hash.html", null ],

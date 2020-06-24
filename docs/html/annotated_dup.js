@@ -20,6 +20,7 @@ var annotated_dup =
     [ "min_op", "d5/ddb/structmin__op.html", null ],
     [ "ModInt", "d2/de3/class_mod_int.html", "d2/de3/class_mod_int" ],
     [ "NDArray", "d4/d9e/class_n_d_array.html", "d4/d9e/class_n_d_array" ],
+    [ "PrimeFactor", "d5/d8f/struct_prime_factor.html", "d5/d8f/struct_prime_factor" ],
     [ "range", "d2/d1f/classrange.html", "d2/d1f/classrange" ],
     [ "reverse_range", "d1/d4f/classreverse__range.html", "d1/d4f/classreverse__range" ],
     [ "RollingHash", "d5/d61/class_rolling_hash.html", "d5/d61/class_rolling_hash" ],
