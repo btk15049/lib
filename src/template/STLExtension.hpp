@@ -14,4 +14,11 @@ namespace ext {
         sort(std::begin(container), std::end(container));
         return container;
     }
+
+    template <typename Container>
+    Container& reverse(Container& container) {
+        reverse(std::begin(container), std::end(container));
+        return container;
+    }
+
 } // namespace ext
