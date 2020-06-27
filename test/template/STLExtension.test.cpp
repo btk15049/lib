@@ -38,6 +38,15 @@ BOOST_AUTO_TEST_CASE(ReverseTest) {
         BOOST_CHECK_EQUAL_COLLECTIONS(actual.begin(), actual.end(),
                                       args.begin(), args.end());
     }
+    {
+        std::vector<int> args     = {2, 3, 1, 4};
+        std::vector<int> expected = {4, 3, 2, 1};
+        auto& actual              = ext::reverse(ext::sort(args));
+        BOOST_CHECK_EQUAL_COLLECTIONS(actual.begin(), actual.end(),
+                                      expected.begin(), expected.end());
+        BOOST_CHECK_EQUAL_COLLECTIONS(actual.begin(), actual.end(),
+                                      args.begin(), args.end());
+    }
 }
 
 //! @cond
