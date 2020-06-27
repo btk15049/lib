@@ -33,15 +33,15 @@ BOOST_AUTO_TEST_CASE(JoinTest) {
         BOOST_CHECK_EQUAL(expected, actual);
     }
     {
-        std::vector<std::string> args = {"a b"};
+        std::vector<std::string> args = {"a", "b"};
         std::string actual            = join(args, ' ');
         std::string expected          = "a b";
         BOOST_CHECK_EQUAL(expected, actual);
     }
     {
-        std::tuple<std::string, int> args = {"a", 1};
-        std::string actual                = join(args, ' ');
-        std::string expected              = "a 1";
+        std::tuple<std::string, int> args("a", 1);
+        std::string actual   = join(args, ' ');
+        std::string expected = "a 1";
         BOOST_CHECK_EQUAL(expected, actual);
     }
     {
