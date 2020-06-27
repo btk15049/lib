@@ -10,13 +10,13 @@
 
 namespace ext {
     template <typename Container>
-    Container& sort(Container& container) {
+    inline Container& sort(Container& container) {
         sort(std::begin(container), std::end(container));
         return container;
     }
 
     template <typename Container>
-    Container& reverse(Container& container) {
+    inline Container& reverse(Container& container) {
         reverse(std::begin(container), std::end(container));
         return container;
     }
