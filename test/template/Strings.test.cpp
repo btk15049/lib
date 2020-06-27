@@ -38,6 +38,17 @@ BOOST_AUTO_TEST_CASE(JoinTest) {
         std::string expected          = "a b";
         BOOST_CHECK_EQUAL(expected, actual);
     }
+    {
+        std::tuple<std::string, int> args = {"a", 1};
+        std::string actual                = join(args, ' ');
+        std::string expected              = "a 1";
+        BOOST_CHECK_EQUAL(expected, actual);
+    }
+    {
+        std::string actual   = join(std::make_tuple("a", 1, 1.5), ' ');
+        std::string expected = "a 1 1.5";
+        BOOST_CHECK_EQUAL(expected, actual);
+    }
 }
 
 //! @cond
