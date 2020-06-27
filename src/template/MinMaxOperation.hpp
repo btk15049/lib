@@ -135,7 +135,7 @@ inline bool chmin(T& target, Ts&&... candidates) {
 /**
  * @brief chminのmax版
  * @see chmin
- *  @tparam T 型
+ * @tparam T 型
  * @param target 変更する値
  * @param candidates
  * @return 更新があればtrue
