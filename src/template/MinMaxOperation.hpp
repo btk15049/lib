@@ -18,7 +18,7 @@
  * @tparam T
  */
 template <typename T>
-struct min_op {
+struct minFunc {
     /**
      * @brief 本体
      *
@@ -35,7 +35,7 @@ struct min_op {
  * @tparam T
  */
 template <typename T>
-struct max_op {
+struct maxFunc {
     /**
      * @brief 本体
      *
@@ -55,7 +55,7 @@ struct max_op {
  * @return T
  */
 template <typename F, typename T>
-inline T multi_op(T&& v) {
+inline T chain(T&& v) {
     return v;
 }
 
@@ -70,13 +70,13 @@ inline T multi_op(T&& v) {
  * @return T
  */
 template <typename F, typename T, typename... Ts>
-inline T multi_op(const T head, Ts&&... tail) {
-    return F::exec(head, multi_op<F>(tail...));
+inline T chain(const T head, Ts&&... tail) {
+    return F::exec(head, chain<F>(tail...));
 }
 
 /**
  * @brief 複数項の最小値
- * @see multi_op
+ * @see chain
  * @tparam T
  * @tparam Ts
  * @param head
@@ -84,13 +84,13 @@ inline T multi_op(const T head, Ts&&... tail) {
  * @return T
  */
 template <typename T, typename... Ts>
-inline T multi_min(T head, Ts... tail) {
-    return multi_op<min_op<T>>(head, tail...);
+inline T minOf(T head, Ts... tail) {
+    return chain<minFunc<T>>(head, tail...);
 }
 
 /**
  * @brief 複数項の最大値
- * @see multi_op
+ * @see chain
  * @tparam T
  * @tparam Ts
  * @param head
@@ -98,8 +98,8 @@ inline T multi_min(T head, Ts... tail) {
  * @return T
  */
 template <typename T, typename... Ts>
-inline T multi_max(T head, Ts... tail) {
-    return multi_op<max_op<T>>(head, tail...);
+inline T maxOf(T head, Ts... tail) {
+    return chain<maxFunc<T>>(head, tail...);
 }
 
 /**
@@ -114,9 +114,9 @@ inline T multi_max(T head, Ts... tail) {
  * @return false
  */
 template <typename F, typename T, typename... Ts>
-inline bool ch_op(T& target, Ts&&... candidates) {
+inline bool changeTarget(T& target, Ts&&... candidates) {
     const T old = target;
-    target      = multi_op<F>(target, candidates...);
+    target      = chain<F>(target, candidates...);
     return old != target;
 }
 
@@ -129,7 +129,7 @@ inline bool ch_op(T& target, Ts&&... candidates) {
  */
 template <typename T, typename... Ts>
 inline bool chmin(T& target, Ts&&... candidates) {
-    return ch_op<min_op<T>>(target, candidates...);
+    return changeTarget<minFunc<T>>(target, candidates...);
 }
 
 /**
@@ -142,5 +142,5 @@ inline bool chmin(T& target, Ts&&... candidates) {
  */
 template <typename T, typename... Ts>
 inline bool chmax(T& target, Ts&&... candidates) {
-    return ch_op<max_op<T>>(target, candidates...);
+    return changeTarget<maxFunc<T>>(target, candidates...);
 }

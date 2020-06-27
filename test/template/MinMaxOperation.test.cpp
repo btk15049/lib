@@ -18,34 +18,34 @@ BOOST_AUTO_TEST_SUITE(MinMaxOperation)
 BOOST_AUTO_TEST_SUITE(MultiOperation)
 
 /**
- * @brief multi_minのテスト
+ * @brief minOfのテスト
  * @details 左端，中央，右端が最小の場合を全て検証
  */
-BOOST_AUTO_TEST_CASE(MultiMin) {
-    BOOST_CHECK_EQUAL(multi_min(2, 3, 4), 2);
-    BOOST_CHECK_EQUAL(multi_min(3, 4, 2), 2);
-    BOOST_CHECK_EQUAL(multi_min(4, 2, 3), 2);
+BOOST_AUTO_TEST_CASE(MultiMinTest) {
+    BOOST_CHECK_EQUAL(minOf(2, 3, 4), 2);
+    BOOST_CHECK_EQUAL(minOf(3, 4, 2), 2);
+    BOOST_CHECK_EQUAL(minOf(4, 2, 3), 2);
     int x = 3, y = 2, z = 4;
-    BOOST_CHECK_EQUAL(multi_min(x, y, z), 2);
+    BOOST_CHECK_EQUAL(minOf(x, y, z), 2);
 }
 
 /**
- * @brief multi_minのテスト
+ * @brief minOfのテスト
  * @details 左端，中央，右端が最大の場合を全て検証
  */
-BOOST_AUTO_TEST_CASE(MultiMax) {
-    BOOST_CHECK_EQUAL(multi_max(2, 3, 4), 4);
-    BOOST_CHECK_EQUAL(multi_max(3, 4, 2), 4);
-    BOOST_CHECK_EQUAL(multi_max(4, 2, 3), 4);
+BOOST_AUTO_TEST_CASE(MultiMaxTest) {
+    BOOST_CHECK_EQUAL(maxOf(2, 3, 4), 4);
+    BOOST_CHECK_EQUAL(maxOf(3, 4, 2), 4);
+    BOOST_CHECK_EQUAL(maxOf(4, 2, 3), 4);
     int x = 3, y = 2, z = 4;
-    BOOST_CHECK_EQUAL(multi_max(x, y, z), 4);
+    BOOST_CHECK_EQUAL(maxOf(x, y, z), 4);
 }
 
 /**
  * @brief chminのテスト
  * @details 第一引数より {大きい，同じ，小さい} 場合を全て検証
  */
-BOOST_AUTO_TEST_CASE(ChMin) {
+BOOST_AUTO_TEST_CASE(ChangeMinTest) {
     int x;
     x = 10;
     BOOST_CHECK_EQUAL(chmin(x, 3, 4), true);
@@ -62,7 +62,7 @@ BOOST_AUTO_TEST_CASE(ChMin) {
  * @brief chmaxのテスト
  * @details 第一引数より {大きい，同じ，小さい} 場合を全て検証
  */
-BOOST_AUTO_TEST_CASE(ChMax) {
+BOOST_AUTO_TEST_CASE(ChangeMaxTest) {
     int x;
     x = 1;
     BOOST_CHECK_EQUAL(chmax(x, 3, 4), true);
