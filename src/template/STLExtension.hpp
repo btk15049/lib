@@ -62,6 +62,14 @@ namespace ext {
         return accumulate(container, T(0));
     }
 
+    /**
+     * @brief std::countのWrapper関数
+     * @tparam Container std::vectorやstd::listを想定
+     * @tparam T 数える値の型
+     * @param container コンテナオブジェクト
+     * @param value 数える値
+     * @return int
+     */
     template <typename Container, typename T>
     inline int count(Container& container, T value) {
         return std::count(std::begin(container), std::end(container), value);
