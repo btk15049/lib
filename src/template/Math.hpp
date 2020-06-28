@@ -1,29 +1,19 @@
+/**
+ * @file Math.hpp
+ * @author btk
+ * @brief 最大値とか最小値を求める
+ */
 /*<head>*/
 #pragma once
+#include "template/ChainOperation.hpp"
 #include <cstdint>
+#include <iostream>
 /*</head>*/
 
 /**
  * @brief gcd, ceil等自作算数用関数を集める。stdと被るので名前空間を区切る
  */
 namespace math {
-
-    /**
-     * @brief aとｂの最大公約数
-     * @param a int64
-     * @param b int64
-     * @return int64 最大公約数
-     */
-    int64_t gcd(int64_t a, int64_t b) { return (b == 0) ? a : gcd(b, a % b); }
-
-    /**
-     * @brief aとｂの最小公倍数
-     * @param a int64
-     * @param b int64
-     * @return int64 最小公倍数
-     */
-    int64_t lcm(int64_t a, int64_t b) { return (a / gcd(a, b)) * b; }
-
 
     /**
      * @brief 拡張ユークリッド互除法
@@ -40,6 +30,73 @@ namespace math {
         y         = 0;
         if (b != 0) g = extgcd(b, a % b, y, x), y -= (a / b) * x;
         return g;
+    }
+
+    namespace inner {
+        /**
+         * @brief 2項のgcdを求める
+         * @tparam T
+         */
+        template <typename T>
+        struct GCDFunc {
+            /**
+             * @brief 本体
+             * @param l
+             * @param r
+             * @return T
+             */
+            static inline T exec(T l, T r) {
+                std ::cerr << l << " " << r << std::endl;
+                while (r != 0) {
+                    T u = l % r;
+                    l   = r;
+                    r   = u;
+                }
+                std ::cerr << ">" << l << std::endl;
+
+                return l;
+            }
+        };
+
+        /**
+         * @brief 2項のgcdを求める
+         * @tparam T
+         */
+        template <typename T>
+        struct LCMFunc {
+            /**
+             * @brief 本体
+             * @param l
+             * @param r
+             * @return T
+             */
+            static inline T exec(T l, T r) {
+                return (l / GCDFunc<T>::exec(l, r)) * r;
+            }
+        };
+
+    } // namespace inner
+
+    /**
+     * @brief valuesの最大公約数
+     * @tparam Ts パラメータパック
+     * @param values gcdを求めたい値の集合（2個以上）
+     * @return int64 最大公約数
+     */
+    template <typename... Ts>
+    inline int64_t gcd(Ts &&... values) {
+        return chain<inner::GCDFunc<int64_t>>(values...);
+    }
+
+    /**
+     * @brief valuesの最小公倍数
+     * @tparam Ts パラメータパック
+     * @param values lcmを求めたい値の集合（2個以上）
+     * @return int64 最小公倍数
+     */
+    template <typename... Ts>
+    inline int64_t lcm(Ts &&... values) {
+        return chain<inner::LCMFunc<int64_t>>(values...);
     }
 
     /**
