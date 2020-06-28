@@ -7,7 +7,6 @@
 #pragma once
 #include "template/ChainOperation.hpp"
 #include <cstdint>
-#include <iostream>
 /*</head>*/
 
 /**
@@ -46,14 +45,11 @@ namespace math {
              * @return T
              */
             static inline T exec(T l, T r) {
-                std ::cerr << l << " " << r << std::endl;
                 while (r != 0) {
                     T u = l % r;
                     l   = r;
                     r   = u;
                 }
-                std ::cerr << ">" << l << std::endl;
-
                 return l;
             }
         };

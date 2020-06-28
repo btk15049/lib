@@ -26,7 +26,7 @@ inline T chain(T&& v) {
  * @return T
  */
 template <typename F, typename T, typename... Ts>
-inline T chain(const T head, Ts&&... tail) {
+inline auto chain(const T head, Ts&&... tail) {
     return F::exec(head, chain<F>(tail...));
 }
 

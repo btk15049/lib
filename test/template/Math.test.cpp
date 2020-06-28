@@ -37,8 +37,6 @@ BOOST_AUTO_TEST_CASE(GCDTest) {
     {
         auto actual      = math::gcd(0, 10 * int64_t(1e9), 15 * int64_t(1e9));
         int64_t expected = 5 * int64_t(1e9);
-        std::cerr << actual << std::endl;
-        std::cerr << expected << std::endl;
         BOOST_CHECK_EQUAL(actual, expected);
     }
 }
