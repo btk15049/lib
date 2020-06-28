@@ -77,6 +77,22 @@ BOOST_AUTO_TEST_CASE(AccumulateTest) {
     }
 }
 
+BOOST_AUTO_TEST_CASE(CountTest) {
+    {
+        std::vector<int> args = {1, 2, 3, 1};
+        int expected          = 2;
+        auto actual           = ext::count(args, 1);
+        BOOST_CHECK_EQUAL(actual, expected);
+    }
+    {
+        std::vector<int> args = {};
+        int expected          = 0;
+        auto actual           = ext::count(args, 1);
+        BOOST_CHECK_EQUAL(actual, expected);
+    }
+}
+
+
 //! @cond
 BOOST_AUTO_TEST_SUITE_END();
 //! @endcond

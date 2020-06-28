@@ -62,4 +62,9 @@ namespace ext {
         return accumulate(container, T(0));
     }
 
+    template <typename Container, typename T>
+    inline int count(Container& container, T value) {
+        return std::count(std::begin(container), std::end(container), value);
+    }
+
 } // namespace ext
