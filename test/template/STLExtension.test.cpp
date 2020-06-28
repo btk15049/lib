@@ -9,6 +9,7 @@
 //! @endcond
 #include "template/STLExtension.hpp"
 #include <boost/test/included/unit_test.hpp>
+#include <cstdint>
 #include <vector>
 
 //! @cond
@@ -46,6 +47,33 @@ BOOST_AUTO_TEST_CASE(ReverseTest) {
                                       expected.begin(), expected.end());
         BOOST_CHECK_EQUAL_COLLECTIONS(actual.begin(), actual.end(),
                                       args.begin(), args.end());
+    }
+}
+
+BOOST_AUTO_TEST_CASE(AccumulateTest) {
+    {
+        std::vector<int> args = {1, 10, 100, 1000};
+        int expected          = 1111;
+        auto actual           = ext::accumulate(args);
+        BOOST_CHECK_EQUAL(actual, expected);
+    }
+    {
+        std::vector<int> args = {1, 10, 100, 1000};
+        int expected          = 1111;
+        auto actual           = ext::accumulate(args, 0);
+        BOOST_CHECK_EQUAL(actual, expected);
+    }
+    {
+        std::vector<int64_t> args(100, 1e9);
+        int64_t expected = 1e11;
+        auto actual      = ext::accumulate(args);
+        BOOST_CHECK_EQUAL(actual, expected);
+    }
+    {
+        std::vector<int> args(1000, 1e9);
+        int64_t expected = 1e12;
+        auto actual      = ext::accumulate(args, int64_t(0));
+        BOOST_CHECK_EQUAL(actual, expected);
     }
 }
 

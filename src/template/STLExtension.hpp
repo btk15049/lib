@@ -6,6 +6,8 @@
 #pragma once
 #include <algorithm>
 #include <iterator>
+#include <numeric>
+#include <vector>
 /*</head>*/
 
 namespace ext {
@@ -33,6 +35,31 @@ namespace ext {
     inline Container& reverse(Container& container) {
         reverse(std::begin(container), std::end(container));
         return container;
+    }
+
+    /**
+     * @brief std::accumulateのvector限定Wrapper関数
+     * @tparam T 配列の要素の型
+     * @tparam U 戻り値の型
+     * @param container 配列
+     * @param zero 初期値
+     * @return U 総和
+     */
+    template <typename T, typename U>
+    inline U accumulate(const std::vector<T>& container, U zero) {
+        return std::accumulate(std::begin(container), std::end(container),
+                               zero);
+    }
+
+    /**
+     * @brief std::accumulateのvector限定Wrapper関数の、引数省略版
+     * @tparam T 配列の要素の型 && 戻り値の型
+     * @param container 配列
+     * @return T 総和 overflowに注意
+     */
+    template <typename T>
+    inline T accumulate(const std::vector<T>& container) {
+        return accumulate(container, T(0));
     }
 
 } // namespace ext
