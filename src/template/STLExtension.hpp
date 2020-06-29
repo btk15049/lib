@@ -24,6 +24,15 @@ namespace ext {
         return container;
     }
 
+    /**
+     * @brief std::sortのWrapper関数
+     * @tparam Container std::vectorやstd::listを想定
+     * @tparam Comparator 比較関数の型
+     * @param container ソートしたいコンテナオブジェクト
+     * @param comparator 比較関数
+     * @return Container&
+     * ソート後のコンテナオブジェクト==引数に渡したオブジェクト
+     */
     template <typename Container, typename Comparator>
     inline Container& sort(Container& container, Comparator comparator) {
         sort(std::begin(container), std::end(container), comparator);
