@@ -102,6 +102,33 @@ BOOST_AUTO_TEST_CASE(CountTest) {
     }
 }
 
+BOOST_AUTO_TEST_CASE(IotaTest) {
+    {
+        std::vector<int> expected = {0, 1, 2, 3};
+        auto actual               = ext::iota(4);
+        BOOST_CHECK_EQUAL_COLLECTIONS(actual.begin(), actual.end(),
+                                      expected.begin(), expected.end());
+    }
+    {
+        std::vector<int> expected = {1, 2, 3, 4, 5};
+        auto actual               = ext::iota(5, 1);
+        BOOST_CHECK_EQUAL_COLLECTIONS(actual.begin(), actual.end(),
+                                      expected.begin(), expected.end());
+    }
+    {
+        std::vector<int> expected = {2, 5, 8, 11};
+        auto actual               = ext::iota(4, 2, 3);
+        BOOST_CHECK_EQUAL_COLLECTIONS(actual.begin(), actual.end(),
+                                      expected.begin(), expected.end());
+    }
+    {
+        std::vector<int> expected = {1, -1, -3, -5};
+        auto actual               = ext::iota(4, 1, -2);
+        BOOST_CHECK_EQUAL_COLLECTIONS(actual.begin(), actual.end(),
+                                      expected.begin(), expected.end());
+    }
+}
+
 
 //! @cond
 BOOST_AUTO_TEST_SUITE_END();

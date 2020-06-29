@@ -90,4 +90,20 @@ namespace ext {
         return std::count(std::begin(container), std::end(container), value);
     }
 
+    /**
+     * @brief 等差数列のvectorを作る関数
+     * @param n 要素数
+     * @param startFrom 初項
+     * @param step 等差
+     * @return std::vector<int> 等差数列
+     */
+    inline std::vector<int> iota(int n, int startFrom = 0, int step = 1) {
+        std::vector<int> container(n);
+        int v = startFrom;
+        for (int i = 0; i < n; i++, v += step) {
+            container[i] = v;
+        }
+        return container;
+    }
+
 } // namespace ext
