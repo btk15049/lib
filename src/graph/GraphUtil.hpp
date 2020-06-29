@@ -9,7 +9,7 @@
 /*<head>*/
 #pragma once
 #include "graph/Graph.hpp"
-#include "template/MinMaxOperation.hpp"
+#include "template/Math.hpp"
 /*</head>*/
 
 #include <queue>
@@ -35,8 +35,8 @@ std::vector<U> dijkstra(Graph<T>& g, U inf, const int s = 0) {
     que.push(std::make_pair(-U(), s));
 
     while (!que.empty()) {
-        const int v       = que.top().second;
-        const U c = -que.top().first;
+        const int v = que.top().second;
+        const U c   = -que.top().first;
         que.pop();
         if (d[v] < c) continue;
         for (const int eid : g[v]) {
