@@ -94,7 +94,7 @@ namespace ext {
      * @brief 等差数列のvectorを作る関数
      * @param n 要素数
      * @param startFrom 初項
-     * @param step 等差
+     * @param step 公差
      * @return std::vector<int> 等差数列
      */
     inline std::vector<int> iota(int n, int startFrom = 0, int step = 1) {
