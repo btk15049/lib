@@ -24,6 +24,12 @@ namespace ext {
         return container;
     }
 
+    template <typename Container, typename Comparator>
+    inline Container& sort(Container& container, Comparator comparator) {
+        sort(std::begin(container), std::end(container), comparator);
+        return container;
+    }
+
     /**
      * @brief std::reverseのWrapper関数
      * @tparam Container std::vectorやstd::listを想定
