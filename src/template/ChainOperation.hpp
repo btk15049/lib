@@ -4,6 +4,11 @@
  * @brief パラメータパックを利用した演算子結合を実現
  */
 
+/*<head>*/
+#pragma once
+/*</head>*/
+
+
 /**
  * @brief テンプレート再帰の末尾
  * @tparam F 二項演算
