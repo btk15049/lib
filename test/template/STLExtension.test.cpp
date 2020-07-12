@@ -181,6 +181,18 @@ BOOST_AUTO_TEST_CASE(maxInTest) {
     }
 }
 
+BOOST_AUTO_TEST_CASE(minInTest) {
+    // maxInで多めに検証しているので、テストは少なめ
+    {
+        std::vector<int> args = {5, 2, 3, 100};
+        int expected          = 2;
+        auto actual           = ext::minIn(std::begin(args), std::end(args));
+        BOOST_CHECK_EQUAL(actual, expected);
+        actual = ext::minIn(args);
+        BOOST_CHECK_EQUAL(actual, expected);
+    }
+}
+
 //! @cond
 BOOST_AUTO_TEST_SUITE_END();
 //! @endcond

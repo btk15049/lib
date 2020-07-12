@@ -138,5 +138,34 @@ namespace ext {
         return maxIn(container.begin(), container.end(), defaultValue);
     }
 
+    /**
+     * @brief
+     * (*min_element) のwrapper、位置は返さない
+     * @tparam ITR iterator
+     * @param l iteratorの最初
+     * @param r iteratorの終了位置
+     * @param defaultValue 要素がないときのデフォルト値
+     * @return auto 最小値、型はコンテナ内の型
+     */
+    template <typename ITR>
+    inline auto minIn(ITR l, ITR r,
+                      std::remove_reference_t<decltype(*l)> defaultValue = 0) {
+        if (r == l) {
+            return defaultValue;
+        }
+        return *std::min_element(l, r);
+    }
+
+    /**
+     * @brief minIn の vector 限定版
+     * @tparam T 戻り値の型
+     * @param containter 最大値求める対象のコンテナ
+     * @param defaultValue コンテナの要素がない場合の初期値
+     * @return T 最小値、コンテナ似要素がない場合はdefaultValue
+     */
+    template <typename T>
+    inline T minIn(std::vector<T> container, T defaultValue = 0) {
+        return minIn(container.begin(), container.end(), defaultValue);
+    }
 
 } // namespace ext
