@@ -135,11 +135,15 @@ BOOST_AUTO_TEST_CASE(maxInTest) {
         int expected          = 3;
         auto actual           = ext::maxIn(std::begin(args), std::end(args));
         BOOST_CHECK_EQUAL(actual, expected);
+        actual = ext::maxIn(args);
+        BOOST_CHECK_EQUAL(actual, expected);
     }
     {
         std::vector<int> args = {1, 2, 3, 1};
         int expected          = 3;
         auto actual = ext::maxIn(std::begin(args), std::end(args), -1);
+        BOOST_CHECK_EQUAL(actual, expected);
+        actual = ext::maxIn(args, -1);
         BOOST_CHECK_EQUAL(actual, expected);
     }
     {
@@ -147,11 +151,15 @@ BOOST_AUTO_TEST_CASE(maxInTest) {
         int expected = -1;
         auto actual  = ext::maxIn(std::begin(args), std::end(args), -1);
         BOOST_CHECK_EQUAL(actual, expected);
+        actual = ext::maxIn(args, -1);
+        BOOST_CHECK_EQUAL(actual, expected);
     }
     {
         std::vector<int> args;
         int expected = 0;
         auto actual  = ext::maxIn(std::begin(args), std::end(args));
+        BOOST_CHECK_EQUAL(actual, expected);
+        actual = ext::maxIn(args);
         BOOST_CHECK_EQUAL(actual, expected);
     }
     {
@@ -159,12 +167,16 @@ BOOST_AUTO_TEST_CASE(maxInTest) {
         int64_t expected          = 1'000'000'000'000ll;
         auto actual = ext::maxIn(std::begin(args), std::end(args));
         BOOST_CHECK_EQUAL(actual, expected);
+        actual = ext::maxIn(args);
+        BOOST_CHECK_EQUAL(actual, expected);
     }
     {
         std::vector<int64_t> args = {};
         int64_t expected          = -1'000'000'000'000ll;
         auto actual =
             ext::maxIn(std::begin(args), std::end(args), -1'000'000'000'000ll);
+        BOOST_CHECK_EQUAL(actual, expected);
+        actual = ext::maxIn(args, -1'000'000'000'000ll);
         BOOST_CHECK_EQUAL(actual, expected);
     }
 }
