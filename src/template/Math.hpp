@@ -96,6 +96,37 @@ namespace math {
     }
 
     /**
+     * @brief iterator で指定された集合のlcmを求める
+     * @tparam ITR iterator
+     * @param l 開始位置
+     * @param r 終了位置
+     * @return int64_t lcm
+     */
+    template <typename ITR>
+    inline int64_t lcmIn(ITR l, ITR r) {
+        int64_t ret = 1;
+        for (auto it = l; it != r; ++it) {
+            ret = lcm(ret, *it);
+        }
+        return ret;
+    }
+
+    /**
+     * @brief container (配列など) で指定された要素のlcmを求める
+     * @tparam Container vectorやlist
+     * @param container コンテナ
+     * @return int64_t lcm
+     */
+    template <typename Container>
+    inline int64_t lcmIn(Container container) {
+        int64_t ret = 1;
+        for (auto e : container) {
+            ret = lcm(ret, e);
+        }
+        return ret;
+    }
+
+    /**
      * @brief u/dを切り上げした整数を求める
      * @todo 負の数への対応
      * @tparam T 整数型
