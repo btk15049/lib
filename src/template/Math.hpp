@@ -1,5 +1,11 @@
+/**
+ * @file Math.hpp
+ * @author btk
+ * @brief 最大値とか最小値を求める
+ */
 /*<head>*/
 #pragma once
+#include "template/ChainOperation.hpp"
 #include <cstdint>
 /*</head>*/
 
@@ -7,23 +13,6 @@
  * @brief gcd, ceil等自作算数用関数を集める。stdと被るので名前空間を区切る
  */
 namespace math {
-
-    /**
-     * @brief aとｂの最大公約数
-     * @param a int64
-     * @param b int64
-     * @return int64 最大公約数
-     */
-    int64_t gcd(int64_t a, int64_t b) { return (b == 0) ? a : gcd(b, a % b); }
-
-    /**
-     * @brief aとｂの最小公倍数
-     * @param a int64
-     * @param b int64
-     * @return int64 最小公倍数
-     */
-    int64_t lcm(int64_t a, int64_t b) { return (a / gcd(a, b)) * b; }
-
 
     /**
      * @brief 拡張ユークリッド互除法
@@ -42,6 +31,132 @@ namespace math {
         return g;
     }
 
+    namespace inner {
+        /**
+         * @brief 2項のgcdを求める
+         * @tparam T
+         */
+        template <typename T>
+        struct GCDFunc {
+            /**
+             * @brief 本体
+             * @param l
+             * @param r
+             * @return T
+             */
+            static inline T exec(T l, T r) {
+                while (r != 0) {
+                    T u = l % r;
+                    l   = r;
+                    r   = u;
+                }
+                return l;
+            }
+        };
+
+        /**
+         * @brief 2項のgcdを求める
+         * @tparam T
+         */
+        template <typename T>
+        struct LCMFunc {
+            /**
+             * @brief 本体
+             * @param l
+             * @param r
+             * @return T
+             */
+            static inline T exec(T l, T r) {
+                return (l / GCDFunc<T>::exec(l, r)) * r;
+            }
+        };
+
+    } // namespace inner
+
+    /**
+     * @brief valuesの最大公約数
+     * @tparam Ts パラメータパック
+     * @param values gcdを求めたい値の集合（2個以上）
+     * @return int64 最大公約数
+     */
+    template <typename... Ts>
+    inline int64_t gcd(Ts &&... values) {
+        return chain<inner::GCDFunc<int64_t>>(values...);
+    }
+
+    /**
+     * @brief valuesの最小公倍数
+     * @tparam Ts パラメータパック
+     * @param values lcmを求めたい値の集合（2個以上）
+     * @return int64 最小公倍数
+     */
+    template <typename... Ts>
+    inline int64_t lcm(Ts &&... values) {
+        return chain<inner::LCMFunc<int64_t>>(values...);
+    }
+
+    /**
+     * @brief iterator で指定された集合のlcmを求める
+     * @tparam ITR iterator
+     * @param l 開始位置
+     * @param r 終了位置
+     * @return int64_t lcm
+     */
+    template <typename ITR>
+    inline int64_t lcmAll(ITR l, ITR r) {
+        int64_t ret = 1;
+        for (auto it = l; it != r; ++it) {
+            ret = lcm(ret, *it);
+        }
+        return ret;
+    }
+
+    /**
+     * @brief container (配列など) で指定された要素のlcmを求める
+     * @tparam Container vectorやlist
+     * @param container コンテナ
+     * @return int64_t lcm
+     */
+    template <typename Container>
+    inline int64_t lcmAll(Container container) {
+        int64_t ret = 1;
+        for (auto e : container) {
+            ret = lcm(ret, e);
+        }
+        return ret;
+    }
+
+    /**
+     * @brief iterator で指定された集合のgcdを求める
+     * @tparam ITR iterator
+     * @param l 開始位置
+     * @param r 終了位置
+     * @return int64_t lcm
+     */
+    template <typename ITR>
+    inline int64_t gcdAll(ITR l, ITR r) {
+        int64_t ret = 0;
+        for (auto it = l; it != r; ++it) {
+            ret = gcd(ret, *it);
+        }
+        return ret;
+    }
+
+    /**
+     * @brief container (配列など) で指定された要素のgcdを求める
+     * @tparam Container vectorやlist
+     * @param container コンテナ
+     * @return int64_t gcd
+     */
+    template <typename Container>
+    inline int64_t gcdAll(Container container) {
+        int64_t ret = 0;
+        for (auto e : container) {
+            ret = gcd(ret, e);
+        }
+        return ret;
+    }
+
     /**
      * @brief u/dを切り上げした整数を求める
      * @todo 負の数への対応
@@ -56,3 +171,88 @@ namespace math {
     }
 
 } // namespace math
+
+/**
+ * @brief 2項の最小値求める
+ * @tparam T
+ */
+template <typename T>
+struct minFunc {
+    /**
+     * @brief 本体
+     * @param l
+     * @param r
+     * @return T
+     */
+    static T exec(const T l, const T r) { return l < r ? l : r; }
+};
+
+/**
+ * @brief 2項の最大値求める
+ *
+ * @tparam T
+ */
+template <typename T>
+struct maxFunc {
+    /**
+     * @brief 本体
+     *
+     * @param l
+     * @param r
+     * @return T
+     */
+    static T exec(const T l, const T r) { return l > r ? l : r; }
+};
+
+/**
+ * @brief 複数項の最小値
+ * @see chain
+ * @tparam T
+ * @tparam Ts
+ * @param head
+ * @param tail
+ * @return T
+ */
+template <typename T, typename... Ts>
+inline T minOf(T head, Ts... tail) {
+    return chain<minFunc<T>>(head, tail...);
+}
+
+/**
+ * @brief 複数項の最大値
+ * @see chain
+ * @tparam T
+ * @tparam Ts
+ * @param head
+ * @param tail
+ * @return T
+ */
+template <typename T, typename... Ts>
+inline T maxOf(T head, Ts... tail) {
+    return chain<maxFunc<T>>(head, tail...);
+}
+
+/**
+ * @brief change min
+ * @tparam T 型
+ * @param target 変更する値
+ * @param candidates
+ * @return 更新があればtrue
+ */
+template <typename T, typename... Ts>
+inline bool chmin(T &target, Ts &&... candidates) {
+    return changeTarget<minFunc<T>>(target, candidates...);
+}
+
+/**
+ * @brief chminのmax版
+ * @see chmin
+ * @tparam T 型
+ * @param target 変更する値
+ * @param candidates
+ * @return 更新があればtrue
+ */
+template <typename T, typename... Ts>
+inline bool chmax(T &target, Ts &&... candidates) {
+    return changeTarget<maxFunc<T>>(target, candidates...);
+}

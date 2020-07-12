@@ -2,22 +2,17 @@
  * @file SegmentManager.hpp
  * @author btk
  * @brief 区間を追加したり削除したりするやつ
- * @version 0.1
- * @date 2020-01-03
- * 
- * @copyright Copyright (c) 2020
- * 
  */
 
 /*<head>*/
 #pragma once
-#include "template/MinMaxOperation.hpp"
+#include "template/Math.hpp"
 #include <map>
 #include <vector>
 /*</head>*/
 
 /**
- * @brief 
+ * @brief
  * 区間を表す構造体
  * 半開区間[l,r)の形で管理される
  */
@@ -74,7 +69,9 @@ inline bool in(const int64_t v, const Segment s) { return !out(v, s); }
  * @return true s1がs2に完全に内包されている場合
  * @return それ以外
  */
-inline bool in(const Segment s1, const Segment s2) { return in(s1.l, s2) && in(s1.r -1 , s2); }
+inline bool in(const Segment s1, const Segment s2) {
+    return in(s1.l, s2) && in(s1.r - 1, s2);
+}
 
 /**
  * @brief 区間s1が区間s2に対して外側にあるかどうかを判定
@@ -89,16 +86,16 @@ inline bool operator==(const Segment& l, const Segment& r) {
     return l.l == r.l && l.r == r.r;
 }
 
-namespace std{
+namespace std {
     /**
      * @brief std::to_stringをオーバーロード、デバッグ用
      * @param s 区間
      * @return string 文字列
      */
     string to_string(Segment s) {
-        return "{"+to_string(s.l) + ", " + to_string(s.r) + "}";
+        return "{" + to_string(s.l) + ", " + to_string(s.r) + "}";
     }
-}
+} // namespace std
 
 /**
  * @brief 複数の区間を統合して管理するためのクラス
@@ -106,24 +103,29 @@ namespace std{
  */
 class SegmentManager {
   public:
-  /**
-   * @brief Construct a new Segment Manager object
-   */
+    /**
+     * @brief Construct a new Segment Manager object
+     */
     SegmentManager();
 
     /**
      * @brief 現在の状態に対してsを追加し、変化があった差分を戻り値として返す
      * @param s 追加する区間
-     * @return first 追加される区間の集合（入力とは異なる区間になる可能性があるので注意）
-     * @return second 削除される区間の集合（もとの入力とは異なる区間になる可能性があるので注意）
+     * @return first
+     * 追加される区間の集合（入力とは異なる区間になる可能性があるので注意）
+     * @return second
+     * 削除される区間の集合（もとの入力とは異なる区間になる可能性があるので注意）
      */
     std::pair<Segment, std::vector<Segment>> add(Segment s);
 
     /**
-     * @brief 現在の状態からsに覆われた範囲を削除し、変化があった差分を戻り値として返す
+     * @brief
+     * 現在の状態からsに覆われた範囲を削除し、変化があった差分を戻り値として返す
      * @param s 削除する区間
-     * @return first 追加される区間の集合（もとの入力とは異なる区間になる可能性があるので注意、高々サイズ2）
-     * @return second 削除される区間の集合（もとの入力とは異なる区間になる可能性があるので注意）
+     * @return first
+     * 追加される区間の集合（もとの入力とは異なる区間になる可能性があるので注意、高々サイズ2）
+     * @return second
+     * 削除される区間の集合（もとの入力とは異なる区間になる可能性があるので注意）
      */
     std::pair<std::vector<Segment>, std::vector<Segment>> erase(Segment s);
 
@@ -159,7 +161,7 @@ SegmentManager::erase(Segment s) {
     std::vector<Segment> deleted;
     std::vector<Segment> inserted;
 
-    for (auto it                                     = data.upper_bound(s.l);
+    for (auto it                                    = data.upper_bound(s.l);
          it != data.end() && it->second.l < s.r; it = next(it)) {
         if (it->second.l < s.l) {
             inserted.push_back(Segment(it->second.l, s.l));
@@ -181,7 +183,7 @@ SegmentManager::erase(Segment s) {
 
 std::vector<Segment> SegmentManager::all() {
     std::vector<Segment> result;
-    for (auto &it:data){
+    for (auto& it : data) {
         result.push_back(it.second);
     }
     return result;

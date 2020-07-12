@@ -9,12 +9,11 @@
 /*<head>*/
 #pragma once
 #include "template/Grid.hpp"
-#include "template/IncludeSTL.hpp"
 #include "template/IO.hpp"
+#include "template/IncludeSTL.hpp"
 #include "template/Loop.hpp"
 #include "template/Macro.hpp"
 #include "template/Math.hpp"
-#include "template/MinMaxOperation.hpp"
 #include "template/Random.hpp"
 #include "template/Strings.hpp"
 /*</head>*/
