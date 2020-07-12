@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <iterator>
 #include <numeric>
+#include <type_traits>
 #include <vector>
 /*</head>*/
 
@@ -105,5 +106,15 @@ namespace ext {
         }
         return container;
     }
+
+    template <typename ITR>
+    inline auto maxIn(ITR l, ITR r,
+                      std::remove_reference_t<decltype(*l)> defaultValue = 0) {
+        if (r == l) {
+            return defaultValue;
+        }
+        return *std::max_element(l, r);
+    }
+
 
 } // namespace ext
