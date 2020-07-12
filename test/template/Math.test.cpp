@@ -39,6 +39,18 @@ BOOST_AUTO_TEST_CASE(GCDTest) {
         int64_t expected = 5 * int64_t(1e9);
         BOOST_CHECK_EQUAL(actual, expected);
     }
+    {
+        std::vector<int> args = {12, 30, 10};
+        auto actual           = math::gcdIn(args.begin(), args.end());
+        int64_t expected      = 2;
+        BOOST_CHECK_EQUAL(actual, expected);
+    }
+    {
+        std::vector<int> args = {1, 0, 0};
+        auto actual           = math::gcdIn(args.begin(), args.end());
+        int64_t expected      = 1;
+        BOOST_CHECK_EQUAL(actual, expected);
+    }
 }
 
 /**
