@@ -103,7 +103,7 @@ namespace math {
      * @return int64_t lcm
      */
     template <typename ITR>
-    inline int64_t lcmIn(ITR l, ITR r) {
+    inline int64_t lcmAll(ITR l, ITR r) {
         int64_t ret = 1;
         for (auto it = l; it != r; ++it) {
             ret = lcm(ret, *it);
@@ -118,7 +118,7 @@ namespace math {
      * @return int64_t lcm
      */
     template <typename Container>
-    inline int64_t lcmIn(Container container) {
+    inline int64_t lcmAll(Container container) {
         int64_t ret = 1;
         for (auto e : container) {
             ret = lcm(ret, e);
@@ -134,7 +134,7 @@ namespace math {
      * @return int64_t lcm
      */
     template <typename ITR>
-    inline int64_t gcdIn(ITR l, ITR r) {
+    inline int64_t gcdAll(ITR l, ITR r) {
         int64_t ret = 0;
         for (auto it = l; it != r; ++it) {
             ret = gcd(ret, *it);
@@ -149,7 +149,7 @@ namespace math {
      * @return int64_t gcd
      */
     template <typename Container>
-    inline int64_t gcdIn(Container container) {
+    inline int64_t gcdAll(Container container) {
         int64_t ret = 0;
         for (auto e : container) {
             ret = gcd(ret, e);
