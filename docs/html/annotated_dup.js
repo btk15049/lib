@@ -1,5 +1,7 @@
 var annotated_dup =
 [
+    [ "math", "dd/d47/namespacemath.html", "dd/d47/namespacemath" ],
+    [ "strings", "df/dcb/namespacestrings.html", "df/dcb/namespacestrings" ],
     [ "BinaryIndexedTree", "d3/db7/class_binary_indexed_tree.html", "d3/db7/class_binary_indexed_tree" ],
     [ "BlockBufferManager", "d0/d40/class_block_buffer_manager.html", "d0/d40/class_block_buffer_manager" ],
     [ "BufferManager", "da/dd6/class_buffer_manager.html", "da/dd6/class_buffer_manager" ],
@@ -16,8 +18,8 @@ var annotated_dup =
     [ "HeavyLightDecomposition", "d3/d4c/class_heavy_light_decomposition.html", "d3/d4c/class_heavy_light_decomposition" ],
     [ "KMP", "de/df2/class_k_m_p.html", "de/df2/class_k_m_p" ],
     [ "Matrix", "d6/d3f/class_matrix.html", "d6/d3f/class_matrix" ],
-    [ "max_op", "dd/dbb/structmax__op.html", null ],
-    [ "min_op", "d5/ddb/structmin__op.html", null ],
+    [ "maxFunc", "d0/d85/structmax_func.html", null ],
+    [ "minFunc", "da/df7/structmin_func.html", null ],
     [ "ModInt", "d2/de3/class_mod_int.html", "d2/de3/class_mod_int" ],
     [ "NDArray", "d4/d9e/class_n_d_array.html", "d4/d9e/class_n_d_array" ],
     [ "PrimeFactor", "d5/d8f/struct_prime_factor.html", "d5/d8f/struct_prime_factor" ],

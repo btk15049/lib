@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kmp',['KMP',['../de/df2/class_k_m_p.html',1,'']]]
+  ['indexwrapper',['IndexWrapper',['../df/d54/structstrings_1_1_index_wrapper.html',1,'strings']]]
 ];

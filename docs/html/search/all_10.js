@@ -9,6 +9,7 @@ var searchData=
   ['rec',['REC',['../de/d09/_macro_8hpp.html#a848e3840f6ce872df8a72301636ef20c',1,'Macro.hpp']]],
   ['resize',['resize',['../da/d9a/class_graph.html#acd74a091d791e166b1126b355b5e8325',1,'Graph']]],
   ['rev',['rev',['../d4/d12/struct_flow_edge.html#a6f6aede74b1de01f3ab05e69d5a141af',1,'FlowEdge']]],
+  ['reverse',['reverse',['../d4/d19/_s_t_l_extension_8hpp.html#a3c4370a67563da5a0e302f38c2ec58fe',1,'ext']]],
   ['reverse_5frange',['reverse_range',['../d1/d4f/classreverse__range.html',1,'reverse_range'],['../d1/d4f/classreverse__range.html#af6187d9958de336cd61af477ae280d0f',1,'reverse_range::reverse_range(int n)'],['../d1/d4f/classreverse__range.html#a90823b9c9e5bad59865cb1805c9eaf43',1,'reverse_range::reverse_range(int i, int n)']]],
   ['rollinghash',['RollingHash',['../d5/d61/class_rolling_hash.html',1,'RollingHash&lt; base, mod &gt;'],['../d5/d61/class_rolling_hash.html#a70c6380902840f5f8126d7160308d46a',1,'RollingHash::RollingHash()']]],
   ['rollinghash_2ehpp',['RollingHash.hpp',['../df/d01/_rolling_hash_8hpp.html',1,'']]],

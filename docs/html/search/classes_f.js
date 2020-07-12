@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['weightededge',['WeightedEdge',['../d4/d91/struct_weighted_edge.html',1,'']]]
+  ['segment',['Segment',['../d2/d49/struct_segment.html',1,'']]],
+  ['segmentmanager',['SegmentManager',['../d5/d17/class_segment_manager.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['primefactor',['PrimeFactor',['../d5/d8f/struct_prime_factor.html',1,'']]]
+  ['lcmfunc',['LCMFunc',['../dc/d48/structmath_1_1inner_1_1_l_c_m_func.html',1,'math::inner']]]
 ];

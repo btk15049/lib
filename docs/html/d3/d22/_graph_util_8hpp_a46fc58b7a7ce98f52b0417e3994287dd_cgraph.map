@@ -1,5 +1,5 @@
 <map id="dijkstra" name="dijkstra">
 <area shape="rect" id="node2" href="$da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34" title="グラフの頂点数を返す " alt="" coords="117,5,207,32"/>
 <area shape="rect" id="node3" href="$da/d9a/class_graph.html#a2ab07cab9c48c18daebf7c8aaad861af" title="辺番号から辺の参照を取得する " alt="" coords="121,56,203,83"/>
-<area shape="rect" id="node4" href="$d1/d0d/_min_max_operation_8hpp.html#ad7dddcbb7d239d6f6b6507057e1af8a0" title="change min " alt="" coords="133,107,191,133"/>
+<area shape="rect" id="node4" href="$dc/dba/_math_8hpp.html#ad7dddcbb7d239d6f6b6507057e1af8a0" title="change min " alt="" coords="133,107,191,133"/>
 </map>

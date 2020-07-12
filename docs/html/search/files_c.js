@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['template_2ehpp',['Template.hpp',['../df/dc0/_template_8hpp.html',1,'']]],
-  ['tree_2ehpp',['Tree.hpp',['../d2/d21/_tree_8hpp.html',1,'']]],
-  ['tree_2etest_2ecpp',['Tree.test.cpp',['../d6/d94/_tree_8test_8cpp.html',1,'']]]
+  ['segmentmanager_2ehpp',['SegmentManager.hpp',['../d9/d9f/_segment_manager_8hpp.html',1,'']]],
+  ['stlextension_2ehpp',['STLExtension.hpp',['../d4/d19/_s_t_l_extension_8hpp.html',1,'']]],
+  ['strings_2ehpp',['Strings.hpp',['../d2/dfe/_strings_8hpp.html',1,'']]],
+  ['strings_2etest_2ecpp',['Strings.test.cpp',['../da/d72/_strings_8test_8cpp.html',1,'']]]
 ];
