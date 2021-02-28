@@ -15,6 +15,6 @@
 #include "template/Macro.hpp"
 #include "template/Math.hpp"
 #include "template/Random.hpp"
-#include "temp;ate/STLExtension.hpp"
+#include "template/STLExtension.hpp"
 #include "template/Strings.hpp"
 /*</head>*/
