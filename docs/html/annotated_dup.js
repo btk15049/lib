@@ -7,7 +7,6 @@ var annotated_dup =
     [ "BufferManager", "da/dd6/class_buffer_manager.html", "da/dd6/class_buffer_manager" ],
     [ "BufferTest", "d4/df3/class_buffer_test.html", "d4/df3/class_buffer_test" ],
     [ "Chain", "d7/dfb/class_chain.html", "d7/dfb/class_chain" ],
-    [ "cww", "d8/d22/structcww.html", "d8/d22/structcww" ],
     [ "Dinic", "d2/dbc/class_dinic.html", "d2/dbc/class_dinic" ],
     [ "DisposableBufferManager", "d0/d62/class_disposable_buffer_manager.html", "d0/d62/class_disposable_buffer_manager" ],
     [ "Edge", "d5/db4/struct_edge.html", "d5/db4/struct_edge" ],

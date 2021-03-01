@@ -14,6 +14,5 @@ var searchData=
   ['combination',['combination',['../db/d1d/namespacefactorial.html#a7dfbf1497818a073c6b35c59bec734fa',1,'factorial']]],
   ['compute',['compute',['../d7/dfb/class_chain.html#a12990fc8425bb7a1f5d8c608ac24a693',1,'Chain']]],
   ['cost',['cost',['../d4/d91/struct_weighted_edge.html#ac277a832dda5b850d5d049a69b2a065b',1,'WeightedEdge']]],
-  ['count',['count',['../d5/d8f/struct_prime_factor.html#ad501448410df381f92473cc2f3a7f2e4',1,'PrimeFactor::count()'],['../d4/d19/_s_t_l_extension_8hpp.html#a793eb926345978297b088f99d1db2910',1,'ext::count()']]],
-  ['cww',['cww',['../d8/d22/structcww.html',1,'cww'],['../d8/d22/structcww.html#a5e40c19c8061c67e7327080a6633190c',1,'cww::cww()']]]
+  ['count',['count',['../d5/d8f/struct_prime_factor.html#ad501448410df381f92473cc2f3a7f2e4',1,'PrimeFactor::count()'],['../d4/d19/_s_t_l_extension_8hpp.html#a793eb926345978297b088f99d1db2910',1,'ext::count()']]]
 ];
