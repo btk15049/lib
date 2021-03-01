@@ -2,15 +2,14 @@
  * @file IO.hpp
  * @author btk
  * @brief cin高速化とか，出力の小数桁固定とか
- * @version 0.1
- * @date 2019-07-13
+ * @version 0.2
+ * @date 2021-03-01
  *
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2021
  */
 
 /*<head>*/
 #pragma once
-#include "template/Macro.hpp"
 #include <iomanip>
 #include <iostream>
 #include <vector>
@@ -19,27 +18,17 @@
 /**
  * @brief 入出力の設定を行うための構造体
  */
-struct cww {
-    /**
-     * @brief Construct a new cww::cww object
-     * @details
-     * CIN_ONLYを定義すると，submit時にcinとscanfの同期を切る設定が走る
-     * DECIMAL_DIGITSを定義すると，doubleの出力時指定した桁数分小数部を吐くようになる
-     */
-    cww() {
-#ifdef FAST_IO
+
+namespace io {
+    inline void enableFastIO() {
         std::ios::sync_with_stdio(false);
         std::cin.tie(0);
-#endif
-#ifdef DECIMAL_DIGITS
-        std::cout << std::fixed;
-        std::cout << std::setprecision(DECIMAL_DIGITS);
-#endif
     }
-};
-
-//! 入出力設定構造体を実体化
-cww star;
+    inline void setDigits(int digits) {
+        std::cout << std::fixed;
+        std::cout << std::setprecision(digits);
+    }
+} // namespace io
 
 /**
  * @brief

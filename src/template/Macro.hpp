@@ -14,9 +14,6 @@
 #include <vector>
 /*</head>*/
 
-//! LL
-using LL = long long;
-
 /**
  * @def DEBUG
  * @brief デバッグ用のif文 提出時はif(0)で実行されない
@@ -26,9 +23,6 @@ using LL = long long;
 #ifdef BTK
 #    define DEBUG if (1)
 #else
-#    ifdef CIN_ONLY
-#        define FAST_IO
-#    endif
 #    define DEBUG if (0)
 #endif
 /**
@@ -60,10 +54,13 @@ inline T& unused_var(T& v) {
     return v;
 }
 
-template<typename T>
-std::vector<T>nestingVector(std::size_t size){return std::vector<T>(size);}
+template <typename T>
+std::vector<T> nestingVector(std::size_t size) {
+    return std::vector<T>(size);
+}
 
-template <typename T,typename... Ts>
-inline auto nestingVector(std::size_t size, Ts... ts){
-    return std::vector<decltype(nestingVector<T>(ts...))>(size, nestingVector<T>(ts...));
+template <typename T, typename... Ts>
+inline auto nestingVector(std::size_t size, Ts... ts) {
+    return std::vector<decltype(nestingVector<T>(ts...))>(
+        size, nestingVector<T>(ts...));
 }
