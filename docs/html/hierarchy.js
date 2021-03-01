@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "math::BetouzSolution", "d3/ddc/structmath_1_1_betouz_solution.html", null ],
     [ "BinaryIndexedTree< T, AddOperation, InvOperation >", "d3/db7/class_binary_indexed_tree.html", null ],
     [ "BufferManager< T >", "da/dd6/class_buffer_manager.html", [
       [ "BlockBufferManager< T >", "d0/d40/class_block_buffer_manager.html", null ],
