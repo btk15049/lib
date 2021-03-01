@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['strings',['strings',['../df/dcb/namespacestrings.html',1,'']]]
+  ['math',['math',['../dd/d47/namespacemath.html',1,'']]]
 ];

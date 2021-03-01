@@ -8,7 +8,6 @@ var hierarchy =
     [ "BufferManager< int >", "da/dd6/class_buffer_manager.html", null ],
     [ "BufferTest", "d4/df3/class_buffer_test.html", null ],
     [ "Chain< T, r, size >", "d7/dfb/class_chain.html", null ],
-    [ "cww", "d8/d22/structcww.html", null ],
     [ "Dinic< T, flow_inf >", "d2/dbc/class_dinic.html", null ],
     [ "Edge", "d5/db4/struct_edge.html", null ],
     [ "FlowEdge< F >", "d4/d12/struct_flow_edge.html", null ],

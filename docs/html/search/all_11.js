@@ -9,7 +9,6 @@ var searchData=
   ['size',['size',['../da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34',1,'Graph::size()'],['../d3/db7/class_binary_indexed_tree.html#a1b8d48d94af3f19bfe20f80a39136dc2',1,'BinaryIndexedTree::size()'],['../db/d1d/namespacefactorial.html#a6bbd137b4b995b45e2c08792ae42492c',1,'factorial::size()']]],
   ['solve',['solve',['../d2/dbc/class_dinic.html#a106e1fc1675c2316780bbc7cc906fbb0',1,'Dinic']]],
   ['sort',['sort',['../d4/d19/_s_t_l_extension_8hpp.html#a85eebae905e5b0c5a31db11bef959fd0',1,'ext::sort(Container &amp;container)'],['../d4/d19/_s_t_l_extension_8hpp.html#a42fac516c8af04548601320733b50f63',1,'ext::sort(Container &amp;container, Comparator comparator)']]],
-  ['star',['star',['../d8/d1c/_i_o_8hpp.html#a2300ec6c7ff1e212d19431b279cd329c',1,'IO.hpp']]],
   ['stlextension_2ehpp',['STLExtension.hpp',['../d4/d19/_s_t_l_extension_8hpp.html',1,'']]],
   ['strings',['strings',['../df/dcb/namespacestrings.html',1,'']]],
   ['strings_2ehpp',['Strings.hpp',['../d2/dfe/_strings_8hpp.html',1,'']]],

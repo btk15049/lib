@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrix',['matrix',['../d6/d3f/class_matrix.html#afdef7c02708aa8b42755c6ad27350720',1,'Matrix']]]
+  ['row_5farray',['row_array',['../d6/d3f/class_matrix.html#a9c67489bb11557790e7e5e91fcac8712',1,'Matrix']]]
 ];

@@ -10,6 +10,5 @@ var searchData=
   ['color',['color',['../d3/d4c/class_heavy_light_decomposition.html#a15fd1f0ad3c1c17b68463cdff8cb5e67',1,'HeavyLightDecomposition']]],
   ['combination',['combination',['../db/d1d/namespacefactorial.html#a7dfbf1497818a073c6b35c59bec734fa',1,'factorial']]],
   ['compute',['compute',['../d7/dfb/class_chain.html#a12990fc8425bb7a1f5d8c608ac24a693',1,'Chain']]],
-  ['count',['count',['../d4/d19/_s_t_l_extension_8hpp.html#a793eb926345978297b088f99d1db2910',1,'ext']]],
-  ['cww',['cww',['../d8/d22/structcww.html#a5e40c19c8061c67e7327080a6633190c',1,'cww']]]
+  ['count',['count',['../d4/d19/_s_t_l_extension_8hpp.html#a793eb926345978297b088f99d1db2910',1,'ext']]]
 ];
