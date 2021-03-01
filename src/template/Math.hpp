@@ -7,6 +7,7 @@
 #pragma once
 #include "template/ChainOperation.hpp"
 #include <cstdint>
+#include <optional>
 /*</head>*/
 
 /**
@@ -29,6 +30,38 @@ namespace math {
         y         = 0;
         if (b != 0) g = extgcd(b, a % b, y, x), y -= (a / b) * x;
         return g;
+    }
+
+
+    /**
+     * @brief 一次不定方程式の解
+     * @details 値の説明は betouzEquation 関数を参照のこと
+     */
+    struct BetouzSolution {
+        int64_t x, y, dx, dy;
+    };
+
+
+    /**
+     * @brief 一次不定方程式
+     * @details a(x + k*dx) + b(y -k*dy) = cとなる x, y, dx, dy を求める。
+     * @param a 入力
+     * @param b 入力
+     * @param c 入力
+     * @return int64_t 解がないときは nullopt が返る
+     */
+    std::optional<BetouzSolution> betouzEquation(int64_t a, int64_t b,
+                                                 int64_t c) {
+        BetouzSolution sol;
+        const int64_t g = extgcd(a, b, sol.x, sol.y);
+        if (c % g == 0) {
+            return std::nullopt;
+        }
+        sol.dx = b / g;
+        sol.dy = a / g;
+        sol.x *= c / g;
+        sol.y *= c / g;
+        return sol;
     }
 
     namespace inner {
@@ -80,7 +113,7 @@ namespace math {
      * @return int64 最大公約数
      */
     template <typename... Ts>
-    inline int64_t gcd(Ts &&... values) {
+    inline int64_t gcd(Ts &&...values) {
         return chain<inner::GCDFunc<int64_t>>(values...);
     }
 
@@ -91,7 +124,7 @@ namespace math {
      * @return int64 最小公倍数
      */
     template <typename... Ts>
-    inline int64_t lcm(Ts &&... values) {
+    inline int64_t lcm(Ts &&...values) {
         return chain<inner::LCMFunc<int64_t>>(values...);
     }
 
@@ -240,7 +273,7 @@ inline T maxOf(T head, Ts... tail) {
  * @return 更新があればtrue
  */
 template <typename T, typename... Ts>
-inline bool chmin(T &target, Ts &&... candidates) {
+inline bool chmin(T &target, Ts &&...candidates) {
     return changeTarget<minFunc<T>>(target, candidates...);
 }
 
@@ -253,6 +286,6 @@ inline bool chmin(T &target, Ts &&... candidates) {
  * @return 更新があればtrue
  */
 template <typename T, typename... Ts>
-inline bool chmax(T &target, Ts &&... candidates) {
+inline bool chmax(T &target, Ts &&...candidates) {
     return changeTarget<maxFunc<T>>(target, candidates...);
 }
