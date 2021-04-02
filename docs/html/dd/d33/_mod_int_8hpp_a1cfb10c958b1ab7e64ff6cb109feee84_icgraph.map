@@ -1,8 +1,9 @@
 <map id="inv" name="inv">
-<area shape="rect" id="node2" href="$dd/d33/_mod_int_8hpp.html#abab586c102bec08ad72f0e5c82d19626" title="operator/" alt="" coords="135,5,209,32"/>
-<area shape="rect" id="node3" href="$db/d1d/namespacefactorial.html#a18522a4facdc5307a6980e06593b57c5" title="順列数の前計算 " alt="" coords="121,56,223,83"/>
-<area shape="rect" id="node7" href="$d3/db7/class_binary_indexed_tree.html#a9615521efa40ff74273d41564ecd73ff" title="位置idにvを加算する " alt="" coords="92,107,252,133"/>
-<area shape="rect" id="node4" href="$db/d1d/namespacefactorial.html#af49158f0c5745811b40efefadad42a49" title="nPkを求める " alt="" coords="301,31,445,57"/>
-<area shape="rect" id="node5" href="$db/d1d/namespacefactorial.html#a7dfbf1497818a073c6b35c59bec734fa" title="nCkを求める " alt="" coords="300,81,447,108"/>
-<area shape="rect" id="node6" href="$db/d1d/namespacefactorial.html#ad29d4fe4e85ebaf691f5e613bda6804e" title="重複組合せ " alt="" coords="495,81,644,108"/>
+<area shape="rect" id="node1" title="x^&#45;1 modを求める" alt="" coords="812,56,855,83"/>
+<area shape="rect" id="node2" href="$db/d1d/namespacefactorial.html#a18522a4facdc5307a6980e06593b57c5" title="順列数の前計算" alt="" coords="648,31,764,57"/>
+<area shape="rect" id="node7" href="$dd/d33/_mod_int_8hpp.html#abab586c102bec08ad72f0e5c82d19626" title=" " alt="" coords="665,81,747,108"/>
+<area shape="rect" id="node3" href="$db/d1d/namespacefactorial.html#a7dfbf1497818a073c6b35c59bec734fa" title="nCkを求める" alt="" coords="435,5,600,32"/>
+<area shape="rect" id="node6" href="$db/d1d/namespacefactorial.html#af49158f0c5745811b40efefadad42a49" title="nPkを求める" alt="" coords="435,56,599,83"/>
+<area shape="rect" id="node4" href="$db/d1d/namespacefactorial.html#ad29d4fe4e85ebaf691f5e613bda6804e" title="重複組合せ" alt="" coords="220,5,387,32"/>
+<area shape="rect" id="node5" href="$db/d1d/namespacefactorial.html#a54824a4c0a39b8959f2a033cf8180aac" title="上限付き重複組合せ" alt="" coords="5,5,172,32"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="Dinic::solve" name="Dinic::solve">
-<area shape="rect" id="node2" href="$da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34" title="グラフの頂点数を返す " alt="" coords="144,5,265,32"/>
+<area shape="rect" id="node1" title="現在の残余グラフから得られる最大流を求めて流す．" alt="" coords="5,5,104,32"/>
+<area shape="rect" id="node2" href="$da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34" title="グラフの頂点数を返す" alt="" coords="152,5,285,32"/>
 </map>

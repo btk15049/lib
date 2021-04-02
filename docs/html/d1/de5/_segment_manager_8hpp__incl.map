@@ -1,4 +1,9 @@
 <map id="src/structure/SegmentManager.hpp" name="src/structure/SegmentManager.hpp">
-<area shape="rect" id="node2" href="$dc/dba/_math_8hpp.html" title="最大値とか最小値を求める " alt="" coords="205,80,351,107"/>
-<area shape="rect" id="node3" href="$dc/d70/_chain_operation_8hpp.html" title="パラメータパックを利用した演算子結合を実現 " alt="" coords="5,155,220,181"/>
+<area shape="rect" id="node1" title="区間を追加したり削除したりするやつ" alt="" coords="276,5,525,32"/>
+<area shape="rect" id="node2" href="$dc/dba/_math_8hpp.html" title="最大値とか最小値を求める" alt="" coords="205,80,351,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="375,80,426,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="451,80,513,107"/>
+<area shape="rect" id="node3" href="$dc/d70/_chain_operation_8hpp.html" title="パラメータパックを利用した演算子結合を実現" alt="" coords="5,155,220,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="245,155,311,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="335,155,410,181"/>
 </map>

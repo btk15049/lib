@@ -1,6 +1,7 @@
 <map id="src/template/Random.hpp" name="src/template/Random.hpp">
-<area shape="rect" id="node2" href="$df/dc0/_template_8hpp.html" title="競技プログラミング用テンプレート " alt="" coords="5,87,128,114"/>
-<area shape="rect" id="node3" href="$d4/dd7/_binary_indexed_tree_8test_8cpp_source.html" title="test/structure/BinaryIndexed\lTree.test.cpp" alt="" coords="152,80,339,121"/>
-<area shape="rect" id="node4" href="$d0/d03/_union_find_8test_8cpp.html" title="UnionFind.hpp のテスト " alt="" coords="363,87,576,114"/>
-<area shape="rect" id="node5" href="$df/d33/_random_8test_8cpp.html" title="Random.hpp のテスト " alt="" coords="600,87,803,114"/>
+<area shape="rect" id="node1" title="乱数生成系" alt="" coords="294,5,485,32"/>
+<area shape="rect" id="node2" href="$df/dc0/_template_8hpp.html" title="競技プログラミング用テンプレート" alt="" coords="5,87,139,114"/>
+<area shape="rect" id="node3" href="$d4/dd7/_binary_indexed_tree_8test_8cpp_source.html" title=" " alt="" coords="163,80,370,121"/>
+<area shape="rect" id="node4" href="$d0/d03/_union_find_8test_8cpp.html" title="UnionFind.hpp のテスト" alt="" coords="395,87,629,114"/>
+<area shape="rect" id="node5" href="$df/d33/_random_8test_8cpp.html" title="Random.hpp のテスト" alt="" coords="653,87,877,114"/>
 </map>

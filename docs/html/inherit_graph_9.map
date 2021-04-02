@@ -1,4 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$da/d9a/class_graph.html" title="Graph\&lt; FlowEdge \&gt;" alt="" coords="5,5,159,32"/>
-<area shape="rect" id="node2" href="$de/d66/class_flow_graph.html" title="FlowGraph\&lt; FlowEdge \&gt;" alt="" coords="207,5,389,32"/>
+<area shape="rect" id="node1" href="$da/d9a/class_graph.html" title=" " alt="" coords="5,31,128,57"/>
+<area shape="rect" id="node2" href="$d4/d2f/class_forest.html" title="根付き森クラス" alt="" coords="188,5,288,32"/>
+<area shape="rect" id="node3" href="$d4/d2f/class_forest.html" title=" " alt="" coords="176,56,300,83"/>
+<area shape="rect" id="node4" href="$dd/df8/class_tree.html" title="&quot;木&quot;に限定したクラス" alt="" coords="348,56,435,83"/>
 </map>

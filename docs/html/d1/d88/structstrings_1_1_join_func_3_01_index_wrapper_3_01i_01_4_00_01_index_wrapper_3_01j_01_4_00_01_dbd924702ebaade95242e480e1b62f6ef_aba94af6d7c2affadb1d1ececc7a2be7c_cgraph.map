@@ -1,3 +1,4 @@
 <map id="strings::JoinFunc&lt; IndexWrapper&lt; i &gt;, IndexWrapper&lt; j &gt;, DelimiterType, Ts... &gt;::join" name="strings::JoinFunc&lt; IndexWrapper&lt; i &gt;, IndexWrapper&lt; j &gt;, DelimiterType, Ts... &gt;::join">
-<area shape="rect" id="node2" href="$d2/dfe/_strings_8hpp.html#a809def35ce8c92090264c46538957bdb" title="コレクションを文字列に変換する関数 " alt="" coords="248,27,291,54"/>
+<area shape="rect" id="node1" title="tuple用join関数の本体" alt="" coords="5,5,225,76"/>
+<area shape="rect" id="node2" href="$d2/dfe/_strings_8hpp.html#a809def35ce8c92090264c46538957bdb" title="コレクションを文字列に変換する関数" alt="" coords="273,27,320,54"/>
 </map>

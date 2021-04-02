@@ -13,8 +13,10 @@ var hierarchy =
     [ "Edge", "d5/db4/struct_edge.html", null ],
     [ "FlowEdge< F >", "d4/d12/struct_flow_edge.html", null ],
     [ "math::inner::GCDFunc< T >", "d6/dc2/structmath_1_1inner_1_1_g_c_d_func.html", null ],
-    [ "Graph< E >", "da/d9a/class_graph.html", [
-      [ "Forest< E >", "d4/d2f/class_forest.html", [
+    [ "Graph< E >", "da/d9a/class_graph.html", null ],
+    [ "Graph< Edge >", "da/d9a/class_graph.html", [
+      [ "Forest< E >", "d4/d2f/class_forest.html", null ],
+      [ "Forest< Edge >", "d4/d2f/class_forest.html", [
         [ "Tree< E >", "dd/df8/class_tree.html", null ]
       ] ]
     ] ],

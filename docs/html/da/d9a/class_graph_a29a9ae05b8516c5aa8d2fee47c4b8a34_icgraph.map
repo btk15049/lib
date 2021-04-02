@@ -1,7 +1,7 @@
 <map id="Graph::size" name="Graph::size">
-<area shape="rect" id="node2" href="$d3/d22/_graph_util_8hpp.html#a46fc58b7a7ce98f52b0417e3994287dd" title="通常のダイクストラ " alt="" coords="209,5,273,32"/>
-<area shape="rect" id="node4" href="$d3/d4c/class_heavy_light_decomposition.html#ad4102d7e2ad72d05cf0b9e3a8a31cc06" title="Construct a new Heavy Light Decomposition object lenderにはBlockBufferを使うのを推奨 N*5メモリがいる�..." alt="" coords="150,57,333,98"/>
-<area shape="rect" id="node5" href="$d4/d2f/class_forest.html#a685fbf0361f516909c907d390c07aedb" title="無向グラフから根付き森を作る " alt="" coords="189,123,293,149"/>
-<area shape="rect" id="node6" href="$d6/d94/_tree_8test_8cpp.html#ad9284ff9b94a0e38a0b035d76cd1c518" title="頂点数が正しいかのテスト " alt="" coords="143,173,340,200"/>
-<area shape="rect" id="node3" href="$d8/dad/_graph_8test_8cpp.html#a886fab0f694a9447bfd980403af56fff" title="Construct a new boost auto test case object ダイクストラのテスト " alt="" coords="388,5,585,32"/>
+<area shape="rect" id="node1" title="グラフの頂点数を返す" alt="" coords="471,56,565,83"/>
+<area shape="rect" id="node2" href="$d3/d22/_graph_util_8hpp.html#a46fc58b7a7ce98f52b0417e3994287dd" title="通常のダイクストラ" alt="" coords="298,5,369,32"/>
+<area shape="rect" id="node4" href="$d4/d2f/class_forest.html#a685fbf0361f516909c907d390c07aedb" title="無向グラフから根付き森を作る" alt="" coords="247,56,419,83"/>
+<area shape="rect" id="node5" href="$da/d9a/class_graph.html#ac4dd9b5d89afcaad333de14fb7b242f8" title="vの隣接頂点を返す" alt="" coords="244,107,423,133"/>
+<area shape="rect" id="node3" href="$d8/dad/_graph_8test_8cpp.html#a886fab0f694a9447bfd980403af56fff" title="Construct a new boost auto test case object ダイクストラのテスト" alt="" coords="5,5,196,32"/>
 </map>

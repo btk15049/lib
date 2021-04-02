@@ -1,6 +1,6 @@
 <map id="BufferManager::push" name="BufferManager::push">
-<area shape="rect" id="node2" href="$d3/d4c/class_heavy_light_decomposition.html#ac86713caf08b989dd3b73f5934689c4f" title="Destroy the Heavy Light Decomposition object デストラクタ メモリを返すよ " alt="" coords="196,5,387,47"/>
-<area shape="rect" id="node3" href="$da/dd6/class_buffer_manager.html#a0c4608b5095c749f56ab88100ee7b0b3" title="Construct a new Buffer Manager object. " alt="" coords="225,71,358,112"/>
-<area shape="rect" id="node4" href="$d0/d40/class_block_buffer_manager.html#a2e6c1297cffbd75573419e91b7c2446f" title="Construct a new Block Buffer Manager object. " alt="" coords="217,136,365,177"/>
-<area shape="rect" id="node5" href="$d4/df3/class_buffer_test.html#a71eb409569962138156dd19af7ace17a" title="デストラクタ、借りたものを返す " alt="" coords="211,202,371,229"/>
+<area shape="rect" id="node1" title="領域をマネージャに返却（解放）する" alt="" coords="267,71,424,98"/>
+<area shape="rect" id="node2" href="$d0/d40/class_block_buffer_manager.html#a2e6c1297cffbd75573419e91b7c2446f" title="Construct a new Block Buffer Manager object." alt="" coords="31,5,193,47"/>
+<area shape="rect" id="node3" href="$d4/df3/class_buffer_test.html#a71eb409569962138156dd19af7ace17a" title="デストラクタ、借りたものを返す" alt="" coords="27,71,197,98"/>
+<area shape="rect" id="node4" href="$d3/d4c/class_heavy_light_decomposition.html#ac86713caf08b989dd3b73f5934689c4f" title="Destroy the Heavy Light Decomposition object デストラクタ メモリを返すよ" alt="" coords="5,123,219,164"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="UnionFind::unite" name="UnionFind::unite">
-<area shape="rect" id="node2" href="$d0/d03/_union_find_8test_8cpp.html#aea3fa90462a24e8cb6f20dac06a3f5b8" title="雑なストレステスト,localでも1秒超えないようにみたいな調整 " alt="" coords="171,5,368,32"/>
+<area shape="rect" id="node1" title="{xの属する集合}と{yの属する集合}をマージする" alt="" coords="244,5,372,32"/>
+<area shape="rect" id="node2" href="$d0/d03/_union_find_8test_8cpp.html#aea3fa90462a24e8cb6f20dac06a3f5b8" title="雑なストレステスト,localでも1秒超えないようにみたいな調整" alt="" coords="5,5,196,32"/>
 </map>

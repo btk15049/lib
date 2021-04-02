@@ -1,5 +1,6 @@
 <map id="dijkstra" name="dijkstra">
-<area shape="rect" id="node2" href="$da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34" title="グラフの頂点数を返す " alt="" coords="124,5,219,32"/>
-<area shape="rect" id="node3" href="$da/d9a/class_graph.html#a2ab07cab9c48c18daebf7c8aaad861af" title="辺番号から辺の参照を取得する " alt="" coords="127,56,216,83"/>
-<area shape="rect" id="node4" href="$dc/dba/_math_8hpp.html#aff17714bab9cc9b457d8c41cd4c86a26" title="change min " alt="" coords="140,107,203,133"/>
+<area shape="rect" id="node1" title="通常のダイクストラ" alt="" coords="5,56,76,83"/>
+<area shape="rect" id="node2" href="$dc/dba/_math_8hpp.html#aff17714bab9cc9b457d8c41cd4c86a26" title="change min" alt="" coords="140,5,203,32"/>
+<area shape="rect" id="node3" href="$da/d9a/class_graph.html#a2ab07cab9c48c18daebf7c8aaad861af" title="辺番号から辺の参照を取得する" alt="" coords="127,56,216,83"/>
+<area shape="rect" id="node4" href="$da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34" title="グラフの頂点数を返す" alt="" coords="124,107,219,133"/>
 </map>

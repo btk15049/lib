@@ -1,3 +1,4 @@
 <map id="XorShift32::next_signed" name="XorShift32::next_signed">
-<area shape="rect" id="node2" href="$df/d33/_random_8test_8cpp.html#aef08ce68aeeb886558794b41f4e0da0d" title="XorShift32::next_signed の テスト " alt="" coords="215,5,412,32"/>
+<area shape="rect" id="node1" title="[&#45;2^bit,2^bit)の範囲の乱数値を取り出す" alt="" coords="244,5,420,32"/>
+<area shape="rect" id="node2" href="$df/d33/_random_8test_8cpp.html#aef08ce68aeeb886558794b41f4e0da0d" title="XorShift32::next_signed の テスト" alt="" coords="5,5,196,32"/>
 </map>

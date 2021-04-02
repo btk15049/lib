@@ -1,4 +1,5 @@
 <map id="out" name="out">
-<area shape="rect" id="node2" href="$d9/d9f/_segment_manager_8hpp.html#ac5e31fc83231dadde64b63b221a7398d" title="点が区間より左（座標が小さい）かどうかを判定 " alt="" coords="97,5,152,32"/>
-<area shape="rect" id="node3" href="$d9/d9f/_segment_manager_8hpp.html#a86fe2f334e63c8ef0916fc9c4145efea" title="点が区間より右（座標が大きい）かどうかを判定 " alt="" coords="93,56,156,83"/>
+<area shape="rect" id="node1" title="点が区間に対して厳密に外にあるかどうかを判定" alt="" coords="5,31,48,57"/>
+<area shape="rect" id="node2" href="$d9/d9f/_segment_manager_8hpp.html#ac5e31fc83231dadde64b63b221a7398d" title="点が区間より左（座標が小さい）かどうかを判定" alt="" coords="101,5,158,32"/>
+<area shape="rect" id="node3" href="$d9/d9f/_segment_manager_8hpp.html#a86fe2f334e63c8ef0916fc9c4145efea" title="点が区間より右（座標が大きい）かどうかを判定" alt="" coords="96,56,163,83"/>
 </map>

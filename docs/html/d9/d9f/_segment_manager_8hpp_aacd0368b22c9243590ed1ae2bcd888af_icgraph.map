@@ -1,5 +1,7 @@
 <map id="in" name="in">
-<area shape="rect" id="node2" href="$d9/d9f/_segment_manager_8hpp.html#a9d81f4bf4e79d06097f40ecd4b6a41d9" title="区間s1が区間s2に対して境界上を含む内側にあるかどうかを判定 " alt="" coords="171,5,210,32"/>
-<area shape="rect" id="node3" href="$d9/d9f/_segment_manager_8hpp.html#a83ce4dfa26f46be0eb4ef13cb70bd489" title="区間s1が区間s2に対して外側にあるかどうかを判定 " alt="" coords="159,56,223,83"/>
-<area shape="rect" id="node4" href="$d0/de1/_matrix_8test_8cpp.html#a39307ed68514a68c0c228568dcb758dd" title="行列累乗のテストをフィボナッチで " alt="" coords="92,107,289,133"/>
+<area shape="rect" id="node1" title="点が区間に対して境界上または内にあるかどうかを判定" alt="" coords="244,81,283,108"/>
+<area shape="rect" id="node2" href="$d0/de1/_matrix_8test_8cpp.html#a39307ed68514a68c0c228568dcb758dd" title="行列累乗のテストをフィボナッチで" alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node3" href="$d9/d9f/_segment_manager_8hpp.html#a9d81f4bf4e79d06097f40ecd4b6a41d9" title="区間s1が区間s2に対して境界上を含む内側にあるかどうかを判定" alt="" coords="81,56,120,83"/>
+<area shape="rect" id="node4" href="$d8/d49/_matrix_8hpp.html#abab4f5bc9e83b83e9d00a9a882fd37c7" title="行列とベクトルの積" alt="" coords="77,107,124,133"/>
+<area shape="rect" id="node5" href="$d9/d9f/_segment_manager_8hpp.html#a83ce4dfa26f46be0eb4ef13cb70bd489" title="区間s1が区間s2に対して外側にあるかどうかを判定" alt="" coords="65,157,136,184"/>
 </map>

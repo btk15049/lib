@@ -1,0 +1,4 @@
+<map id="factorial::multiChoose" name="factorial::multiChoose">
+<area shape="rect" id="node1" title="重複組合せ" alt="" coords="220,5,387,32"/>
+<area shape="rect" id="node2" href="$db/d1d/namespacefactorial.html#a54824a4c0a39b8959f2a033cf8180aac" title="上限付き重複組合せ" alt="" coords="5,5,172,32"/>
+</map>

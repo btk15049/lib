@@ -1,8 +1,8 @@
 <map id="BOOST_AUTO_TEST_CASE" name="BOOST_AUTO_TEST_CASE">
-<area shape="rect" id="node1" title="resizeのテスト" alt="" coords="5,80,203,105"/>
-<area shape="rect" id="node2" href="$d6/d94/_tree_8test_8cpp.html#a8650c7bec5069b9877678230db3345a7" title="入力サンプル生成" alt="" coords="260,5,349,31"/>
-<area shape="rect" id="node4" href="$da/d9a/class_graph.html#acd74a091d791e166b1126b355b5e8325" title="グラフの頂点数を変更する" alt="" coords="254,55,355,80"/>
-<area shape="rect" id="node5" href="$da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34" title="グラフの頂点数を返す" alt="" coords="260,104,349,129"/>
-<area shape="rect" id="node6" href="$da/d9a/class_graph.html#a4b38dc02322759eff4f3859f9cb1fd7c" title="vの次数を返す" alt="" coords="251,153,358,179"/>
-<area shape="rect" id="node3" href="$da/d9a/class_graph.html#a600b949cc6b53adfb4edfd0d2813edc2" title="&quot;無向&quot;辺(a,b)を追加する．" alt="" coords="406,5,531,31"/>
+<area shape="rect" id="node1" title="resizeのテスト" alt="" coords="5,81,196,108"/>
+<area shape="rect" id="node2" href="$da/d9a/class_graph.html#a4b38dc02322759eff4f3859f9cb1fd7c" title="vの次数を返す" alt="" coords="244,5,420,32"/>
+<area shape="rect" id="node3" href="$da/d9a/class_graph.html#acd74a091d791e166b1126b355b5e8325" title="グラフの頂点数を変更する" alt="" coords="247,56,417,83"/>
+<area shape="rect" id="node4" href="$da/d9a/class_graph.html#a29a9ae05b8516c5aa8d2fee47c4b8a34" title="グラフの頂点数を返す" alt="" coords="253,107,411,133"/>
+<area shape="rect" id="node5" href="$d6/d94/_tree_8test_8cpp.html#a8650c7bec5069b9877678230db3345a7" title="入力サンプル生成" alt="" coords="283,157,381,184"/>
+<area shape="rect" id="node6" href="$da/d9a/class_graph.html#a600b949cc6b53adfb4edfd0d2813edc2" title="&quot;無向&quot;辺(a,b)を追加する．" alt="" coords="468,157,600,184"/>
 </map>

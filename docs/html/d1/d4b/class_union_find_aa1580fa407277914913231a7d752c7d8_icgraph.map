@@ -1,3 +1,4 @@
 <map id="UnionFind::same" name="UnionFind::same">
-<area shape="rect" id="node2" href="$d0/d03/_union_find_8test_8cpp.html#aea3fa90462a24e8cb6f20dac06a3f5b8" title="雑なストレステスト,localでも1秒超えないようにみたいな調整 " alt="" coords="175,5,372,32"/>
+<area shape="rect" id="node1" title="xとyが同じ集合に属しているかどうか判定する" alt="" coords="244,5,375,32"/>
+<area shape="rect" id="node2" href="$d0/d03/_union_find_8test_8cpp.html#aea3fa90462a24e8cb6f20dac06a3f5b8" title="雑なストレステスト,localでも1秒超えないようにみたいな調整" alt="" coords="5,5,196,32"/>
 </map>

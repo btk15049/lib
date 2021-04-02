@@ -1,7 +1,8 @@
 <map id="factorial::permutation" name="factorial::permutation">
-<area shape="rect" id="node2" href="$d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="整数から高速にModIntを作りたいときに使う " alt="" coords="348,5,439,32"/>
-<area shape="rect" id="node4" href="$db/d1d/namespacefactorial.html#a18522a4facdc5307a6980e06593b57c5" title="順列数の前計算 " alt="" coords="197,56,300,83"/>
-<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される． " alt="" coords="623,31,733,57"/>
-<area shape="rect" id="node5" href="$dd/d33/_mod_int_8hpp.html#a1cfb10c958b1ab7e64ff6cb109feee84" title="x^&#45;1 modを求める " alt="" coords="374,56,413,83"/>
-<area shape="rect" id="node6" href="$d2/de3/class_mod_int.html#acdc1731731a680922b2fbad067eb5e68" title="整数から安全にModIntを作りたいときに使う " alt="" coords="487,56,575,83"/>
+<area shape="rect" id="node1" title="nPkを求める" alt="" coords="5,31,169,57"/>
+<area shape="rect" id="node2" href="$db/d1d/namespacefactorial.html#a18522a4facdc5307a6980e06593b57c5" title="順列数の前計算" alt="" coords="217,5,333,32"/>
+<area shape="rect" id="node6" href="$d2/de3/class_mod_int.html#a00a73d14b1dc0e7ff12007372af3841d" title="整数から高速にModIntを作りたいときに使う" alt="" coords="381,56,480,83"/>
+<area shape="rect" id="node3" href="$dd/d33/_mod_int_8hpp.html#a1cfb10c958b1ab7e64ff6cb109feee84" title="x^&#45;1 modを求める" alt="" coords="409,5,452,32"/>
+<area shape="rect" id="node4" href="$d2/de3/class_mod_int.html#a9e9cb84028e34a44a1ccdbdaeb8e3821" title="整数から安全にModIntを作りたいときに使う" alt="" coords="528,5,624,32"/>
+<area shape="rect" id="node5" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される．" alt="" coords="672,31,792,57"/>
 </map>

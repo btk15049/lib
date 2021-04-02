@@ -1,5 +1,7 @@
 <map id="factorial::build" name="factorial::build">
-<area shape="rect" id="node2" href="$db/d1d/namespacefactorial.html#af49158f0c5745811b40efefadad42a49" title="nPkを求める " alt="" coords="157,5,301,32"/>
-<area shape="rect" id="node3" href="$db/d1d/namespacefactorial.html#a7dfbf1497818a073c6b35c59bec734fa" title="nCkを求める " alt="" coords="156,56,303,83"/>
-<area shape="rect" id="node4" href="$db/d1d/namespacefactorial.html#ad29d4fe4e85ebaf691f5e613bda6804e" title="重複組合せ " alt="" coords="351,56,500,83"/>
+<area shape="rect" id="node1" title="順列数の前計算" alt="" coords="648,31,764,57"/>
+<area shape="rect" id="node2" href="$db/d1d/namespacefactorial.html#a7dfbf1497818a073c6b35c59bec734fa" title="nCkを求める" alt="" coords="435,5,600,32"/>
+<area shape="rect" id="node5" href="$db/d1d/namespacefactorial.html#af49158f0c5745811b40efefadad42a49" title="nPkを求める" alt="" coords="435,56,599,83"/>
+<area shape="rect" id="node3" href="$db/d1d/namespacefactorial.html#ad29d4fe4e85ebaf691f5e613bda6804e" title="重複組合せ" alt="" coords="220,5,387,32"/>
+<area shape="rect" id="node4" href="$db/d1d/namespacefactorial.html#a54824a4c0a39b8959f2a033cf8180aac" title="上限付き重複組合せ" alt="" coords="5,5,172,32"/>
 </map>

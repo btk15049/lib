@@ -1,6 +1,11 @@
 <map id="out" name="out">
-<area shape="rect" id="node2" href="$d9/d9f/_segment_manager_8hpp.html#aacd0368b22c9243590ed1ae2bcd888af" title="点が区間に対して境界上または内にあるかどうかを判定 " alt="" coords="93,56,132,83"/>
-<area shape="rect" id="node3" href="$d9/d9f/_segment_manager_8hpp.html#a9d81f4bf4e79d06097f40ecd4b6a41d9" title="区間s1が区間s2に対して境界上を含む内側にあるかどうかを判定 " alt="" coords="259,5,298,32"/>
-<area shape="rect" id="node4" href="$d9/d9f/_segment_manager_8hpp.html#a83ce4dfa26f46be0eb4ef13cb70bd489" title="区間s1が区間s2に対して外側にあるかどうかを判定 " alt="" coords="247,56,311,83"/>
-<area shape="rect" id="node5" href="$d0/de1/_matrix_8test_8cpp.html#a39307ed68514a68c0c228568dcb758dd" title="行列累乗のテストをフィボナッチで " alt="" coords="180,107,377,133"/>
+<area shape="rect" id="node1" title="点が区間に対して厳密に外にあるかどうかを判定" alt="" coords="339,157,381,184"/>
+<area shape="rect" id="node2" href="$d9/d9f/_segment_manager_8hpp.html#aacd0368b22c9243590ed1ae2bcd888af" title="点が区間に対して境界上または内にあるかどうかを判定" alt="" coords="248,107,287,133"/>
+<area shape="rect" id="node7" href="$d8/d49/_matrix_8hpp.html#a9f7ba7e6fe16a8ca462238086510d4c3" title="行列積" alt="" coords="244,208,291,235"/>
+<area shape="rect" id="node3" href="$d0/de1/_matrix_8test_8cpp.html#a39307ed68514a68c0c228568dcb758dd" title="行列累乗のテストをフィボナッチで" alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node4" href="$d9/d9f/_segment_manager_8hpp.html#a9d81f4bf4e79d06097f40ecd4b6a41d9" title="区間s1が区間s2に対して境界上を含む内側にあるかどうかを判定" alt="" coords="81,56,120,83"/>
+<area shape="rect" id="node5" href="$d8/d49/_matrix_8hpp.html#abab4f5bc9e83b83e9d00a9a882fd37c7" title="行列とベクトルの積" alt="" coords="77,107,124,133"/>
+<area shape="rect" id="node6" href="$d9/d9f/_segment_manager_8hpp.html#a83ce4dfa26f46be0eb4ef13cb70bd489" title="区間s1が区間s2に対して外側にあるかどうかを判定" alt="" coords="65,157,136,184"/>
+<area shape="rect" id="node8" href="$d7/dfb/class_chain.html#a130e9e29ffdc448c88184093ac4a9c0e" title="Construct a new Chain object 行列累乗用にビルドをしておく" alt="" coords="49,208,153,235"/>
+<area shape="rect" id="node9" href="$d7/dfb/class_chain.html#a12990fc8425bb7a1f5d8c608ac24a693" title="コンストラクタで与えた正方行列を M, 引数のベクトルを v として M^n * v を計算" alt="" coords="39,259,163,285"/>
 </map>

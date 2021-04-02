@@ -1,4 +1,5 @@
 <map id="mul" name="mul">
-<area shape="rect" id="node2" href="$d2/de3/class_mod_int.html#afc9eff3b1c5f8cbdf96da6f2bf367546" title="整数から高速にModIntを作りたいときに使う " alt="" coords="96,5,187,32"/>
-<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される． " alt="" coords="235,5,345,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,52,32"/>
+<area shape="rect" id="node2" href="$d2/de3/class_mod_int.html#a00a73d14b1dc0e7ff12007372af3841d" title="整数から高速にModIntを作りたいときに使う" alt="" coords="100,5,199,32"/>
+<area shape="rect" id="node3" href="$d2/de3/class_mod_int.html#a109ff365f0ca38fb67d18fcee2442835" title="デフォルトコンストラクタ．0で初期化される．" alt="" coords="247,5,367,32"/>
 </map>

@@ -1,8 +1,13 @@
 <map id="test/graph/HeavyLightDecomposition.test.cpp" name="test/graph/HeavyLightDecomposition.test.cpp">
-<area shape="rect" id="node2" href="$d8/d10/_heavy_light_decomposition_8hpp.html" title="重軽分解 " alt="" coords="5,87,241,114"/>
-<area shape="rect" id="node8" href="$dd/df1/_buffer_8hpp.html" title="メモリ管理クラス " alt="" coords="209,169,347,196"/>
-<area shape="rect" id="node3" href="$d2/d21/_tree_8hpp.html" title="根付き森と根付き木 " alt="" coords="57,169,166,196"/>
-<area shape="rect" id="node4" href="$da/d72/_graph_8hpp.html" title="グラフクラス " alt="" coords="28,244,147,271"/>
-<area shape="rect" id="node5" href="$d7/d75/_loop_8hpp.html" title="rangeとかループ系のクラス " alt="" coords="108,319,237,345"/>
-<area shape="rect" id="node9" href="$de/d09/_macro_8hpp.html" title="マクロとか，LLとか " alt="" coords="223,244,360,271"/>
+<area shape="rect" id="node1" title="HeavyLightDecomposition.hpp のテスト" alt="" coords="146,5,466,32"/>
+<area shape="rect" id="node2" href="$d8/d10/_heavy_light_decomposition_8hpp.html" title="重軽分解" alt="" coords="5,87,268,114"/>
+<area shape="rect" id="node8" href="$dd/df1/_buffer_8hpp.html" title="メモリ管理クラス" alt="" coords="231,169,381,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="343,80,490,121"/>
+<area shape="rect" id="node3" href="$d2/d21/_tree_8hpp.html" title="根付き森と根付き木" alt="" coords="65,169,184,196"/>
+<area shape="rect" id="node4" href="$da/d72/_graph_8hpp.html" title="グラフクラス" alt="" coords="35,244,166,271"/>
+<area shape="rect" id="node5" href="$d7/d75/_loop_8hpp.html" title="rangeとかループ系のクラス" alt="" coords="118,319,262,345"/>
+<area shape="rect" id="node6" title=" " alt="" coords="9,319,94,345"/>
+<area shape="rect" id="node7" title=" " alt="" coords="287,319,349,345"/>
+<area shape="rect" id="node9" href="$de/d09/_macro_8hpp.html" title="マクロとか，LLとか" alt="" coords="241,244,395,271"/>
+<area shape="rect" id="node10" title=" " alt="" coords="419,244,481,271"/>
 </map>

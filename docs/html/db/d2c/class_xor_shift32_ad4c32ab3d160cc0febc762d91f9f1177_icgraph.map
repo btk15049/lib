@@ -1,3 +1,4 @@
 <map id="XorShift32::next_int" name="XorShift32::next_int">
-<area shape="rect" id="node2" href="$df/d33/_random_8test_8cpp.html#ab645e5e0ad26ae2d610a9e75075fe07c" title="XorShift32::next_int の テスト " alt="" coords="191,5,388,32"/>
+<area shape="rect" id="node1" title="[0, 2^bit) の範囲の乱数値を取り出す" alt="" coords="244,5,395,32"/>
+<area shape="rect" id="node2" href="$d0/d03/_union_find_8test_8cpp.html#aea3fa90462a24e8cb6f20dac06a3f5b8" title="雑なストレステスト,localでも1秒超えないようにみたいな調整" alt="" coords="5,5,196,32"/>
 </map>

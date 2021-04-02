@@ -1,4 +1,5 @@
 <map id="SegmentManager::add" name="SegmentManager::add">
-<area shape="rect" id="node2" href="$dc/dba/_math_8hpp.html#aff17714bab9cc9b457d8c41cd4c86a26" title="change min " alt="" coords="223,5,286,32"/>
-<area shape="rect" id="node3" href="$dc/dba/_math_8hpp.html#a6509e780dd86d7fc46d58b8b874a7a37" title="chminのmax版 " alt="" coords="221,56,288,83"/>
+<area shape="rect" id="node1" title="現在の状態に対してsを追加し、変化があった差分を戻り値として返す" alt="" coords="5,31,175,57"/>
+<area shape="rect" id="node2" href="$dc/dba/_math_8hpp.html#a6509e780dd86d7fc46d58b8b874a7a37" title="chminのmax版" alt="" coords="223,5,289,32"/>
+<area shape="rect" id="node3" href="$dc/dba/_math_8hpp.html#aff17714bab9cc9b457d8c41cd4c86a26" title="change min" alt="" coords="225,56,287,83"/>
 </map>

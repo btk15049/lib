@@ -1,6 +1,7 @@
 <map id="UnionFind::find" name="UnionFind::find">
-<area shape="rect" id="node2" href="$d1/d4b/class_union_find.html#ac293e615592ebd4ff06d86e1fa4ab644" title="{xの属する集合}と{yの属する集合}をマージする " alt="" coords="204,5,321,32"/>
-<area shape="rect" id="node4" href="$d1/d4b/class_union_find.html#aa1580fa407277914913231a7d752c7d8" title="xとyが同じ集合に属しているかどうか判定する " alt="" coords="202,56,323,83"/>
-<area shape="rect" id="node5" href="$d0/d03/_union_find_8test_8cpp.html#a317a5073f2dc6f46814abe8117e886a3" title="初期化時のテスト " alt="" coords="164,107,361,133"/>
-<area shape="rect" id="node3" href="$d0/d03/_union_find_8test_8cpp.html#aea3fa90462a24e8cb6f20dac06a3f5b8" title="雑なストレステスト,localでも1秒超えないようにみたいな調整 " alt="" coords="409,31,607,57"/>
+<area shape="rect" id="node1" title="xの親を探す" alt="" coords="483,56,601,83"/>
+<area shape="rect" id="node2" href="$d0/d03/_union_find_8test_8cpp.html#a317a5073f2dc6f46814abe8117e886a3" title="初期化時のテスト" alt="" coords="244,5,435,32"/>
+<area shape="rect" id="node3" href="$d1/d4b/class_union_find.html#aa1580fa407277914913231a7d752c7d8" title="xとyが同じ集合に属しているかどうか判定する" alt="" coords="274,56,405,83"/>
+<area shape="rect" id="node5" href="$d1/d4b/class_union_find.html#ac293e615592ebd4ff06d86e1fa4ab644" title="{xの属する集合}と{yの属する集合}をマージする" alt="" coords="275,107,403,133"/>
+<area shape="rect" id="node4" href="$d0/d03/_union_find_8test_8cpp.html#aea3fa90462a24e8cb6f20dac06a3f5b8" title="雑なストレステスト,localでも1秒超えないようにみたいな調整" alt="" coords="5,81,196,108"/>
 </map>

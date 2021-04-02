@@ -1,10 +1,11 @@
 <map id="src/graph/Graph.hpp" name="src/graph/Graph.hpp">
-<area shape="rect" id="node2" href="$db/dd6/_dinic_8hpp.html" title="Dinic法の実装 " alt="" coords="26,80,161,107"/>
-<area shape="rect" id="node4" href="$d3/d22/_graph_util_8hpp.html" title="Graphクラスを使ったライブラリ(dijkstraなど)を管理 " alt="" coords="191,80,351,107"/>
-<area shape="rect" id="node5" href="$d8/dad/_graph_8test_8cpp.html" title="Graph.hpp のテスト " alt="" coords="195,155,365,181"/>
-<area shape="rect" id="node6" href="$d2/d21/_tree_8hpp.html" title="根付き森と根付き木 " alt="" coords="453,80,584,107"/>
-<area shape="rect" id="node3" href="$d4/d00/_dinic_8test_8cpp.html" title="Dinic.hpp のテスト " alt="" coords="5,155,171,181"/>
-<area shape="rect" id="node7" href="$d8/d10/_heavy_light_decomposition_8hpp.html" title="重軽分解 " alt="" coords="389,155,648,181"/>
-<area shape="rect" id="node9" href="$d6/d94/_tree_8test_8cpp.html" title="Tree.hpp のテスト " alt="" coords="671,155,833,181"/>
-<area shape="rect" id="node8" href="$d5/d9a/_heavy_light_decomposition_8test_8cpp.html" title="HeavyLightDecomposition.hpp のテスト " alt="" coords="375,229,663,256"/>
+<area shape="rect" id="node1" title="グラフクラス" alt="" coords="279,5,433,32"/>
+<area shape="rect" id="node2" href="$db/dd6/_dinic_8hpp.html" title="Dinic法の実装" alt="" coords="29,80,176,107"/>
+<area shape="rect" id="node4" href="$d3/d22/_graph_util_8hpp.html" title="Graphクラスを使ったライブラリ(dijkstraなど)を管理" alt="" coords="205,80,381,107"/>
+<area shape="rect" id="node5" href="$d8/dad/_graph_8test_8cpp.html" title="Graph.hpp のテスト" alt="" coords="211,155,397,181"/>
+<area shape="rect" id="node6" href="$d2/d21/_tree_8hpp.html" title="根付き森と根付き木" alt="" coords="495,80,636,107"/>
+<area shape="rect" id="node3" href="$d4/d00/_dinic_8test_8cpp.html" title="Dinic.hpp のテスト" alt="" coords="5,155,187,181"/>
+<area shape="rect" id="node7" href="$d8/d10/_heavy_light_decomposition_8hpp.html" title="重軽分解" alt="" coords="422,155,709,181"/>
+<area shape="rect" id="node9" href="$d6/d94/_tree_8test_8cpp.html" title="Tree.hpp のテスト" alt="" coords="733,155,907,181"/>
+<area shape="rect" id="node8" href="$d5/d9a/_heavy_light_decomposition_8test_8cpp.html" title="HeavyLightDecomposition.hpp のテスト" alt="" coords="405,229,725,256"/>
 </map>
