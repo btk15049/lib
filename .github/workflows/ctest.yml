@@ -1,6 +1,12 @@
 name: C/C++ CI
 
 on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'test/**'
+      - 'CMakeLists.txt'
+      - '.github/workflows/ctest.yml'    
   push:
     paths:
       - 'src/**'
