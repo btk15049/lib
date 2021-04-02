@@ -3,6 +3,7 @@
 /*</head>*/
 
 #include <utility>
+#include <cstdint>
 
 /**
  * @file ModInt.hpp
