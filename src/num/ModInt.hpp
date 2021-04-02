@@ -3,6 +3,7 @@
 /*</head>*/
 
 #include <utility>
+#include <cstdint>
 
 /**
  * @file ModInt.hpp
@@ -36,7 +37,7 @@ class ModInt {
      * @brief ゲッター
      * @details 出力時などは "cout << *ret << endl;"のようにやるとよい．
      */
-    long long operator*() const { return x; }
+    int64_t operator*() const { return x; }
     /**
      * @brief デフォルトコンストラクタ．0で初期化される．
      */
@@ -51,11 +52,11 @@ class ModInt {
     ModInt(const int y) { x = y; }
 
     /**
-     * @brief long longからのコンストラクタ
+     * @brief int64_tからのコンストラクタ
      * @param[in] y 設定したい値
      * @details 毎回modを取るので低速．
      */
-    ModInt(const long long y) { x = (int)((mod + y % mod) % mod); }
+    ModInt(const int64_t y) { x = (int)((mod + y % mod) % mod); }
 
     /**
      * @brief ModIntからの代入演算子
@@ -68,7 +69,7 @@ class ModInt {
      * @param[in] x 設定したい値
      * @details xが[0,mod)であることが保証されてないと正しく動かない．
      */
-    static inline ModInt raw(const long long x) {
+    static inline ModInt raw(const int64_t x) {
         // assert(x<mod);
         return ModInt((int)x);
     }
@@ -78,7 +79,7 @@ class ModInt {
      * @param[in] x 設定したい値
      * @details mod2回取るから遅い．負数でもOK．
      */
-    static inline ModInt get(const long long x) { return ModInt(x); }
+    static inline ModInt get(const int64_t x) { return ModInt(x); }
 
     /**
      * @brief intからの代入演算子
@@ -92,11 +93,11 @@ class ModInt {
     }
 
     /**
-     * @brief long longからの代入演算子
+     * @brief int64_tからの代入演算子
      * @param[in] o 設定したい値
      * @details mod2回取るから遅い．負数でもOK．
      */
-    ModInt& operator=(const long long o) {
+    ModInt& operator=(const int64_t o) {
         this->x = (int)((mod + o % mod) % mod);
         return *this;
     }
@@ -118,7 +119,7 @@ class ModInt {
  * @details if文使って少し高速化．
  */
 inline ModInt add(const ModInt l, const ModInt r) {
-    const long long x = *l + *r;
+    const int64_t x = *l + *r;
     return ModInt::raw(x >= mod ? x - mod : x);
 }
 
@@ -133,9 +134,9 @@ inline ModInt mul(const ModInt l, const ModInt r) {
 /**
  * @brief a^x %modを求める
  * @param[in] a ModInt
- * @param[in] x long long．
+ * @param[in] x int64_t．
  */
-inline ModInt pow(ModInt a, long long x) {
+inline ModInt pow(ModInt a, int64_t x) {
     ModInt ret = ModInt::raw(1);
     while (x) {
         if (x & 1) {
@@ -155,9 +156,9 @@ inline ModInt pow(ModInt a, long long x) {
  *   O(log(mod))
  */
 inline ModInt inv(const ModInt x) {
-    long long a = *x, b = mod, u = 1, v = 0;
+    int64_t a = *x, b = mod, u = 1, v = 0;
     while (b) {
-        long long t = a / b;
+        int64_t t = a / b;
         std::swap(a -= t * b, b);
         std::swap(u -= t * v, v);
     }
@@ -202,7 +203,7 @@ inline ModInt operator+(const ModInt l, const int r) {
  * @param[in] l ModInt
  * @param[in] r int
  */
-inline ModInt operator+(const ModInt l, const long long r) {
+inline ModInt operator+(const ModInt l, const int64_t r) {
     return add(l, ModInt::get(r));
 }
 
@@ -220,7 +221,7 @@ inline ModInt operator*(const ModInt l, const int r) {
  * @param[in] l ModInt
  * @param[in] r int
  */
-inline ModInt operator*(const ModInt l, const long long r) {
+inline ModInt operator*(const ModInt l, const int64_t r) {
     return mul(l, ModInt::get(r));
 }
 
@@ -238,7 +239,7 @@ inline ModInt operator-(const ModInt l, const int r) {
  * @param[in] l ModInt
  * @param[in] r int
  */
-inline ModInt operator-(const ModInt l, const long long r) {
+inline ModInt operator-(const ModInt l, const int64_t r) {
     return add(l, -ModInt::get(r));
 }
 
@@ -256,18 +257,18 @@ inline ModInt operator/(const ModInt l, const int r) {
  * @param[in] l ModInt
  * @param[in] r int
  */
-inline ModInt operator/(const ModInt l, const long long r) {
+inline ModInt operator/(const ModInt l, const int64_t r) {
     return mul(l, inv(ModInt::get(r)));
 }
 
 /**
 * @param[in] l ModInt
-* @param[in] r long long
+* @param[in] r int64_t
 * @details
 *   pow(l,r)を呼び出すだけなのでpowを参照のこと．
     計算量はO(log mod)
 */
-inline ModInt operator^(const ModInt l, const long long r) { return pow(l, r); }
+inline ModInt operator^(const ModInt l, const int64_t r) { return pow(l, r); }
 
 /**
  * @brief
