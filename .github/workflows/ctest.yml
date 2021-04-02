@@ -27,13 +27,13 @@ jobs:
         env:
           CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
           IMAGE_NAME: ctest-with-boost
-          TAG: 20191006
+          TAG: 20201030
         run: |
           docker pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
           docker tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG} ctest
       - name: CTest using docker image
         env:
           LIB_PATH: /app/src
-          BUILD_CMD: /usr/bin/g++-5
+          BUILD_CMD: /usr/bin/g++-9
           BOOST_PATH: /usr/local/include
         run: docker run -e LIB_PATH -e BUILD_CMD -e BOOST_PATH -v /home/runner/work/lib/lib:/app ctest
