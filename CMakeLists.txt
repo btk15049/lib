@@ -10,6 +10,6 @@ set(CMAKE_CXX_FLAGS "-O2 -Wall -Wextra -Werror -std=c++17")
 add_compile_definitions("BTK")
 enable_testing()
 
-include_directories($ENV{BOOST_PATH})
+include_directories("${Boost_INCLUDE_DIRS}")
 include_directories(src)
 add_subdirectory(test)

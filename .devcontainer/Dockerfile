@@ -1,15 +1,16 @@
-FROM ubuntu:focal
+ARG VARIANT="focal"
+FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 
 WORKDIR /opt
 
-RUN apt-get update -y && apt-get upgrade -y \
+RUN apt update -y && apt upgrade -y \
     && apt-get install -y software-properties-common \
     && apt-add-repository ppa:fish-shell/release-3 \
     && apt-add-repository ppa:git-core/ppa
-RUN apt-get update -y && apt-get upgrade -y \
+RUN apt update -y && apt upgrade -y \
     && apt-get install -y \
-    git \
     build-essential \
+    fish \
     g++-9 \
     libssl-dev \
     python3-pip \
@@ -46,6 +47,3 @@ RUN git clone https://github.com/boostorg/boost.git \
 RUN git clone https://github.com/atcoder/ac-library.git \
     && cp -r ac-library/atcoder /usr/include/atcoder
 
-WORKDIR /app
-
-CMD bash -c "mkdir build && cd build && cmake .. && make && ctest -V"
