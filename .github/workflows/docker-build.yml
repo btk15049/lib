@@ -19,7 +19,7 @@ jobs:
       - name: Get image for cache from Github Package Registry
         env:
           CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
-          IMAGE_NAME: ctest-with-boost
+          IMAGE_NAME: ctest
         run: |
           docker pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
           docker tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest cache
