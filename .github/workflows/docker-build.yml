@@ -16,9 +16,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PUSH_TO_PACKAGE_REGISTRY }}
         run: echo $GITHUB_TOKEN | docker login ghcr.io -u btk15049 --password-stdin
-      - name: Build docker image using cache
+      - name: Pull image for cache
+        env:
+          CONTAINER_REGISTRY_PATH: ghcr.io/btk15049
+          IMAGE_NAME: ctest
         run: |
-          docker build --cache-from ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest -t current docker
+          docker pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
+          docker tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest cache
+      - name: Build docker image
+        run: |
+          docker build --cache-from cache -t current docker
       - name: Push docker image
         env:
           CONTAINER_REGISTRY_PATH: ghcr.io/btk15049
