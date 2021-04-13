@@ -17,11 +17,6 @@ on:
 jobs:
   test:
     name: CTest
-    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v1
-      - name: Run test
-        run: docker run -v /home/runner/work/lib/lib:/app ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}
-        env:
-          CONTAINER_REGISTRY_PATH: ghcr.io/btk15049
-          IMAGE_NAME: ctest
+      - uses: docker://ghcr.io/btk15049/ctest
+        name: Run test
