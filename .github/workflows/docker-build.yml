@@ -15,7 +15,7 @@ jobs:
       - name: Login to GitHub Package Registry
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PUSH_TO_PACKAGE_REGISTRY }}
-        run: echo $GITHUB_TOKEN | docker login ghcr.io -u btk15049 -p --password-stdin
+        run: echo $GITHUB_TOKEN | docker login ghcr.io -u btk15049 --password-stdin
       - name: Build docker image
         run: |
           docker build -t current docker
