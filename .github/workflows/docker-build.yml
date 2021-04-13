@@ -12,13 +12,13 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: Login to GitHub Package Registry
+      - name: Login to GitHub Container Registry
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PUSH_TO_PACKAGE_REGISTRY }}
         run: echo $GITHUB_TOKEN | docker login ghcr.io -u btk15049 --password-stdin
-      - name: Build docker image
+      - name: Build docker image using cache
         run: |
-          docker build -t current docker
+          docker build --cache-from ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest -t current docker
       - name: Push docker image
         env:
           CONTAINER_REGISTRY_PATH: ghcr.io/btk15049
