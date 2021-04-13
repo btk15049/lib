@@ -10,16 +10,16 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: Login to GitHub Package Registry
+      - name: Login to GitHub Container Registry
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PUSH_TO_PACKAGE_REGISTRY }}
-        run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
+        run: echo $GITHUB_TOKEN | docker login ghcr.io -u btk15049 --password-stdin
       - name: Build docker image
         run: |
           docker build -t current docker
       - name: Push docker image
         env:
-          CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
+          CONTAINER_REGISTRY_PATH: ghcr.io/btk15049
           IMAGE_NAME: ctest
         run: |
           TAG=`date "+%Y%m%d"`
@@ -33,16 +33,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: Login to GitHub Package Registry
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_TO_PULL_FROM_PACKAGE_REGISTRY }}
-        run: docker login docker.pkg.github.com -u btk15049 -p $GITHUB_TOKEN
-      - name: Pull image from GitHub Package Registry
-        env:
-          CONTAINER_REGISTRY_PATH: docker.pkg.github.com/${{ github.repository }}
-          IMAGE_NAME: ctest
-        run: |
-          docker pull ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
-          docker tag ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest current
       - name: Run test
-        run: docker run -v /home/runner/work/lib/lib:/app current
+        run: docker run -v /home/runner/work/lib/lib:/app ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}
+        env:
+          CONTAINER_REGISTRY_PATH: ghcr.io/btk15049
+          IMAGE_NAME: ctest

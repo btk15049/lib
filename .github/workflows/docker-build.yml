@@ -36,3 +36,14 @@ jobs:
           docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:${TAG}
           docker tag current ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
           docker push ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}:latest
+  test:
+    name: CTest using published image
+    needs: build
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run test
+        run: docker run -v /home/runner/work/lib/lib:/app ${CONTAINER_REGISTRY_PATH}/${IMAGE_NAME}
+        env:
+          CONTAINER_REGISTRY_PATH: ghcr.io/btk15049
+          IMAGE_NAME: ctest
