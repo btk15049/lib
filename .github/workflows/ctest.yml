@@ -15,8 +15,9 @@ on:
       - ".github/workflows/ctest.yml"
 
 jobs:
+  runs-on: ubuntu-latest
   test:
     name: CTest
     steps:
-      - uses: docker://ghcr.io/btk15049/ctest
+      - uses: docker://ghcr.io/btk15049/ctest:latest
         name: Run test
