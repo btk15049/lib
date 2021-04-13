@@ -19,5 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     name: CTest
     steps:
+      - uses: actions/checkout@v1
       - uses: docker://ghcr.io/btk15049/ctest:latest
         name: Run test
